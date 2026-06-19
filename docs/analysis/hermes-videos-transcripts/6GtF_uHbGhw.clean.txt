@@ -1,0 +1,1636 @@
+# The 7 Levels of Hermes Agent (Jack, 25min)
+# Video ID: 6GtF_uHbGhw
+# Total segments: 1632
+
+[00:00:00] I have spent hundreds of hours in Hermes
+[00:00:02] I have spent hundreds of hours in Hermes Agent building, experimenting, and I've
+[00:00:05] Agent building, experimenting, and I've
+[00:00:05] Agent building, experimenting, and I've seen every single masterass. And in this
+[00:00:06] seen every single masterass. And in this
+[00:00:06] seen every single masterass. And in this video, I'm going to take you through the
+[00:00:08] video, I'm going to take you through the
+[00:00:08] video, I'm going to take you through the seven levels of Hermes Agent step by
+[00:00:11] seven levels of Hermes Agent step by
+[00:00:11] seven levels of Hermes Agent step by step so you know what to expect at each
+[00:00:12] step so you know what to expect at each
+[00:00:12] step so you know what to expect at each level, the exact mistakes that you need
+[00:00:15] level, the exact mistakes that you need
+[00:00:15] level, the exact mistakes that you need to avoid, and what you need to do to
+[00:00:16] to avoid, and what you need to do to
+[00:00:16] to avoid, and what you need to do to progress to the next level so you can
+[00:00:18] progress to the next level so you can
+[00:00:18] progress to the next level so you can save more time, make more money, and get
+[00:00:20] save more time, make more money, and get
+[00:00:20] save more time, make more money, and get light years ahead of everybody else. And
+[00:00:22] light years ahead of everybody else. And
+[00:00:22] light years ahead of everybody else. And if you're new, I'm Jack. I built and saw
+[00:00:24] if you're new, I'm Jack. I built and saw
+[00:00:24] if you're new, I'm Jack. I built and saw my LTC startup with a gazillion
+[00:00:25] my LTC startup with a gazillion
+[00:00:25] my LTC startup with a gazillion customers. Now I build my own AI
+[00:00:27] customers. Now I build my own AI
+[00:00:27] customers. Now I build my own AI companies and I share here the stuff
+[00:00:29] companies and I share here the stuff
+[00:00:29] companies and I share here the stuff that actually works. So if you haven't
+[00:00:31] that actually works. So if you haven't
+[00:00:31] that actually works. So if you haven't already, grab that beautiful coffee and
+[00:00:33] already, grab that beautiful coffee and
+[00:00:33] already, grab that beautiful coffee and let's dive straight in. Now there are
+[00:00:35] let's dive straight in. Now there are
+[00:00:35] let's dive straight in. Now there are seven levels to this Hermes agent. And
+[00:00:37] seven levels to this Hermes agent. And
+[00:00:37] seven levels to this Hermes agent. And if you make it towards the end of the
+[00:00:39] if you make it towards the end of the
+[00:00:39] if you make it towards the end of the video, they're going to be saying, "Hey,
+[00:00:40] video, they're going to be saying, "Hey,
+[00:00:40] video, they're going to be saying, "Hey, who is this super intelligent Hermes
+[00:00:42] who is this super intelligent Hermes
+[00:00:42] who is this super intelligent Hermes individual I see before me?" That's what
+[00:00:44] individual I see before me?" That's what
+[00:00:44] individual I see before me?" That's what they're going to be saying about you
+[00:00:45] they're going to be saying about you
+[00:00:45] they're going to be saying about you when you make it to the end of this
+[00:00:45] when you make it to the end of this
+[00:00:46] when you make it to the end of this video. Now, we're going to go through
+[00:00:47] video. Now, we're going to go through
+[00:00:47] video. Now, we're going to go through every level of Hermes from one prompt to
+[00:00:49] every level of Hermes from one prompt to
+[00:00:49] every level of Hermes from one prompt to an agent that literally does wonderful
+[00:00:51] an agent that literally does wonderful
+[00:00:51] an agent that literally does wonderful and fantastical things and a lot of
+[00:00:53] and fantastical things and a lot of
+[00:00:53] and fantastical things and a lot of mistakes. Now, here's the thing. What?
+[00:00:56] mistakes. Now, here's the thing. What?
+[00:00:56] mistakes. Now, here's the thing. What? Level zero is where everybody's at
+[00:00:57] Level zero is where everybody's at
+[00:00:57] Level zero is where everybody's at because just for context, nobody's using
+[00:01:00] because just for context, nobody's using
+[00:01:00] because just for context, nobody's using this stuff. Like you're seeing all this
+[00:01:01] this stuff. Like you're seeing all this
+[00:01:01] this stuff. Like you're seeing all this content because you watch it, but just
+[00:01:03] content because you watch it, but just
+[00:01:03] content because you watch it, but just like for context, barely anybody is
+[00:01:05] like for context, barely anybody is
+[00:01:05] like for context, barely anybody is using AI, let alone Hermes agent. So,
+[00:01:07] using AI, let alone Hermes agent. So,
+[00:01:07] using AI, let alone Hermes agent. So, you are already ahead. Now, let's begin
+[00:01:09] you are already ahead. Now, let's begin
+[00:01:09] you are already ahead. Now, let's begin with level one, which is the beginner.
+[00:01:11] with level one, which is the beginner.
+[00:01:11] with level one, which is the beginner. This is basically the download and go
+[00:01:14] This is basically the download and go
+[00:01:14] This is basically the download and go individual. Essentially, what's happened
+[00:01:15] individual. Essentially, what's happened
+[00:01:15] individual. Essentially, what's happened here is you understood that it's an
+[00:01:17] here is you understood that it's an
+[00:01:17] here is you understood that it's an agent and not a chatbot. We know that
+[00:01:19] agent and not a chatbot. We know that
+[00:01:19] agent and not a chatbot. We know that chat bots you can have conversations
+[00:01:21] chat bots you can have conversations
+[00:01:21] chat bots you can have conversations with like Claude and Chat GPT. Hermes is
+[00:01:24] with like Claude and Chat GPT. Hermes is
+[00:01:24] with like Claude and Chat GPT. Hermes is something that actually goes ahead and
+[00:01:25] something that actually goes ahead and
+[00:01:25] something that actually goes ahead and does things for us. And to have reached
+[00:01:27] does things for us. And to have reached
+[00:01:27] does things for us. And to have reached level one, what you needed to have done
+[00:01:28] level one, what you needed to have done
+[00:01:28] level one, what you needed to have done is actually gone ahead to basically the
+[00:01:31] is actually gone ahead to basically the
+[00:01:31] is actually gone ahead to basically the website, grab the information and
+[00:01:32] website, grab the information and
+[00:01:32] website, grab the information and download Hermes onto your computer. And
+[00:01:34] download Hermes onto your computer. And
+[00:01:34] download Hermes onto your computer. And if this sounds like I'm speaking German,
+[00:01:35] if this sounds like I'm speaking German,
+[00:01:36] if this sounds like I'm speaking German, click this link on screen. I see the
+[00:01:37] click this link on screen. I see the
+[00:01:37] click this link on screen. I see the full process of getting it set up. But
+[00:01:39] full process of getting it set up. But
+[00:01:39] full process of getting it set up. But effectively, you've gone and you've
+[00:01:40] effectively, you've gone and you've
+[00:01:40] effectively, you've gone and you've installed it on your computer. Now,
+[00:01:41] installed it on your computer. Now,
+[00:01:41] installed it on your computer. Now, you've installed it on your computer and
+[00:01:43] you've installed it on your computer and
+[00:01:43] you've installed it on your computer and you're connected to Telegram or your
+[00:01:45] you're connected to Telegram or your
+[00:01:45] you're connected to Telegram or your messaging platform of choice. Now, at
+[00:01:46] messaging platform of choice. Now, at
+[00:01:46] messaging platform of choice. Now, at level one, you're using it for simple
+[00:01:48] level one, you're using it for simple
+[00:01:48] level one, you're using it for simple tasks. So you might say something like,
+[00:01:50] tasks. So you might say something like,
+[00:01:50] tasks. So you might say something like, "Hey there, I am going from Dubai to a
+[00:01:52] "Hey there, I am going from Dubai to a
+[00:01:52] "Hey there, I am going from Dubai to a random country in Europe for 3 months.
+[00:01:54] random country in Europe for 3 months.
+[00:01:54] random country in Europe for 3 months. Do some research. Write me a list of the
+[00:01:56] Do some research. Write me a list of the
+[00:01:56] Do some research. Write me a list of the best countries to go to with some
+[00:01:58] best countries to go to with some
+[00:01:58] best countries to go to with some insights and just save that HTML file on
+[00:02:00] insights and just save that HTML file on
+[00:02:00] insights and just save that HTML file on my desktop so I can check it out for me
+[00:02:02] my desktop so I can check it out for me
+[00:02:02] my desktop so I can check it out for me later when I come back." Send that off
+[00:02:04] later when I come back." Send that off
+[00:02:04] later when I come back." Send that off and literally Hermes agent is going to
+[00:02:06] and literally Hermes agent is going to
+[00:02:06] and literally Hermes agent is going to do this for us and just save things for
+[00:02:08] do this for us and just save things for
+[00:02:08] do this for us and just save things for us to check whenever we want to. And as
+[00:02:09] us to check whenever we want to. And as
+[00:02:10] us to check whenever we want to. And as you can see, Hermes agent completes
+[00:02:11] you can see, Hermes agent completes
+[00:02:11] you can see, Hermes agent completes things for us. It uses tools, it's got
+[00:02:13] things for us. It uses tools, it's got
+[00:02:13] things for us. It uses tools, it's got the chat, I can just do anything we want
+[00:02:15] the chat, I can just do anything we want
+[00:02:15] the chat, I can just do anything we want to in those current environments. And
+[00:02:17] to in those current environments. And
+[00:02:17] to in those current environments. And now I can even open this up and see its
+[00:02:19] now I can even open this up and see its
+[00:02:19] now I can even open this up and see its output. Now as you can see I open up and
+[00:02:21] output. Now as you can see I open up and
+[00:02:21] output. Now as you can see I open up and it's given me a nice little breakdown of
+[00:02:22] it's given me a nice little breakdown of
+[00:02:22] it's given me a nice little breakdown of all the things that I want to do. Key
+[00:02:24] all the things that I want to do. Key
+[00:02:24] all the things that I want to do. Key difference here is that you're using
+[00:02:25] difference here is that you're using
+[00:02:25] difference here is that you're using Hermes agent for anything and also tool
+[00:02:28] Hermes agent for anything and also tool
+[00:02:28] Hermes agent for anything and also tool calling to build interesting things. Now
+[00:02:29] calling to build interesting things. Now
+[00:02:29] calling to build interesting things. Now the biggest drawback at level one is
+[00:02:31] the biggest drawback at level one is
+[00:02:31] the biggest drawback at level one is you're just using it for long oneshot
+[00:02:34] you're just using it for long oneshot
+[00:02:34] you're just using it for long oneshot prompt things. You need to make sure
+[00:02:35] prompt things. You need to make sure
+[00:02:35] prompt things. You need to make sure that you're collaborating with Hermes
+[00:02:37] that you're collaborating with Hermes
+[00:02:37] that you're collaborating with Hermes agent. Ask it to understand your stated
+[00:02:39] agent. Ask it to understand your stated
+[00:02:39] agent. Ask it to understand your stated intention. Go back and forward and just
+[00:02:41] intention. Go back and forward and just
+[00:02:41] intention. Go back and forward and just be mindful of your context window. You
+[00:02:43] be mindful of your context window. You
+[00:02:43] be mindful of your context window. You can probably expect to save about 30
+[00:02:45] can probably expect to save about 30
+[00:02:45] can probably expect to save about 30 minutes a day when you're using it in
+[00:02:47] minutes a day when you're using it in
+[00:02:47] minutes a day when you're using it in this type of fashion. And this brings us
+[00:02:48] this type of fashion. And this brings us
+[00:02:48] this type of fashion. And this brings us on to the second level of Hermes agent
+[00:02:51] on to the second level of Hermes agent
+[00:02:51] on to the second level of Hermes agent and one of its strongest features that
+[00:02:53] and one of its strongest features that
+[00:02:53] and one of its strongest features that if you don't use it, you are not
+[00:02:55] if you don't use it, you are not
+[00:02:55] if you don't use it, you are not utilizing Hermes properly. Now with the
+[00:02:57] utilizing Hermes properly. Now with the
+[00:02:57] utilizing Hermes properly. Now with the apprentice at this level, effectively
+[00:02:59] apprentice at this level, effectively
+[00:02:59] apprentice at this level, effectively Hermes is getting to know you as an
+[00:03:02] Hermes is getting to know you as an
+[00:03:02] Hermes is getting to know you as an individual. Now the key thing about
+[00:03:03] individual. Now the key thing about
+[00:03:03] individual. Now the key thing about Hermes agent is that the more that it
+[00:03:05] Hermes agent is that the more that it
+[00:03:05] Hermes agent is that the more that it knows you, the better it actually gets.
+[00:03:07] knows you, the better it actually gets.
+[00:03:07] knows you, the better it actually gets. And I can show you here for example with
+[00:03:08] And I can show you here for example with
+[00:03:08] And I can show you here for example with this memory system. The more
+[00:03:10] this memory system. The more
+[00:03:10] this memory system. The more information, the more you speak to
+[00:03:11] information, the more you speak to
+[00:03:11] information, the more you speak to Hermes agent, the more information that
+[00:03:13] Hermes agent, the more information that
+[00:03:13] Hermes agent, the more information that you give it, the higher performance it
+[00:03:15] you give it, the higher performance it
+[00:03:15] you give it, the higher performance it will actually get. But what do I mean by
+[00:03:16] will actually get. But what do I mean by
+[00:03:16] will actually get. But what do I mean by that? Let me explain. So Hermes itself
+[00:03:18] that? Let me explain. So Hermes itself
+[00:03:18] that? Let me explain. So Hermes itself has a very cool memory system. For
+[00:03:20] has a very cool memory system. For
+[00:03:20] has a very cool memory system. For example, you can say to Hermes agent,
+[00:03:22] example, you can say to Hermes agent,
+[00:03:22] example, you can say to Hermes agent, hey, what was that thing? Could you just
+[00:03:23] hey, what was that thing? Could you just
+[00:03:23] hey, what was that thing? Could you just tell me one thing that we spoke about 2
+[00:03:25] tell me one thing that we spoke about 2
+[00:03:25] tell me one thing that we spoke about 2 days ago, please? You can actually get
+[00:03:27] days ago, please? You can actually get
+[00:03:27] days ago, please? You can actually get Hermes agent to recall specifically
+[00:03:30] Hermes agent to recall specifically
+[00:03:30] Hermes agent to recall specifically things that happened on days. Now, the
+[00:03:31] things that happened on days. Now, the
+[00:03:31] things that happened on days. Now, the cool thing is Hermes will commit to its
+[00:03:34] cool thing is Hermes will commit to its
+[00:03:34] cool thing is Hermes will commit to its own internal memory the more that you
+[00:03:36] own internal memory the more that you
+[00:03:36] own internal memory the more that you actually talked about it. But it isn't
+[00:03:37] actually talked about it. But it isn't
+[00:03:38] actually talked about it. But it isn't even just about its memory on a service
+[00:03:39] even just about its memory on a service
+[00:03:39] even just about its memory on a service level because this is just basic at
+[00:03:41] level because this is just basic at
+[00:03:41] level because this is just basic at level two. It's also its ability here to
+[00:03:44] level two. It's also its ability here to
+[00:03:44] level two. It's also its ability here to know who you are and tailor its specific
+[00:03:47] know who you are and tailor its specific
+[00:03:47] know who you are and tailor its specific advice based on what you're trying to
+[00:03:49] advice based on what you're trying to
+[00:03:49] advice based on what you're trying to actually get. And as you can see, it's
+[00:03:50] actually get. And as you can see, it's
+[00:03:50] actually get. And as you can see, it's talking about alarm, which is a video
+[00:03:51] talking about alarm, which is a video
+[00:03:51] talking about alarm, which is a video that came out a couple of days ago on my
+[00:03:53] that came out a couple of days ago on my
+[00:03:53] that came out a couple of days ago on my channel. Now, you are missing out on
+[00:03:55] channel. Now, you are missing out on
+[00:03:55] channel. Now, you are missing out on Hermes magic unless it knows about you.
+[00:03:58] Hermes magic unless it knows about you.
+[00:03:58] Hermes magic unless it knows about you. So, what you want to do effectively is
+[00:03:59] So, what you want to do effectively is
+[00:03:59] So, what you want to do effectively is use what we call a Hermes soul.md. What
+[00:04:02] use what we call a Hermes soul.md. What
+[00:04:02] use what we call a Hermes soul.md. What do I mean by that? Uh well if I show you
+[00:04:03] do I mean by that? Uh well if I show you
+[00:04:03] do I mean by that? Uh well if I show you here for example in the OS if I come
+[00:04:05] here for example in the OS if I come
+[00:04:05] here for example in the OS if I come down here you can actually categorize
+[00:04:07] down here you can actually categorize
+[00:04:07] down here you can actually categorize your user profile and actually
+[00:04:09] your user profile and actually
+[00:04:09] your user profile and actually physically give it a soul. This is stuff
+[00:04:10] physically give it a soul. This is stuff
+[00:04:10] physically give it a soul. This is stuff like how do I want you to address me
+[00:04:12] like how do I want you to address me
+[00:04:12] like how do I want you to address me information about you and basically your
+[00:04:14] information about you and basically your
+[00:04:14] information about you and basically your business or whatever it is that you
+[00:04:16] business or whatever it is that you
+[00:04:16] business or whatever it is that you actually are physically doing. And I'll
+[00:04:17] actually are physically doing. And I'll
+[00:04:17] actually are physically doing. And I'll put a link down below for the soul.
+[00:04:19] put a link down below for the soul.
+[00:04:19] put a link down below for the soul. Hermes template that takes you through
+[00:04:20] Hermes template that takes you through
+[00:04:20] Hermes template that takes you through everything mission goals your business
+[00:04:22] everything mission goals your business
+[00:04:22] everything mission goals your business key metrics all this sort of stuff. The
+[00:04:24] key metrics all this sort of stuff. The
+[00:04:24] key metrics all this sort of stuff. The be the beautiful part of Hermes, okay,
+[00:04:26] be the beautiful part of Hermes, okay,
+[00:04:26] be the beautiful part of Hermes, okay, is that if two people speak to Hermes
+[00:04:28] is that if two people speak to Hermes
+[00:04:28] is that if two people speak to Hermes and ask it the same question, they
+[00:04:29] and ask it the same question, they
+[00:04:29] and ask it the same question, they should get radically different answers
+[00:04:31] should get radically different answers
+[00:04:31] should get radically different answers because it understands context. It's all
+[00:04:33] because it understands context. It's all
+[00:04:34] because it understands context. It's all about context engineering. It needs to
+[00:04:36] about context engineering. It needs to
+[00:04:36] about context engineering. It needs to know about you and your information,
+[00:04:37] know about you and your information,
+[00:04:37] know about you and your information, your data, so it can best help you. And
+[00:04:39] your data, so it can best help you. And
+[00:04:39] your data, so it can best help you. And that's one of the biggest differential
+[00:04:41] that's one of the biggest differential
+[00:04:41] that's one of the biggest differential is that we start to see at level two on
+[00:04:44] is that we start to see at level two on
+[00:04:44] is that we start to see at level two on our seven level scale. That's why we
+[00:04:45] our seven level scale. That's why we
+[00:04:46] our seven level scale. That's why we call it the apprentice. And the key
+[00:04:47] call it the apprentice. And the key
+[00:04:47] call it the apprentice. And the key point here is that Hermes never starts
+[00:04:49] point here is that Hermes never starts
+[00:04:49] point here is that Hermes never starts from zero. It's the agent that remembers
+[00:04:51] from zero. It's the agent that remembers
+[00:04:51] from zero. It's the agent that remembers your birthday. Its memory is one of its
+[00:04:53] your birthday. Its memory is one of its
+[00:04:53] your birthday. Its memory is one of its most coolest features and it should it
+[00:04:55] most coolest features and it should it
+[00:04:55] most coolest features and it should it should know that stuff about you. So at
+[00:04:56] should know that stuff about you. So at
+[00:04:56] should know that stuff about you. So at this level we should be looking at
+[00:04:58] this level we should be looking at
+[00:04:58] this level we should be looking at roughly 5 hours a week that we're
+[00:05:00] roughly 5 hours a week that we're
+[00:05:00] roughly 5 hours a week that we're claiming back. Key thing is if it knows
+[00:05:01] claiming back. Key thing is if it knows
+[00:05:01] claiming back. Key thing is if it knows you, you can stop carrying all the
+[00:05:03] you, you can stop carrying all the
+[00:05:03] you, you can stop carrying all the information in your head. And remember
+[00:05:05] information in your head. And remember
+[00:05:05] information in your head. And remember this when we're thinking about how much
+[00:05:07] this when we're thinking about how much
+[00:05:07] this when we're thinking about how much time it saves you. There's such a thing
+[00:05:08] time it saves you. There's such a thing
+[00:05:08] time it saves you. There's such a thing as context switching, right? It isn't
+[00:05:10] as context switching, right? It isn't
+[00:05:10] as context switching, right? It isn't just how much time did I spend doing
+[00:05:12] just how much time did I spend doing
+[00:05:12] just how much time did I spend doing something. You lose things when you
+[00:05:13] something. You lose things when you
+[00:05:13] something. You lose things when you switch between tasks. So having one of
+[00:05:15] switch between tasks. So having one of
+[00:05:15] switch between tasks. So having one of the world's most intelligent personal AI
+[00:05:16] the world's most intelligent personal AI
+[00:05:16] the world's most intelligent personal AI assistants is an unbelievable gamecher
+[00:05:19] assistants is an unbelievable gamecher
+[00:05:19] assistants is an unbelievable gamecher and why it's blowing up so much and it's
+[00:05:21] and why it's blowing up so much and it's
+[00:05:21] and why it's blowing up so much and it's going to be such a huge thing in the
+[00:05:22] going to be such a huge thing in the
+[00:05:22] going to be such a huge thing in the future. Key details, it remembers your
+[00:05:23] future. Key details, it remembers your
+[00:05:24] future. Key details, it remembers your preferences, it can recall past chats,
+[00:05:26] preferences, it can recall past chats,
+[00:05:26] preferences, it can recall past chats, and there's no need to reexlain. Now,
+[00:05:27] and there's no need to reexlain. Now,
+[00:05:27] and there's no need to reexlain. Now, custom instructions are one thing, but
+[00:05:29] custom instructions are one thing, but
+[00:05:29] custom instructions are one thing, but if you don't use skills and commands
+[00:05:32] if you don't use skills and commands
+[00:05:32] if you don't use skills and commands properly in level three, you're not
+[00:05:34] properly in level three, you're not
+[00:05:34] properly in level three, you're not utilizing its full potential. What do I
+[00:05:36] utilizing its full potential. What do I
+[00:05:36] utilizing its full potential. What do I physically mean by that? Well, we're
+[00:05:37] physically mean by that? Well, we're
+[00:05:38] physically mean by that? Well, we're looking at two key things here. Okay,
+[00:05:40] looking at two key things here. Okay,
+[00:05:40] looking at two key things here. Okay, first thing I want to touch on here is
+[00:05:41] first thing I want to touch on here is
+[00:05:41] first thing I want to touch on here is some of the key commands and controls
+[00:05:43] some of the key commands and controls
+[00:05:43] some of the key commands and controls that will radically change your
+[00:05:44] that will radically change your
+[00:05:44] that will radically change your experience as her with Hermes. At this
+[00:05:47] experience as her with Hermes. At this
+[00:05:47] experience as her with Hermes. At this level, you're starting to basically
+[00:05:48] level, you're starting to basically
+[00:05:48] level, you're starting to basically really utilize its functionality and how
+[00:05:51] really utilize its functionality and how
+[00:05:51] really utilize its functionality and how cool it freaking is. Let me show you
+[00:05:52] cool it freaking is. Let me show you
+[00:05:52] cool it freaking is. Let me show you exactly what I mean. First of all, I
+[00:05:54] exactly what I mean. First of all, I
+[00:05:54] exactly what I mean. First of all, I might give it a prompt that sounds
+[00:05:55] might give it a prompt that sounds
+[00:05:55] might give it a prompt that sounds something like this. Hey there, I would
+[00:05:57] something like this. Hey there, I would
+[00:05:57] something like this. Hey there, I would like to go online and find for me what
+[00:05:58] like to go online and find for me what
+[00:05:58] like to go online and find for me what are what is the best advice to scale my
+[00:06:01] are what is the best advice to scale my
+[00:06:01] are what is the best advice to scale my LinkedIn and acquire clients in that
+[00:06:03] LinkedIn and acquire clients in that
+[00:06:03] LinkedIn and acquire clients in that channel. Do some deep research for me
+[00:06:04] channel. Do some deep research for me
+[00:06:04] channel. Do some deep research for me and find that out. Okay, so you can give
+[00:06:06] and find that out. Okay, so you can give
+[00:06:06] and find that out. Okay, so you can give Hermes a prompt like this. We could be
+[00:06:08] Hermes a prompt like this. We could be
+[00:06:08] Hermes a prompt like this. We could be in the gym. We could be anywhere. Now
+[00:06:10] in the gym. We could be anywhere. Now
+[00:06:10] in the gym. We could be anywhere. Now crucially, I can do a couple of things.
+[00:06:11] crucially, I can do a couple of things.
+[00:06:11] crucially, I can do a couple of things. I can do forward slash. I can do steer.
+[00:06:14] I can do forward slash. I can do steer.
+[00:06:14] I can do forward slash. I can do steer. And steer basically will guide it in one
+[00:06:17] And steer basically will guide it in one
+[00:06:17] And steer basically will guide it in one direction. I specifically want you to
+[00:06:19] direction. I specifically want you to
+[00:06:19] direction. I specifically want you to look at top creators on LinkedIn who are
+[00:06:22] look at top creators on LinkedIn who are
+[00:06:22] look at top creators on LinkedIn who are already doing very well and also
+[00:06:24] already doing very well and also
+[00:06:24] already doing very well and also YouTube. Now, what this means is I'm
+[00:06:26] YouTube. Now, what this means is I'm
+[00:06:26] YouTube. Now, what this means is I'm kind of like it's it's going to use this
+[00:06:28] kind of like it's it's going to use this
+[00:06:28] kind of like it's it's going to use this and think about this prompt before it's
+[00:06:30] and think about this prompt before it's
+[00:06:30] and think about this prompt before it's even completed. Now, and it's a great
+[00:06:31] even completed. Now, and it's a great
+[00:06:31] even completed. Now, and it's a great little hack. Another one I can do is
+[00:06:33] little hack. Another one I can do is
+[00:06:33] little hack. Another one I can do is background, which basically means whilst
+[00:06:35] background, which basically means whilst
+[00:06:35] background, which basically means whilst it's doing that task, fire this one off
+[00:06:37] it's doing that task, fire this one off
+[00:06:37] it's doing that task, fire this one off in the background. So, I could say, "Hey
+[00:06:39] in the background. So, I could say, "Hey
+[00:06:39] in the background. So, I could say, "Hey there. I'd like you to go ahead and do
+[00:06:40] there. I'd like you to go ahead and do
+[00:06:40] there. I'd like you to go ahead and do some research on the best way for me to
+[00:06:42] some research on the best way for me to
+[00:06:42] some research on the best way for me to grow my Instagram. Specifically, go and
+[00:06:44] grow my Instagram. Specifically, go and
+[00:06:44] grow my Instagram. Specifically, go and find me great Instagram creators and
+[00:06:45] find me great Instagram creators and
+[00:06:45] find me great Instagram creators and build me a beautiful list of ways that I
+[00:06:47] build me a beautiful list of ways that I
+[00:06:47] build me a beautiful list of ways that I can improve my Instagram." Now,
+[00:06:49] can improve my Instagram." Now,
+[00:06:49] can improve my Instagram." Now, background tasks themselves happen in
+[00:06:51] background tasks themselves happen in
+[00:06:51] background tasks themselves happen in the background and it doesn't even
+[00:06:53] the background and it doesn't even
+[00:06:53] the background and it doesn't even interact with the core thing that Hermes
+[00:06:54] interact with the core thing that Hermes
+[00:06:54] interact with the core thing that Hermes agent is doing. So, the idea here is
+[00:06:56] agent is doing. So, the idea here is
+[00:06:56] agent is doing. So, the idea here is that we're using more of the features
+[00:06:58] that we're using more of the features
+[00:06:58] that we're using more of the features that exist within Hermes. We've got
+[00:06:59] that exist within Hermes. We've got
+[00:06:59] that exist within Hermes. We've got handoff, we've got clear, basically
+[00:07:01] handoff, we've got clear, basically
+[00:07:01] handoff, we've got clear, basically clear functions. And again, there's lots
+[00:07:03] clear functions. And again, there's lots
+[00:07:03] clear functions. And again, there's lots of different things you can do. Now, the
+[00:07:05] of different things you can do. Now, the
+[00:07:05] of different things you can do. Now, the other really interesting one here is the
+[00:07:08] other really interesting one here is the
+[00:07:08] other really interesting one here is the model. Now, at this level, at level
+[00:07:10] model. Now, at this level, at level
+[00:07:10] model. Now, at this level, at level three, we're basically using what I call
+[00:07:12] three, we're basically using what I call
+[00:07:12] three, we're basically using what I call model agnostic behavior. What the hell
+[00:07:14] model agnostic behavior. What the hell
+[00:07:14] model agnostic behavior. What the hell does that mean, Jack? What it basically
+[00:07:16] does that mean, Jack? What it basically
+[00:07:16] does that mean, Jack? What it basically means is that we tag in the best model
+[00:07:19] means is that we tag in the best model
+[00:07:19] means is that we tag in the best model for the job. That's simply it. In fact,
+[00:07:21] for the job. That's simply it. In fact,
+[00:07:21] for the job. That's simply it. In fact, I can even show you with the Hermes app.
+[00:07:23] I can even show you with the Hermes app.
+[00:07:23] I can even show you with the Hermes app. If I pull this up, and even if you see
+[00:07:25] If I pull this up, and even if you see
+[00:07:25] If I pull this up, and even if you see here, for example, in the operating
+[00:07:26] here, for example, in the operating
+[00:07:26] here, for example, in the operating system for Hermes, if I come over here,
+[00:07:28] system for Hermes, if I come over here,
+[00:07:28] system for Hermes, if I come over here, you can see the model that we currently
+[00:07:30] you can see the model that we currently
+[00:07:30] you can see the model that we currently have tagged in. In my previous video, I
+[00:07:32] have tagged in. In my previous video, I
+[00:07:32] have tagged in. In my previous video, I also showed you how you can run this
+[00:07:33] also showed you how you can run this
+[00:07:33] also showed you how you can run this 100% privately, which is crazy. Now, the
+[00:07:36] 100% privately, which is crazy. Now, the
+[00:07:36] 100% privately, which is crazy. Now, the point here is that we can see the model
+[00:07:38] point here is that we can see the model
+[00:07:38] point here is that we can see the model we're dealing with. We're talking to
+[00:07:39] we're dealing with. We're talking to
+[00:07:39] we're dealing with. We're talking to chat 5.5 and if I have a conversation,
+[00:07:41] chat 5.5 and if I have a conversation,
+[00:07:41] chat 5.5 and if I have a conversation, I've got that freaking awesome. So, for
+[00:07:43] I've got that freaking awesome. So, for
+[00:07:43] I've got that freaking awesome. So, for example, if you can come now, you can
+[00:07:44] example, if you can come now, you can
+[00:07:44] example, if you can come now, you can see the different models I have within
+[00:07:46] see the different models I have within
+[00:07:46] see the different models I have within her agent, right? Anthropic, GitHub,
+[00:07:48] her agent, right? Anthropic, GitHub,
+[00:07:48] her agent, right? Anthropic, GitHub, open air codeex, open reach, etc. So, I
+[00:07:51] open air codeex, open reach, etc. So, I
+[00:07:51] open air codeex, open reach, etc. So, I speak to people all the time about
+[00:07:52] speak to people all the time about
+[00:07:52] speak to people all the time about Hermes agent. Now, some say, Jack, my
+[00:07:54] Hermes agent. Now, some say, Jack, my
+[00:07:54] Hermes agent. Now, some say, Jack, my credit credits went very quickly. Your
+[00:07:56] credit credits went very quickly. Your
+[00:07:56] credit credits went very quickly. Your core model, okay, think of it like this.
+[00:07:58] core model, okay, think of it like this.
+[00:07:58] core model, okay, think of it like this. You want to connect your chat GPT
+[00:08:00] You want to connect your chat GPT
+[00:08:00] You want to connect your chat GPT subscription to Hermes agent. Super
+[00:08:02] subscription to Hermes agent. Super
+[00:08:02] subscription to Hermes agent. Super duper important. That lets you use your
+[00:08:04] duper important. That lets you use your
+[00:08:04] duper important. That lets you use your $20 chat GPT subscription for anything.
+[00:08:07] $20 chat GPT subscription for anything.
+[00:08:07] $20 chat GPT subscription for anything. It is a coding powerhouse. Now, the most
+[00:08:09] It is a coding powerhouse. Now, the most
+[00:08:09] It is a coding powerhouse. Now, the most intelligent model is Opus 4.8. But the
+[00:08:13] intelligent model is Opus 4.8. But the
+[00:08:13] intelligent model is Opus 4.8. But the reality is you don't need it for
+[00:08:15] reality is you don't need it for
+[00:08:15] reality is you don't need it for everything. We don't need
+[00:08:15] everything. We don't need
+[00:08:15] everything. We don't need astrophysicists, you know, basically
+[00:08:18] astrophysicists, you know, basically
+[00:08:18] astrophysicists, you know, basically building Legos for us. It's not
+[00:08:19] building Legos for us. It's not
+[00:08:19] building Legos for us. It's not required. Sonet 4.6 is a very good
+[00:08:23] required. Sonet 4.6 is a very good
+[00:08:23] required. Sonet 4.6 is a very good middle ground of like really good
+[00:08:25] middle ground of like really good
+[00:08:25] middle ground of like really good performance, but it's not going to burn
+[00:08:26] performance, but it's not going to burn
+[00:08:26] performance, but it's not going to burn your cost. These are API costs. The
+[00:08:28] your cost. These are API costs. The
+[00:08:28] your cost. These are API costs. The other model you need to have in here as
+[00:08:30] other model you need to have in here as
+[00:08:30] other model you need to have in here as well is Grock. Grock also connects via
+[00:08:33] well is Grock. Grock also connects via
+[00:08:33] well is Grock. Grock also connects via oorthth which means open authentication.
+[00:08:35] oorthth which means open authentication.
+[00:08:35] oorthth which means open authentication. You literally connect it, you sign in,
+[00:08:38] You literally connect it, you sign in,
+[00:08:38] You literally connect it, you sign in, and you're basically using Grock within
+[00:08:40] and you're basically using Grock within
+[00:08:40] and you're basically using Grock within the engine. Now, the cool thing about
+[00:08:41] the engine. Now, the cool thing about
+[00:08:41] the engine. Now, the cool thing about Grock, again, it's on your subscription
+[00:08:43] Grock, again, it's on your subscription
+[00:08:43] Grock, again, it's on your subscription and you get access to the entirety of X.
+[00:08:46] and you get access to the entirety of X.
+[00:08:46] and you get access to the entirety of X. So, you can say, hey, uh, what's
+[00:08:47] So, you can say, hey, uh, what's
+[00:08:47] So, you can say, hey, uh, what's happening this week with websites? And
+[00:08:49] happening this week with websites? And
+[00:08:49] happening this week with websites? And it'll tell you all the top posts. It's
+[00:08:50] it'll tell you all the top posts. It's
+[00:08:50] it'll tell you all the top posts. It's freaking amazing. Then, we want to tag
+[00:08:52] freaking amazing. Then, we want to tag
+[00:08:52] freaking amazing. Then, we want to tag in the right models. You want to make
+[00:08:54] in the right models. You want to make
+[00:08:54] in the right models. You want to make sure that you've got Open Routter as
+[00:08:56] sure that you've got Open Routter as
+[00:08:56] sure that you've got Open Routter as well. Open router is a very important
+[00:08:58] well. Open router is a very important
+[00:08:58] well. Open router is a very important piece of software that effectually lets
+[00:08:59] piece of software that effectually lets
+[00:08:59] piece of software that effectually lets us connect to anything in the world that
+[00:09:01] us connect to anything in the world that
+[00:09:01] us connect to anything in the world that we want to. Why do I like it? Well, let
+[00:09:03] we want to. Why do I like it? Well, let
+[00:09:03] we want to. Why do I like it? Well, let me show you this. If I come over to
+[00:09:04] me show you this. If I come over to
+[00:09:04] me show you this. If I come over to rankings, you can see we have access to
+[00:09:06] rankings, you can see we have access to
+[00:09:06] rankings, you can see we have access to every model. You can access free models.
+[00:09:08] every model. You can access free models.
+[00:09:08] every model. You can access free models. You can access any model that you wish.
+[00:09:10] You can access any model that you wish.
+[00:09:10] You can access any model that you wish. It's really freaking impressive. This is
+[00:09:12] It's really freaking impressive. This is
+[00:09:12] It's really freaking impressive. This is how I personally access 4.8 um with
+[00:09:16] how I personally access 4.8 um with
+[00:09:16] how I personally access 4.8 um with Claude. And essentially, we can ratchet
+[00:09:17] Claude. And essentially, we can ratchet
+[00:09:17] Claude. And essentially, we can ratchet it down whenever we want to. We can even
+[00:09:19] it down whenever we want to. We can even
+[00:09:19] it down whenever we want to. We can even use DeepSeek V4 Flash, which is
+[00:09:22] use DeepSeek V4 Flash, which is
+[00:09:22] use DeepSeek V4 Flash, which is fantastic. So we get to basically
+[00:09:24] fantastic. So we get to basically
+[00:09:24] fantastic. So we get to basically ratchet it up based on performance and
+[00:09:26] ratchet it up based on performance and
+[00:09:26] ratchet it up based on performance and cost and also privacy. So we get to move
+[00:09:28] cost and also privacy. So we get to move
+[00:09:28] cost and also privacy. So we get to move those dials up to get the right models
+[00:09:30] those dials up to get the right models
+[00:09:30] those dials up to get the right models we want to. And at level three of the
+[00:09:32] we want to. And at level three of the
+[00:09:32] we want to. And at level three of the system guys, what we're doing is
+[00:09:34] system guys, what we're doing is
+[00:09:34] system guys, what we're doing is leveraging the right model for the right
+[00:09:36] leveraging the right model for the right
+[00:09:36] leveraging the right model for the right task. This is also the level where we
+[00:09:39] task. This is also the level where we
+[00:09:39] task. This is also the level where we begin to introduce skills. Now when it
+[00:09:41] begin to introduce skills. Now when it
+[00:09:41] begin to introduce skills. Now when it comes to skills, what I think is really
+[00:09:43] comes to skills, what I think is really
+[00:09:43] comes to skills, what I think is really important is the skills are only as good
+[00:09:45] important is the skills are only as good
+[00:09:45] important is the skills are only as good as the model doing the skill and what
+[00:09:47] as the model doing the skill and what
+[00:09:47] as the model doing the skill and what the skill actually is. So for example in
+[00:09:49] the skill actually is. So for example in
+[00:09:49] the skill actually is. So for example in the pantheon here I've got in the
+[00:09:51] the pantheon here I've got in the
+[00:09:51] the pantheon here I've got in the operating system. One of the things that
+[00:09:53] operating system. One of the things that
+[00:09:53] operating system. One of the things that I'm very specific about when I add my
+[00:09:54] I'm very specific about when I add my
+[00:09:54] I'm very specific about when I add my skills is specifying three things. So
+[00:09:56] skills is specifying three things. So
+[00:09:56] skills is specifying three things. So let's go with the alchemist in this case
+[00:09:58] let's go with the alchemist in this case
+[00:09:58] let's go with the alchemist in this case right? I specify what the job is a
+[00:10:00] right? I specify what the job is a
+[00:10:00] right? I specify what the job is a description of that job and then a
+[00:10:02] description of that job and then a
+[00:10:02] description of that job and then a system prompt which is completely
+[00:10:03] system prompt which is completely
+[00:10:03] system prompt which is completely optional. And then crucially I come down
+[00:10:05] optional. And then crucially I come down
+[00:10:05] optional. And then crucially I come down and I actually specifically outline what
+[00:10:07] and I actually specifically outline what
+[00:10:07] and I actually specifically outline what the model is. Why? Because I don't want
+[00:10:09] the model is. Why? Because I don't want
+[00:10:09] the model is. Why? Because I don't want 4.8 which is really expensive doing
+[00:10:12] 4.8 which is really expensive doing
+[00:10:12] 4.8 which is really expensive doing something that we could delegate to a
+[00:10:13] something that we could delegate to a
+[00:10:13] something that we could delegate to a free model or something on deepseek. And
+[00:10:15] free model or something on deepseek. And
+[00:10:16] free model or something on deepseek. And of course we can connect this entire
+[00:10:17] of course we can connect this entire
+[00:10:17] of course we can connect this entire thing. Then if I want to change my
+[00:10:18] thing. Then if I want to change my
+[00:10:18] thing. Then if I want to change my primes, I can visually come in, see
+[00:10:20] primes, I can visually come in, see
+[00:10:20] primes, I can visually come in, see them, and make adjustments as I went, as
+[00:10:22] them, and make adjustments as I went, as
+[00:10:22] them, and make adjustments as I went, as I come and go. Now, why is this so
+[00:10:24] I come and go. Now, why is this so
+[00:10:24] I come and go. Now, why is this so important? This really, if you're down
+[00:10:26] important? This really, if you're down
+[00:10:26] important? This really, if you're down to it at level three, are some of the
+[00:10:28] to it at level three, are some of the
+[00:10:28] to it at level three, are some of the biggest time saves that you're going to
+[00:10:29] biggest time saves that you're going to
+[00:10:29] biggest time saves that you're going to get because it can do things like go and
+[00:10:31] get because it can do things like go and
+[00:10:31] get because it can do things like go and do my competitive research. Go and find
+[00:10:33] do my competitive research. Go and find
+[00:10:33] do my competitive research. Go and find for me all the outliers that exist on
+[00:10:35] for me all the outliers that exist on
+[00:10:35] for me all the outliers that exist on Instagram. And you can build software
+[00:10:36] Instagram. And you can build software
+[00:10:36] Instagram. And you can build software that looks like this. And this, for
+[00:10:38] that looks like this. And this, for
+[00:10:38] that looks like this. And this, for example, if you're trying to grow on
+[00:10:39] example, if you're trying to grow on
+[00:10:39] example, if you're trying to grow on Instagram, as for instance, shows you
+[00:10:40] Instagram, as for instance, shows you
+[00:10:40] Instagram, as for instance, shows you all of the outliers. I grabbed this from
+[00:10:42] all of the outliers. I grabbed this from
+[00:10:42] all of the outliers. I grabbed this from my community. Why is this so cool? Well,
+[00:10:44] my community. Why is this so cool? Well,
+[00:10:44] my community. Why is this so cool? Well, this would be something that you could
+[00:10:45] this would be something that you could
+[00:10:45] this would be something that you could have spent hours doing. And this is why
+[00:10:47] have spent hours doing. And this is why
+[00:10:47] have spent hours doing. And this is why this can save you up to a day a week
+[00:10:49] this can save you up to a day a week
+[00:10:49] this can save you up to a day a week because you can now delegate tasks and
+[00:10:51] because you can now delegate tasks and
+[00:10:51] because you can now delegate tasks and automations and research to Hermes and
+[00:10:53] automations and research to Hermes and
+[00:10:53] automations and research to Hermes and it will execute for you perfectly. Now,
+[00:10:55] it will execute for you perfectly. Now,
+[00:10:55] it will execute for you perfectly. Now, this sounds like I'm actually speaking
+[00:10:57] this sounds like I'm actually speaking
+[00:10:57] this sounds like I'm actually speaking Portuguese. I'm going to put a link down
+[00:10:58] Portuguese. I'm going to put a link down
+[00:10:58] Portuguese. I'm going to put a link down below for this full Claude code course
+[00:10:59] below for this full Claude code course
+[00:11:00] below for this full Claude code course that will take you from foundation and
+[00:11:01] that will take you from foundation and
+[00:11:01] that will take you from foundation and setups, building websites, power
+[00:11:03] setups, building websites, power
+[00:11:03] setups, building websites, power features, memory systems, Hermes setup,
+[00:11:05] features, memory systems, Hermes setup,
+[00:11:05] features, memory systems, Hermes setup, stuff I have never covered on YouTube
+[00:11:07] stuff I have never covered on YouTube
+[00:11:07] stuff I have never covered on YouTube before. I'm going to put all down below.
+[00:11:09] before. I'm going to put all down below.
+[00:11:09] before. I'm going to put all down below. People mess about this course all the
+[00:11:10] People mess about this course all the
+[00:11:10] People mess about this course all the freaking time. You also get complete
+[00:11:12] freaking time. You also get complete
+[00:11:12] freaking time. You also get complete immediate access to this entire
+[00:11:13] immediate access to this entire
+[00:11:13] immediate access to this entire operating system. I'll put a link down
+[00:11:15] operating system. I'll put a link down
+[00:11:15] operating system. I'll put a link down below so you can check that and upgrade
+[00:11:17] below so you can check that and upgrade
+[00:11:17] below so you can check that and upgrade if that's valuable to you. And just FYI,
+[00:11:19] if that's valuable to you. And just FYI,
+[00:11:19] if that's valuable to you. And just FYI, by the way, um our price on our
+[00:11:20] by the way, um our price on our
+[00:11:20] by the way, um our price on our community is popping up on the 13th. So
+[00:11:22] community is popping up on the 13th. So
+[00:11:22] community is popping up on the 13th. So if you see it ahead of time, we'd love
+[00:11:23] if you see it ahead of time, we'd love
+[00:11:23] if you see it ahead of time, we'd love to welcome you. So we've covered this in
+[00:11:26] to welcome you. So we've covered this in
+[00:11:26] to welcome you. So we've covered this in level three and it does lead us very
+[00:11:28] level three and it does lead us very
+[00:11:28] level three and it does lead us very nicely onto the fourth level of Hermes,
+[00:11:31] nicely onto the fourth level of Hermes,
+[00:11:31] nicely onto the fourth level of Hermes, which is the integrator. Now in the
+[00:11:32] which is the integrator. Now in the
+[00:11:32] which is the integrator. Now in the integrator section, this is where really
+[00:11:34] integrator section, this is where really
+[00:11:34] integrator section, this is where really Hermes goes to a completely new level.
+[00:11:37] Hermes goes to a completely new level.
+[00:11:37] Hermes goes to a completely new level. And if you look at this graphic as a for
+[00:11:38] And if you look at this graphic as a for
+[00:11:38] And if you look at this graphic as a for instance, okay, what we're really doing
+[00:11:40] instance, okay, what we're really doing
+[00:11:40] instance, okay, what we're really doing is connecting it and giving it the
+[00:11:42] is connecting it and giving it the
+[00:11:42] is connecting it and giving it the ability to connect to your world because
+[00:11:45] ability to connect to your world because
+[00:11:45] ability to connect to your world because the more things that you touch and
+[00:11:47] the more things that you touch and
+[00:11:47] the more things that you touch and interact with that we can plug into
+[00:11:48] interact with that we can plug into
+[00:11:48] interact with that we can plug into Hermes, the more it can really do. A lot
+[00:11:50] Hermes, the more it can really do. A lot
+[00:11:50] Hermes, the more it can really do. A lot of the stuff that we've covered so far
+[00:11:51] of the stuff that we've covered so far
+[00:11:51] of the stuff that we've covered so far is you speaking to Hermes and Hermes
+[00:11:53] is you speaking to Hermes and Hermes
+[00:11:53] is you speaking to Hermes and Hermes doing things like quote me that does X
+[00:11:55] doing things like quote me that does X
+[00:11:55] doing things like quote me that does X or go and research Y. In level four, we
+[00:11:58] or go and research Y. In level four, we
+[00:11:58] or go and research Y. In level four, we really unlock the new capabilities when
+[00:12:00] really unlock the new capabilities when
+[00:12:00] really unlock the new capabilities when we give it access to things like reading
+[00:12:02] we give it access to things like reading
+[00:12:02] we give it access to things like reading our emails, things like creating
+[00:12:03] our emails, things like creating
+[00:12:03] our emails, things like creating calendar appointments with us and our
+[00:12:05] calendar appointments with us and our
+[00:12:05] calendar appointments with us and our friends and our our colleagues and
+[00:12:06] friends and our our colleagues and
+[00:12:06] friends and our our colleagues and potential business partners, looking at
+[00:12:08] potential business partners, looking at
+[00:12:08] potential business partners, looking at notion for like things like our to-do
+[00:12:10] notion for like things like our to-do
+[00:12:10] notion for like things like our to-do list, plugging into Slack so I can get
+[00:12:12] list, plugging into Slack so I can get
+[00:12:12] list, plugging into Slack so I can get immediate updates. For example, maybe
+[00:12:13] immediate updates. For example, maybe
+[00:12:13] immediate updates. For example, maybe you're on ClickUp, right? One of the
+[00:12:15] you're on ClickUp, right? One of the
+[00:12:15] you're on ClickUp, right? One of the things that we could do with ClickUp is
+[00:12:17] things that we could do with ClickUp is
+[00:12:17] things that we could do with ClickUp is have our team, this is one of the things
+[00:12:18] have our team, this is one of the things
+[00:12:18] have our team, this is one of the things I implemented, basically giving updates
+[00:12:20] I implemented, basically giving updates
+[00:12:20] I implemented, basically giving updates on that. And now basically when I want
+[00:12:21] on that. And now basically when I want
+[00:12:21] on that. And now basically when I want to know what's going on in my business,
+[00:12:23] to know what's going on in my business,
+[00:12:23] to know what's going on in my business, I can say, "Hey, Hermes, what were the
+[00:12:25] I can say, "Hey, Hermes, what were the
+[00:12:25] I can say, "Hey, Hermes, what were the numbers this week?" And the really cool
+[00:12:27] numbers this week?" And the really cool
+[00:12:27] numbers this week?" And the really cool thing and I want to stress this upon
+[00:12:28] thing and I want to stress this upon
+[00:12:28] thing and I want to stress this upon you, okay? Is that you give it text but
+[00:12:30] you, okay? Is that you give it text but
+[00:12:30] you, okay? Is that you give it text but also numbers. So if I'm saying, "Hey,
+[00:12:33] also numbers. So if I'm saying, "Hey,
+[00:12:33] also numbers. So if I'm saying, "Hey, I'm thinking about this from a strategic
+[00:12:35] I'm thinking about this from a strategic
+[00:12:35] I'm thinking about this from a strategic point of view. What are your thoughts on
+[00:12:36] point of view. What are your thoughts on
+[00:12:36] point of view. What are your thoughts on this strategy?" And one of the things my
+[00:12:38] this strategy?" And one of the things my
+[00:12:38] this strategy?" And one of the things my Hermes agent will know to do depending
+[00:12:40] Hermes agent will know to do depending
+[00:12:40] Hermes agent will know to do depending upon what I'm talking about is it can go
+[00:12:42] upon what I'm talking about is it can go
+[00:12:42] upon what I'm talking about is it can go to different databases. Say you're
+[00:12:43] to different databases. Say you're
+[00:12:43] to different databases. Say you're connected on ClickUp or whatever you
+[00:12:44] connected on ClickUp or whatever you
+[00:12:44] connected on ClickUp or whatever you are. it can go through the latest
+[00:12:46] are. it can go through the latest
+[00:12:46] are. it can go through the latest updates that you had that week from your
+[00:12:47] updates that you had that week from your
+[00:12:48] updates that you had that week from your team and say well actually Jack did you
+[00:12:49] team and say well actually Jack did you
+[00:12:49] team and say well actually Jack did you know that um you know Kevin or I don't
+[00:12:51] know that um you know Kevin or I don't
+[00:12:51] know that um you know Kevin or I don't know Sarah M or whatever actually
+[00:12:53] know Sarah M or whatever actually
+[00:12:53] know Sarah M or whatever actually submitted a report that unlocked this
+[00:12:55] submitted a report that unlocked this
+[00:12:55] submitted a report that unlocked this new thing that's really relevant for you
+[00:12:56] new thing that's really relevant for you
+[00:12:56] new thing that's really relevant for you to know so the idea is you don't have to
+[00:12:58] to know so the idea is you don't have to
+[00:12:58] to know so the idea is you don't have to rely on your memory or you shouldn't
+[00:13:00] rely on your memory or you shouldn't
+[00:13:00] rely on your memory or you shouldn't have to rely on your memory plugging
+[00:13:02] have to rely on your memory plugging
+[00:13:02] have to rely on your memory plugging Hermes into your world will create new
+[00:13:04] Hermes into your world will create new
+[00:13:04] Hermes into your world will create new optionality for you and this is a key
+[00:13:06] optionality for you and this is a key
+[00:13:06] optionality for you and this is a key thing that everybody's missing how do I
+[00:13:07] thing that everybody's missing how do I
+[00:13:08] thing that everybody's missing how do I actually plug in new things well it's so
+[00:13:09] actually plug in new things well it's so
+[00:13:09] actually plug in new things well it's so unbelievably straightforward let me show
+[00:13:11] unbelievably straightforward let me show
+[00:13:11] unbelievably straightforward let me show you what I mean so say we have our
+[00:13:12] you what I mean so say we have our
+[00:13:12] you what I mean so say we have our Hermes agent here right and again it's
+[00:13:13] Hermes agent here right and again it's
+[00:13:14] Hermes agent here right and again it's even working now in the background
+[00:13:15] even working now in the background
+[00:13:15] even working now in the background around answering our things before and
+[00:13:16] around answering our things before and
+[00:13:16] around answering our things before and I'm going to come down here. I'm going
+[00:13:17] I'm going to come down here. I'm going
+[00:13:17] I'm going to come down here. I'm going to do a for slash and we're going to
+[00:13:19] to do a for slash and we're going to
+[00:13:19] to do a for slash and we're going to stop which is going to kill all the
+[00:13:20] stop which is going to kill all the
+[00:13:20] stop which is going to kill all the background processes and that'll be the
+[00:13:22] background processes and that'll be the
+[00:13:22] background processes and that'll be the end of it. But let's say I want to
+[00:13:23] end of it. But let's say I want to
+[00:13:23] end of it. But let's say I want to connect. So, one of the big ones I love
+[00:13:25] connect. So, one of the big ones I love
+[00:13:25] connect. So, one of the big ones I love to connect to is Granola. They're not
+[00:13:27] to connect to is Granola. They're not
+[00:13:27] to connect to is Granola. They're not sponsoring this video or anything, but
+[00:13:28] sponsoring this video or anything, but
+[00:13:28] sponsoring this video or anything, but the point with Granola is they will let
+[00:13:30] the point with Granola is they will let
+[00:13:30] the point with Granola is they will let you chat to any of your meeting
+[00:13:31] you chat to any of your meeting
+[00:13:32] you chat to any of your meeting histories. For example, I could say,
+[00:13:33] histories. For example, I could say,
+[00:13:33] histories. For example, I could say, "Hey, dude. Um, what was the title of
+[00:13:35] "Hey, dude. Um, what was the title of
+[00:13:35] "Hey, dude. Um, what was the title of the last meeting I had, and can you tell
+[00:13:37] the last meeting I had, and can you tell
+[00:13:37] the last meeting I had, and can you tell me one action I took from it, please?"
+[00:13:39] me one action I took from it, please?"
+[00:13:39] me one action I took from it, please?" Now, when you connect anything to Hermes
+[00:13:40] Now, when you connect anything to Hermes
+[00:13:40] Now, when you connect anything to Hermes agent, sometimes you'll just store the
+[00:13:42] agent, sometimes you'll just store the
+[00:13:42] agent, sometimes you'll just store the API key on your desktop. Other times,
+[00:13:44] API key on your desktop. Other times,
+[00:13:44] API key on your desktop. Other times, you can literally log in by via an MCP,
+[00:13:47] you can literally log in by via an MCP,
+[00:13:47] you can literally log in by via an MCP, which is freaking awesome. And bear in
+[00:13:48] which is freaking awesome. And bear in
+[00:13:48] which is freaking awesome. And bear in mind, guys, this is one of the cool
+[00:13:49] mind, guys, this is one of the cool
+[00:13:49] mind, guys, this is one of the cool benefits of having this on your desktop.
+[00:13:51] benefits of having this on your desktop.
+[00:13:51] benefits of having this on your desktop. Like, it's already got all of your
+[00:13:53] Like, it's already got all of your
+[00:13:53] Like, it's already got all of your signins and credentials, so you don't
+[00:13:54] signins and credentials, so you don't
+[00:13:54] signins and credentials, so you don't need to duplicate this. I mean, I'm not
+[00:13:56] need to duplicate this. I mean, I'm not
+[00:13:56] need to duplicate this. I mean, I'm not getting paid tens of thousands of
+[00:13:57] getting paid tens of thousands of
+[00:13:58] getting paid tens of thousands of dollars to sell you some kind of VPS. I
+[00:14:00] dollars to sell you some kind of VPS. I
+[00:14:00] dollars to sell you some kind of VPS. I tell you exactly what I do in these
+[00:14:02] tell you exactly what I do in these
+[00:14:02] tell you exactly what I do in these situations, which is running it locally
+[00:14:03] situations, which is running it locally
+[00:14:03] situations, which is running it locally on my computer. I don't really see the
+[00:14:05] on my computer. I don't really see the
+[00:14:05] on my computer. I don't really see the point or value in running it on a VPS to
+[00:14:08] point or value in running it on a VPS to
+[00:14:08] point or value in running it on a VPS to be honest with you. So, it's just really
+[00:14:09] be honest with you. So, it's just really
+[00:14:09] be honest with you. So, it's just really cool and just makes it a lot easier to
+[00:14:11] cool and just makes it a lot easier to
+[00:14:11] cool and just makes it a lot easier to do things like this. So we would just
+[00:14:12] do things like this. So we would just
+[00:14:12] do things like this. So we would just come down and we click on allow access
+[00:14:14] come down and we click on allow access
+[00:14:14] come down and we click on allow access in this case. And as you can see down
+[00:14:15] in this case. And as you can see down
+[00:14:15] in this case. And as you can see down here, one action you took away from a
+[00:14:17] here, one action you took away from a
+[00:14:17] here, one action you took away from a automation coffee was to collaborate
+[00:14:18] automation coffee was to collaborate
+[00:14:18] automation coffee was to collaborate with someone in the workshop regarding
+[00:14:19] with someone in the workshop regarding
+[00:14:19] with someone in the workshop regarding iOS knowledge graph. There you go. You
+[00:14:21] iOS knowledge graph. There you go. You
+[00:14:21] iOS knowledge graph. There you go. You can see exactly how that's connected and
+[00:14:23] can see exactly how that's connected and
+[00:14:23] can see exactly how that's connected and we even set the one up together. And the
+[00:14:24] we even set the one up together. And the
+[00:14:24] we even set the one up together. And the other thing to bear in mind is if you're
+[00:14:25] other thing to bear in mind is if you're
+[00:14:25] other thing to bear in mind is if you're ever not sure how to connect something,
+[00:14:27] ever not sure how to connect something,
+[00:14:27] ever not sure how to connect something, just say, "Hey, I want to give you the
+[00:14:28] just say, "Hey, I want to give you the
+[00:14:28] just say, "Hey, I want to give you the ability to do this thing. What do you
+[00:14:30] ability to do this thing. What do you
+[00:14:30] ability to do this thing. What do you need from me to do it?" And just follow
+[00:14:32] need from me to do it?" And just follow
+[00:14:32] need from me to do it?" And just follow through the instructions. One little
+[00:14:34] through the instructions. One little
+[00:14:34] through the instructions. One little side hack for you. Don't ever paste
+[00:14:35] side hack for you. Don't ever paste
+[00:14:36] side hack for you. Don't ever paste those API keys directly in Hermes. You
+[00:14:38] those API keys directly in Hermes. You
+[00:14:38] those API keys directly in Hermes. You can save them on your desktop or it'll
+[00:14:40] can save them on your desktop or it'll
+[00:14:40] can save them on your desktop or it'll give you a terminal command. You can
+[00:14:41] give you a terminal command. You can
+[00:14:41] give you a terminal command. You can enter that in and it will th basically
+[00:14:43] enter that in and it will th basically
+[00:14:43] enter that in and it will th basically explain everything to you step by step.
+[00:14:45] explain everything to you step by step.
+[00:14:45] explain everything to you step by step. Now, where most people get stuck at this
+[00:14:48] Now, where most people get stuck at this
+[00:14:48] Now, where most people get stuck at this level is they basically give it the MCP
+[00:14:50] level is they basically give it the MCP
+[00:14:50] level is they basically give it the MCP candy store. We give you imagine giving
+[00:14:52] candy store. We give you imagine giving
+[00:14:52] candy store. We give you imagine giving the 5-year-old all the candy in the
+[00:14:53] the 5-year-old all the candy in the
+[00:14:53] the 5-year-old all the candy in the world in a candy shop, it would go
+[00:14:54] world in a candy shop, it would go
+[00:14:54] world in a candy shop, it would go freaking in ballistic. So, same thing
+[00:14:56] freaking in ballistic. So, same thing
+[00:14:56] freaking in ballistic. So, same thing here. Now, the more MCPs that we give to
+[00:14:59] here. Now, the more MCPs that we give to
+[00:14:59] here. Now, the more MCPs that we give to him, his agent, the bigger its context
+[00:15:01] him, his agent, the bigger its context
+[00:15:01] him, his agent, the bigger its context window actually grows. Now, there are
+[00:15:03] window actually grows. Now, there are
+[00:15:03] window actually grows. Now, there are cool tools we can do like laser loading
+[00:15:05] cool tools we can do like laser loading
+[00:15:05] cool tools we can do like laser loading them and stuff, but fundamentally we
+[00:15:07] them and stuff, but fundamentally we
+[00:15:07] them and stuff, but fundamentally we don't want to give it loads of garbage
+[00:15:09] don't want to give it loads of garbage
+[00:15:09] don't want to give it loads of garbage that we're not physically using. So it's
+[00:15:11] that we're not physically using. So it's
+[00:15:11] that we're not physically using. So it's context window doesn't balloon
+[00:15:12] context window doesn't balloon
+[00:15:12] context window doesn't balloon significantly. That's just one to watch
+[00:15:14] significantly. That's just one to watch
+[00:15:14] significantly. That's just one to watch out. And the idea is the fewer number of
+[00:15:15] out. And the idea is the fewer number of
+[00:15:15] out. And the idea is the fewer number of keys we can give it the better. Now a
+[00:15:17] keys we can give it the better. Now a
+[00:15:17] keys we can give it the better. Now a couple things I really want to bear in
+[00:15:18] couple things I really want to bear in
+[00:15:18] couple things I really want to bear in mind with this. First of all, emails. I
+[00:15:20] mind with this. First of all, emails. I
+[00:15:20] mind with this. First of all, emails. I personally do not give it the ability to
+[00:15:22] personally do not give it the ability to
+[00:15:22] personally do not give it the ability to send emails. It can draft them. It can
+[00:15:24] send emails. It can draft them. It can
+[00:15:24] send emails. It can draft them. It can add things to my calendar, but it can't
+[00:15:26] add things to my calendar, but it can't
+[00:15:26] add things to my calendar, but it can't send emails just yet. So I kind of like
+[00:15:28] send emails just yet. So I kind of like
+[00:15:28] send emails just yet. So I kind of like to keep that one internally rather than
+[00:15:30] to keep that one internally rather than
+[00:15:30] to keep that one internally rather than sending it out. Some point it will be
+[00:15:32] sending it out. Some point it will be
+[00:15:32] sending it out. Some point it will be fine, but at the moment I just like to
+[00:15:33] fine, but at the moment I just like to
+[00:15:33] fine, but at the moment I just like to keep that um requirement to myself. And
+[00:15:35] keep that um requirement to myself. And
+[00:15:35] keep that um requirement to myself. And so really level four is about crushing
+[00:15:38] so really level four is about crushing
+[00:15:38] so really level four is about crushing your admin. It should be able to do
+[00:15:40] your admin. It should be able to do
+[00:15:40] your admin. It should be able to do anything you need it to do. Anything
+[00:15:42] anything you need it to do. Anything
+[00:15:42] anything you need it to do. Anything that you would personally do on a
+[00:15:43] that you would personally do on a
+[00:15:43] that you would personally do on a laptop, Hermes should be able to do that
+[00:15:45] laptop, Hermes should be able to do that
+[00:15:45] laptop, Hermes should be able to do that for you. And if it can't, just ask
+[00:15:47] for you. And if it can't, just ask
+[00:15:47] for you. And if it can't, just ask yourself, why doesn't it have that
+[00:15:48] yourself, why doesn't it have that
+[00:15:48] yourself, why doesn't it have that access and just connect it to Hermes.
+[00:15:50] access and just connect it to Hermes.
+[00:15:50] access and just connect it to Hermes. It's a really good exercise to do and
+[00:15:52] It's a really good exercise to do and
+[00:15:52] It's a really good exercise to do and will save you so much time. Now, level
+[00:15:54] will save you so much time. Now, level
+[00:15:54] will save you so much time. Now, level five is when it starts to get very
+[00:15:56] five is when it starts to get very
+[00:15:56] five is when it starts to get very interesting. We call this level the
+[00:15:58] interesting. We call this level the
+[00:15:58] interesting. We call this level the orchestration level. Effectively, where
+[00:16:00] orchestration level. Effectively, where
+[00:16:00] orchestration level. Effectively, where Hermes becomes not only an executing
+[00:16:02] Hermes becomes not only an executing
+[00:16:02] Hermes becomes not only an executing agent, but a manager that manages other
+[00:16:05] agent, but a manager that manages other
+[00:16:05] agent, but a manager that manages other agents to do different tasks. It can in
+[00:16:07] agents to do different tasks. It can in
+[00:16:07] agents to do different tasks. It can in fact spin up multiple agents and every
+[00:16:10] fact spin up multiple agents and every
+[00:16:10] fact spin up multiple agents and every single update that you see with Claude
+[00:16:12] single update that you see with Claude
+[00:16:12] single update that you see with Claude Opus 4.8 can now do this cool thing. It
+[00:16:14] Opus 4.8 can now do this cool thing. It
+[00:16:14] Opus 4.8 can now do this cool thing. It can do ultra work. Hermes can do the
+[00:16:16] can do ultra work. Hermes can do the
+[00:16:16] can do ultra work. Hermes can do the exact same thing. Remember someone asked
+[00:16:17] exact same thing. Remember someone asked
+[00:16:17] exact same thing. Remember someone asked me recently, Jack, what's better, Claude
+[00:16:19] me recently, Jack, what's better, Claude
+[00:16:19] me recently, Jack, what's better, Claude or Hermes? It's like asking me what is
+[00:16:22] or Hermes? It's like asking me what is
+[00:16:22] or Hermes? It's like asking me what is better, Lewis Hamilton or Ferrari.
+[00:16:24] better, Lewis Hamilton or Ferrari.
+[00:16:24] better, Lewis Hamilton or Ferrari. They're different, right? Hermes is the
+[00:16:26] They're different, right? Hermes is the
+[00:16:26] They're different, right? Hermes is the if you think of Hermes is more kind of
+[00:16:27] if you think of Hermes is more kind of
+[00:16:27] if you think of Hermes is more kind of like the the actual agent system and
+[00:16:29] like the the actual agent system and
+[00:16:29] like the the actual agent system and then the actual driver, the race car
+[00:16:31] then the actual driver, the race car
+[00:16:31] then the actual driver, the race car drivers are things like Claude and Chat
+[00:16:33] drivers are things like Claude and Chat
+[00:16:33] drivers are things like Claude and Chat GPT. This is more of a system that
+[00:16:35] GPT. This is more of a system that
+[00:16:35] GPT. This is more of a system that surrounds it. Now the key thing here is
+[00:16:36] surrounds it. Now the key thing here is
+[00:16:36] surrounds it. Now the key thing here is that Hermes itself can use Opus 4.8 and
+[00:16:39] that Hermes itself can use Opus 4.8 and
+[00:16:39] that Hermes itself can use Opus 4.8 and all of these individual models to do
+[00:16:41] all of these individual models to do
+[00:16:41] all of these individual models to do many different things at the exact same
+[00:16:43] many different things at the exact same
+[00:16:43] many different things at the exact same time. And we just mentioned didn't we
+[00:16:45] time. And we just mentioned didn't we
+[00:16:45] time. And we just mentioned didn't we about the Pantheon this idea that we can
+[00:16:46] about the Pantheon this idea that we can
+[00:16:46] about the Pantheon this idea that we can actually go ahead if I bring up the
+[00:16:48] actually go ahead if I bring up the
+[00:16:48] actually go ahead if I bring up the right actual tab here and show you this
+[00:16:50] right actual tab here and show you this
+[00:16:50] right actual tab here and show you this all these different systems these
+[00:16:51] all these different systems these
+[00:16:51] all these different systems these different skills that we want to build
+[00:16:52] different skills that we want to build
+[00:16:52] different skills that we want to build out to do various different things. But
+[00:16:54] out to do various different things. But
+[00:16:54] out to do various different things. But what is really cool about Hermes agent
+[00:16:55] what is really cool about Hermes agent
+[00:16:56] what is really cool about Hermes agent is that we can actually ask it to do
+[00:16:58] is that we can actually ask it to do
+[00:16:58] is that we can actually ask it to do multiple things at the same time. Let me
+[00:17:00] multiple things at the same time. Let me
+[00:17:00] multiple things at the same time. Let me show you what I mean. And this is really
+[00:17:01] show you what I mean. And this is really
+[00:17:01] show you what I mean. And this is really where the sub agents come to play. So I
+[00:17:03] where the sub agents come to play. So I
+[00:17:03] where the sub agents come to play. So I can say hey there I would like you to
+[00:17:05] can say hey there I would like you to
+[00:17:05] can say hey there I would like you to create for me a team of agents. I would
+[00:17:09] create for me a team of agents. I would
+[00:17:09] create for me a team of agents. I would like one of the sub aents to be called
+[00:17:11] like one of the sub aents to be called
+[00:17:11] like one of the sub aents to be called it chat GBT 5.5. I want to use DeepSeek
+[00:17:14] it chat GBT 5.5. I want to use DeepSeek
+[00:17:14] it chat GBT 5.5. I want to use DeepSeek V4 and I'd like to task DeepSeek V4 with
+[00:17:16] V4 and I'd like to task DeepSeek V4 with
+[00:17:16] V4 and I'd like to task DeepSeek V4 with going and doing some comprehensive
+[00:17:18] going and doing some comprehensive
+[00:17:18] going and doing some comprehensive research on the best industries to sell
+[00:17:22] research on the best industries to sell
+[00:17:22] research on the best industries to sell websites to. I want GPT4, excuse me, GPT
+[00:17:25] websites to. I want GPT4, excuse me, GPT
+[00:17:25] websites to. I want GPT4, excuse me, GPT 5.5 to critique it and I want them to go
+[00:17:27] 5.5 to critique it and I want them to go
+[00:17:27] 5.5 to critique it and I want them to go around in a loop until they've solved
+[00:17:28] around in a loop until they've solved
+[00:17:28] around in a loop until they've solved the issue. And then I would like to have
+[00:17:30] the issue. And then I would like to have
+[00:17:30] the issue. And then I would like to have Opus 4.8 eight as an orchestrative agent
+[00:17:33] Opus 4.8 eight as an orchestrative agent
+[00:17:33] Opus 4.8 eight as an orchestrative agent that will oversee it like his team, spin
+[00:17:35] that will oversee it like his team, spin
+[00:17:35] that will oversee it like his team, spin up as many sub agents as you see fit,
+[00:17:37] up as many sub agents as you see fit,
+[00:17:37] up as many sub agents as you see fit, but a lot of the work I want done by the
+[00:17:39] but a lot of the work I want done by the
+[00:17:39] but a lot of the work I want done by the very cheap Deep Seek V4. And as you can
+[00:17:41] very cheap Deep Seek V4. And as you can
+[00:17:41] very cheap Deep Seek V4. And as you can see, it's actually going ahead and doing
+[00:17:42] see, it's actually going ahead and doing
+[00:17:42] see, it's actually going ahead and doing that for us. So, we have multiple agents
+[00:17:45] that for us. So, we have multiple agents
+[00:17:45] that for us. So, we have multiple agents in Hermes working in parallel. Now, this
+[00:17:48] in Hermes working in parallel. Now, this
+[00:17:48] in Hermes working in parallel. Now, this is the reason why this is even better in
+[00:17:50] is the reason why this is even better in
+[00:17:50] is the reason why this is even better in some respects than Opus 4.8 is mainly
+[00:17:52] some respects than Opus 4.8 is mainly
+[00:17:52] some respects than Opus 4.8 is mainly because we're not just using Claude
+[00:17:54] because we're not just using Claude
+[00:17:54] because we're not just using Claude here. Now obviously you can connect
+[00:17:55] here. Now obviously you can connect
+[00:17:55] here. Now obviously you can connect these things to Claude which is fine but
+[00:17:57] these things to Claude which is fine but
+[00:17:57] these things to Claude which is fine but again I get to bring in any model I want
+[00:17:59] again I get to bring in any model I want
+[00:17:59] again I get to bring in any model I want to to do anything that I want. You can
+[00:18:01] to to do anything that I want. You can
+[00:18:02] to to do anything that I want. You can do this within Claude but I also think
+[00:18:03] do this within Claude but I also think
+[00:18:03] do this within Claude but I also think it's one of the coolest things that we
+[00:18:05] it's one of the coolest things that we
+[00:18:05] it's one of the coolest things that we can do in Hermes which is completely
+[00:18:06] can do in Hermes which is completely
+[00:18:06] can do in Hermes which is completely model agnostic. We bring in the best
+[00:18:09] model agnostic. We bring in the best
+[00:18:09] model agnostic. We bring in the best model for the job and we have these
+[00:18:11] model for the job and we have these
+[00:18:11] model for the job and we have these fantastic parallel agents working for
+[00:18:13] fantastic parallel agents working for
+[00:18:13] fantastic parallel agents working for us. Now on level five itself this is
+[00:18:15] us. Now on level five itself this is
+[00:18:15] us. Now on level five itself this is where you can really explode your output
+[00:18:18] where you can really explode your output
+[00:18:18] where you can really explode your output if you know what you're applying for.
+[00:18:20] if you know what you're applying for.
+[00:18:20] if you know what you're applying for. Remember the biggest hallmark basically
+[00:18:22] Remember the biggest hallmark basically
+[00:18:22] Remember the biggest hallmark basically of a of a beginner automator is that you
+[00:18:25] of a of a beginner automator is that you
+[00:18:25] of a of a beginner automator is that you automate stuff that should simply should
+[00:18:26] automate stuff that should simply should
+[00:18:26] automate stuff that should simply should not exist. The idea is this is high
+[00:18:29] not exist. The idea is this is high
+[00:18:29] not exist. The idea is this is high leverage when you know the high leverage
+[00:18:31] leverage when you know the high leverage
+[00:18:31] leverage when you know the high leverage thing that you're focusing in on. Right?
+[00:18:33] thing that you're focusing in on. Right?
+[00:18:33] thing that you're focusing in on. Right? We don't just talk about AI here. We
+[00:18:34] We don't just talk about AI here. We
+[00:18:34] We don't just talk about AI here. We talk about in the context of winning
+[00:18:36] talk about in the context of winning
+[00:18:36] talk about in the context of winning like in life like in business, in our
+[00:18:38] like in life like in business, in our
+[00:18:38] like in life like in business, in our physical health, in our relationships.
+[00:18:40] physical health, in our relationships.
+[00:18:40] physical health, in our relationships. We want to be the best version of
+[00:18:42] We want to be the best version of
+[00:18:42] We want to be the best version of ourselves. And that means we know the
+[00:18:44] ourselves. And that means we know the
+[00:18:44] ourselves. And that means we know the problem that we're solving. AI is an
+[00:18:45] problem that we're solving. AI is an
+[00:18:45] problem that we're solving. AI is an accelerant to that end. So the point is
+[00:18:47] accelerant to that end. So the point is
+[00:18:47] accelerant to that end. So the point is you can start to tank your output if you
+[00:18:50] you can start to tank your output if you
+[00:18:50] you can start to tank your output if you know what you're focusing on and what
+[00:18:51] know what you're focusing on and what
+[00:18:51] know what you're focusing on and what your bottleneck is in your particular
+[00:18:53] your bottleneck is in your particular
+[00:18:53] your bottleneck is in your particular business or situation. So it's a real
+[00:18:55] business or situation. So it's a real
+[00:18:55] business or situation. So it's a real explosive feature. But it brings us very
+[00:18:57] explosive feature. But it brings us very
+[00:18:57] explosive feature. But it brings us very nicely onto the sixth level where it
+[00:19:00] nicely onto the sixth level where it
+[00:19:00] nicely onto the sixth level where it takes one step further. And this one is
+[00:19:01] takes one step further. And this one is
+[00:19:02] takes one step further. And this one is known as the builder. So first thing to
+[00:19:04] known as the builder. So first thing to
+[00:19:04] known as the builder. So first thing to understand about Hermes agent is that it
+[00:19:05] understand about Hermes agent is that it
+[00:19:06] understand about Hermes agent is that it does ship real things. Anything I'm
+[00:19:08] does ship real things. Anything I'm
+[00:19:08] does ship real things. Anything I'm getting fired up right now. Anything you
+[00:19:09] getting fired up right now. Anything you
+[00:19:10] getting fired up right now. Anything you can build in Claude Code, you can build
+[00:19:12] can build in Claude Code, you can build
+[00:19:12] can build in Claude Code, you can build in Hermes agent. And honestly for me
+[00:19:14] in Hermes agent. And honestly for me
+[00:19:14] in Hermes agent. And honestly for me guy, this was the coolest unlock to be
+[00:19:17] guy, this was the coolest unlock to be
+[00:19:17] guy, this was the coolest unlock to be at the gym doing my bench press. I used
+[00:19:19] at the gym doing my bench press. I used
+[00:19:19] at the gym doing my bench press. I used to decline, incline, whatever you want
+[00:19:20] to decline, incline, whatever you want
+[00:19:20] to decline, incline, whatever you want to do. And being able to actually code
+[00:19:23] to do. And being able to actually code
+[00:19:23] to do. And being able to actually code things and build things is a freaking
+[00:19:25] things and build things is a freaking
+[00:19:25] things and build things is a freaking unbelievable. If you're building
+[00:19:27] unbelievable. If you're building
+[00:19:27] unbelievable. If you're building software, the ability to have those
+[00:19:28] software, the ability to have those
+[00:19:28] software, the ability to have those conversations, spin up the different sub
+[00:19:30] conversations, spin up the different sub
+[00:19:30] conversations, spin up the different sub agents and build software whilst you're
+[00:19:33] agents and build software whilst you're
+[00:19:33] agents and build software whilst you're doing anything else you want to is
+[00:19:34] doing anything else you want to is
+[00:19:34] doing anything else you want to is literally gamechanging. It is no longer
+[00:19:37] literally gamechanging. It is no longer
+[00:19:37] literally gamechanging. It is no longer just a chatbot. This is software. You
+[00:19:39] just a chatbot. This is software. You
+[00:19:39] just a chatbot. This is software. You are building software. And I'm telling
+[00:19:41] are building software. And I'm telling
+[00:19:41] are building software. And I'm telling you right now, that is the future.
+[00:19:42] you right now, that is the future.
+[00:19:42] you right now, that is the future. Building these micro softwares, these
+[00:19:44] Building these micro softwares, these
+[00:19:44] Building these micro softwares, these micro apps is insane. If you have the
+[00:19:46] micro apps is insane. If you have the
+[00:19:46] micro apps is insane. If you have the idea, if you can imagine it, you can
+[00:19:48] idea, if you can imagine it, you can
+[00:19:48] idea, if you can imagine it, you can build it. That's kind of the point here.
+[00:19:50] build it. That's kind of the point here.
+[00:19:50] build it. That's kind of the point here. Hermes lets us do this remotely and in
+[00:19:52] Hermes lets us do this remotely and in
+[00:19:52] Hermes lets us do this remotely and in my view no other app it terms of like
+[00:19:55] my view no other app it terms of like
+[00:19:55] my view no other app it terms of like you know Codeex and Claude really
+[00:19:56] you know Codeex and Claude really
+[00:19:56] you know Codeex and Claude really compete with Hermes remote ability. You
+[00:19:59] compete with Hermes remote ability. You
+[00:19:59] compete with Hermes remote ability. You can hack it and make it hacky but then
+[00:20:00] can hack it and make it hacky but then
+[00:20:00] can hack it and make it hacky but then what you start to realize is you're
+[00:20:02] what you start to realize is you're
+[00:20:02] what you start to realize is you're basically just rebuilding Hermes anyway.
+[00:20:04] basically just rebuilding Hermes anyway.
+[00:20:04] basically just rebuilding Hermes anyway. So this is why this is so freaking sick.
+[00:20:06] So this is why this is so freaking sick.
+[00:20:06] So this is why this is so freaking sick. And at level six as well you start to
+[00:20:08] And at level six as well you start to
+[00:20:08] And at level six as well you start to use its automation features. And what do
+[00:20:10] use its automation features. And what do
+[00:20:10] use its automation features. And what do I mean by that? I mean about asking it
+[00:20:11] I mean by that? I mean about asking it
+[00:20:11] I mean by that? I mean about asking it to do things at certain times. Taking
+[00:20:14] to do things at certain times. Taking
+[00:20:14] to do things at certain times. Taking what we call asynchronosity which means
+[00:20:16] what we call asynchronosity which means
+[00:20:16] what we call asynchronosity which means that most people do this. I answer you
+[00:20:18] that most people do this. I answer you
+[00:20:18] that most people do this. I answer you respond. you you ask a question, I
+[00:20:20] respond. you you ask a question, I
+[00:20:20] respond. you you ask a question, I respond. What people in level six do at
+[00:20:22] respond. What people in level six do at
+[00:20:22] respond. What people in level six do at the builder level is they're actually
+[00:20:23] the builder level is they're actually
+[00:20:23] the builder level is they're actually adding scheduled tasks. They're saying,
+[00:20:25] adding scheduled tasks. They're saying,
+[00:20:25] adding scheduled tasks. They're saying, "Hey, Hermes, um, I need to go and have
+[00:20:27] "Hey, Hermes, um, I need to go and have
+[00:20:27] "Hey, Hermes, um, I need to go and have a conversation this weekend with, you
+[00:20:29] a conversation this weekend with, you
+[00:20:29] a conversation this weekend with, you know, I don't know, McKenzie and K. Um,
+[00:20:31] know, I don't know, McKenzie and K. Um,
+[00:20:31] know, I don't know, McKenzie and K. Um, do some deep research over the next 24
+[00:20:33] do some deep research over the next 24
+[00:20:33] do some deep research over the next 24 hours and then on Friday afternoon, make
+[00:20:35] hours and then on Friday afternoon, make
+[00:20:35] hours and then on Friday afternoon, make sure you give me a fresh report on my
+[00:20:36] sure you give me a fresh report on my
+[00:20:36] sure you give me a fresh report on my desk, find the email addresses of all
+[00:20:38] desk, find the email addresses of all
+[00:20:38] desk, find the email addresses of all the board, the members of the board, and
+[00:20:40] the board, the members of the board, and
+[00:20:40] the board, the members of the board, and actually draft me an email." Or you'll
+[00:20:42] actually draft me an email." Or you'll
+[00:20:42] actually draft me an email." Or you'll say, "And also send me a reminder on
+[00:20:43] say, "And also send me a reminder on
+[00:20:43] say, "And also send me a reminder on Thursday evening that I need to go ahead
+[00:20:45] Thursday evening that I need to go ahead
+[00:20:45] Thursday evening that I need to go ahead and do this thing." And you're basically
+[00:20:47] and do this thing." And you're basically
+[00:20:47] and do this thing." And you're basically creating your scheduled tasks. And it's
+[00:20:48] creating your scheduled tasks. And it's
+[00:20:48] creating your scheduled tasks. And it's unbelievably easy to do. For example,
+[00:20:50] unbelievably easy to do. For example,
+[00:20:50] unbelievably easy to do. For example, you just say, "Hey there, I've got a big
+[00:20:52] you just say, "Hey there, I've got a big
+[00:20:52] you just say, "Hey there, I've got a big meeting on Sunday. Could you just set me
+[00:20:54] meeting on Sunday. Could you just set me
+[00:20:54] meeting on Sunday. Could you just set me a reminder, I don't know, midday at
+[00:20:56] a reminder, I don't know, midday at
+[00:20:56] a reminder, I don't know, midday at 12:00 on Saturday, Dubai time, to do
+[00:20:58] 12:00 on Saturday, Dubai time, to do
+[00:20:58] 12:00 on Saturday, Dubai time, to do some preparation for my meeting with uh
+[00:21:01] some preparation for my meeting with uh
+[00:21:01] some preparation for my meeting with uh in the video. I want you to do some deep
+[00:21:03] in the video. I want you to do some deep
+[00:21:03] in the video. I want you to do some deep research between now and then. Find out
+[00:21:05] research between now and then. Find out
+[00:21:05] research between now and then. Find out who the members of the board are and
+[00:21:06] who the members of the board are and
+[00:21:06] who the members of the board are and then also go ahead and um find me five
+[00:21:08] then also go ahead and um find me five
+[00:21:08] then also go ahead and um find me five interesting things to talk about in that
+[00:21:09] interesting things to talk about in that
+[00:21:10] interesting things to talk about in that meeting." Whatever the thing is, I can
+[00:21:11] meeting." Whatever the thing is, I can
+[00:21:11] meeting." Whatever the thing is, I can send that off. And I'm just explaining
+[00:21:13] send that off. And I'm just explaining
+[00:21:13] send that off. And I'm just explaining it. I'm yapping in English, by the way.
+[00:21:15] it. I'm yapping in English, by the way.
+[00:21:15] it. I'm yapping in English, by the way. When I'm not using Glider, which I'm
+[00:21:17] When I'm not using Glider, which I'm
+[00:21:17] When I'm not using Glider, which I'm using for my speech dictation, fastest
+[00:21:18] using for my speech dictation, fastest
+[00:21:18] using for my speech dictation, fastest in the world right now, I typically do
+[00:21:20] in the world right now, I typically do
+[00:21:20] in the world right now, I typically do my voice message when I'm talking to
+[00:21:21] my voice message when I'm talking to
+[00:21:21] my voice message when I'm talking to Hermes is and I just yap and I talk
+[00:21:23] Hermes is and I just yap and I talk
+[00:21:23] Hermes is and I just yap and I talk because the speed at which you can get
+[00:21:25] because the speed at which you can get
+[00:21:25] because the speed at which you can get information out is four or five times
+[00:21:27] information out is four or five times
+[00:21:27] information out is four or five times faster, which is why I speech type. It's
+[00:21:29] faster, which is why I speech type. It's
+[00:21:29] faster, which is why I speech type. It's like honestly the biggest productivity
+[00:21:30] like honestly the biggest productivity
+[00:21:30] like honestly the biggest productivity hack I've had and something I use with
+[00:21:32] hack I've had and something I use with
+[00:21:32] hack I've had and something I use with Hermes all the time. Now, Hermes is
+[00:21:34] Hermes all the time. Now, Hermes is
+[00:21:34] Hermes all the time. Now, Hermes is setting a reminder to remind me of
+[00:21:35] setting a reminder to remind me of
+[00:21:35] setting a reminder to remind me of something. I mean, this sends me a daily
+[00:21:36] something. I mean, this sends me a daily
+[00:21:36] something. I mean, this sends me a daily brief every single day. It's freaking
+[00:21:37] brief every single day. It's freaking
+[00:21:37] brief every single day. It's freaking incredible. And then it's also going to
+[00:21:39] incredible. And then it's also going to
+[00:21:39] incredible. And then it's also going to do some research and come back and make
+[00:21:40] do some research and come back and make
+[00:21:40] do some research and come back and make that reality. Look at this right now.
+[00:21:41] that reality. Look at this right now.
+[00:21:41] that reality. Look at this right now. So, a wonderful reminder research for
+[00:21:43] So, a wonderful reminder research for
+[00:21:43] So, a wonderful reminder research for June 6, you know, midday. It's like an
+[00:21:46] June 6, you know, midday. It's like an
+[00:21:46] June 6, you know, midday. It's like an executive assistant, but it never
+[00:21:47] executive assistant, but it never
+[00:21:47] executive assistant, but it never forgets and and it's like the most
+[00:21:49] forgets and and it's like the most
+[00:21:49] forgets and and it's like the most intelligent thing in the world. You're
+[00:21:50] intelligent thing in the world. You're
+[00:21:50] intelligent thing in the world. You're only really limited by how you're
+[00:21:52] only really limited by how you're
+[00:21:52] only really limited by how you're physically applying her to your
+[00:21:54] physically applying her to your
+[00:21:54] physically applying her to your situation. And what level six is going
+[00:21:56] situation. And what level six is going
+[00:21:56] situation. And what level six is going to give you is something really powerful
+[00:21:58] to give you is something really powerful
+[00:21:58] to give you is something really powerful and it's this idea I mentioned of
+[00:21:59] and it's this idea I mentioned of
+[00:21:59] and it's this idea I mentioned of asynchronosity that it ships without
+[00:22:01] asynchronosity that it ships without
+[00:22:02] asynchronosity that it ships without you. It does things without you. And
+[00:22:03] you. It does things without you. And
+[00:22:04] you. It does things without you. And your relationship goes from being I say
+[00:22:06] your relationship goes from being I say
+[00:22:06] your relationship goes from being I say you respond to something completely
+[00:22:08] you respond to something completely
+[00:22:08] you respond to something completely asynchronous and it does that. So things
+[00:22:10] asynchronous and it does that. So things
+[00:22:10] asynchronous and it does that. So things get built even when you're not thinking
+[00:22:12] get built even when you're not thinking
+[00:22:12] get built even when you're not thinking about them. That's like the huge unlock
+[00:22:15] about them. That's like the huge unlock
+[00:22:15] about them. That's like the huge unlock for level six with Hermes. And that then
+[00:22:17] for level six with Hermes. And that then
+[00:22:17] for level six with Hermes. And that then takes us to the doorstep of the most
+[00:22:19] takes us to the doorstep of the most
+[00:22:20] takes us to the doorstep of the most powerful level of Hermes agent and that
+[00:22:22] powerful level of Hermes agent and that
+[00:22:22] powerful level of Hermes agent and that is the agentic power user. And the idea
+[00:22:24] is the agentic power user. And the idea
+[00:22:24] is the agentic power user. And the idea behind the agentic power users we have
+[00:22:26] behind the agentic power users we have
+[00:22:26] behind the agentic power users we have one operating system for every AI. What
+[00:22:30] one operating system for every AI. What
+[00:22:30] one operating system for every AI. What do I physically mean when I say that?
+[00:22:32] do I physically mean when I say that?
+[00:22:32] do I physically mean when I say that? Well, I best showing you. So this for
+[00:22:33] Well, I best showing you. So this for
+[00:22:34] Well, I best showing you. So this for example is the agentic operating system
+[00:22:36] example is the agentic operating system
+[00:22:36] example is the agentic operating system that I use. Now here obviously we've got
+[00:22:38] that I use. Now here obviously we've got
+[00:22:38] that I use. Now here obviously we've got a full overview of all the brands that
+[00:22:40] a full overview of all the brands that
+[00:22:40] a full overview of all the brands that we're connected to, all the different
+[00:22:41] we're connected to, all the different
+[00:22:41] we're connected to, all the different integrations that we have. We can talk
+[00:22:43] integrations that we have. We can talk
+[00:22:43] integrations that we have. We can talk to Hermes. I've been over the incredible
+[00:22:45] to Hermes. I've been over the incredible
+[00:22:45] to Hermes. I've been over the incredible functionalities this has this ability to
+[00:22:47] functionalities this has this ability to
+[00:22:47] functionalities this has this ability to create midterm goals for your business.
+[00:22:49] create midterm goals for your business.
+[00:22:50] create midterm goals for your business. And it breaks down in steps and give you
+[00:22:51] And it breaks down in steps and give you
+[00:22:52] And it breaks down in steps and give you like eight different steps of what
+[00:22:53] like eight different steps of what
+[00:22:53] like eight different steps of what Hermes is going to do, what you're going
+[00:22:55] Hermes is going to do, what you're going
+[00:22:55] Hermes is going to do, what you're going to do, and vice versa. The Panther tend
+[00:22:57] to do, and vice versa. The Panther tend
+[00:22:57] to do, and vice versa. The Panther tend to look at our different skills. And
+[00:22:58] to look at our different skills. And
+[00:22:58] to look at our different skills. And this is where it gets really
+[00:22:59] this is where it gets really
+[00:22:59] this is where it gets really interesting, right? After we've got the
+[00:23:00] interesting, right? After we've got the
+[00:23:00] interesting, right? After we've got the memory, we've got the Obsidian
+[00:23:01] memory, we've got the Obsidian
+[00:23:01] memory, we've got the Obsidian integration, we've got all our
+[00:23:02] integration, we've got all our
+[00:23:02] integration, we've got all our documents, which is crazy. If I want to
+[00:23:04] documents, which is crazy. If I want to
+[00:23:04] documents, which is crazy. If I want to look at, for example, something Hermes
+[00:23:05] look at, for example, something Hermes
+[00:23:05] look at, for example, something Hermes made for me, I can look at this. There
+[00:23:07] made for me, I can look at this. There
+[00:23:07] made for me, I can look at this. There is nothing else to do this right now.
+[00:23:09] is nothing else to do this right now.
+[00:23:09] is nothing else to do this right now. Like, you're going to build PDFs, you're
+[00:23:11] Like, you're going to build PDFs, you're
+[00:23:11] Like, you're going to build PDFs, you're going to build documents, you're going
+[00:23:12] going to build documents, you're going
+[00:23:12] going to build documents, you're going to build softwares, but they just live
+[00:23:14] to build softwares, but they just live
+[00:23:14] to build softwares, but they just live in the chat or they're just filed
+[00:23:15] in the chat or they're just filed
+[00:23:15] in the chat or they're just filed somewhere. The ability to actually
+[00:23:17] somewhere. The ability to actually
+[00:23:17] somewhere. The ability to actually physically see in a dashboard all the
+[00:23:18] physically see in a dashboard all the
+[00:23:18] physically see in a dashboard all the stuff that Hermes does for you is
+[00:23:20] stuff that Hermes does for you is
+[00:23:20] stuff that Hermes does for you is incredible. Like, let's say that you
+[00:23:21] incredible. Like, let's say that you
+[00:23:21] incredible. Like, let's say that you want to write an invoice to the UFC for
+[00:23:23] want to write an invoice to the UFC for
+[00:23:23] want to write an invoice to the UFC for your UFC debut. You want to do a head
+[00:23:25] your UFC debut. You want to do a head
+[00:23:25] your UFC debut. You want to do a head kick or something like that. Well, okay,
+[00:23:27] kick or something like that. Well, okay,
+[00:23:27] kick or something like that. Well, okay, it's great that it's in the chat and it
+[00:23:28] it's great that it's in the chat and it
+[00:23:28] it's great that it's in the chat and it can send things, but when I want to come
+[00:23:30] can send things, but when I want to come
+[00:23:30] can send things, but when I want to come back and look at it and do various
+[00:23:31] back and look at it and do various
+[00:23:31] back and look at it and do various different things, I can do that. But the
+[00:23:33] different things, I can do that. But the
+[00:23:33] different things, I can do that. But the real unlock is connecting your world
+[00:23:35] real unlock is connecting your world
+[00:23:36] real unlock is connecting your world together. Remember context engineering
+[00:23:37] together. Remember context engineering
+[00:23:38] together. Remember context engineering is one of the biggest trends that you're
+[00:23:39] is one of the biggest trends that you're
+[00:23:39] is one of the biggest trends that you're going to see it is exploding. And the
+[00:23:41] going to see it is exploding. And the
+[00:23:41] going to see it is exploding. And the idea here for me to see my spend across
+[00:23:43] idea here for me to see my spend across
+[00:23:43] idea here for me to see my spend across every model claude codeex anti-gravity
+[00:23:46] every model claude codeex anti-gravity
+[00:23:46] every model claude codeex anti-gravity to have the ability to have basically
+[00:23:48] to have the ability to have basically
+[00:23:48] to have the ability to have basically Hermes agent dream for me. What do I
+[00:23:50] Hermes agent dream for me. What do I
+[00:23:50] Hermes agent dream for me. What do I mean by that? I mean it's going to look
+[00:23:52] mean by that? I mean it's going to look
+[00:23:52] mean by that? I mean it's going to look at every message that I've said to it.
+[00:23:54] at every message that I've said to it.
+[00:23:54] at every message that I've said to it. It's going to look at all the stuff that
+[00:23:56] It's going to look at all the stuff that
+[00:23:56] It's going to look at all the stuff that I've done not only in Hermes but in
+[00:23:57] I've done not only in Hermes but in
+[00:23:57] I've done not only in Hermes but in claude code in anti-gravity in codeex in
+[00:24:00] claude code in anti-gravity in codeex in
+[00:24:00] claude code in anti-gravity in codeex in anything else that I'm touching. And we
+[00:24:02] anything else that I'm touching. And we
+[00:24:02] anything else that I'm touching. And we use all of that data, all the skills to
+[00:24:04] use all of that data, all the skills to
+[00:24:04] use all of that data, all the skills to proactively think about are the ways
+[00:24:07] proactively think about are the ways
+[00:24:07] proactively think about are the ways that I can improve this like what does
+[00:24:09] that I can improve this like what does
+[00:24:09] that I can improve this like what does Jack what is Jack not doing that he
+[00:24:11] Jack what is Jack not doing that he
+[00:24:11] Jack what is Jack not doing that he should be doing? What are the skills
+[00:24:13] should be doing? What are the skills
+[00:24:13] should be doing? What are the skills that he's not using that he should be
+[00:24:14] that he's not using that he should be
+[00:24:14] that he's not using that he should be using to do research and feed that back
+[00:24:16] using to do research and feed that back
+[00:24:16] using to do research and feed that back to you? And crucially the ability and I
+[00:24:19] to you? And crucially the ability and I
+[00:24:19] to you? And crucially the ability and I got here in the memory section right now
+[00:24:20] got here in the memory section right now
+[00:24:20] got here in the memory section right now to see everything from my Obsidian
+[00:24:22] to see everything from my Obsidian
+[00:24:22] to see everything from my Obsidian memory that connects everything together
+[00:24:24] memory that connects everything together
+[00:24:24] memory that connects everything together and literally even the code memory and
+[00:24:26] and literally even the code memory and
+[00:24:26] and literally even the code memory and the Hermes memory. The agentic operating
+[00:24:29] the Hermes memory. The agentic operating
+[00:24:29] the Hermes memory. The agentic operating system users are individuals that don't
+[00:24:31] system users are individuals that don't
+[00:24:31] system users are individuals that don't operate in silos. They have their entire
+[00:24:34] operate in silos. They have their entire
+[00:24:34] operate in silos. They have their entire AI connectivity in one location. And it
+[00:24:37] AI connectivity in one location. And it
+[00:24:37] AI connectivity in one location. And it basically means that I do coding and
+[00:24:39] basically means that I do coding and
+[00:24:39] basically means that I do coding and claude code. Cool. I do coding in
+[00:24:41] claude code. Cool. I do coding in
+[00:24:41] claude code. Cool. I do coding in Hermes. They're no longer separate. That
+[00:24:43] Hermes. They're no longer separate. That
+[00:24:43] Hermes. They're no longer separate. That gap is completely bridged and it unlocks
+[00:24:45] gap is completely bridged and it unlocks
+[00:24:45] gap is completely bridged and it unlocks capabilities that people don't even
+[00:24:47] capabilities that people don't even
+[00:24:47] capabilities that people don't even realize actually exist. And at this
+[00:24:49] realize actually exist. And at this
+[00:24:49] realize actually exist. And at this level, not only is it running without
+[00:24:50] level, not only is it running without
+[00:24:50] level, not only is it running without you, it reports and does work for you
+[00:24:52] you, it reports and does work for you
+[00:24:52] you, it reports and does work for you whilst you are actually physically
+[00:24:54] whilst you are actually physically
+[00:24:54] whilst you are actually physically sleeping. So, three truths you really
+[00:24:56] sleeping. So, three truths you really
+[00:24:56] sleeping. So, three truths you really need to understand. It's not a better
+[00:24:58] need to understand. It's not a better
+[00:24:58] need to understand. It's not a better coder than claude code. It is literally
+[00:25:00] coder than claude code. It is literally
+[00:25:00] coder than claude code. It is literally using claude code. That's really
+[00:25:02] using claude code. That's really
+[00:25:02] using claude code. That's really important to understand. The number here
+[00:25:03] important to understand. The number here
+[00:25:03] important to understand. The number here is that you can't really have over a
+[00:25:05] is that you can't really have over a
+[00:25:05] is that you can't really have over a thousand agents running simultaneously.
+[00:25:07] thousand agents running simultaneously.
+[00:25:07] thousand agents running simultaneously. The agreed number of agents that we
+[00:25:09] The agreed number of agents that we
+[00:25:09] The agreed number of agents that we think can be done does vary based on
+[00:25:11] think can be done does vary based on
+[00:25:11] think can be done does vary based on different models, but realistically it's
+[00:25:12] different models, but realistically it's
+[00:25:12] different models, but realistically it's not going to be a thousand. And the
+[00:25:14] not going to be a thousand. And the
+[00:25:14] not going to be a thousand. And the magic itself isn't something you need to
+[00:25:16] magic itself isn't something you need to
+[00:25:16] magic itself isn't something you need to wait 17 years to do. This is something
+[00:25:18] wait 17 years to do. This is something
+[00:25:18] wait 17 years to do. This is something you can build and learn in a couple of
+[00:25:20] you can build and learn in a couple of
+[00:25:20] you can build and learn in a couple of videos if you just apply yourself. Now,
+[00:25:22] videos if you just apply yourself. Now,
+[00:25:22] videos if you just apply yourself. Now, understanding where you're at in those
+[00:25:24] understanding where you're at in those
+[00:25:24] understanding where you're at in those seven levels and where they fall apart,
+[00:25:25] seven levels and where they fall apart,
+[00:25:25] seven levels and where they fall apart, the next thing we need to do is embrace
+[00:25:27] the next thing we need to do is embrace
+[00:25:27] the next thing we need to do is embrace the most powerful level. And that's
+[00:25:29] the most powerful level. And that's
+[00:25:29] the most powerful level. And that's learning exactly how to utilize this
+[00:25:30] learning exactly how to utilize this
+[00:25:30] learning exactly how to utilize this agentic operating system, which we're
+[00:25:32] agentic operating system, which we're
+[00:25:32] agentic operating system, which we're going to do together in this video right

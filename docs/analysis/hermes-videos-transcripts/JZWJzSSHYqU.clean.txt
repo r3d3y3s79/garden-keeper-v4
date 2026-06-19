@@ -1,0 +1,952 @@
+# 7 Business Use Cases for Hermes Agent (Rick, 17min)
+# Video ID: JZWJzSSHYqU
+# Total segments: 948
+
+[00:00:00] So, a lot of you have probably already
+[00:00:01] So, a lot of you have probably already tried to get your business organized for
+[00:00:03] tried to get your business organized for
+[00:00:03] tried to get your business organized for AI. You know, your goals, your offers,
+[00:00:05] AI. You know, your goals, your offers,
+[00:00:05] AI. You know, your goals, your offers, your audience, how you like things done
+[00:00:07] your audience, how you like things done
+[00:00:07] your audience, how you like things done all in one place. So, the AI actually
+[00:00:09] all in one place. So, the AI actually
+[00:00:10] all in one place. So, the AI actually has your context. And if you've done
+[00:00:11] has your context. And if you've done
+[00:00:11] has your context. And if you've done that, great. That's exactly the right
+[00:00:13] that, great. That's exactly the right
+[00:00:13] that, great. That's exactly the right foundation to have. But here's the next
+[00:00:16] foundation to have. But here's the next
+[00:00:16] foundation to have. But here's the next problem that you're going to run into.
+[00:00:17] problem that you're going to run into.
+[00:00:18] problem that you're going to run into. Even when you've organized everything,
+[00:00:20] Even when you've organized everything,
+[00:00:20] Even when you've organized everything, you're still the one doing the upkeep.
+[00:00:22] you're still the one doing the upkeep.
+[00:00:22] you're still the one doing the upkeep. You're updating it. You're keeping it
+[00:00:24] You're updating it. You're keeping it
+[00:00:24] You're updating it. You're keeping it tidy. You're reminding the AI to go use
+[00:00:27] tidy. You're reminding the AI to go use
+[00:00:27] tidy. You're reminding the AI to go use something every single time. Well, now
+[00:00:28] something every single time. Well, now
+[00:00:28] something every single time. Well, now there is a perfect solution for that.
+[00:00:31] there is a perfect solution for that.
+[00:00:31] there is a perfect solution for that. I've been testing a free AI agent called
+[00:00:33] I've been testing a free AI agent called
+[00:00:33] I've been testing a free AI agent called Hermes, and it's the first thing I've
+[00:00:35] Hermes, and it's the first thing I've
+[00:00:35] Hermes, and it's the first thing I've used that takes the whole job off of
+[00:00:37] used that takes the whole job off of
+[00:00:37] used that takes the whole job off of your plate. Hermes doesn't sit around
+[00:00:39] your plate. Hermes doesn't sit around
+[00:00:39] your plate. Hermes doesn't sit around waiting for you to feed it. As you work,
+[00:00:41] waiting for you to feed it. As you work,
+[00:00:41] waiting for you to feed it. As you work, it figures out what's worth knowing
+[00:00:42] it figures out what's worth knowing
+[00:00:42] it figures out what's worth knowing about you and your business. It keeps
+[00:00:44] about you and your business. It keeps
+[00:00:44] about you and your business. It keeps that organized on its own, and it pulls
+[00:00:47] that organized on its own, and it pulls
+[00:00:47] that organized on its own, and it pulls up exactly what it needs in the moment.
+[00:00:49] up exactly what it needs in the moment.
+[00:00:49] up exactly what it needs in the moment. You're not managing any of it. And it
+[00:00:51] You're not managing any of it. And it
+[00:00:51] You're not managing any of it. And it goes further than that. Essentially, it
+[00:00:53] goes further than that. Essentially, it
+[00:00:53] goes further than that. Essentially, it builds its own little shortcuts out of
+[00:00:55] builds its own little shortcuts out of
+[00:00:55] builds its own little shortcuts out of the way that you work. So over time, it
+[00:00:58] the way that you work. So over time, it
+[00:00:58] the way that you work. So over time, it doesn't just know your business. It
+[00:00:59] doesn't just know your business. It
+[00:00:59] doesn't just know your business. It actually gets better at running parts of
+[00:01:01] actually gets better at running parts of
+[00:01:01] actually gets better at running parts of it for you. And the best part, it's
+[00:01:04] it for you. And the best part, it's
+[00:01:04] it for you. And the best part, it's completely free and it runs on the AI
+[00:01:06] completely free and it runs on the AI
+[00:01:06] completely free and it runs on the AI subscription you're probably already
+[00:01:08] subscription you're probably already
+[00:01:08] subscription you're probably already paying for. So in this video, I'm going
+[00:01:10] paying for. So in this video, I'm going
+[00:01:10] paying for. So in this video, I'm going to walk you through seven mind-blowing
+[00:01:12] to walk you through seven mind-blowing
+[00:01:12] to walk you through seven mind-blowing use cases for it. Everything from
+[00:01:15] use cases for it. Everything from
+[00:01:15] use cases for it. Everything from running your own projects to building
+[00:01:16] running your own projects to building
+[00:01:16] running your own projects to building your own dashboard to handling research
+[00:01:19] your own dashboard to handling research
+[00:01:19] your own dashboard to handling research that you would normally pass off to
+[00:01:20] that you would normally pass off to
+[00:01:20] that you would normally pass off to somebody on your team. And don't worry,
+[00:01:23] somebody on your team. And don't worry,
+[00:01:23] somebody on your team. And don't worry, none of this is technical. If you can
+[00:01:25] none of this is technical. If you can
+[00:01:25] none of this is technical. If you can set a message and follow a couple of
+[00:01:27] set a message and follow a couple of
+[00:01:27] set a message and follow a couple of steps, you can do everything I'm about
+[00:01:29] steps, you can do everything I'm about
+[00:01:29] steps, you can do everything I'm about to share with you. Okay, for use case
+[00:01:30] to share with you. Okay, for use case
+[00:01:30] to share with you. Okay, for use case number one, this is something that I
+[00:01:32] number one, this is something that I
+[00:01:32] number one, this is something that I think every single one of us deals with.
+[00:01:33] think every single one of us deals with.
+[00:01:33] think every single one of us deals with. And that's taking one idea and turning
+[00:01:35] And that's taking one idea and turning
+[00:01:35] And that's taking one idea and turning it into a whole week's worth of content
+[00:01:37] it into a whole week's worth of content
+[00:01:37] it into a whole week's worth of content or a whole month or a quarter. Normally,
+[00:01:39] or a whole month or a quarter. Normally,
+[00:01:40] or a whole month or a quarter. Normally, that's, you know, you've got the idea,
+[00:01:41] that's, you know, you've got the idea,
+[00:01:41] that's, you know, you've got the idea, then you got to go research it, find the
+[00:01:43] then you got to go research it, find the
+[00:01:43] then you got to go research it, find the right angles, outline it, write the
+[00:01:45] right angles, outline it, write the
+[00:01:45] right angles, outline it, write the newsletter, draft the social post.
+[00:01:46] newsletter, draft the social post.
+[00:01:46] newsletter, draft the social post. That's an entire afternoon or day or
+[00:01:48] That's an entire afternoon or day or
+[00:01:48] That's an entire afternoon or day or even week. What I do now is I just hand
+[00:01:50] even week. What I do now is I just hand
+[00:01:50] even week. What I do now is I just hand Hermes the one idea and it splits the
+[00:01:53] Hermes the one idea and it splits the
+[00:01:53] Hermes the one idea and it splits the work into a little team where each piece
+[00:01:55] work into a little team where each piece
+[00:01:56] work into a little team where each piece has its own clear job and then they go
+[00:01:58] has its own clear job and then they go
+[00:01:58] has its own clear job and then they go do it. One researches, one finds the
+[00:02:00] do it. One researches, one finds the
+[00:02:00] do it. One researches, one finds the angle, one outlines, one repurposes it,
+[00:02:02] angle, one outlines, one repurposes it,
+[00:02:02] angle, one outlines, one repurposes it, one writes the post. All of that from a
+[00:02:05] one writes the post. All of that from a
+[00:02:05] one writes the post. All of that from a single idea. So check this out. So right
+[00:02:08] single idea. So check this out. So right
+[00:02:08] single idea. So check this out. So right now I run Hermes through both Slack and
+[00:02:11] now I run Hermes through both Slack and
+[00:02:11] now I run Hermes through both Slack and Telegram. So I have Telegram right here.
+[00:02:14] Telegram. So I have Telegram right here.
+[00:02:14] Telegram. So I have Telegram right here. They just now, by the way, have a
+[00:02:16] They just now, by the way, have a
+[00:02:16] They just now, by the way, have a desktop app that they just rolled out.
+[00:02:18] desktop app that they just rolled out.
+[00:02:18] desktop app that they just rolled out. Literally the day that I'm recording
+[00:02:19] Literally the day that I'm recording
+[00:02:19] Literally the day that I'm recording this, they just rolled out a desktop
+[00:02:20] this, they just rolled out a desktop
+[00:02:20] this, they just rolled out a desktop app. I like to do it in Slack because I
+[00:02:23] app. I like to do it in Slack because I
+[00:02:23] app. I like to do it in Slack because I find it easy to copy and paste if I need
+[00:02:26] find it easy to copy and paste if I need
+[00:02:26] find it easy to copy and paste if I need to store stuff or let a team member know
+[00:02:28] to store stuff or let a team member know
+[00:02:28] to store stuff or let a team member know or something like that. So, here's what
+[00:02:30] or something like that. So, here's what
+[00:02:30] or something like that. So, here's what we're going to do for this first use
+[00:02:31] we're going to do for this first use
+[00:02:32] we're going to do for this first use case. So, I'm going to I'm going to tell
+[00:02:33] case. So, I'm going to I'm going to tell
+[00:02:33] case. So, I'm going to I'm going to tell Hermes I'm recording a YouTube video
+[00:02:35] Hermes I'm recording a YouTube video
+[00:02:35] Hermes I'm recording a YouTube video about seven practical Hermes agent use
+[00:02:37] about seven practical Hermes agent use
+[00:02:37] about seven practical Hermes agent use cases for entrepreneurs, which is what
+[00:02:39] cases for entrepreneurs, which is what
+[00:02:39] cases for entrepreneurs, which is what I'm doing right now. Find out the best
+[00:02:41] I'm doing right now. Find out the best
+[00:02:41] I'm doing right now. Find out the best angle for this YouTube video. And then
+[00:02:42] angle for this YouTube video. And then
+[00:02:42] angle for this YouTube video. And then I'm asking it to create a complete
+[00:02:44] I'm asking it to create a complete
+[00:02:44] I'm asking it to create a complete marketing package from the topic. So
+[00:02:46] marketing package from the topic. So
+[00:02:46] marketing package from the topic. So title options, YouTube description, five
+[00:02:49] title options, YouTube description, five
+[00:02:49] title options, YouTube description, five LinkedIn post ideas, one newsletter
+[00:02:51] LinkedIn post ideas, one newsletter
+[00:02:51] LinkedIn post ideas, one newsletter section for what I'm seeing. So that
+[00:02:53] section for what I'm seeing. So that
+[00:02:53] section for what I'm seeing. So that what I'm seeing section that it knows
+[00:02:54] what I'm seeing section that it knows
+[00:02:54] what I'm seeing section that it knows about from my newsletter. That's because
+[00:02:56] about from my newsletter. That's because
+[00:02:56] about from my newsletter. That's because I've told it and taught Hermes about my
+[00:02:59] I've told it and taught Hermes about my
+[00:02:59] I've told it and taught Hermes about my business and the newsletter that I send
+[00:03:01] business and the newsletter that I send
+[00:03:01] business and the newsletter that I send out every Sunday. So it is taking all
+[00:03:03] out every Sunday. So it is taking all
+[00:03:03] out every Sunday. So it is taking all that memory into account. Remember, this
+[00:03:05] that memory into account. Remember, this
+[00:03:05] that memory into account. Remember, this is getting smarter and smarter and
+[00:03:06] is getting smarter and smarter and
+[00:03:06] is getting smarter and smarter and smarter and it knows so much about your
+[00:03:09] smarter and it knows so much about your
+[00:03:09] smarter and it knows so much about your business. It can be so helpful. Charles,
+[00:03:11] business. It can be so helpful. Charles,
+[00:03:11] business. It can be so helpful. Charles, by the way, is my marketing agent in
+[00:03:14] by the way, is my marketing agent in
+[00:03:14] by the way, is my marketing agent in Hermes. So, right now, I currently have
+[00:03:16] Hermes. So, right now, I currently have
+[00:03:16] Hermes. So, right now, I currently have a marketing agent, also a sort of
+[00:03:19] a marketing agent, also a sort of
+[00:03:19] a marketing agent, also a sort of general overall agent that I like to
+[00:03:21] general overall agent that I like to
+[00:03:21] general overall agent that I like to call um Alex. Okay. In literally 30
+[00:03:25] call um Alex. Okay. In literally 30
+[00:03:25] call um Alex. Okay. In literally 30 seconds, it's done all of that research
+[00:03:28] seconds, it's done all of that research
+[00:03:28] seconds, it's done all of that research and written out the content piece that
+[00:03:30] and written out the content piece that
+[00:03:30] and written out the content piece that I've asked for. So, it's telling me what
+[00:03:32] I've asked for. So, it's telling me what
+[00:03:32] I've asked for. So, it's telling me what the best angle of the video should be,
+[00:03:35] the best angle of the video should be,
+[00:03:35] the best angle of the video should be, and then it gives the different use case
+[00:03:37] and then it gives the different use case
+[00:03:37] and then it gives the different use case ideas. It's giving me title options for
+[00:03:40] ideas. It's giving me title options for
+[00:03:40] ideas. It's giving me title options for the video. It's giving me its pick.
+[00:03:42] the video. It's giving me its pick.
+[00:03:42] the video. It's giving me its pick. Writing the YouTube description. Here
+[00:03:44] Writing the YouTube description. Here
+[00:03:44] Writing the YouTube description. Here are five po uh LinkedIn post ideas. Idea
+[00:03:47] are five po uh LinkedIn post ideas. Idea
+[00:03:47] are five po uh LinkedIn post ideas. Idea one, idea two. Then remember we asked it
+[00:03:50] one, idea two. Then remember we asked it
+[00:03:50] one, idea two. Then remember we asked it for the newsletter section for what I'm
+[00:03:52] for the newsletter section for what I'm
+[00:03:52] for the newsletter section for what I'm seeing. And then finally, a simple CTA
+[00:03:55] seeing. And then finally, a simple CTA
+[00:03:55] seeing. And then finally, a simple CTA to the AI playbook community that I
+[00:03:57] to the AI playbook community that I
+[00:03:57] to the AI playbook community that I could use within the video. And again,
+[00:04:00] could use within the video. And again,
+[00:04:00] could use within the video. And again, all I did was I asked it for what it I
+[00:04:01] all I did was I asked it for what it I
+[00:04:02] all I did was I asked it for what it I wanted it to do. I wasn't super specific
+[00:04:04] wanted it to do. I wasn't super specific
+[00:04:04] wanted it to do. I wasn't super specific on any of it. The reason being is
+[00:04:07] on any of it. The reason being is
+[00:04:07] on any of it. The reason being is because Hermes gets smarter and smarter,
+[00:04:09] because Hermes gets smarter and smarter,
+[00:04:09] because Hermes gets smarter and smarter, has this amazing memory and I've taught
+[00:04:12] has this amazing memory and I've taught
+[00:04:12] has this amazing memory and I've taught it about my business. If you've watched
+[00:04:14] it about my business. If you've watched
+[00:04:14] it about my business. If you've watched my information hierarchy video that I
+[00:04:16] my information hierarchy video that I
+[00:04:16] my information hierarchy video that I did last week, it's just reading off of
+[00:04:18] did last week, it's just reading off of
+[00:04:18] did last week, it's just reading off of that information in my folder structure
+[00:04:21] that information in my folder structure
+[00:04:21] that information in my folder structure on my computer that has all the
+[00:04:22] on my computer that has all the
+[00:04:22] on my computer that has all the information about me, my business, my
+[00:04:24] information about me, my business, my
+[00:04:24] information about me, my business, my voice, my audience, my offers, my
+[00:04:26] voice, my audience, my offers, my
+[00:04:26] voice, my audience, my offers, my pricing structure, my ICP, etc. And
+[00:04:28] pricing structure, my ICP, etc. And
+[00:04:28] pricing structure, my ICP, etc. And Hermes just knows all of this stuff
+[00:04:30] Hermes just knows all of this stuff
+[00:04:30] Hermes just knows all of this stuff because I pointed Hermes at that
+[00:04:32] because I pointed Hermes at that
+[00:04:32] because I pointed Hermes at that information. And now everything that
+[00:04:35] information. And now everything that
+[00:04:35] information. And now everything that Hermes has given me is super super
+[00:04:36] Hermes has given me is super super
+[00:04:36] Hermes has given me is super super relevant and helpful to my business. And
+[00:04:39] relevant and helpful to my business. And
+[00:04:39] relevant and helpful to my business. And by the way, I'm going to have all the
+[00:04:40] by the way, I'm going to have all the
+[00:04:40] by the way, I'm going to have all the use cases, the prompts I use, and
+[00:04:43] use cases, the prompts I use, and
+[00:04:43] use cases, the prompts I use, and everything that we're talking about here
+[00:04:44] everything that we're talking about here
+[00:04:44] everything that we're talking about here in this video downloadable for you so
+[00:04:46] in this video downloadable for you so
+[00:04:46] in this video downloadable for you so you can just copy it and use it
+[00:04:47] you can just copy it and use it
+[00:04:47] you can just copy it and use it yourself. I'll link to it in the
+[00:04:49] yourself. I'll link to it in the
+[00:04:49] yourself. I'll link to it in the description below. Okay, for use case
+[00:04:50] description below. Okay, for use case
+[00:04:50] description below. Okay, for use case number two, I'm literally in the process
+[00:04:51] number two, I'm literally in the process
+[00:04:51] number two, I'm literally in the process right now of putting together a new
+[00:04:53] right now of putting together a new
+[00:04:53] right now of putting together a new offer. And instead of guessing on it or
+[00:04:55] offer. And instead of guessing on it or
+[00:04:56] offer. And instead of guessing on it or paying somebody to, you know, go do the
+[00:04:58] paying somebody to, you know, go do the
+[00:04:58] paying somebody to, you know, go do the research and figure out pricing
+[00:05:00] research and figure out pricing
+[00:05:00] research and figure out pricing structure and comparables and all that
+[00:05:02] structure and comparables and all that
+[00:05:02] structure and comparables and all that stuff, I had Hermes go look at what
+[00:05:03] stuff, I had Hermes go look at what
+[00:05:03] stuff, I had Hermes go look at what everyone else in my space is charging
+[00:05:05] everyone else in my space is charging
+[00:05:05] everyone else in my space is charging and offering compared against what I was
+[00:05:07] and offering compared against what I was
+[00:05:07] and offering compared against what I was building and had already built and then
+[00:05:09] building and had already built and then
+[00:05:10] building and had already built and then actually come back to me with a
+[00:05:11] actually come back to me with a
+[00:05:11] actually come back to me with a recommendation like how to position it,
+[00:05:13] recommendation like how to position it,
+[00:05:13] recommendation like how to position it, what to charge, the whole structure of
+[00:05:15] what to charge, the whole structure of
+[00:05:15] what to charge, the whole structure of the offer. I said, I'm considering
+[00:05:17] the offer. I said, I'm considering
+[00:05:17] the offer. I said, I'm considering creating a cohort program. I'm giving
+[00:05:18] creating a cohort program. I'm giving
+[00:05:18] creating a cohort program. I'm giving you two URLs of two programs that are
+[00:05:21] you two URLs of two programs that are
+[00:05:21] you two URLs of two programs that are vastly different in pricing. I want you
+[00:05:23] vastly different in pricing. I want you
+[00:05:23] vastly different in pricing. I want you to analyze those offers. Compare them to
+[00:05:25] to analyze those offers. Compare them to
+[00:05:25] to analyze those offers. Compare them to my agent playbook challenge that I just
+[00:05:27] my agent playbook challenge that I just
+[00:05:27] my agent playbook challenge that I just did and give me a recommendation on what
+[00:05:30] did and give me a recommendation on what
+[00:05:30] did and give me a recommendation on what I might create as a standalone offer in
+[00:05:32] I might create as a standalone offer in
+[00:05:32] I might create as a standalone offer in my own business. Make sure you ask me
+[00:05:33] my own business. Make sure you ask me
+[00:05:34] my own business. Make sure you ask me any questions you're not clear on before
+[00:05:35] any questions you're not clear on before
+[00:05:35] any questions you're not clear on before doing this. And then literally after
+[00:05:36] doing this. And then literally after
+[00:05:36] doing this. And then literally after about 5 minutes, this is the output that
+[00:05:38] about 5 minutes, this is the output that
+[00:05:38] about 5 minutes, this is the output that it gave me. It gave me the standalone
+[00:05:40] it gave me. It gave me the standalone
+[00:05:40] it gave me. It gave me the standalone offer recommendation and then gave me
+[00:05:42] offer recommendation and then gave me
+[00:05:42] offer recommendation and then gave me the executive recommendation, a quick
+[00:05:44] the executive recommendation, a quick
+[00:05:44] the executive recommendation, a quick summary, ICP, broke down week by week,
+[00:05:48] summary, ICP, broke down week by week,
+[00:05:48] summary, ICP, broke down week by week, um, and then gave me a full pricing,
+[00:05:50] um, and then gave me a full pricing,
+[00:05:50] um, and then gave me a full pricing, recommendation, structure, tier
+[00:05:52] recommendation, structure, tier
+[00:05:52] recommendation, structure, tier structure. And again, I gave it
+[00:05:53] structure. And again, I gave it
+[00:05:53] structure. And again, I gave it basically couple of sentences. It
+[00:05:55] basically couple of sentences. It
+[00:05:55] basically couple of sentences. It already knows my business, so it could
+[00:05:57] already knows my business, so it could
+[00:05:57] already knows my business, so it could tailor the whole thing to me instead of
+[00:05:59] tailor the whole thing to me instead of
+[00:05:59] tailor the whole thing to me instead of handing me some generic advice. So
+[00:06:01] handing me some generic advice. So
+[00:06:01] handing me some generic advice. So before you go pay somebody to help you
+[00:06:03] before you go pay somebody to help you
+[00:06:03] before you go pay somebody to help you position or price your next offer, I'd
+[00:06:05] position or price your next offer, I'd
+[00:06:05] position or price your next offer, I'd at least run through this first. and you
+[00:06:08] at least run through this first. and you
+[00:06:08] at least run through this first. and you totally might not need to hand it off to
+[00:06:10] totally might not need to hand it off to
+[00:06:10] totally might not need to hand it off to somebody or pay somebody else to do it.
+[00:06:11] somebody or pay somebody else to do it.
+[00:06:12] somebody or pay somebody else to do it. Okay, use case number three. And
+[00:06:13] Okay, use case number three. And
+[00:06:13] Okay, use case number three. And honestly, this might be my favorite of
+[00:06:15] honestly, this might be my favorite of
+[00:06:15] honestly, this might be my favorite of the seven use cases I'm sharing with you
+[00:06:16] the seven use cases I'm sharing with you
+[00:06:16] the seven use cases I'm sharing with you here today. So, you can hand Hermes an
+[00:06:18] here today. So, you can hand Hermes an
+[00:06:18] here today. So, you can hand Hermes an entire project and basically let it run
+[00:06:21] entire project and basically let it run
+[00:06:21] entire project and basically let it run itself. Okay, so check this out. This is
+[00:06:23] itself. Okay, so check this out. This is
+[00:06:23] itself. Okay, so check this out. This is the Hermes agent actual dashboard. So,
+[00:06:26] the Hermes agent actual dashboard. So,
+[00:06:26] the Hermes agent actual dashboard. So, this is not something that I built. Now,
+[00:06:29] this is not something that I built. Now,
+[00:06:29] this is not something that I built. Now, they have a plugin. There's a canban
+[00:06:30] they have a plugin. There's a canban
+[00:06:30] they have a plugin. There's a canban plugin, which is what you're looking at
+[00:06:32] plugin, which is what you're looking at
+[00:06:32] plugin, which is what you're looking at here. And why this is cool because I can
+[00:06:35] here. And why this is cool because I can
+[00:06:35] here. And why this is cool because I can put something into the triage section
+[00:06:37] put something into the triage section
+[00:06:37] put something into the triage section here and then Hermes takes over. So what
+[00:06:40] here and then Hermes takes over. So what
+[00:06:40] here and then Hermes takes over. So what we're going to do here is click on the
+[00:06:41] we're going to do here is click on the
+[00:06:41] we're going to do here is click on the plus button and under triage and I'm
+[00:06:44] plus button and under triage and I'm
+[00:06:44] plus button and under triage and I'm going to tell it that I want it to and
+[00:06:45] going to tell it that I want it to and
+[00:06:45] going to tell it that I want it to and I've not done this before. So I'm going
+[00:06:47] I've not done this before. So I'm going
+[00:06:47] I've not done this before. So I'm going to tell it we're going to do it live
+[00:06:48] to tell it we're going to do it live
+[00:06:48] to tell it we're going to do it live right here. So I'm going to say create a
+[00:06:50] right here. So I'm going to say create a
+[00:06:50] right here. So I'm going to say create a better reason to choose the AI playbook
+[00:06:52] better reason to choose the AI playbook
+[00:06:52] better reason to choose the AI playbook annual plan. Then I'm gonna click go.
+[00:06:54] annual plan. Then I'm gonna click go.
+[00:06:54] annual plan. Then I'm gonna click go. And as you can see here it's starting to
+[00:06:55] And as you can see here it's starting to
+[00:06:56] And as you can see here it's starting to move through the different uh status
+[00:06:59] move through the different uh status
+[00:06:59] move through the different uh status columns here. So, as you can see here,
+[00:07:00] columns here. So, as you can see here,
+[00:07:00] columns here. So, as you can see here, if you look through the to-do column, so
+[00:07:02] if you look through the to-do column, so
+[00:07:02] if you look through the to-do column, so it says create a better reason to choose
+[00:07:04] it says create a better reason to choose
+[00:07:04] it says create a better reason to choose the AI playbook annual plan. So, it's
+[00:07:06] the AI playbook annual plan. So, it's
+[00:07:06] the AI playbook annual plan. So, it's created a task under the to-do column.
+[00:07:08] created a task under the to-do column.
+[00:07:08] created a task under the to-do column. Wrote the annual plan or write the
+[00:07:10] Wrote the annual plan or write the
+[00:07:10] Wrote the annual plan or write the annual plan reason to choose copy. Then,
+[00:07:13] annual plan reason to choose copy. Then,
+[00:07:13] annual plan reason to choose copy. Then, you can look over here under in
+[00:07:14] you can look over here under in
+[00:07:14] you can look over here under in progress. It says audit the current AI
+[00:07:16] progress. It says audit the current AI
+[00:07:16] progress. It says audit the current AI playbook annual offer angle. And then it
+[00:07:19] playbook annual offer angle. And then it
+[00:07:20] playbook annual offer angle. And then it says research annual plan conversion
+[00:07:21] says research annual plan conversion
+[00:07:21] says research annual plan conversion hooks. So, it's doing all of this all on
+[00:07:24] hooks. So, it's doing all of this all on
+[00:07:24] hooks. So, it's doing all of this all on its own. Okay. And then, as you can see
+[00:07:26] its own. Okay. And then, as you can see
+[00:07:26] its own. Okay. And then, as you can see here, it just moved down to the done
+[00:07:28] here, it just moved down to the done
+[00:07:28] here, it just moved down to the done column. So it audited the current AI
+[00:07:29] column. So it audited the current AI
+[00:07:29] column. So it audited the current AI playbook annual offer angle. Now it has
+[00:07:33] playbook annual offer angle. Now it has
+[00:07:33] playbook annual offer angle. Now it has moved the research annual plan
+[00:07:34] moved the research annual plan
+[00:07:34] moved the research annual plan conversion hooks that's in progress. So
+[00:07:37] conversion hooks that's in progress. So
+[00:07:37] conversion hooks that's in progress. So if I click on this and I scroll down
+[00:07:40] if I click on this and I scroll down
+[00:07:40] if I click on this and I scroll down here, number one, it has the description
+[00:07:42] here, number one, it has the description
+[00:07:42] here, number one, it has the description of the task that it created all by
+[00:07:45] of the task that it created all by
+[00:07:45] of the task that it created all by itself. And then if I go down to the
+[00:07:46] itself. And then if I go down to the
+[00:07:46] itself. And then if I go down to the bottom here, it'll tell me what the
+[00:07:48] bottom here, it'll tell me what the
+[00:07:48] bottom here, it'll tell me what the output was from that particular task.
+[00:07:51] output was from that particular task.
+[00:07:51] output was from that particular task. And also if you look closely here, it'll
+[00:07:53] And also if you look closely here, it'll
+[00:07:53] And also if you look closely here, it'll tell you what skills it invoked all by
+[00:07:55] tell you what skills it invoked all by
+[00:07:55] tell you what skills it invoked all by itself. And then again, you can see here
+[00:07:57] itself. And then again, you can see here
+[00:07:57] itself. And then again, you can see here where it goes through the audit and also
+[00:08:01] where it goes through the audit and also
+[00:08:01] where it goes through the audit and also it tells me where it put it into my
+[00:08:05] it tells me where it put it into my
+[00:08:05] it tells me where it put it into my Obsidian. So now I can go look at this
+[00:08:07] Obsidian. So now I can go look at this
+[00:08:07] Obsidian. So now I can go look at this in Obsidian. It just carried all this
+[00:08:09] in Obsidian. It just carried all this
+[00:08:09] in Obsidian. It just carried all this information over there and it keeps
+[00:08:10] information over there and it keeps
+[00:08:10] information over there and it keeps working its way through the entire
+[00:08:13] working its way through the entire
+[00:08:13] working its way through the entire project that way. So you're not the
+[00:08:15] project that way. So you're not the
+[00:08:15] project that way. So you're not the project managing anymore. You're just
+[00:08:16] project managing anymore. You're just
+[00:08:16] project managing anymore. You're just saying what you want done and Hermes
+[00:08:19] saying what you want done and Hermes
+[00:08:19] saying what you want done and Hermes handles the steps and it moves it
+[00:08:21] handles the steps and it moves it
+[00:08:21] handles the steps and it moves it through the entire project and it breaks
+[00:08:22] through the entire project and it breaks
+[00:08:22] through the entire project and it breaks it down by itself into individual
+[00:08:25] it down by itself into individual
+[00:08:26] it down by itself into individual uh steps within the overall project. All
+[00:08:27] uh steps within the overall project. All
+[00:08:27] uh steps within the overall project. All right, so use case number four and this
+[00:08:29] right, so use case number four and this
+[00:08:29] right, so use case number four and this is where having all of your context in
+[00:08:31] is where having all of your context in
+[00:08:31] is where having all of your context in one place really really pays off because
+[00:08:33] one place really really pays off because
+[00:08:33] one place really really pays off because Hermes already knows your business, your
+[00:08:36] Hermes already knows your business, your
+[00:08:36] Hermes already knows your business, your goals, your priorities, all of it. So
+[00:08:38] goals, your priorities, all of it. So
+[00:08:38] goals, your priorities, all of it. So you can basically use it as a strategic
+[00:08:40] you can basically use it as a strategic
+[00:08:40] you can basically use it as a strategic adviser. So let's do this in Telegram.
+[00:08:43] adviser. So let's do this in Telegram.
+[00:08:43] adviser. So let's do this in Telegram. Let's just say that you're off getting
+[00:08:44] Let's just say that you're off getting
+[00:08:44] Let's just say that you're off getting coffee somewhere. And again, I'm going
+[00:08:46] coffee somewhere. And again, I'm going
+[00:08:46] coffee somewhere. And again, I'm going to show you on my computer on Telegram,
+[00:08:48] to show you on my computer on Telegram,
+[00:08:48] to show you on my computer on Telegram, but obviously you can pull it up on your
+[00:08:49] but obviously you can pull it up on your
+[00:08:49] but obviously you can pull it up on your phone as well. And so, I'm just going to
+[00:08:53] phone as well. And so, I'm just going to
+[00:08:53] phone as well. And so, I'm just going to speak to it based on everything you know
+[00:08:54] speak to it based on everything you know
+[00:08:54] speak to it based on everything you know about me, my business, what my goals
+[00:08:57] about me, my business, what my goals
+[00:08:57] about me, my business, what my goals are, where I'm at right now, what are
+[00:08:59] are, where I'm at right now, what are
+[00:08:59] are, where I'm at right now, what are the three highest leverage things that I
+[00:09:02] the three highest leverage things that I
+[00:09:02] the three highest leverage things that I should focus on this week. So, it's
+[00:09:05] should focus on this week. So, it's
+[00:09:05] should focus on this week. So, it's going to take its body of knowledge
+[00:09:06] going to take its body of knowledge
+[00:09:06] going to take its body of knowledge about you and your current situation.
+[00:09:08] about you and your current situation.
+[00:09:08] about you and your current situation. Again, the more you're using it, the
+[00:09:10] Again, the more you're using it, the
+[00:09:10] Again, the more you're using it, the smarter it's getting. And so you can see
+[00:09:12] smarter it's getting. And so you can see
+[00:09:12] smarter it's getting. And so you can see here it's invoking different skills,
+[00:09:14] here it's invoking different skills,
+[00:09:14] here it's invoking different skills, reading different files about the
+[00:09:16] reading different files about the
+[00:09:16] reading different files about the business, and then it'll give me my
+[00:09:18] business, and then it'll give me my
+[00:09:18] business, and then it'll give me my three priorities. Okay. And here it is
+[00:09:20] three priorities. Okay. And here it is
+[00:09:20] three priorities. Okay. And here it is again. This is this is deadon for me. So
+[00:09:23] again. This is this is deadon for me. So
+[00:09:23] again. This is this is deadon for me. So finish the start here path for my
+[00:09:25] finish the start here path for my
+[00:09:25] finish the start here path for my community. We're just revamping it. Uh
+[00:09:27] community. We're just revamping it. Uh
+[00:09:27] community. We're just revamping it. Uh record this YouTube video. Top three
+[00:09:29] record this YouTube video. Top three
+[00:09:29] record this YouTube video. Top three things for the week. And then it's also
+[00:09:33] things for the week. And then it's also
+[00:09:33] things for the week. And then it's also telling me where it recommends I start.
+[00:09:36] telling me where it recommends I start.
+[00:09:36] telling me where it recommends I start. And you can see here your focus block 60
+[00:09:38] And you can see here your focus block 60
+[00:09:38] And you can see here your focus block 60 minutes in the morning because it knows
+[00:09:40] minutes in the morning because it knows
+[00:09:40] minutes in the morning because it knows that I am freshest in the morning with
+[00:09:43] that I am freshest in the morning with
+[00:09:43] that I am freshest in the morning with my ADHD brain. I work better in the
+[00:09:46] my ADHD brain. I work better in the
+[00:09:46] my ADHD brain. I work better in the morning. That's when I'm freshest.
+[00:09:47] morning. That's when I'm freshest.
+[00:09:47] morning. That's when I'm freshest. That's when I'm going to get more things
+[00:09:48] That's when I'm going to get more things
+[00:09:48] That's when I'm going to get more things done. That's my magic time. And it knows
+[00:09:50] done. That's my magic time. And it knows
+[00:09:50] done. That's my magic time. And it knows that about me. And then let's just say
+[00:09:52] that about me. And then let's just say
+[00:09:52] that about me. And then let's just say that I wanted Hermes to start working on
+[00:09:54] that I wanted Hermes to start working on
+[00:09:54] that I wanted Hermes to start working on the cohort offer that I have here. I
+[00:09:57] the cohort offer that I have here. I
+[00:09:57] the cohort offer that I have here. I could have it create a landing page for
+[00:09:59] could have it create a landing page for
+[00:09:59] could have it create a landing page for me. I could have it write sales page
+[00:10:01] me. I could have it write sales page
+[00:10:01] me. I could have it write sales page copy for me just just by telling it
+[00:10:03] copy for me just just by telling it
+[00:10:03] copy for me just just by telling it let's start creating the sales page the
+[00:10:05] let's start creating the sales page the
+[00:10:05] let's start creating the sales page the onepage offer based on the above
+[00:10:07] onepage offer based on the above
+[00:10:07] onepage offer based on the above structure that you've given me and then
+[00:10:09] structure that you've given me and then
+[00:10:09] structure that you've given me and then it will go and do it and I can just
+[00:10:10] it will go and do it and I can just
+[00:10:10] it will go and do it and I can just start assigning things based off of
+[00:10:12] start assigning things based off of
+[00:10:12] start assigning things based off of these priorities and that's the thing a
+[00:10:14] these priorities and that's the thing a
+[00:10:14] these priorities and that's the thing a regular AI chat just can't do for you
+[00:10:16] regular AI chat just can't do for you
+[00:10:16] regular AI chat just can't do for you because it's starting from scratch every
+[00:10:17] because it's starting from scratch every
+[00:10:17] because it's starting from scratch every time you talk about it. All right, use
+[00:10:19] time you talk about it. All right, use
+[00:10:19] time you talk about it. All right, use case number five. You can have Hermes
+[00:10:21] case number five. You can have Hermes
+[00:10:21] case number five. You can have Hermes build your own dashboard for you like a
+[00:10:23] build your own dashboard for you like a
+[00:10:23] build your own dashboard for you like a command center for your whole business.
+[00:10:25] command center for your whole business.
+[00:10:25] command center for your whole business. And I mean built completely from scratch
+[00:10:28] And I mean built completely from scratch
+[00:10:28] And I mean built completely from scratch just by talking to Hermes. And so here
+[00:10:30] just by talking to Hermes. And so here
+[00:10:30] just by talking to Hermes. And so here is my dashboard. Here's my command
+[00:10:32] is my dashboard. Here's my command
+[00:10:32] is my dashboard. Here's my command center. And I had Hermes build it for me
+[00:10:34] center. And I had Hermes build it for me
+[00:10:34] center. And I had Hermes build it for me inside of Obsidian because Obsidian for
+[00:10:37] inside of Obsidian because Obsidian for
+[00:10:37] inside of Obsidian because Obsidian for me is my one source of truth. I have all
+[00:10:39] me is my one source of truth. I have all
+[00:10:39] me is my one source of truth. I have all the projects in there, context, all of
+[00:10:41] the projects in there, context, all of
+[00:10:42] the projects in there, context, all of my to-dos. So I've given Hermes access
+[00:10:44] my to-dos. So I've given Hermes access
+[00:10:44] my to-dos. So I've given Hermes access to my Obsidian via my VPS. And so it's
+[00:10:48] to my Obsidian via my VPS. And so it's
+[00:10:48] to my Obsidian via my VPS. And so it's able to pull all of these things
+[00:10:49] able to pull all of these things
+[00:10:49] able to pull all of these things together really, really quickly. And so
+[00:10:51] together really, really quickly. And so
+[00:10:51] together really, really quickly. And so here's my to-do, my in progress, my
+[00:10:53] here's my to-do, my in progress, my
+[00:10:53] here's my to-do, my in progress, my block. So it's a canban board for that
+[00:10:55] block. So it's a canban board for that
+[00:10:55] block. So it's a canban board for that I've created for my own stuff. This is
+[00:10:57] I've created for my own stuff. This is
+[00:10:58] I've created for my own stuff. This is different from the Hermes Canvan board
+[00:11:00] different from the Hermes Canvan board
+[00:11:00] different from the Hermes Canvan board that I show you in use case number three
+[00:11:02] that I show you in use case number three
+[00:11:02] that I show you in use case number three earlier. So for example, create the
+[00:11:05] earlier. So for example, create the
+[00:11:05] earlier. So for example, create the money math one pager with current AIP
+[00:11:08] money math one pager with current AIP
+[00:11:08] money math one pager with current AIP numbers or or define the weekly
+[00:11:10] numbers or or define the weekly
+[00:11:10] numbers or or define the weekly repurposing flow. So it's in progress
+[00:11:12] repurposing flow. So it's in progress
+[00:11:12] repurposing flow. So it's in progress right now. So I can click on this and it
+[00:11:14] right now. So I can click on this and it
+[00:11:14] right now. So I can click on this and it goes to the particular project page and
+[00:11:17] goes to the particular project page and
+[00:11:17] goes to the particular project page and it has all the details of that
+[00:11:20] it has all the details of that
+[00:11:20] it has all the details of that particular project as well as each of
+[00:11:23] particular project as well as each of
+[00:11:23] particular project as well as each of the tasks that are assigned within that
+[00:11:26] the tasks that are assigned within that
+[00:11:26] the tasks that are assigned within that project. And you can see here it has the
+[00:11:29] project. And you can see here it has the
+[00:11:29] project. And you can see here it has the status. I can come in here and set due
+[00:11:31] status. I can come in here and set due
+[00:11:31] status. I can come in here and set due dates or I can better yet I can tell
+[00:11:33] dates or I can better yet I can tell
+[00:11:33] dates or I can better yet I can tell Hermes what the due dates are. And uh I
+[00:11:36] Hermes what the due dates are. And uh I
+[00:11:36] Hermes what the due dates are. And uh I can also assign these specific tasks to
+[00:11:38] can also assign these specific tasks to
+[00:11:38] can also assign these specific tasks to Hermes, right? And so if I come back out
+[00:11:41] Hermes, right? And so if I come back out
+[00:11:41] Hermes, right? And so if I come back out here, I really like this because again
+[00:11:43] here, I really like this because again
+[00:11:43] here, I really like this because again it is all in one place and it knows my
+[00:11:46] it is all in one place and it knows my
+[00:11:46] it is all in one place and it knows my business. It's categorized. So like for
+[00:11:48] business. It's categorized. So like for
+[00:11:48] business. It's categorized. So like for example right here, export active
+[00:11:50] example right here, export active
+[00:11:50] example right here, export active subscribers from kit. We're waiting on
+[00:11:52] subscribers from kit. We're waiting on
+[00:11:52] subscribers from kit. We're waiting on this for somebody on my team to do it or
+[00:11:54] this for somebody on my team to do it or
+[00:11:54] this for somebody on my team to do it or myself to do it. So I can click on this
+[00:11:57] myself to do it. So I can click on this
+[00:11:57] myself to do it. So I can click on this and the project is within the beehive or
+[00:12:00] and the project is within the beehive or
+[00:12:00] and the project is within the beehive or the kit beehive migration. So Hermes
+[00:12:04] the kit beehive migration. So Hermes
+[00:12:04] the kit beehive migration. So Hermes created this entire plan step by step. I
+[00:12:06] created this entire plan step by step. I
+[00:12:06] created this entire plan step by step. I didn't write any of this. It did it via
+[00:12:08] didn't write any of this. It did it via
+[00:12:08] didn't write any of this. It did it via research. It's given me all the notes
+[00:12:11] research. It's given me all the notes
+[00:12:11] research. It's given me all the notes and links to specific pages. So all of
+[00:12:13] and links to specific pages. So all of
+[00:12:13] and links to specific pages. So all of this is is in one place and I love it. I
+[00:12:16] this is is in one place and I love it. I
+[00:12:16] this is is in one place and I love it. I just live out of this dashboard here,
+[00:12:18] just live out of this dashboard here,
+[00:12:18] just live out of this dashboard here, making sure that I know exactly what's
+[00:12:20] making sure that I know exactly what's
+[00:12:20] making sure that I know exactly what's going on, what needs to happen, what do
+[00:12:22] going on, what needs to happen, what do
+[00:12:22] going on, what needs to happen, what do I need to do, what can I assign to
+[00:12:25] I need to do, what can I assign to
+[00:12:25] I need to do, what can I assign to different agents in Hermes here that
+[00:12:26] different agents in Hermes here that
+[00:12:26] different agents in Hermes here that I've set up, also to people on my team,
+[00:12:29] I've set up, also to people on my team,
+[00:12:29] I've set up, also to people on my team, etc. One central dashboard. It's really,
+[00:12:31] etc. One central dashboard. It's really,
+[00:12:31] etc. One central dashboard. It's really, really good. Okay, use case number six.
+[00:12:33] really good. Okay, use case number six.
+[00:12:33] really good. Okay, use case number six. This is one of my favorite use cases
+[00:12:34] This is one of my favorite use cases
+[00:12:34] This is one of my favorite use cases because it shows where all of this
+[00:12:37] because it shows where all of this
+[00:12:37] because it shows where all of this starts to get really, really interesting
+[00:12:39] starts to get really, really interesting
+[00:12:39] starts to get really, really interesting when it comes to the Hermes agent. Most
+[00:12:41] when it comes to the Hermes agent. Most
+[00:12:41] when it comes to the Hermes agent. Most people use AI like a search box, right?
+[00:12:43] people use AI like a search box, right?
+[00:12:44] people use AI like a search box, right? to ask a question, get an answer, and
+[00:12:46] to ask a question, get an answer, and
+[00:12:46] to ask a question, get an answer, and move on. But what I want is something
+[00:12:47] move on. But what I want is something
+[00:12:47] move on. But what I want is something different. I want my business to get
+[00:12:49] different. I want my business to get
+[00:12:49] different. I want my business to get smarter over time. Thus using Hermes. So
+[00:12:51] smarter over time. Thus using Hermes. So
+[00:12:51] smarter over time. Thus using Hermes. So I created an AI role that I call
+[00:12:54] I created an AI role that I call
+[00:12:54] I created an AI role that I call researcher. Its job is to watch for
+[00:12:56] researcher. Its job is to watch for
+[00:12:56] researcher. Its job is to watch for useful signals out there, if you will,
+[00:12:59] useful signals out there, if you will,
+[00:12:59] useful signals out there, if you will, compare them against what matters in my
+[00:13:01] compare them against what matters in my
+[00:13:01] compare them against what matters in my business, and separate what's actually
+[00:13:03] business, and separate what's actually
+[00:13:03] business, and separate what's actually been observed from what's just a claim.
+[00:13:06] been observed from what's just a claim.
+[00:13:06] been observed from what's just a claim. Let me explain this because that
+[00:13:07] Let me explain this because that
+[00:13:07] Let me explain this because that distinction is huge. Because if AI just
+[00:13:09] distinction is huge. Because if AI just
+[00:13:09] distinction is huge. Because if AI just summarizes everything confidently, it
+[00:13:12] summarizes everything confidently, it
+[00:13:12] summarizes everything confidently, it can make weak information, for example,
+[00:13:14] can make weak information, for example,
+[00:13:14] can make weak information, for example, sound way more certain than it really
+[00:13:17] sound way more certain than it really
+[00:13:17] sound way more certain than it really is. So, researcher keeps track of the
+[00:13:21] is. So, researcher keeps track of the
+[00:13:21] is. So, researcher keeps track of the evidence, the claims, the weak signals,
+[00:13:23] evidence, the claims, the weak signals,
+[00:13:23] evidence, the claims, the weak signals, and the things that still need to be
+[00:13:24] and the things that still need to be
+[00:13:24] and the things that still need to be verified when it's doing research for
+[00:13:27] verified when it's doing research for
+[00:13:27] verified when it's doing research for me. And then it writes all of that into
+[00:13:29] me. And then it writes all of that into
+[00:13:29] me. And then it writes all of that into my Obsidian vault that I just showed you
+[00:13:30] my Obsidian vault that I just showed you
+[00:13:30] my Obsidian vault that I just showed you in the previous use cases. So, all my
+[00:13:33] in the previous use cases. So, all my
+[00:13:33] in the previous use cases. So, all my other roles can use it later. So, check
+[00:13:36] other roles can use it later. So, check
+[00:13:36] other roles can use it later. So, check this out. I'm going to go over to Hermes
+[00:13:37] this out. I'm going to go over to Hermes
+[00:13:37] this out. I'm going to go over to Hermes in my Slack and I'm just going to type
+[00:13:39] in my Slack and I'm just going to type
+[00:13:39] in my Slack and I'm just going to type in Alex. So, Alex is the name of my
+[00:13:42] in Alex. So, Alex is the name of my
+[00:13:42] in Alex. So, Alex is the name of my Hermes agent. Ask researcher to run a
+[00:13:44] Hermes agent. Ask researcher to run a
+[00:13:44] Hermes agent. Ask researcher to run a researcher refresh for my AI playbook
+[00:13:46] researcher refresh for my AI playbook
+[00:13:46] researcher refresh for my AI playbook business. Focus on AI operating systems
+[00:13:48] business. Focus on AI operating systems
+[00:13:48] business. Focus on AI operating systems for online entrepreneurs. Write the
+[00:13:49] for online entrepreneurs. Write the
+[00:13:49] for online entrepreneurs. Write the evidence verification cue and content
+[00:13:52] evidence verification cue and content
+[00:13:52] evidence verification cue and content opportunities for me and my business to
+[00:13:55] opportunities for me and my business to
+[00:13:55] opportunities for me and my business to Obsidian. Then bring the operator brief
+[00:13:58] Obsidian. Then bring the operator brief
+[00:13:58] Obsidian. Then bring the operator brief back here. So, I'm asking it to go do a
+[00:14:01] back here. So, I'm asking it to go do a
+[00:14:01] back here. So, I'm asking it to go do a research project. But this isn't your
+[00:14:04] research project. But this isn't your
+[00:14:04] research project. But this isn't your standard research project like deep
+[00:14:06] standard research project like deep
+[00:14:06] standard research project like deep research for example. Remember it's
+[00:14:09] research for example. Remember it's
+[00:14:09] research for example. Remember it's researching through the lens and context
+[00:14:11] researching through the lens and context
+[00:14:11] researching through the lens and context of my business because it knows so much
+[00:14:14] of my business because it knows so much
+[00:14:14] of my business because it knows so much about my business. Okay, it's just
+[00:14:16] about my business. Okay, it's just
+[00:14:16] about my business. Okay, it's just finished up its research. Did a very
+[00:14:17] finished up its research. Did a very
+[00:14:17] finished up its research. Did a very thorough research about 20 minutes or
+[00:14:19] thorough research about 20 minutes or
+[00:14:19] thorough research about 20 minutes or so. So here is the brief of the research
+[00:14:22] so. So here is the brief of the research
+[00:14:22] so. So here is the brief of the research that it gave me and now it's telling me
+[00:14:23] that it gave me and now it's telling me
+[00:14:23] that it gave me and now it's telling me the files where it put it into my
+[00:14:26] the files where it put it into my
+[00:14:26] the files where it put it into my Obsidian. So let's go check that out.
+[00:14:29] Obsidian. So let's go check that out.
+[00:14:29] Obsidian. So let's go check that out. And here are all the things that it just
+[00:14:31] And here are all the things that it just
+[00:14:31] And here are all the things that it just did in terms of the research. Gave me a
+[00:14:34] did in terms of the research. Gave me a
+[00:14:34] did in terms of the research. Gave me a whole bunch of content opportunities.
+[00:14:36] whole bunch of content opportunities.
+[00:14:36] whole bunch of content opportunities. And again, here is the operator brief
+[00:14:38] And again, here is the operator brief
+[00:14:38] And again, here is the operator brief that it's just given me, why it matters
+[00:14:40] that it's just given me, why it matters
+[00:14:40] that it's just given me, why it matters for me, what's verified, what's not
+[00:14:42] for me, what's verified, what's not
+[00:14:42] for me, what's verified, what's not verified yet, content opportunities,
+[00:14:44] verified yet, content opportunities,
+[00:14:44] verified yet, content opportunities, recommended next action. So, it's
+[00:14:45] recommended next action. So, it's
+[00:14:45] recommended next action. So, it's telling me what I could do. I could say,
+[00:14:47] telling me what I could do. I could say,
+[00:14:47] telling me what I could do. I could say, "All right, hand this off to uh to
+[00:14:49] "All right, hand this off to uh to
+[00:14:49] "All right, hand this off to uh to Charles or Alexander, my marketing
+[00:14:51] Charles or Alexander, my marketing
+[00:14:51] Charles or Alexander, my marketing agent, and on to the next step." So, the
+[00:14:53] agent, and on to the next step." So, the
+[00:14:53] agent, and on to the next step." So, the big takeaway here is this. The value is
+[00:14:55] big takeaway here is this. The value is
+[00:14:55] big takeaway here is this. The value is not that AI summarized, you know, all
+[00:14:57] not that AI summarized, you know, all
+[00:14:57] not that AI summarized, you know, all the research for me that I asked it to
+[00:14:59] the research for me that I asked it to
+[00:14:59] the research for me that I asked it to do. The value is that my business now
+[00:15:01] do. The value is that my business now
+[00:15:01] do. The value is that my business now has a place to store evidence,
+[00:15:02] has a place to store evidence,
+[00:15:02] has a place to store evidence, uncertainty, and also useful signals
+[00:15:04] uncertainty, and also useful signals
+[00:15:04] uncertainty, and also useful signals that it gets through the research that
+[00:15:07] that it gets through the research that
+[00:15:07] that it gets through the research that are relevant to me. And all of that
+[00:15:09] are relevant to me. And all of that
+[00:15:09] are relevant to me. And all of that means that tomorrow's AI, if you will,
+[00:15:11] means that tomorrow's AI, if you will,
+[00:15:11] means that tomorrow's AI, if you will, for me works smarter than today's
+[00:15:14] for me works smarter than today's
+[00:15:14] for me works smarter than today's version of the AI that I'm using. Okay,
+[00:15:16] version of the AI that I'm using. Okay,
+[00:15:16] version of the AI that I'm using. Okay, for use case number seven, we're going
+[00:15:18] for use case number seven, we're going
+[00:15:18] for use case number seven, we're going to delegate real work from your phone
+[00:15:20] to delegate real work from your phone
+[00:15:20] to delegate real work from your phone and come back to it finished on your
+[00:15:23] and come back to it finished on your
+[00:15:23] and come back to it finished on your computer. So, I might open up Telegram
+[00:15:25] computer. So, I might open up Telegram
+[00:15:25] computer. So, I might open up Telegram on my phone and I might say something
+[00:15:27] on my phone and I might say something
+[00:15:27] on my phone and I might say something like, "Alex, I just had an idea for this
+[00:15:29] like, "Alex, I just had an idea for this
+[00:15:29] like, "Alex, I just had an idea for this week's newsletter. The point is that
+[00:15:32] week's newsletter. The point is that
+[00:15:32] week's newsletter. The point is that most entrepreneurs are using AI like a
+[00:15:35] most entrepreneurs are using AI like a
+[00:15:35] most entrepreneurs are using AI like a slot machine instead of building an
+[00:15:36] slot machine instead of building an
+[00:15:36] slot machine instead of building an actual operating system. Turn this into
+[00:15:39] actual operating system. Turn this into
+[00:15:39] actual operating system. Turn this into a draft for my audience. Use my voice AI
+[00:15:42] a draft for my audience. Use my voice AI
+[00:15:42] a draft for my audience. Use my voice AI playbook positioning and include three
+[00:15:45] playbook positioning and include three
+[00:15:45] playbook positioning and include three different subject lines, preview text,
+[00:15:47] different subject lines, preview text,
+[00:15:47] different subject lines, preview text, and the final draft. And then I can put
+[00:15:49] and the final draft. And then I can put
+[00:15:49] and the final draft. And then I can put my phone away. And then by the time I'm
+[00:15:51] my phone away. And then by the time I'm
+[00:15:51] my phone away. And then by the time I'm back at my desk after I get my coffee,
+[00:15:53] back at my desk after I get my coffee,
+[00:15:53] back at my desk after I get my coffee, it's done and waiting for me. So let's
+[00:15:55] it's done and waiting for me. So let's
+[00:15:55] it's done and waiting for me. So let's open up Telegram, which is the app I was
+[00:15:57] open up Telegram, which is the app I was
+[00:15:57] open up Telegram, which is the app I was using on my phone. So I'm back at my
+[00:15:59] using on my phone. So I'm back at my
+[00:15:59] using on my phone. So I'm back at my computer now and we'll see what it did.
+[00:16:01] computer now and we'll see what it did.
+[00:16:01] computer now and we'll see what it did. So gave me three subject lines right
+[00:16:04] So gave me three subject lines right
+[00:16:04] So gave me three subject lines right here. Gives me preview text and then has
+[00:16:06] here. Gives me preview text and then has
+[00:16:06] here. Gives me preview text and then has written an email here. And by the way,
+[00:16:09] written an email here. And by the way,
+[00:16:09] written an email here. And by the way, this is following the format of my
+[00:16:12] this is following the format of my
+[00:16:12] this is following the format of my actual newsletter. It's gone and done
+[00:16:15] actual newsletter. It's gone and done
+[00:16:15] actual newsletter. It's gone and done the research. It knows my voice. It
+[00:16:18] the research. It knows my voice. It
+[00:16:18] the research. It knows my voice. It knows my newsletter format. Um, and it's
+[00:16:21] knows my newsletter format. Um, and it's
+[00:16:21] knows my newsletter format. Um, and it's written the whole thing. So, this is the
+[00:16:23] written the whole thing. So, this is the
+[00:16:23] written the whole thing. So, this is the part that for me makes it feel less like
+[00:16:25] part that for me makes it feel less like
+[00:16:25] part that for me makes it feel less like a tool and more like actual help. You
+[00:16:28] a tool and more like actual help. You
+[00:16:28] a tool and more like actual help. You can be away from your desk living your
+[00:16:29] can be away from your desk living your
+[00:16:29] can be away from your desk living your life and the work is still moving
+[00:16:31] life and the work is still moving
+[00:16:31] life and the work is still moving forward. Not just reminders, not just
+[00:16:32] forward. Not just reminders, not just
+[00:16:32] forward. Not just reminders, not just notes, actual work is getting done. So,
+[00:16:35] notes, actual work is getting done. So,
+[00:16:35] notes, actual work is getting done. So, there you have it. Seven mind-blowing
+[00:16:37] there you have it. Seven mind-blowing
+[00:16:37] there you have it. Seven mind-blowing use cases for Hermes. And honestly, I'm
+[00:16:39] use cases for Hermes. And honestly, I'm
+[00:16:39] use cases for Hermes. And honestly, I'm just scratching the surface here. The
+[00:16:41] just scratching the surface here. The
+[00:16:41] just scratching the surface here. The thing I keep coming back to is that this
+[00:16:43] thing I keep coming back to is that this
+[00:16:43] thing I keep coming back to is that this isn't just another tool that you've got
+[00:16:44] isn't just another tool that you've got
+[00:16:44] isn't just another tool that you've got to babysit. It actually gets sharper
+[00:16:47] to babysit. It actually gets sharper
+[00:16:47] to babysit. It actually gets sharper about your business the more that you
+[00:16:49] about your business the more that you
+[00:16:49] about your business the more that you use it. Now again, if you want all the
+[00:16:50] use it. Now again, if you want all the
+[00:16:50] use it. Now again, if you want all the use cases that I share with you broken
+[00:16:52] use cases that I share with you broken
+[00:16:52] use cases that I share with you broken down with along with the prompts and
+[00:16:54] down with along with the prompts and
+[00:16:54] down with along with the prompts and requests that I did for each of the use
+[00:16:56] requests that I did for each of the use
+[00:16:56] requests that I did for each of the use cases, I've linked to it in the
+[00:16:58] cases, I've linked to it in the
+[00:16:58] cases, I've linked to it in the description below. You can go ahead and
+[00:16:59] description below. You can go ahead and
+[00:16:59] description below. You can go ahead and download that. And again, as always,
+[00:17:01] download that. And again, as always,
+[00:17:01] download that. And again, as always, thanks so much for watching today's
+[00:17:02] thanks so much for watching today's
+[00:17:02] thanks so much for watching today's video. Appreciate you. See you in the
+[00:17:03] video. Appreciate you. See you in the
+[00:17:03] video. Appreciate you. See you in the next video.

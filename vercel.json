@@ -1,0 +1,20 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options", "value": "DENY" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
+      ]
+    }
+  ],
+  "rewrites": [
+    { "source": "/api/subscribe", "destination": "/api/subscribe" },
+    { "source": "/api/stripe-webhook", "destination": "/api/stripe-webhook" },
+    { "source": "/api/broadcast", "destination": "/api/broadcast" },
+    { "source": "/api/recover-abandoned", "destination": "/api/recover-abandoned" },
+    { "source": "/api/upload-cookies", "destination": "/api/upload-cookies" }
+  ]
+}

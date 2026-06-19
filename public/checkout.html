@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Garden Keeper — Checkout</title>
+<!-- Plausible analytics -->
+<script defer data-domain="garden-keeper-v4.vercel.app" src="https://plausible.io/js/script.js"></script>
+<script>
+  window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments); };
+  try {
+    var utm_source = new URLSearchParams(location.search).get('utm_source') || '';
+    var ref = document.referrer || 'direct';
+    var src = utm_source || (ref.includes('reddit.com') ? 'reddit' : (ref.includes('google.com') ? 'google' : (ref === '' ? 'direct' : 'referral')));
+    window.plausible('CheckoutView', { props: { source: src } });
+  } catch (e) {}
+</script>
+<style>
+  :root { --bg: #0f2416; --card: #1a3a24; --accent: #7cb342; --text: #e8f5e9; }
+  body { background: var(--bg); color: var(--text); font-family: system-ui, sans-serif; margin: 0; }
+  .container { max-width: 900px; margin: 0 auto; padding: 2rem; }
+  h1 { text-align: center; }
+  .tiers { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 2rem; }
+  .tier { background: var(--card); border: 1px solid #2e5c36; border-radius: 12px; padding: 1.5rem; text-align: center; }
+  .tier h3 { margin: 0 0 .5rem; }
+  .price { font-size: 1.8rem; font-weight: 700; color: var(--accent); }
+  .btn { margin-top: 1rem; display:inline-block; background: var(--accent); color: #0f2416; border:none; padding:.75rem 1.25rem; border-radius:8px; font-weight:700; cursor:pointer; }
+  .vip .btn { background: #ffd700; }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>The Garden Keeper</h1>
+  <p style="text-align:center;opacity:.8">Choose your journaling experience.</p>
+  <div class="tiers">
+    <div class="tier">
+      <h3>Single Journal</h3>
+      <div class="price">$6.99</div>
+      <p>One beautifully designed journal for your plant-tracking needs.</p>
+      <button class="btn" onclick="checkout('gk_single_journal')">Buy Now</button>
+    </div>
+    <div class="tier">
+      <h3>Bundle (3 Journals)</h3>
+      <div class="price">$11.99</div>
+      <p>Triple pack — perfect for gifting or multi-season tracking.</p>
+      <button class="btn" onclick="checkout('gk_bundle_3')">Buy Now</button>
+    </div>
+    <div class="tier">
+      <h3>Complete Set (5)</h3>
+      <div class="price">$17.99</div>
+      <p>The full collection — five themed journals at our best value.</p>
+      <button class="btn" onclick="checkout('gk_complete_set_5')">Buy Now</button>
+    </div>
+    <div class="tier vip">
+      <h3>VIP Subscription</h3>
+      <div class="price">$4.99<span style="font-size:.9rem">/mo</span></div>
+      <p>Exclusive guides, community perks & early releases.</p>
+      <button class="btn" onclick="checkout('gk_vip_monthly')">Subscribe</button>
+    </div>
+  </div>
+  <p style="text-align:center;margin-top:2rem;opacity:.6;font-size:.85rem">Secure checkout powered by Stripe</p>
+</div>
+<script>
+const PAYMENT_LINKS = {
+  gk_single_journal:   'https://buy.stripe.com/7sYfZa8J10rBcBK8Z02go00',
+  gk_bundle_3:           'https://buy.stripe.com/28E14g1gzb6f7hqejk2go01',
+  gk_complete_set_5:     'https://buy.stripe.com/8x2dR2e3leir8lufno2go02',
+  gk_vip_monthly:        'https://buy.stripe.com/5kQ14g3oH2zJbxG7UW2go03'
+};
+function checkout(lookupKey) {
+  const url = PAYMENT_LINKS[lookupKey];
+  if (url) {
+    try { window.plausible('CheckoutStart', { props: { product: lookupKey } }); } catch(e) {}
+    window.location.href = url;
+  } else {
+    alert('Product not available: ' + lookupKey);
+  }
+}
+</script>
+</body>
+</html>

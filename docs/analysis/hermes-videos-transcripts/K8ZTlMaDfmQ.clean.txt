@@ -1,0 +1,1136 @@
+# Hermes on $6 VPS - The Full Build (Tonbi, 20min)
+# Video ID: K8ZTlMaDfmQ
+# Total segments: 1132
+
+[00:00:00] So, when you start with AI coding tools,
+[00:00:02] So, when you start with AI coding tools, and you start making projects, and want
+[00:00:04] and you start making projects, and want
+[00:00:04] and you start making projects, and want to actually deploy websites and web
+[00:00:06] to actually deploy websites and web
+[00:00:06] to actually deploy websites and web apps,
+[00:00:07] apps,
+[00:00:07] apps, if you're using Claude or a Codex,
+[00:00:09] if you're using Claude or a Codex,
+[00:00:09] if you're using Claude or a Codex, they'll often suggest you use, you know,
+[00:00:10] they'll often suggest you use, you know,
+[00:00:10] they'll often suggest you use, you know, Supabase or Railway, Vercel.
+[00:00:13] Supabase or Railway, Vercel.
+[00:00:13] Supabase or Railway, Vercel. And when I started out, those were the
+[00:00:15] And when I started out, those were the
+[00:00:15] And when I started out, those were the different platforms that I was using,
+[00:00:17] different platforms that I was using,
+[00:00:17] different platforms that I was using, and they're all great for what they do,
+[00:00:19] and they're all great for what they do,
+[00:00:19] and they're all great for what they do, and especially for beginners.
+[00:00:21] and especially for beginners.
+[00:00:22] and especially for beginners. But, I found a way to replace all of
+[00:00:23] But, I found a way to replace all of
+[00:00:23] But, I found a way to replace all of them,
+[00:00:24] them,
+[00:00:24] them, run my web apps,
+[00:00:25] run my web apps,
+[00:00:25] run my web apps, all on a small VPS with one Hermes agent
+[00:00:29] all on a small VPS with one Hermes agent
+[00:00:29] all on a small VPS with one Hermes agent maintaining
+[00:00:30] maintaining
+[00:00:30] maintaining the app content
+[00:00:32] the app content
+[00:00:32] the app content and running my businesses.
+[00:00:34] and running my businesses.
+[00:00:34] and running my businesses. In this video, I'm going to show you
+[00:00:36] In this video, I'm going to show you
+[00:00:36] In this video, I'm going to show you what my setup is. I'll introduce some of
+[00:00:38] what my setup is. I'll introduce some of
+[00:00:38] what my setup is. I'll introduce some of my workflows, agentic workflows, that
+[00:00:41] my workflows, agentic workflows, that
+[00:00:41] my workflows, agentic workflows, that makes this possible.
+[00:00:42] makes this possible.
+[00:00:42] makes this possible. And then, I'm actually going to demo
+[00:00:44] And then, I'm actually going to demo
+[00:00:44] And then, I'm actually going to demo deploying a a new web app onto this same
+[00:00:48] deploying a a new web app onto this same
+[00:00:48] deploying a a new web app onto this same VPS with the same agent ready to run for
+[00:00:51] VPS with the same agent ready to run for
+[00:00:51] VPS with the same agent ready to run for me.
+[00:00:52] me.
+[00:00:52] me. So, let's get started.
+[00:00:54] So, let's get started.
+[00:00:54] So, let's get started. And if you like this video, please
+[00:00:55] And if you like this video, please
+[00:00:55] And if you like this video, please consider supporting the channel by
+[00:00:57] consider supporting the channel by
+[00:00:57] consider supporting the channel by joining Team Garage,
+[00:00:59] joining Team Garage,
+[00:00:59] joining Team Garage, which will give you early access to
+[00:01:00] which will give you early access to
+[00:01:00] which will give you early access to videos,
+[00:01:01] videos,
+[00:01:02] videos, or Team Garage Max, where you will get
+[00:01:03] or Team Garage Max, where you will get
+[00:01:03] or Team Garage Max, where you will get exclusive videos each week, as well as
+[00:01:05] exclusive videos each week, as well as
+[00:01:05] exclusive videos each week, as well as many other perks. I'd like to continue
+[00:01:08] many other perks. I'd like to continue
+[00:01:08] many other perks. I'd like to continue providing as much free, valuable content
+[00:01:10] providing as much free, valuable content
+[00:01:10] providing as much free, valuable content as possible, as well as better
+[00:01:11] as possible, as well as better
+[00:01:11] as possible, as well as better experiments on different hardware. So,
+[00:01:13] experiments on different hardware. So,
+[00:01:13] experiments on different hardware. So, these memberships will really make it
+[00:01:15] these memberships will really make it
+[00:01:15] these memberships will really make it possible.
+[00:01:16] possible.
+[00:01:16] possible. So, a few things to start, what we're
+[00:01:17] So, a few things to start, what we're
+[00:01:17] So, a few things to start, what we're going to cover here is going to be kind
+[00:01:19] going to cover here is going to be kind
+[00:01:19] going to cover here is going to be kind of the usual stack and what it gives
+[00:01:21] of the usual stack and what it gives
+[00:01:21] of the usual stack and what it gives you. Uh then, I'm going to show you the
+[00:01:23] you. Uh then, I'm going to show you the
+[00:01:23] you. Uh then, I'm going to show you the example of Agent Wikis. This is a real
+[00:01:25] example of Agent Wikis. This is a real
+[00:01:25] example of Agent Wikis. This is a real site. This is live at agentwikis.com.
+[00:01:28] site. This is live at agentwikis.com.
+[00:01:28] site. This is live at agentwikis.com. You can check it out yourself. It's all
+[00:01:30] You can check it out yourself. It's all
+[00:01:31] You can check it out yourself. It's all uh free
+[00:01:32] uh free
+[00:01:32] uh free knowledge bases for your agents. You can
+[00:01:34] knowledge bases for your agents. You can
+[00:01:34] knowledge bases for your agents. You can check it out. You can
+[00:01:35] check it out. You can
+[00:01:35] check it out. You can join the wait list to request your own
+[00:01:37] join the wait list to request your own
+[00:01:37] join the wait list to request your own private knowledge base, but these are
+[00:01:39] private knowledge base, but these are
+[00:01:39] private knowledge base, but these are all free to use.
+[00:01:41] all free to use.
+[00:01:41] all free to use. Uh so, this has been the site that I
+[00:01:43] Uh so, this has been the site that I
+[00:01:44] Uh so, this has been the site that I have primarily been managing
+[00:01:46] have primarily been managing
+[00:01:46] have primarily been managing uh with this Hermes agent. So, I'll show
+[00:01:48] uh with this Hermes agent. So, I'll show
+[00:01:48] uh with this Hermes agent. So, I'll show you some of the workflows that I have
+[00:01:50] you some of the workflows that I have
+[00:01:50] you some of the workflows that I have with it, and how I keep all the
+[00:01:51] with it, and how I keep all the
+[00:01:52] with it, and how I keep all the information fresh,
+[00:01:53] information fresh,
+[00:01:53] information fresh, uh and
+[00:01:55] uh and
+[00:01:55] uh and make sure that I am able to fix any
+[00:01:57] make sure that I am able to fix any
+[00:01:57] make sure that I am able to fix any issues quickly.
+[00:01:58] issues quickly.
+[00:01:58] issues quickly. And largely autonomously.
+[00:02:00] And largely autonomously.
+[00:02:00] And largely autonomously. Uh then we're going to look at a site
+[00:02:02] Uh then we're going to look at a site
+[00:02:02] Uh then we're going to look at a site that needs a database. Like Agent Wiki's
+[00:02:04] that needs a database. Like Agent Wiki's
+[00:02:04] that needs a database. Like Agent Wiki's doesn't really need a database itself.
+[00:02:07] doesn't really need a database itself.
+[00:02:07] doesn't really need a database itself. It's mostly just markdown files.
+[00:02:09] It's mostly just markdown files.
+[00:02:09] It's mostly just markdown files. Um the game app that I'm going to be
+[00:02:12] Um the game app that I'm going to be
+[00:02:12] Um the game app that I'm going to be showing you actually needs one. So
+[00:02:14] showing you actually needs one. So
+[00:02:14] showing you actually needs one. So that's where you would usually use
+[00:02:15] that's where you would usually use
+[00:02:15] that's where you would usually use Superbase.
+[00:02:17] Superbase.
+[00:02:17] Superbase. Uh but I'm going to show you how to kind
+[00:02:18] Uh but I'm going to show you how to kind
+[00:02:18] Uh but I'm going to show you how to kind of replace it with this VPS and an
+[00:02:21] of replace it with this VPS and an
+[00:02:21] of replace it with this VPS and an agent.
+[00:02:23] agent.
+[00:02:23] agent. Uh so this is the usual stack.
+[00:02:26] Uh so this is the usual stack.
+[00:02:26] Uh so this is the usual stack. And like I said, if you were live coding
+[00:02:28] And like I said, if you were live coding
+[00:02:29] And like I said, if you were live coding in the winter with Opus 4.5, it would
+[00:02:31] in the winter with Opus 4.5, it would
+[00:02:31] in the winter with Opus 4.5, it would usually like give you these options or a
+[00:02:34] usually like give you these options or a
+[00:02:34] usually like give you these options or a couple others.
+[00:02:35] couple others.
+[00:02:35] couple others. And they offer a lot. I'm simplifying
+[00:02:37] And they offer a lot. I'm simplifying
+[00:02:37] And they offer a lot. I'm simplifying here, but Vercel is mainly for
+[00:02:40] here, but Vercel is mainly for
+[00:02:40] here, but Vercel is mainly for deployment of front ends.
+[00:02:42] deployment of front ends.
+[00:02:42] deployment of front ends. Railway, um you can do managed like
+[00:02:45] Railway, um you can do managed like
+[00:02:45] Railway, um you can do managed like Postgres
+[00:02:46] Postgres
+[00:02:46] Postgres backups.
+[00:02:48] backups.
+[00:02:48] backups. A lot of apps that need back end uh will
+[00:02:50] A lot of apps that need back end uh will
+[00:02:50] A lot of apps that need back end uh will use Railway and Superbase
+[00:02:52] use Railway and Superbase
+[00:02:53] use Railway and Superbase is uh used a lot for
+[00:02:55] is uh used a lot for
+[00:02:55] is uh used a lot for uh databases. Postgres, you get auth,
+[00:02:57] uh databases. Postgres, you get auth,
+[00:02:57] uh databases. Postgres, you get auth, real time, uh row level security,
+[00:03:00] real time, uh row level security,
+[00:03:00] real time, uh row level security, storage.
+[00:03:01] storage.
+[00:03:01] storage. These are all good. I've all I've used
+[00:03:03] These are all good. I've all I've used
+[00:03:03] These are all good. I've all I've used them all.
+[00:03:04] them all.
+[00:03:04] them all. Uh but running them as a stack can get a
+[00:03:06] Uh but running them as a stack can get a
+[00:03:06] Uh but running them as a stack can get a little bit expensive.
+[00:03:08] little bit expensive.
+[00:03:08] little bit expensive. And the reality is that having a VPS or
+[00:03:10] And the reality is that having a VPS or
+[00:03:10] And the reality is that having a VPS or any kind of server like that
+[00:03:12] any kind of server like that
+[00:03:12] any kind of server like that can replace these functionalities or at
+[00:03:14] can replace these functionalities or at
+[00:03:14] can replace these functionalities or at least the core functionalities.
+[00:03:17] least the core functionalities.
+[00:03:17] least the core functionalities. What they really give you is de-risking
+[00:03:18] What they really give you is de-risking
+[00:03:18] What they really give you is de-risking and convenience. They're super
+[00:03:20] and convenience. They're super
+[00:03:20] and convenience. They're super convenient.
+[00:03:21] convenient.
+[00:03:21] convenient. So let's keep that in mind as we move
+[00:03:23] So let's keep that in mind as we move
+[00:03:23] So let's keep that in mind as we move forward.
+[00:03:24] forward.
+[00:03:24] forward. Okay. The site that needs nothing.
+[00:03:27] Okay. The site that needs nothing.
+[00:03:27] Okay. The site that needs nothing. Well, it needs some things, but this is
+[00:03:29] Well, it needs some things, but this is
+[00:03:29] Well, it needs some things, but this is Agent Wiki's once again.
+[00:03:32] Agent Wiki's once again.
+[00:03:32] Agent Wiki's once again. And it has no database. It has no build
+[00:03:33] And it has no database. It has no build
+[00:03:33] And it has no database. It has no build step. It was specifically created and
+[00:03:37] step. It was specifically created and
+[00:03:37] step. It was specifically created and coded to be super agent friendly.
+[00:03:40] coded to be super agent friendly.
+[00:03:40] coded to be super agent friendly. And Git is the database. There's no
+[00:03:42] And Git is the database. There's no
+[00:03:42] And Git is the database. There's no actual database. It's just Git.
+[00:03:45] actual database. It's just Git.
+[00:03:45] actual database. It's just Git. Uh Agent Wiki's is now I think we're up
+[00:03:47] Uh Agent Wiki's is now I think we're up
+[00:03:47] Uh Agent Wiki's is now I think we're up to a couple more Wiki's, but we have 16
+[00:03:49] to a couple more Wiki's, but we have 16
+[00:03:49] to a couple more Wiki's, but we have 16 right now that are all public. And the
+[00:03:51] right now that are all public. And the
+[00:03:51] right now that are all public. And the Wiki just a folder of markdown files.
+[00:03:54] Wiki just a folder of markdown files.
+[00:03:54] Wiki just a folder of markdown files. I have them for Hermes Agent,
+[00:03:56] I have them for Hermes Agent,
+[00:03:56] I have them for Hermes Agent, Hyperframes,
+[00:03:58] Hyperframes,
+[00:03:58] Hyperframes, ComfyUI, a bunch of others.
+[00:04:01] ComfyUI, a bunch of others.
+[00:04:01] ComfyUI, a bunch of others. So, this is how it was built out. The
+[00:04:03] So, this is how it was built out. The
+[00:04:03] So, this is how it was built out. The app server renders markdown from disk on
+[00:04:05] app server renders markdown from disk on
+[00:04:05] app server renders markdown from disk on every request. It keeps a search index
+[00:04:08] every request. It keeps a search index
+[00:04:08] every request. It keeps a search index in memory that only rebuilds when the
+[00:04:09] in memory that only rebuilds when the
+[00:04:09] in memory that only rebuilds when the files actually change. So, git push is
+[00:04:12] files actually change. So, git push is
+[00:04:12] files actually change. So, git push is the deploy.
+[00:04:13] the deploy.
+[00:04:13] the deploy. A pull on the server is is instantly
+[00:04:15] A pull on the server is is instantly
+[00:04:16] A pull on the server is is instantly live. There's no restart, no rebuilding.
+[00:04:18] live. There's no restart, no rebuilding.
+[00:04:18] live. There's no restart, no rebuilding. So, for a huge class of site, docs,
+[00:04:21] So, for a huge class of site, docs,
+[00:04:21] So, for a huge class of site, docs, blogs, wikis, marketing pages, stuff
+[00:04:24] blogs, wikis, marketing pages, stuff
+[00:04:24] blogs, wikis, marketing pages, stuff like this, git is your database, your
+[00:04:26] like this, git is your database, your
+[00:04:26] like this, git is your database, your CMS, and your deploy pipeline all in
+[00:04:29] CMS, and your deploy pipeline all in
+[00:04:29] CMS, and your deploy pipeline all in one.
+[00:04:30] one.
+[00:04:30] one. You don't need an actual database. The
+[00:04:32] You don't need an actual database. The
+[00:04:32] You don't need an actual database. The database would have been answering a
+[00:04:33] database would have been answering a
+[00:04:33] database would have been answering a question this site never really asks.
+[00:04:37] question this site never really asks.
+[00:04:37] question this site never really asks. So, this site doesn't get its own
+[00:04:38] So, this site doesn't get its own
+[00:04:38] So, this site doesn't get its own server, right? It's a tenant on a box
+[00:04:41] server, right? It's a tenant on a box
+[00:04:41] server, right? It's a tenant on a box that already runs my Hermes Agent. If
+[00:04:44] that already runs my Hermes Agent. If
+[00:04:44] that already runs my Hermes Agent. If you watched episode two of the Hermes
+[00:04:47] you watched episode two of the Hermes
+[00:04:47] you watched episode two of the Hermes Agent masterclass, you saw me deploy a
+[00:04:50] Agent masterclass, you saw me deploy a
+[00:04:50] Agent masterclass, you saw me deploy a Hermes Agent on a VPS.
+[00:04:52] Hermes Agent on a VPS.
+[00:04:52] Hermes Agent on a VPS. So, that agent is um running on a 25 gig
+[00:04:56] So, that agent is um running on a 25 gig
+[00:04:56] So, that agent is um running on a 25 gig storage, 1 VCPU, 1 gig
+[00:05:00] storage, 1 VCPU, 1 gig
+[00:05:00] storage, 1 VCPU, 1 gig uh
+[00:05:00] uh
+[00:05:00] uh droplet, a VPS, basically. And you can
+[00:05:03] droplet, a VPS, basically. And you can
+[00:05:03] droplet, a VPS, basically. And you can see he is hooked up here to Telegram.
+[00:05:07] see he is hooked up here to Telegram.
+[00:05:07] see he is hooked up here to Telegram. So, I can communicate with him directly.
+[00:05:08] So, I can communicate with him directly.
+[00:05:08] So, I can communicate with him directly. And he's always on, obviously the VPS is
+[00:05:11] And he's always on, obviously the VPS is
+[00:05:11] And he's always on, obviously the VPS is always running. I always have access to
+[00:05:13] always running. I always have access to
+[00:05:13] always running. I always have access to him through Telegram.
+[00:05:14] him through Telegram.
+[00:05:14] him through Telegram. I don't need to keep my PC or laptop
+[00:05:16] I don't need to keep my PC or laptop
+[00:05:16] I don't need to keep my PC or laptop open for that him to be working.
+[00:05:19] open for that him to be working.
+[00:05:19] open for that him to be working. Uh here's how the work space is
+[00:05:20] Uh here's how the work space is
+[00:05:20] Uh here's how the work space is designed. So, everything lives under the
+[00:05:22] designed. So, everything lives under the
+[00:05:23] designed. So, everything lives under the CRV/agentwikis
+[00:05:24] CRV/agentwikis
+[00:05:24] CRV/agentwikis directory.
+[00:05:26] directory.
+[00:05:26] directory. Uh the app and one git clone per wiki.
+[00:05:29] Uh the app and one git clone per wiki.
+[00:05:29] Uh the app and one git clone per wiki. So, you can see here the different ones
+[00:05:30] So, you can see here the different ones
+[00:05:30] So, you can see here the different ones I have, Hermes, ComfyUI.
+[00:05:32] I have, Hermes, ComfyUI.
+[00:05:32] I have, Hermes, ComfyUI. So, Caddy uh was already on the box
+[00:05:34] So, Caddy uh was already on the box
+[00:05:34] So, Caddy uh was already on the box terminating TLS for the agent. So, the
+[00:05:37] terminating TLS for the agent. So, the
+[00:05:37] terminating TLS for the agent. So, the site just added a Vhost.
+[00:05:40] site just added a Vhost.
+[00:05:40] site just added a Vhost. So, agentwikis.com just reverse proxies
+[00:05:43] So, agentwikis.com just reverse proxies
+[00:05:43] So, agentwikis.com just reverse proxies uh to the localhost. And then Caddy auto
+[00:05:45] uh to the localhost. And then Caddy auto
+[00:05:45] uh to the localhost. And then Caddy auto provisions the cert from there. It's
+[00:05:47] provisions the cert from there. It's
+[00:05:47] provisions the cert from there. It's auto TLS.
+[00:05:49] auto TLS.
+[00:05:49] auto TLS. So, how I communicate or have access to
+[00:05:52] So, how I communicate or have access to
+[00:05:52] So, how I communicate or have access to this is I use
+[00:05:54] this is I use
+[00:05:54] this is I use uh SSH simply using the IP and then it
+[00:05:57] uh SSH simply using the IP and then it
+[00:05:57] uh SSH simply using the IP and then it uses his name, which is Admiral, and
+[00:05:59] uses his name, which is Admiral, and
+[00:05:59] uses his name, which is Admiral, and just the root.
+[00:06:00] just the root.
+[00:06:00] just the root. Uh Hermes chat, you can see, pulls up
+[00:06:02] Uh Hermes chat, you can see, pulls up
+[00:06:02] Uh Hermes chat, you can see, pulls up the normal Hermes chat you you would
+[00:06:04] the normal Hermes chat you you would
+[00:06:04] the normal Hermes chat you you would see. So, this is all in the VPS
+[00:06:06] see. So, this is all in the VPS
+[00:06:06] see. So, this is all in the VPS that I have access here to work in
+[00:06:08] that I have access here to work in
+[00:06:08] that I have access here to work in Hermes. I'm using GPT-3.5
+[00:06:10] Hermes. I'm using GPT-3.5
+[00:06:10] Hermes. I'm using GPT-3.5 that I can work with Hermes on the VPS
+[00:06:13] that I can work with Hermes on the VPS
+[00:06:13] that I can work with Hermes on the VPS and have direct access to the files
+[00:06:15] and have direct access to the files
+[00:06:15] and have direct access to the files in it
+[00:06:16] in it
+[00:06:16] in it if I want to edit the site or make any
+[00:06:18] if I want to edit the site or make any
+[00:06:18] if I want to edit the site or make any direct changes.
+[00:06:19] direct changes.
+[00:06:19] direct changes. Now, we'll go into more of the security
+[00:06:21] Now, we'll go into more of the security
+[00:06:21] Now, we'll go into more of the security measures cuz I don't give him full reign
+[00:06:23] measures cuz I don't give him full reign
+[00:06:23] measures cuz I don't give him full reign of it. Um only the access to the parts
+[00:06:26] of it. Um only the access to the parts
+[00:06:26] of it. Um only the access to the parts of the site that he needs.
+[00:06:28] of the site that he needs.
+[00:06:28] of the site that he needs. And getting to that point, we have this
+[00:06:29] And getting to that point, we have this
+[00:06:30] And getting to that point, we have this pipeline or loop um that the agent
+[00:06:32] pipeline or loop um that the agent
+[00:06:32] pipeline or loop um that the agent conducts.
+[00:06:35] conducts.
+[00:06:35] conducts. And this is how it maintains the actual
+[00:06:36] And this is how it maintains the actual
+[00:06:36] And this is how it maintains the actual content
+[00:06:38] content
+[00:06:38] content for the most part autonomously.
+[00:06:41] for the most part autonomously.
+[00:06:41] for the most part autonomously. And if you watched my video
+[00:06:43] And if you watched my video
+[00:06:43] And if you watched my video about how to build a multi-agent
+[00:06:45] about how to build a multi-agent
+[00:06:45] about how to build a multi-agent workflow,
+[00:06:46] workflow,
+[00:06:46] workflow, I'll put a uh a card or a link in the
+[00:06:48] I'll put a uh a card or a link in the
+[00:06:48] I'll put a uh a card or a link in the corner of this one.
+[00:06:50] corner of this one.
+[00:06:50] corner of this one. You can go back and watch that if you
+[00:06:51] You can go back and watch that if you
+[00:06:51] You can go back and watch that if you haven't, but that's the main uh pipeline
+[00:06:54] haven't, but that's the main uh pipeline
+[00:06:54] haven't, but that's the main uh pipeline that I use.
+[00:06:56] that I use.
+[00:06:56] that I use. It is multi-agent, uh multi-profile,
+[00:06:59] It is multi-agent, uh multi-profile,
+[00:06:59] It is multi-agent, uh multi-profile, really.
+[00:07:00] really.
+[00:07:00] really. Um but that is
+[00:07:02] Um but that is
+[00:07:02] Um but that is the same pipeline that I adapted here.
+[00:07:04] the same pipeline that I adapted here.
+[00:07:04] the same pipeline that I adapted here. So, there's a cron that fires where I
+[00:07:06] So, there's a cron that fires where I
+[00:07:06] So, there's a cron that fires where I have scout and research agents checking
+[00:07:08] have scout and research agents checking
+[00:07:08] have scout and research agents checking for new releases, checking sources if
+[00:07:10] for new releases, checking sources if
+[00:07:10] for new releases, checking sources if anything's updated
+[00:07:12] anything's updated
+[00:07:12] anything's updated for the various wikis. Um like for exa-
+[00:07:15] for the various wikis. Um like for exa-
+[00:07:15] for the various wikis. Um like for exa- example, if it was a Hermes agent wiki,
+[00:07:17] example, if it was a Hermes agent wiki,
+[00:07:17] example, if it was a Hermes agent wiki, it would check if there's been any new
+[00:07:19] it would check if there's been any new
+[00:07:19] it would check if there's been any new versions released, any updates, any
+[00:07:21] versions released, any updates, any
+[00:07:21] versions released, any updates, any changes to the change logs,
+[00:07:23] changes to the change logs,
+[00:07:23] changes to the change logs, any major features, any community notes.
+[00:07:26] any major features, any community notes.
+[00:07:26] any major features, any community notes. Uh from there, it would dedupe and then,
+[00:07:29] Uh from there, it would dedupe and then,
+[00:07:29] Uh from there, it would dedupe and then, you know, get rid of
+[00:07:31] you know, get rid of
+[00:07:31] you know, get rid of any duplicate entries and then do
+[00:07:33] any duplicate entries and then do
+[00:07:33] any duplicate entries and then do research about what's genuinely new and
+[00:07:35] research about what's genuinely new and
+[00:07:35] research about what's genuinely new and worth adding as a page or
+[00:07:37] worth adding as a page or
+[00:07:37] worth adding as a page or adding as content to an existing page.
+[00:07:39] adding as content to an existing page.
+[00:07:39] adding as content to an existing page. And once it has its plan, there's the
+[00:07:41] And once it has its plan, there's the
+[00:07:41] And once it has its plan, there's the one Telegram gate.
+[00:07:43] one Telegram gate.
+[00:07:43] one Telegram gate. And this goes to me in Telegram, and
+[00:07:45] And this goes to me in Telegram, and
+[00:07:45] And this goes to me in Telegram, and it'll be the same one the same Adderall
+[00:07:48] it'll be the same one the same Adderall
+[00:07:48] it'll be the same one the same Adderall here.
+[00:07:49] here.
+[00:07:49] here. You would just send me that update.
+[00:07:52] You would just send me that update.
+[00:07:52] You would just send me that update. And if I approve, then we can just the
+[00:07:54] And if I approve, then we can just the
+[00:07:54] And if I approve, then we can just the sources, we lint, and we commit it
+[00:07:56] sources, we lint, and we commit it
+[00:07:56] sources, we lint, and we commit it written to get.
+[00:07:57] written to get.
+[00:07:57] written to get. And then it would be live on the site
+[00:08:00] And then it would be live on the site
+[00:08:00] And then it would be live on the site within 15 minutes without any kind of
+[00:08:02] within 15 minutes without any kind of
+[00:08:02] within 15 minutes without any kind of restart. And then this repeats every
+[00:08:04] restart. And then this repeats every
+[00:08:04] restart. And then this repeats every cycle. Right now I have the mono weekly
+[00:08:06] cycle. Right now I have the mono weekly
+[00:08:06] cycle. Right now I have the mono weekly uh weekly cron
+[00:08:09] uh weekly cron
+[00:08:09] uh weekly cron just cuz I have a lot and doing one of
+[00:08:11] just cuz I have a lot and doing one of
+[00:08:11] just cuz I have a lot and doing one of these loops
+[00:08:12] these loops
+[00:08:12] these loops can be quite quite quite costly in terms
+[00:08:15] can be quite quite quite costly in terms
+[00:08:15] can be quite quite quite costly in terms of tokens.
+[00:08:16] of tokens.
+[00:08:16] of tokens. Uh but if you want to see the details of
+[00:08:17] Uh but if you want to see the details of
+[00:08:18] Uh but if you want to see the details of how I built this out, like I said, check
+[00:08:19] how I built this out, like I said, check
+[00:08:19] how I built this out, like I said, check out that video I did.
+[00:08:21] out that video I did.
+[00:08:21] out that video I did. Uh but I'm going to show you a different
+[00:08:22] Uh but I'm going to show you a different
+[00:08:22] Uh but I'm going to show you a different loop actually.
+[00:08:24] loop actually.
+[00:08:24] loop actually. So, this is the demand loop, and I think
+[00:08:25] So, this is the demand loop, and I think
+[00:08:25] So, this is the demand loop, and I think this is a really nice feature of Agent
+[00:08:27] this is a really nice feature of Agent
+[00:08:27] this is a really nice feature of Agent Wiki's.
+[00:08:29] Wiki's.
+[00:08:29] Wiki's. And the goal is pretty simple. When I
+[00:08:30] And the goal is pretty simple. When I
+[00:08:30] And the goal is pretty simple. When I use like these knowledge bases or Wiki's
+[00:08:33] use like these knowledge bases or Wiki's
+[00:08:33] use like these knowledge bases or Wiki's myself,
+[00:08:34] myself,
+[00:08:34] myself, every time I ask a question which isn't
+[00:08:36] every time I ask a question which isn't
+[00:08:36] every time I ask a question which isn't in the Wiki itself,
+[00:08:38] in the Wiki itself,
+[00:08:38] in the Wiki itself, and my agent has to go and find the
+[00:08:40] and my agent has to go and find the
+[00:08:40] and my agent has to go and find the answer, then I have it automatically
+[00:08:43] answer, then I have it automatically
+[00:08:43] answer, then I have it automatically kind of updating with whatever
+[00:08:44] kind of updating with whatever
+[00:08:44] kind of updating with whatever information the agent finds to fill in
+[00:08:47] information the agent finds to fill in
+[00:08:47] information the agent finds to fill in those gaps in the knowledge. So, I
+[00:08:48] those gaps in the knowledge. So, I
+[00:08:48] those gaps in the knowledge. So, I wanted to try to recreate that.
+[00:08:51] wanted to try to recreate that.
+[00:08:51] wanted to try to recreate that. And try to learn what agents are
+[00:08:53] And try to learn what agents are
+[00:08:53] And try to learn what agents are actually asking for
+[00:08:55] actually asking for
+[00:08:55] actually asking for uh without ever reading anyone's prompts
+[00:08:57] uh without ever reading anyone's prompts
+[00:08:57] uh without ever reading anyone's prompts and feed the gaps back into the pipeline
+[00:08:59] and feed the gaps back into the pipeline
+[00:08:59] and feed the gaps back into the pipeline automatically so that my Wiki's here can
+[00:09:02] automatically so that my Wiki's here can
+[00:09:02] automatically so that my Wiki's here can become even more robust
+[00:09:04] become even more robust
+[00:09:04] become even more robust and really answer the questions that
+[00:09:05] and really answer the questions that
+[00:09:06] and really answer the questions that people are asking for.
+[00:09:08] people are asking for.
+[00:09:08] people are asking for. So, agents largely search
+[00:09:10] So, agents largely search
+[00:09:10] So, agents largely search in Agent Wiki's using a MCP server.
+[00:09:13] in Agent Wiki's using a MCP server.
+[00:09:13] in Agent Wiki's using a MCP server. So, what hits the server is a distilled
+[00:09:15] So, what hits the server is a distilled
+[00:09:15] So, what hits the server is a distilled query, not the prompt itself, nothing
+[00:09:17] query, not the prompt itself, nothing
+[00:09:17] query, not the prompt itself, nothing like that. No
+[00:09:18] like that. No
+[00:09:18] like that. No IP or any kind of identifying
+[00:09:20] IP or any kind of identifying
+[00:09:20] IP or any kind of identifying information,
+[00:09:22] information,
+[00:09:22] information, just a distilled query.
+[00:09:24] just a distilled query.
+[00:09:24] just a distilled query. Just simply is this topic in the Wiki.
+[00:09:27] Just simply is this topic in the Wiki.
+[00:09:27] Just simply is this topic in the Wiki. Um and then it also logs whether or not
+[00:09:29] Um and then it also logs whether or not
+[00:09:29] Um and then it also logs whether or not it was hit or miss, whether or not the
+[00:09:31] it was hit or miss, whether or not the
+[00:09:31] it was hit or miss, whether or not the information was in the Wiki itself or it
+[00:09:34] information was in the Wiki itself or it
+[00:09:34] information was in the Wiki itself or it wasn't. And these are aggregates only,
+[00:09:36] wasn't. And these are aggregates only,
+[00:09:36] wasn't. And these are aggregates only, not individual logs. So, there's no
+[00:09:38] not individual logs. So, there's no
+[00:09:38] not individual logs. So, there's no prompt stores. Like I said, there's no
+[00:09:40] prompt stores. Like I said, there's no
+[00:09:40] prompt stores. Like I said, there's no prompts being stored, no IPs, no
+[00:09:42] prompts being stored, no IPs, no
+[00:09:42] prompts being stored, no IPs, no identity.
+[00:09:44] identity.
+[00:09:44] identity. So, these kind of repeated misses are
+[00:09:46] So, these kind of repeated misses are
+[00:09:46] So, these kind of repeated misses are the authoring backlog. So, they get
+[00:09:48] the authoring backlog. So, they get
+[00:09:48] the authoring backlog. So, they get turned into like scout format
+[00:09:50] turned into like scout format
+[00:09:50] turned into like scout format candidates, what you would actually
+[00:09:51] candidates, what you would actually
+[00:09:51] candidates, what you would actually research.
+[00:09:53] research.
+[00:09:53] research. And this is where you would get the
+[00:09:54] And this is where you would get the
+[00:09:54] And this is where you would get the research agents working.
+[00:09:56] research agents working.
+[00:09:56] research agents working. And this is basically the same setup as
+[00:09:58] And this is basically the same setup as
+[00:09:58] And this is basically the same setup as my existing knowledge base pipeline that
+[00:10:00] my existing knowledge base pipeline that
+[00:10:00] my existing knowledge base pipeline that you saw.
+[00:10:02] you saw.
+[00:10:02] you saw. Just using this data as the source
+[00:10:03] Just using this data as the source
+[00:10:03] Just using this data as the source instead of, you know, searching for new
+[00:10:05] instead of, you know, searching for new
+[00:10:05] instead of, you know, searching for new releases or whatever.
+[00:10:07] releases or whatever.
+[00:10:07] releases or whatever. And the rest of the loop is pretty much
+[00:10:08] And the rest of the loop is pretty much
+[00:10:08] And the rest of the loop is pretty much the same, right? It uh formulates a plan
+[00:10:12] the same, right? It uh formulates a plan
+[00:10:12] the same, right? It uh formulates a plan for possible changes, new entries,
+[00:10:15] for possible changes, new entries,
+[00:10:15] for possible changes, new entries, edits.
+[00:10:16] edits.
+[00:10:16] edits. There's a human gate for research,
+[00:10:18] There's a human gate for research,
+[00:10:18] There's a human gate for research, right?
+[00:10:19] right?
+[00:10:19] right? Page versus extend and approve, and
+[00:10:21] Page versus extend and approve, and
+[00:10:21] Page versus extend and approve, and that's what I approved.
+[00:10:24] that's what I approved.
+[00:10:24] that's what I approved. And then it goes back into the the other
+[00:10:25] And then it goes back into the the other
+[00:10:25] And then it goes back into the the other multi-agent pipeline where it writes the
+[00:10:27] multi-agent pipeline where it writes the
+[00:10:27] multi-agent pipeline where it writes the new entries, verifies everything,
+[00:10:29] new entries, verifies everything,
+[00:10:29] new entries, verifies everything, commits it, and then it'll be live.
+[00:10:31] commits it, and then it'll be live.
+[00:10:31] commits it, and then it'll be live. So, this is really a critical element,
+[00:10:33] So, this is really a critical element,
+[00:10:33] So, this is really a critical element, and it's kind of a differentiator
+[00:10:36] and it's kind of a differentiator
+[00:10:36] and it's kind of a differentiator between my knowledge bases and what
+[00:10:38] between my knowledge bases and what
+[00:10:38] between my knowledge bases and what somebody else might be able to create.
+[00:10:40] somebody else might be able to create.
+[00:10:40] somebody else might be able to create. And having an agent right in the VPS
+[00:10:43] And having an agent right in the VPS
+[00:10:43] And having an agent right in the VPS with direct access to all of this
+[00:10:44] with direct access to all of this
+[00:10:44] with direct access to all of this information, nothing leaves the box, all
+[00:10:46] information, nothing leaves the box, all
+[00:10:46] information, nothing leaves the box, all of this happens within the VPS.
+[00:10:49] of this happens within the VPS.
+[00:10:49] of this happens within the VPS. I think that's a pretty good advantage.
+[00:10:51] I think that's a pretty good advantage.
+[00:10:51] I think that's a pretty good advantage. And most importantly, it doesn't require
+[00:10:53] And most importantly, it doesn't require
+[00:10:53] And most importantly, it doesn't require me except for this one little uh
+[00:10:55] me except for this one little uh
+[00:10:55] me except for this one little uh Telegram approval. So, let me show you
+[00:10:57] Telegram approval. So, let me show you
+[00:10:57] Telegram approval. So, let me show you this workflow cuz this is new, you
+[00:10:59] this workflow cuz this is new, you
+[00:10:59] this workflow cuz this is new, you haven't seen this one yet.
+[00:11:00] haven't seen this one yet.
+[00:11:00] haven't seen this one yet. Okay, you can see it working in the
+[00:11:01] Okay, you can see it working in the
+[00:11:01] Okay, you can see it working in the background. This is in the TUI in
+[00:11:03] background. This is in the TUI in
+[00:11:03] background. This is in the TUI in Hermes.
+[00:11:04] Hermes.
+[00:11:04] Hermes. And you can see what I got from the
+[00:11:06] And you can see what I got from the
+[00:11:06] And you can see what I got from the Telegram chat here.
+[00:11:09] Telegram chat here.
+[00:11:09] Telegram chat here. Um
+[00:11:10] Um
+[00:11:10] Um KB intake, parsed five live demand gaps.
+[00:11:14] KB intake, parsed five live demand gaps.
+[00:11:15] KB intake, parsed five live demand gaps. So, we found five uh questions that
+[00:11:18] So, we found five uh questions that
+[00:11:18] So, we found five uh questions that agents had that
+[00:11:21] agents had that
+[00:11:21] agents had that met the criteria. So, that means that
+[00:11:23] met the criteria. So, that means that
+[00:11:23] met the criteria. So, that means that these questions
+[00:11:25] these questions
+[00:11:25] these questions have been asked at least twice in the
+[00:11:26] have been asked at least twice in the
+[00:11:26] have been asked at least twice in the last 7 days.
+[00:11:29] last 7 days.
+[00:11:29] last 7 days. So, that's kind of the standard.
+[00:11:31] So, that's kind of the standard.
+[00:11:31] So, that's kind of the standard. So, it's creating a five-item files and
+[00:11:33] So, it's creating a five-item files and
+[00:11:34] So, it's creating a five-item files and 15 child cards to verify
+[00:11:36] 15 child cards to verify
+[00:11:36] 15 child cards to verify find the effective pages and then route.
+[00:11:38] find the effective pages and then route.
+[00:11:38] find the effective pages and then route. So,
+[00:11:39] So,
+[00:11:39] So, just going to research here.
+[00:11:42] just going to research here.
+[00:11:42] just going to research here. And I'll get updates right in my my
+[00:11:44] And I'll get updates right in my my
+[00:11:44] And I'll get updates right in my my Telegram here.
+[00:11:48] Okay, so the Chrome hit and
+[00:11:51] Okay, so the Chrome hit and you could already see
+[00:11:53] you could already see
+[00:11:53] you could already see some updates um in Telegram that I'm
+[00:11:55] some updates um in Telegram that I'm
+[00:11:55] some updates um in Telegram that I'm receiving. The all the work is happening
+[00:11:57] receiving. The all the work is happening
+[00:11:57] receiving. The all the work is happening autonomously without me. So, I'm just
+[00:11:59] autonomously without me. So, I'm just
+[00:11:59] autonomously without me. So, I'm just getting updates for now.
+[00:12:01] getting updates for now.
+[00:12:01] getting updates for now. You can see KB intake here. First five
+[00:12:04] You can see KB intake here. First five
+[00:12:04] You can see KB intake here. First five live demand gaps.
+[00:12:05] live demand gaps.
+[00:12:05] live demand gaps. So, these all scored 88 of 100 and
+[00:12:08] So, these all scored 88 of 100 and
+[00:12:08] So, these all scored 88 of 100 and advanced.
+[00:12:09] advanced.
+[00:12:09] advanced. And the way I have this set up is that
+[00:12:11] And the way I have this set up is that
+[00:12:11] And the way I have this set up is that it needs the same kind of topic or
+[00:12:13] it needs the same kind of topic or
+[00:12:13] it needs the same kind of topic or keywords have to be
+[00:12:15] keywords have to be
+[00:12:15] keywords have to be asked about at least twice in the last
+[00:12:17] asked about at least twice in the last
+[00:12:17] asked about at least twice in the last week.
+[00:12:18] week.
+[00:12:19] week. Um so, I found five so far.
+[00:12:22] Um so, I found five so far.
+[00:12:22] Um so, I found five so far. And now it's created five item files and
+[00:12:24] And now it's created five item files and
+[00:12:24] And now it's created five item files and 15 child cards.
+[00:12:26] 15 child cards.
+[00:12:26] 15 child cards. And it's going to research will start
+[00:12:27] And it's going to research will start
+[00:12:27] And it's going to research will start when the intake card completes. So, I'll
+[00:12:30] when the intake card completes. So, I'll
+[00:12:30] when the intake card completes. So, I'll get uh intermittent updates like this
+[00:12:33] get uh intermittent updates like this
+[00:12:33] get uh intermittent updates like this in Telegram about what it's doing. This
+[00:12:35] in Telegram about what it's doing. This
+[00:12:35] in Telegram about what it's doing. This is the Kanban board in the VPS agent.
+[00:12:38] is the Kanban board in the VPS agent.
+[00:12:38] is the Kanban board in the VPS agent. We're see where blocked
+[00:12:41] We're see where blocked
+[00:12:41] We're see where blocked um for a lot of this stuff.
+[00:12:47] This is in progress.
+[00:12:50] This is in progress. Routing this item.
+[00:12:53] Okay, here we go.
+[00:12:55] Okay, here we go. Starting to get um messages here in
+[00:12:57] Starting to get um messages here in
+[00:12:57] Starting to get um messages here in Telegram.
+[00:12:58] Telegram.
+[00:12:58] Telegram. So, that it's blocked because it This is
+[00:13:00] So, that it's blocked because it This is
+[00:13:00] So, that it's blocked because it This is the gate, right? This is where it's
+[00:13:02] the gate, right? This is where it's
+[00:13:02] the gate, right? This is where it's going to make a proposal for me.
+[00:13:06] Uh messaging gateway webhook route
+[00:13:10] Uh messaging gateway webhook route rate limits.
+[00:13:12] rate limits.
+[00:13:12] rate limits. So, these are the different questions
+[00:13:13] So, these are the different questions
+[00:13:13] So, these are the different questions that people would be asking, the
+[00:13:15] that people would be asking, the
+[00:13:15] that people would be asking, the different topics they're trying to find
+[00:13:17] different topics they're trying to find
+[00:13:17] different topics they're trying to find that wasn't in the the current whippy
+[00:13:19] that wasn't in the the current whippy
+[00:13:19] that wasn't in the the current whippy wiki.
+[00:13:21] wiki.
+[00:13:21] wiki. So, this is what changes. This is why
+[00:13:22] So, this is what changes. This is why
+[00:13:22] So, this is what changes. This is why ingest it.
+[00:13:25] ingest it.
+[00:13:25] ingest it. And planned writer constraints.
+[00:13:28] And planned writer constraints.
+[00:13:28] And planned writer constraints. Do not touch the raw reply. So, same
+[00:13:30] Do not touch the raw reply. So, same
+[00:13:30] Do not touch the raw reply. So, same thing as you've seen in my other
+[00:13:32] thing as you've seen in my other
+[00:13:32] thing as you've seen in my other workflows, I can just approve this.
+[00:13:35] workflows, I can just approve this.
+[00:13:36] workflows, I can just approve this. You go approve it. Sounds good.
+[00:13:38] You go approve it. Sounds good.
+[00:13:38] You go approve it. Sounds good. Um and then it will continue to do it.
+[00:13:41] Um and then it will continue to do it.
+[00:13:41] Um and then it will continue to do it. So, this is just one human gate. The
+[00:13:43] So, this is just one human gate. The
+[00:13:43] So, this is just one human gate. The rest of the process, like you saw, was
+[00:13:45] rest of the process, like you saw, was
+[00:13:45] rest of the process, like you saw, was autonomous. It runs on a cron.
+[00:13:47] autonomous. It runs on a cron.
+[00:13:47] autonomous. It runs on a cron. Um I just need this so
+[00:13:50] Um I just need this so
+[00:13:50] Um I just need this so I know that it's not writing something
+[00:13:52] I know that it's not writing something
+[00:13:52] I know that it's not writing something completely off
+[00:13:53] completely off
+[00:13:53] completely off or that there's not some kind of issue
+[00:13:55] or that there's not some kind of issue
+[00:13:55] or that there's not some kind of issue with the model that
+[00:13:56] with the model that
+[00:13:56] with the model that it's making terrible decisions.
+[00:14:00] it's making terrible decisions.
+[00:14:00] it's making terrible decisions. So, we can look at what this is going to
+[00:14:01] So, we can look at what this is going to
+[00:14:01] So, we can look at what this is going to update. This is going to update the
+[00:14:02] update. This is going to update the
+[00:14:02] update. This is going to update the messaging gateway.md,
+[00:14:04] messaging gateway.md,
+[00:14:04] messaging gateway.md, um add the webhook route, rate limit
+[00:14:07] um add the webhook route, rate limit
+[00:14:07] um add the webhook route, rate limit answer.
+[00:14:08] answer.
+[00:14:08] answer. You see this is what it is right now.
+[00:14:09] You see this is what it is right now.
+[00:14:10] You see this is what it is right now. So, we can check to see
+[00:14:12] So, we can check to see
+[00:14:12] So, we can check to see if there's anything about rate limits.
+[00:14:13] if there's anything about rate limits.
+[00:14:13] if there's anything about rate limits. You see I'm searching for rate.
+[00:14:16] You see I'm searching for rate.
+[00:14:16] You see I'm searching for rate. Uh migrate rate limit. There's one about
+[00:14:20] Uh migrate rate limit. There's one about
+[00:14:20] Uh migrate rate limit. There's one about here, code expires after 1 hour.
+[00:14:22] here, code expires after 1 hour.
+[00:14:22] here, code expires after 1 hour. And they're rate limited.
+[00:14:24] And they're rate limited.
+[00:14:24] And they're rate limited. Um and then that's the word separate.
+[00:14:28] Um and then that's the word separate.
+[00:14:28] Um and then that's the word separate. So, we'll see once this is fine, uh once
+[00:14:30] So, we'll see once this is fine, uh once
+[00:14:30] So, we'll see once this is fine, uh once it's updated, um it'll be added to the
+[00:14:32] it's updated, um it'll be added to the
+[00:14:32] it's updated, um it'll be added to the actual site. This is the actual This is
+[00:14:34] actual site. This is the actual This is
+[00:14:34] actual site. This is the actual This is in a local one. This is actually on
+[00:14:36] in a local one. This is actually on
+[00:14:36] in a local one. This is actually on agentwikis.com.
+[00:14:38] agentwikis.com.
+[00:14:38] agentwikis.com. So,
+[00:14:39] So,
+[00:14:39] So, keep that in mind till the end. And you
+[00:14:41] keep that in mind till the end. And you
+[00:14:41] keep that in mind till the end. And you can see while the others are still
+[00:14:42] can see while the others are still
+[00:14:42] can see while the others are still working, um
+[00:14:44] working, um
+[00:14:44] working, um this did the verified lint on that one.
+[00:14:47] this did the verified lint on that one.
+[00:14:47] this did the verified lint on that one. The rate limits question.
+[00:14:50] The rate limits question.
+[00:14:50] The rate limits question. Um so, it ran a lint on it
+[00:14:56] to check for conflicts, um make sure
+[00:14:59] to check for conflicts, um make sure everything is verified.
+[00:15:01] everything is verified.
+[00:15:01] everything is verified. Yeah, everything was written in the
+[00:15:02] Yeah, everything was written in the
+[00:15:02] Yeah, everything was written in the specified
+[00:15:04] specified
+[00:15:04] specified markdown file.
+[00:15:06] markdown file.
+[00:15:06] markdown file. And you see all the different formatting
+[00:15:08] And you see all the different formatting
+[00:15:08] And you see all the different formatting and stuff. So, this linter uh helps keep
+[00:15:10] and stuff. So, this linter uh helps keep
+[00:15:10] and stuff. So, this linter uh helps keep everything properly formatted.
+[00:15:13] everything properly formatted.
+[00:15:13] everything properly formatted. And it it went through that. So, you can
+[00:15:14] And it it went through that. So, you can
+[00:15:14] And it it went through that. So, you can see now it's on the commit
+[00:15:16] see now it's on the commit
+[00:15:16] see now it's on the commit stage in the Kanban.
+[00:15:21] And you can see here we got in our final
+[00:15:24] And you can see here we got in our final confirmation message that the knowledge
+[00:15:25] confirmation message that the knowledge
+[00:15:25] confirmation message that the knowledge base ingest committed.
+[00:15:29] So, this is just their clone version.
+[00:15:31] So, this is just their clone version. This is just on their branch.
+[00:15:33] This is just on their branch.
+[00:15:33] This is just on their branch. I get to decide whether or not to to
+[00:15:35] I get to decide whether or not to to
+[00:15:35] I get to decide whether or not to to merge this onto the main.
+[00:15:38] merge this onto the main.
+[00:15:38] merge this onto the main. So, you can see we're getting the other
+[00:15:39] So, you can see we're getting the other
+[00:15:39] So, you can see we're getting the other proposals, but uh for this one that
+[00:15:41] proposals, but uh for this one that
+[00:15:41] proposals, but uh for this one that already passed, right?
+[00:15:44] already passed, right?
+[00:15:44] already passed, right? Uh you still need to merge it onto the
+[00:15:46] Uh you still need to merge it onto the
+[00:15:46] Uh you still need to merge it onto the main, and but you should check the diff.
+[00:15:49] main, and but you should check the diff.
+[00:15:49] main, and but you should check the diff. Um or you can check it with a different
+[00:15:51] Um or you can check it with a different
+[00:15:51] Um or you can check it with a different version of the Sage agent.
+[00:15:53] version of the Sage agent.
+[00:15:53] version of the Sage agent. Just to sanity check it just to make
+[00:15:55] Just to sanity check it just to make
+[00:15:55] Just to sanity check it just to make sure that there's nothing strange in
+[00:15:56] sure that there's nothing strange in
+[00:15:56] sure that there's nothing strange in there.
+[00:15:58] there.
+[00:15:58] there. Um but you can see easily where the
+[00:15:59] Um but you can see easily where the
+[00:15:59] Um but you can see easily where the files are and where it made the commit,
+[00:16:02] files are and where it made the commit,
+[00:16:02] files are and where it made the commit, so you can check them. And then lastly,
+[00:16:04] so you can check them. And then lastly,
+[00:16:04] so you can check them. And then lastly, you would just manually
+[00:16:06] you would just manually
+[00:16:06] you would just manually merge it onto the main, and then it
+[00:16:08] merge it onto the main, and then it
+[00:16:08] merge it onto the main, and then it would pull it and update the site. So,
+[00:16:09] would pull it and update the site. So,
+[00:16:09] would pull it and update the site. So, let's do that.
+[00:16:11] let's do that.
+[00:16:11] let's do that. Okay, you can see the rest of those um
+[00:16:14] Okay, you can see the rest of those um
+[00:16:14] Okay, you can see the rest of those um those new entries were committed, and
+[00:16:15] those new entries were committed, and
+[00:16:15] those new entries were committed, and looking at the Kanban board,
+[00:16:17] looking at the Kanban board,
+[00:16:17] looking at the Kanban board, things clear.
+[00:16:19] things clear.
+[00:16:19] things clear. Uh a bunch of things are done. We have
+[00:16:21] Uh a bunch of things are done. We have
+[00:16:21] Uh a bunch of things are done. We have 22 tasks
+[00:16:23] 22 tasks
+[00:16:23] 22 tasks from that demand gap pipeline.
+[00:16:26] from that demand gap pipeline.
+[00:16:26] from that demand gap pipeline. You can kind of see the diffs here, but
+[00:16:27] You can kind of see the diffs here, but
+[00:16:27] You can kind of see the diffs here, but you can check this manually yourself.
+[00:16:29] you can check this manually yourself.
+[00:16:29] you can check this manually yourself. So, these are the two kind of human
+[00:16:31] So, these are the two kind of human
+[00:16:31] So, these are the two kind of human gates I have. The one when they
+[00:16:33] gates I have. The one when they
+[00:16:33] gates I have. The one when they originally make the proposal, and then
+[00:16:35] originally make the proposal, and then
+[00:16:35] originally make the proposal, and then lastly,
+[00:16:36] lastly,
+[00:16:36] lastly, just seeing the diffs and then merging
+[00:16:39] just seeing the diffs and then merging
+[00:16:39] just seeing the diffs and then merging it all myself. Now, as I gain confidence
+[00:16:42] it all myself. Now, as I gain confidence
+[00:16:42] it all myself. Now, as I gain confidence in this system, I may
+[00:16:44] in this system, I may
+[00:16:44] in this system, I may make this autonomous as well.
+[00:16:47] make this autonomous as well.
+[00:16:47] make this autonomous as well. But I've only been running it for a
+[00:16:48] But I've only been running it for a
+[00:16:48] But I've only been running it for a little bit here since Agent Q has been
+[00:16:50] little bit here since Agent Q has been
+[00:16:50] little bit here since Agent Q has been live.
+[00:16:51] live.
+[00:16:51] live. So, I'm still I still want to be in the
+[00:16:53] So, I'm still I still want to be in the
+[00:16:53] So, I'm still I still want to be in the loop a little bit. And we are on this is
+[00:16:55] loop a little bit. And we are on this is
+[00:16:55] loop a little bit. And we are on this is the live site just updated
+[00:16:57] the live site just updated
+[00:16:57] the live site just updated automatically. I didn't have to do
+[00:16:58] automatically. I didn't have to do
+[00:16:58] automatically. I didn't have to do anything.
+[00:17:00] anything.
+[00:17:00] anything. Uh you can see rate is now nine entries,
+[00:17:03] Uh you can see rate is now nine entries,
+[00:17:03] Uh you can see rate is now nine entries, so that means that it did And here we
+[00:17:05] so that means that it did And here we
+[00:17:05] so that means that it did And here we go. Here it is, the webhook rate limit.
+[00:17:08] go. Here it is, the webhook rate limit.
+[00:17:08] go. Here it is, the webhook rate limit. So, this was not there previously.
+[00:17:11] So, this was not there previously.
+[00:17:11] So, this was not there previously. Um
+[00:17:12] Um
+[00:17:12] Um each webhook route defaults to 30
+[00:17:15] each webhook route defaults to 30
+[00:17:15] each webhook route defaults to 30 requests per minute using a fixed
+[00:17:16] requests per minute using a fixed
+[00:17:16] requests per minute using a fixed window.
+[00:17:18] window.
+[00:17:18] window. So, this answers that question that
+[00:17:20] So, this answers that question that
+[00:17:20] So, this answers that question that somebody had about webhooks. So,
+[00:17:24] somebody had about webhooks. So,
+[00:17:24] somebody had about webhooks. So, this is kind of a self-evolving,
+[00:17:26] this is kind of a self-evolving,
+[00:17:26] this is kind of a self-evolving, self-refining part of this project and
+[00:17:29] self-refining part of this project and
+[00:17:29] self-refining part of this project and these these wikis.
+[00:17:31] these these wikis.
+[00:17:31] these these wikis. Uh but the key here was this this
+[00:17:33] Uh but the key here was this this
+[00:17:33] Uh but the key here was this this workflow, having a agent on a VPS
+[00:17:36] workflow, having a agent on a VPS
+[00:17:36] workflow, having a agent on a VPS running this whole site uh automatically
+[00:17:39] running this whole site uh automatically
+[00:17:40] running this whole site uh automatically and autonomously for the most part, uh
+[00:17:42] and autonomously for the most part, uh
+[00:17:42] and autonomously for the most part, uh maintaining, updating, linting it, and
+[00:17:45] maintaining, updating, linting it, and
+[00:17:45] maintaining, updating, linting it, and keeping all the information
+[00:17:47] keeping all the information
+[00:17:47] keeping all the information relevant and updated.
+[00:17:50] relevant and updated.
+[00:17:50] relevant and updated. So, this is a good workflow, um having
+[00:17:52] So, this is a good workflow, um having
+[00:17:52] So, this is a good workflow, um having everything run through the VPS, but
+[00:17:54] everything run through the VPS, but
+[00:17:54] everything run through the VPS, but there are places where you you would
+[00:17:56] there are places where you you would
+[00:17:56] there are places where you you would need to reach.
+[00:17:58] need to reach.
+[00:17:58] need to reach. And this is when a single box isn't
+[00:17:59] And this is when a single box isn't
+[00:17:59] And this is when a single box isn't enough. When you need real off, um
+[00:18:02] enough. When you need real off, um
+[00:18:03] enough. When you need real off, um like password resets, OAuth
+[00:18:05] like password resets, OAuth
+[00:18:05] like password resets, OAuth uh failure mode, then you want to go to
+[00:18:07] uh failure mode, then you want to go to
+[00:18:07] uh failure mode, then you want to go to something more robust. If you have
+[00:18:09] something more robust. If you have
+[00:18:09] something more robust. If you have something that's can't lose or regulated
+[00:18:10] something that's can't lose or regulated
+[00:18:10] something that's can't lose or regulated data, I mean, I have my wikis backed up
+[00:18:13] data, I mean, I have my wikis backed up
+[00:18:13] data, I mean, I have my wikis backed up locally. I have them on GitHub.
+[00:18:16] locally. I have them on GitHub.
+[00:18:16] locally. I have them on GitHub. Um but if it's something
+[00:18:18] Um but if it's something
+[00:18:18] Um but if it's something that you really can't lose, needs to be
+[00:18:19] that you really can't lose, needs to be
+[00:18:19] that you really can't lose, needs to be regulated, then you're going to want to
+[00:18:21] regulated, then you're going to want to
+[00:18:21] regulated, then you're going to want to do a managed Postgres, so maybe like a a
+[00:18:24] do a managed Postgres, so maybe like a a
+[00:18:24] do a managed Postgres, so maybe like a a railway in that case.
+[00:18:25] railway in that case.
+[00:18:25] railway in that case. Uh global and viral traffic,
+[00:18:29] Uh global and viral traffic,
+[00:18:29] Uh global and viral traffic, you have more advanced options with
+[00:18:30] you have more advanced options with
+[00:18:30] you have more advanced options with Vercel and Cloudflare.
+[00:18:33] Vercel and Cloudflare.
+[00:18:33] Vercel and Cloudflare. Uh email deliverability, self-hosted
+[00:18:35] Uh email deliverability, self-hosted
+[00:18:35] Uh email deliverability, self-hosted SMTP lands in spam.
+[00:18:38] SMTP lands in spam.
+[00:18:38] SMTP lands in spam. You can use Postmark or Resend.
+[00:18:40] You can use Postmark or Resend.
+[00:18:40] You can use Postmark or Resend. And then team velocity, this is
+[00:18:42] And then team velocity, this is
+[00:18:42] And then team velocity, this is obviously I'm just a solo proprietor
+[00:18:44] obviously I'm just a solo proprietor
+[00:18:44] obviously I'm just a solo proprietor here.
+[00:18:45] here.
+[00:18:45] here. Um so, for something where you need more
+[00:18:47] Um so, for something where you need more
+[00:18:47] Um so, for something where you need more teams, you need preview deploys, uh
+[00:18:49] teams, you need preview deploys, uh
+[00:18:49] teams, you need preview deploys, uh something like Vercel and Railway is
+[00:18:51] something like Vercel and Railway is
+[00:18:51] something like Vercel and Railway is great. So,
+[00:18:53] great. So,
+[00:18:53] great. So, So, yeah, the main one um
+[00:18:55] So, yeah, the main one um
+[00:18:55] So, yeah, the main one um that you need to get be careful
+[00:18:56] that you need to get be careful
+[00:18:56] that you need to get be careful obviously is is off holding real
+[00:18:58] obviously is is off holding real
+[00:18:58] obviously is is off holding real credentials.
+[00:18:59] credentials.
+[00:18:59] credentials. So, you want to avoid any kind of breach
+[00:19:01] So, you want to avoid any kind of breach
+[00:19:01] So, you want to avoid any kind of breach and handle that in a more sensitive
+[00:19:04] and handle that in a more sensitive
+[00:19:04] and handle that in a more sensitive and uh safe way.
+[00:19:06] and uh safe way.
+[00:19:06] and uh safe way. Okay, so this was my agent that runs my
+[00:19:08] Okay, so this was my agent that runs my
+[00:19:08] Okay, so this was my agent that runs my web apps.
+[00:19:09] web apps.
+[00:19:09] web apps. In this first video, we just did the one
+[00:19:11] In this first video, we just did the one
+[00:19:11] In this first video, we just did the one that didn't didn't require a database
+[00:19:14] that didn't didn't require a database
+[00:19:14] that didn't didn't require a database and I showed you the different loops
+[00:19:15] and I showed you the different loops
+[00:19:15] and I showed you the different loops that it has, how it autonomously
+[00:19:18] that it has, how it autonomously
+[00:19:18] that it has, how it autonomously maintains my site
+[00:19:19] maintains my site
+[00:19:20] maintains my site without Vercel, Supabase, Railway, or
+[00:19:21] without Vercel, Supabase, Railway, or
+[00:19:22] without Vercel, Supabase, Railway, or anything like that.
+[00:19:23] anything like that.
+[00:19:23] anything like that. Now, part two, I'm going to do another
+[00:19:25] Now, part two, I'm going to do another
+[00:19:25] Now, part two, I'm going to do another video, kind of a extension of this on
+[00:19:28] video, kind of a extension of this on
+[00:19:28] video, kind of a extension of this on the same topic. Then we're going to go
+[00:19:30] the same topic. Then we're going to go
+[00:19:30] the same topic. Then we're going to go into the site that needs a database and
+[00:19:32] into the site that needs a database and
+[00:19:32] into the site that needs a database and I talked a little bit about my game app
+[00:19:35] I talked a little bit about my game app
+[00:19:35] I talked a little bit about my game app at the beginning of this, but this is
+[00:19:36] at the beginning of this, but this is
+[00:19:36] at the beginning of this, but this is going to actually be a follow-up video.
+[00:19:39] going to actually be a follow-up video.
+[00:19:39] going to actually be a follow-up video. This one's running a little bit long.
+[00:19:41] This one's running a little bit long.
+[00:19:41] This one's running a little bit long. And that one's going to take a lot of
+[00:19:42] And that one's going to take a lot of
+[00:19:42] And that one's going to take a lot of time as well because I'm going to be
+[00:19:43] time as well because I'm going to be
+[00:19:43] time as well because I'm going to be actually deploying this
+[00:19:45] actually deploying this
+[00:19:45] actually deploying this game app on the same VPS you just saw on
+[00:19:49] game app on the same VPS you just saw on
+[00:19:49] game app on the same VPS you just saw on Admiral.
+[00:19:50] Admiral.
+[00:19:50] Admiral. And that's going to be a little bit more
+[00:19:51] And that's going to be a little bit more
+[00:19:51] And that's going to be a little bit more involved cuz it actually needs a
+[00:19:53] involved cuz it actually needs a
+[00:19:53] involved cuz it actually needs a database.
+[00:19:54] database.
+[00:19:54] database. So, look forward to that. Probably be
+[00:19:56] So, look forward to that. Probably be
+[00:19:56] So, look forward to that. Probably be next week.
+[00:19:57] next week.
+[00:19:57] next week. Uh but that's going to be it for this
+[00:19:58] Uh but that's going to be it for this
+[00:19:58] Uh but that's going to be it for this one. Please leave a comment. Let me know
+[00:19:59] one. Please leave a comment. Let me know
+[00:20:00] one. Please leave a comment. Let me know your thoughts on this workflow, uh how
+[00:20:02] your thoughts on this workflow, uh how
+[00:20:02] your thoughts on this workflow, uh how you would like to adapt this to your own
+[00:20:04] you would like to adapt this to your own
+[00:20:04] you would like to adapt this to your own apps or own sites.
+[00:20:07] apps or own sites.
+[00:20:07] apps or own sites. And I'll see you in the next video.
+[00:20:08] And I'll see you in the next video.
+[00:20:08] And I'll see you in the next video. Thank you for watching.

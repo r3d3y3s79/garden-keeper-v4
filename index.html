@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Garden Keeper — Plant Journals for People Who Actually Grow Things</title>
+  <meta name="description" content="Beautifully designed plant journals. Get the free plant care cheat sheet or browse the journal collection." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <!-- Plausible analytics -->
+  <script defer data-domain="garden-keeper-v4.vercel.app" src="https://plausible.io/js/script.js"></script>
+  <script>
+    window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments); };
+    try {
+      var utm_source = new URLSearchParams(location.search).get('utm_source') || '';
+      var ref = document.referrer || 'direct';
+      var src = utm_source || (ref.includes('reddit.com') ? 'reddit' : (ref.includes('google.com') ? 'google' : (ref === '' ? 'direct' : 'referral')));
+      window.plausible('pageview', { u: location.href, props: { source: src, page: 'home' } });
+    } catch (e) {}
+  </script>
+  <style>
+    :root {
+      --bg: #0f2416;
+      --card: #1a3a24;
+      --accent: #7cb342;
+      --accent-2: #aed581;
+      --text: #e8f5e9;
+      --muted: #a8c5ad;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      background: linear-gradient(180deg, #0f2416 0%, #163522 100%);
+      color: var(--text);
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+    .wrap { max-width: 920px; margin: 0 auto; padding: 4rem 1.25rem 5rem; }
+    .logo { text-align: center; font-size: 0.85rem; letter-spacing: 0.35em; color: var(--accent-2); text-transform: uppercase; margin-bottom: 0.5rem; }
+    h1 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(2.2rem, 6vw, 3.6rem);
+      line-height: 1.15;
+      margin: 0 0 1rem;
+      text-align: center;
+      font-weight: 700;
+    }
+    h1 .leaf { color: var(--accent); font-style: italic; }
+    .subtitle { text-align: center; color: var(--muted); font-size: 1.1rem; max-width: 600px; margin: 0 auto 3rem; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+    .card {
+      background: var(--card);
+      border: 1px solid #2e5c36;
+      border-radius: 16px;
+      padding: 2rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s ease, border-color 0.2s ease;
+    }
+    .card:hover { transform: translateY(-4px); border-color: var(--accent); }
+    .card .badge { display: inline-block; font-size: 0.75rem; letter-spacing: 0.15em; color: var(--accent-2); text-transform: uppercase; margin-bottom: 0.75rem; }
+    .card h2 { font-family: 'Playfair Display', Georgia, serif; font-size: 1.6rem; margin: 0 0 0.75rem; }
+    .card p { color: var(--muted); font-size: 0.95rem; margin: 0 0 1.5rem; flex: 1; }
+    .card .cta {
+      display: inline-block;
+      background: var(--accent);
+      color: #0f2416;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      text-align: center;
+      transition: background 0.2s ease;
+    }
+    .card .cta:hover { background: #8bc34a; }
+    .card .cta.secondary { background: transparent; color: var(--accent-2); border: 1px solid var(--accent-2); }
+    .card .cta.secondary:hover { background: rgba(174, 213, 129, 0.1); }
+    .footer { text-align: center; color: var(--muted); font-size: 0.85rem; margin-top: 4rem; }
+    .footer a { color: var(--accent-2); text-decoration: none; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="logo">The Garden Keeper</div>
+    <h1>Plant journals for people who <span class="leaf">actually grow things</span>.</h1>
+    <p class="subtitle">Beautifully designed print journals to track every leaf, every season, every harvest. Or grab the free plant care cheat sheet and start today.</p>
+
+    <div class="grid">
+      <div class="card">
+        <span class="badge">Free</span>
+        <h2>Plant Care Cheat Sheet</h2>
+        <p>The one-page PDF that saves plants. Light, water, humidity, and the 4 yellow-leaf patterns every plant parent should know.</p>
+        <a href="/lead-magnet.html" class="cta" data-cta="lead-magnet">Get the free PDF →</a>
+      </div>
+
+      <div class="card">
+        <span class="badge">Shop</span>
+        <h2>The Journal Collection</h2>
+        <p>Single journals, bundles, the complete set, or the VIP monthly subscription. Printed on quality stock, designed to last seasons.</p>
+        <a href="/checkout.html" class="cta" data-cta="checkout">Browse journals →</a>
+      </div>
+    </div>
+
+    <div class="footer">
+      <a href="/admin.html">Admin</a> ·
+      <a href="mailto:hello@garden-keeper.live">Contact</a>
+    </div>
+  </div>
+  <script>
+    // Track CTA clicks
+    document.querySelectorAll('[data-cta]').forEach(function(el) {
+      el.addEventListener('click', function() {
+        try { window.plausible('CTA', { props: { cta: el.getAttribute('data-cta') } }); } catch (e) {}
+      });
+    });
+  </script>
+</body>
+</html>

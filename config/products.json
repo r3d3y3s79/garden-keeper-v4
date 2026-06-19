@@ -1,0 +1,35 @@
+{
+  "project": "The Garden Keeper",
+  "stripe_mode": "sandbox",
+  "products": [
+    {
+      "name": "Single Journal",
+      "price_cents": 699,
+      "currency": "usd",
+      "sku": "GK-JRN-001",
+      "lookup_key": "gk_single_journal"
+    },
+    {
+      "name": "Bundle (3 Journals)",
+      "price_cents": 1199,
+      "currency": "usd",
+      "sku": "GK-JRN-BUNDLE3",
+      "lookup_key": "gk_bundle_3"
+    },
+    {
+      "name": "Complete Set (5 Journals)",
+      "price_cents": 1799,
+      "currency": "usd",
+      "sku": "GK-JRN-SET5",
+      "lookup_key": "gk_complete_set_5"
+    },
+    {
+      "name": "VIP Subscription",
+      "price_cents": 499,
+      "currency": "usd",
+      "sku": "GK-SUB-VIP",
+      "lookup_key": "gk_vip_monthly",
+      "recurring": "month"
+    }
+  ]
+}

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Garden Keeper — Admin Dashboard</title>
+  <meta name="description" content="Live revenue and conversion metrics for The Garden Keeper." />
+  <meta name="robots" content="noindex,nofollow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <!-- Plausible analytics (admin path is noindex so it won't pollute stats) -->
+  <script defer data-domain="garden-keeper-v4.vercel.app" src="https://plausible.io/js/script.js"></script>
+  <style>
+    :root {
+      --bg: #0a1a10;
+      --card: #122a18;
+      --card-2: #163522;
+      --accent: #7cb342;
+      --accent-2: #aed581;
+      --gold: #ffd700;
+      --text: #e8f5e9;
+      --muted: #8fa896;
+      --good: #4caf50;
+      --bad: #ef5350;
+      --warn: #ffa726;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Inter', system-ui, sans-serif;
+      background: radial-gradient(ellipse at top, #0e2416 0%, #0a1a10 60%);
+      color: var(--text);
+      min-height: 100vh;
+      line-height: 1.5;
+    }
+    .header {
+      padding: 1.5rem 1.5rem 1rem;
+      border-bottom: 1px solid #1d3a25;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .header h1 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin: 0;
+      letter-spacing: 0.05em;
+    }
+    .header .sub { font-size: 0.8rem; color: var(--muted); margin-top: 0.2rem; }
+    .header .controls { display: flex; gap: 0.5rem; align-items: center; font-size: 0.8rem; color: var(--muted); }
+    .pulse {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: var(--good);
+      box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.7);
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.7); }
+      70% { box-shadow: 0 0 0 8px rgba(76, 175, 80, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(76, 175, 80, 0); }
+    }
+    .wrap { max-width: 1200px; margin: 0 auto; padding: 1.5rem; }
+    .kpi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .kpi {
+      background: var(--card);
+      border: 1px solid #1d3a25;
+      border-radius: 12px;
+      padding: 1.25rem 1rem;
+    }
+    .kpi .label { font-size: 0.75rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.5rem; }
+    .kpi .value { font-size: 2rem; font-weight: 700; font-family: 'JetBrains Mono', monospace; color: var(--accent-2); }
+    .kpi .sublabel { font-size: 0.8rem; color: var(--muted); margin-top: 0.25rem; }
+    .kpi.featured { background: linear-gradient(135deg, #1a3a24 0%, #122a18 100%); border-color: var(--accent); }
+    .kpi.featured .value { color: var(--gold); font-size: 2.4rem; }
+    .progress {
+      margin-top: 0.75rem;
+      background: #1a3a24;
+      border-radius: 999px;
+      height: 6px;
+      overflow: hidden;
+    }
+    .progress > div {
+      height: 100%;
+      background: linear-gradient(90deg, var(--accent), var(--gold));
+      transition: width 0.6s ease;
+    }
+    .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+    @media (max-width: 720px) { .cols { grid-template-columns: 1fr; } }
+    .panel {
+      background: var(--card);
+      border: 1px solid #1d3a25;
+      border-radius: 12px;
+      padding: 1.25rem;
+    }
+    .panel h2 { margin: 0 0 1rem; font-size: 0.95rem; font-weight: 600; letter-spacing: 0.05em; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.85rem; font-family: 'JetBrains Mono', monospace; }
+    th, td { text-align: left; padding: 0.5rem 0.4rem; border-bottom: 1px solid #1a3a24; }
+    th { color: var(--muted); font-weight: 500; text-transform: uppercase; font-size: 0.7rem; letter-spacing: 0.1em; font-family: 'Inter', sans-serif; }
+    .empty { color: var(--muted); font-size: 0.85rem; padding: 0.5rem 0; }
+    .source-list { display: flex; flex-direction: column; gap: 0.6rem; }
+    .source-row { display: flex; justify-content: space-between; align-items: center; font-size: 0.9rem; }
+    .source-row .name { color: var(--text); }
+    .source-row .count { color: var(--accent-2); font-family: 'JetBrains Mono', monospace; font-weight: 600; }
+    .bar {
+      flex: 1;
+      height: 6px;
+      background: #1a3a24;
+      border-radius: 3px;
+      margin: 0 0.75rem;
+      overflow: hidden;
+    }
+    .bar > div { height: 100%; background: var(--accent); }
+    .footer { text-align: center; padding: 2rem 1rem; color: var(--muted); font-size: 0.75rem; }
+    .footer a { color: var(--accent-2); text-decoration: none; }
+    .err { background: #5b1f1f; color: #ffcdd2; padding: 1rem; border-radius: 8px; font-family: 'JetBrains Mono', monospace; font-size: 0.85rem; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div>
+      <h1>🌱 GARDEN KEEPER — LIVE DASHBOARD</h1>
+      <div class="sub">$1K Weekend · Real-time revenue + email list</div>
+    </div>
+    <div class="controls">
+      <span class="pulse"></span>
+      <span id="last-update">loading…</span>
+      <span>·</span>
+      <span id="auto-status">auto-refresh: on (30s)</span>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div id="root">Loading dashboard…</div>
+  </div>
+
+  <div class="footer">
+    <a href="/">← Back to store</a> · Data: <code>/api/dashboard</code> → VPS <code>:8889</code>
+  </div>
+
+  <script>
+    const $ = (id) => document.getElementById(id);
+    const fmtUsd = (c) => '$' + (c / 100).toFixed(2);
+    const fmtPct = (p) => p.toFixed(2) + '%';
+
+    async function load() {
+      const root = $('root');
+      try {
+        const res = await fetch('/api/dashboard');
+        const data = await res.json();
+        if (!res.ok || !data.success && data.success !== undefined) {
+          throw new Error(data.message || 'Dashboard request failed');
+        }
+
+        const rev = data.revenue || {};
+        const subs = data.subscribers || {};
+        const conv = data.conversion || {};
+        const kpi = data.kpi_targets || {};
+        const recent = data.recent_orders || [];
+        const sources = subs.top_sources || [];
+
+        const targetPct = Math.min(100, kpi.progress_pct || 0);
+
+        root.innerHTML = `
+          <div class="kpi-grid">
+            <div class="kpi featured">
+              <div class="label">$1K Weekend Progress</div>
+              <div class="value">${fmtUsd(rev.total_cents || 0)}</div>
+              <div class="sublabel">of $1,000 target · ${fmtPct(targetPct)}</div>
+              <div class="progress"><div style="width:${targetPct}%"></div></div>
+              <div class="sublabel" style="margin-top:0.5rem">Remaining: $${kpi.remaining_usd || 0}</div>
+            </div>
+            <div class="kpi">
+              <div class="label">Total Revenue</div>
+              <div class="value">${fmtUsd(rev.total_cents || 0)}</div>
+              <div class="sublabel">${rev.paid_orders_count || 0} paid orders</div>
+            </div>
+            <div class="kpi">
+              <div class="label">Email List</div>
+              <div class="value">${subs.active_total || 0}</div>
+              <div class="sublabel">+${subs.new_last_7d || 0} in last 7d</div>
+            </div>
+            <div class="kpi">
+              <div class="label">Conversion Rate</div>
+              <div class="value">${fmtPct(conv.rate_pct || 0)}</div>
+              <div class="sublabel">${conv.paid || 0} paid / ${conv.subscribers || 0} subs</div>
+            </div>
+          </div>
+
+          <div class="cols">
+            <div class="panel">
+              <h2>RECENT ORDERS</h2>
+              ${recent.length === 0 ? '<div class="empty">No orders yet — share the lead magnet to seed the funnel.</div>' : `
+                <table>
+                  <thead>
+                    <tr><th>Time</th><th>Email</th><th>Product</th><th>Amount</th><th>Status</th></tr>
+                  </thead>
+                  <tbody>
+                    ${recent.slice().reverse().slice(0, 10).map(o => `
+                      <tr>
+                        <td>${(o.received_at || '').slice(5, 16)}</td>
+                        <td>${o.email || '<span style="color:var(--muted)">—</span>'}</td>
+                        <td>${o.product_lookup || '<span style="color:var(--muted)">—</span>'}</td>
+                        <td style="color:var(--accent-2)">${fmtUsd(o.amount_cents || 0)}</td>
+                        <td style="color:${o.payment_status === 'paid' || o.payment_status === 'succeeded' ? 'var(--good)' : 'var(--warn)'}">${o.payment_status || 'pending'}</td>
+                      </tr>
+                    `).join('')}
+                  </tbody>
+                </table>
+              `}
+            </div>
+
+            <div class="panel">
+              <h2>TOP TRAFFIC SOURCES</h2>
+              ${sources.length === 0 ? '<div class="empty">No subs yet.</div>' : `
+                <div class="source-list">
+                  ${sources.map(s => {
+                    const max = sources[0].count || 1;
+                    const pct = (s.count / max) * 100;
+                    return `<div class="source-row">
+                      <span class="name">${s.source}</span>
+                      <div class="bar"><div style="width:${pct}%"></div></div>
+                      <span class="count">${s.count}</span>
+                    </div>`;
+                  }).join('')}
+                </div>
+              `}
+            </div>
+          </div>
+        `;
+
+        $('last-update').textContent = 'updated ' + new Date().toLocaleTimeString();
+      } catch (e) {
+        root.innerHTML = `<div class="err">Dashboard error: ${e.message}<br><br>The VPS at :8889 may be down, or /api/dashboard proxy is misconfigured.</div>`;
+        $('last-update').textContent = 'error @ ' + new Date().toLocaleTimeString();
+      }
+    }
+
+    load();
+    setInterval(load, 30000);
+  </script>
+</body>
+</html>

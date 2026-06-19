@@ -1,0 +1,50 @@
+# Vercel deploy: only ship what Vercel actually serves
+.vercel/
+node_modules/
+
+# Secrets — never commit credentials
+.env
+.env.*
+!.env.example
+stripe-backend/.env
+
+# Working content — not served by Vercel
+data/orders.json
+data/email_sequence.md
+data/subscribers.db
+data/subscribers.db-*
+data/reddit_posted.json
+data/reddit_posted.mock_backup.json
+data/reddit_sandbox_test.json
+data/model_router.db
+data/model_router_v2.db
+data/emails_out/
+data/daily_guides/
+
+# Big marketing asset repos — not served by Vercel, don't bloat git
+assets/
+social/
+
+# Build artifacts
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+stripe-backend/.venv/
+
+# Local dev
+.DS_Store
+*.log
+logs/
+
+# IDE
+.idea/
+.vscode/
+
+# Working content (copy, plans, drafts) — not needed in Vercel repo
+content/copy/
+content/reddit/
+content/pinterest/
+content/twitter/
+content/quora/
+pricing-strategy/

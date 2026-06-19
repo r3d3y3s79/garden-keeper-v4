@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agent-Reach Cookies Helper</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
+      color: #e2e8f0; min-height: 100vh; line-height: 1.55;
+    }
+    .wrap { max-width: 720px; margin: 0 auto; padding: 2.5rem 1.25rem 3rem; }
+    h1 { font-size: 1.8rem; margin: 0 0 .5rem; }
+    h2 { font-size: 1.15rem; color: #94a3b8; margin: 2rem 0 .5rem; border-bottom: 1px solid #334155; padding-bottom: .3rem; }
+    p { color: #cbd5e1; }
+    .lead { color: #94a3b8; }
+    .step {
+      background: #1e293b; border: 1px solid #334155; border-radius: 10px;
+      padding: 1.25rem 1rem; margin: 1rem 0;
+    }
+    .step-num {
+      display: inline-block; width: 28px; height: 28px; line-height: 28px;
+      background: #38bdf8; color: #0f172a; border-radius: 50%;
+      text-align: center; font-weight: 700; margin-right: .5rem;
+    }
+    code, .mono {
+      font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+      background: #0f172a; padding: 1px 6px; border-radius: 4px;
+      color: #e2e8f0; font-size: .92em;
+    }
+    .block-cmd {
+      background: #020617; border: 1px solid #334155; border-radius: 6px;
+      padding: .75rem; font-family: ui-monospace, Menlo, monospace; font-size: .9em;
+      color: #cbd5e1; overflow-x: auto; margin: .5rem 0;
+    }
+    .block-cmd.green { border-color: #22c55e; }
+    .btn {
+      display: inline-block; padding: .7rem 1.1rem; border-radius: 8px;
+      background: #38bdf8; color: #0f172a; font-weight: 600;
+      text-decoration: none; border: none; cursor: pointer; font-size: 1rem;
+    }
+    .btn.alt { background: #475569; color: #e2e8f0; }
+    .btn.danger { background: #ef4444; color: white; }
+    .btn:hover { filter: brightness(1.1); }
+    .file-zone {
+      border: 2px dashed #475569; border-radius: 10px; padding: 2rem;
+      text-align: center; background: #0f172a; cursor: pointer; margin: 1rem 0;
+      transition: border-color .2s, background .2s;
+    }
+    .file-zone.over { border-color: #38bdf8; background: #0c4a6e; }
+    .file-zone input[type=file] { display: none; }
+    .file-name { color: #38bdf8; font-weight: 600; margin-top: .5rem; word-break: break-all; }
+    .status { margin-top: 1rem; padding: .7rem .9rem; border-radius: 6px; display: none; }
+    .status.show { display: block; }
+    .status.success { background: #064e3b; color: #a7f3d0; }
+    .status.error { background: #7f1d1d; color: #fecaca; }
+    .status.pending { background: #1e3a8a; color: #bfdbfe; }
+    .support { background: #1e293b; border: 1px solid #334155; border-radius: 10px; padding: 1.25rem; margin: 1rem 0; }
+    details { background: #1e293b; border: 1px solid #334155; border-radius: 10px; padding: 1rem; margin: 1rem 0; }
+    summary { cursor: pointer; font-weight: 600; color: #38bdf8; }
+    summary:hover { color: #7dd3fc; }
+    table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+    th, td { text-align: left; padding: .5rem; border-bottom: 1px solid #334155; }
+    th { color: #94a3b8; font-weight: 600; font-size: .9em; }
+    .pill { display: inline-block; padding: 2px 8px; border-radius: 99px; font-size: .8em; font-weight: 600; }
+    .pill.red { background: #7f1d1d; color: #fecaca; }
+    .pill.amber { background: #78350f; color: #fde68a; }
+    .pill.green { background: #064e3b; color: #a7f3d0; }
+    footer { color: #64748b; font-size: .85rem; margin-top: 2.5rem; text-align: center; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>🍪 Cookies Uploader</h1>
+    <p class="lead">Upload the cookies.txt file you exported from your browser. Saves to <code>/root/.agent-reach/&lt;service&gt;.cookies.txt</code> and tells Hermes to configure it.</p>
+
+    <div class="support">
+      <strong>What to export (filename → service):</strong>
+      <table>
+        <thead>
+          <tr><th>Filename you upload</th><th>Domain you were logged into</th><th>Unlocks</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>youtube.com_cookies.txt</code></td><td>youtube.com</td><td>YouTube transcripts, channel research</td></tr>
+          <tr><td><code>twitter.com_cookies.txt</code></td><td>twitter.com (or x.com)</td><td>Twitter reading, search, threads</td></tr>
+          <tr><td><code>reddit.com_cookies.txt</code></td><td>reddit.com</td><td>Reddit reading (you only need this if you want to bypass the mobile reCAPTCHA)</td></tr>
+          <tr><td><code>xiaohongshu.com_cookies.txt</code></td><td>xiaohongshu.com</td><td>小红书 (XHS) reading</td></tr>
+        </tbody>
+      </table>
+      <p class="lead" style="font-size:.9em">⚠️ A cookies.txt file is effectively a logged-in session token. Don't share it with anyone. Rotate your password if it ever leaks.</p>
+    </div>
+
+    <h2>1. Choose your service and upload the file</h2>
+    <form id="upload-form">
+      <label style="display:block; margin: 1rem 0 .5rem; color:#94a3b8">Which service is this for?</label>
+      <select id="service" style="width:100%; padding:.6rem; background:#0f172a; color:#e2e8f0; border:1px solid #334155; border-radius:6px; font-size:1rem">
+        <option value="youtube">YouTube (youtube.com_cookies.txt)</option>
+        <option value="twitter">Twitter/X (twitter.com_cookies.txt)</option>
+        <option value="reddit">Reddit (reddit.com_cookies.txt)</option>
+        <option value="xiaohongshu">Xiaohongshu (xiaohongshu.com_cookies.txt)</option>
+        <option value="other">Other / not sure</option>
+      </select>
+
+      <label class="file-zone" id="dropzone" style="margin-top:1rem">
+        <input type="file" id="file" accept=".txt" required />
+        <div style="font-size: 1.1rem; color:#cbd5e1">📁 Drop your <code>.txt</code> file here</div>
+        <div style="color:#64748b; font-size:.9rem; margin-top:.3rem">or click to browse</div>
+        <div class="file-name" id="filename"></div>
+      </label>
+
+      <div class="status" id="status"></div>
+
+      <button type="submit" class="btn" id="submit-btn" disabled>Upload to VPS</button>
+    </form>
+
+    <h2>2. Three ways to get the file to the VPS</h2>
+    <p class="lead">This page uploads directly to the running Vercel API. If that doesn't work for any reason, here are three other paths — pick whichever your laptop allows.</p>
+
+    <details>
+      <summary>Method A — Direct upload via this page (easiest, what the form does)</summary>
+      <p>Just pick the file above and click Upload. The browser sends it to a Vercel function which writes it to <code>/root/.agent-reach/</code> on the VPS.</p>
+      <p><strong>What it does:</strong> file is uploaded over HTTPS, validated, saved with a timestamp suffix so duplicates don't collide, and triggers a Telegram notification to Joe.</p>
+    </details>
+
+    <details>
+      <summary>Method B — scp from your laptop terminal (most reliable)</summary>
+      <p>If you have SSH access to the VPS, this is the fastest path. On your laptop:</p>
+      <div class="block-cmd">scp youtube.com_cookies.txt root@72.61.141.125:/root/.agent-reach/</div>
+      <p>(Replace <code>youtube.com_cookies.txt</code> with your actual filename.)</p>
+      <p>You'll be prompted for the root password. If you don't have it / SSH times out, use Method C below.</p>
+    </details>
+
+    <details>
+      <summary>Method C — Telegram (works from any device, no setup)</summary>
+      <p>Send the file via Telegram direct message to <strong>@JoeSaasAgencyBot</strong> with the caption:</p>
+      <div class="block-cmd">/upload-cookies youtube</div>
+      <p>Hermes will pick it up, save it to <code>/root/.agent-reach/youtube.com_cookies.txt</code>, and run <code>agent-reach configure youtube-cookies</code> automatically.</p>
+      <p><em>Note: this is a planned feature. If it's not live yet, the bot will tell you to use Methods A or B.</em></p>
+    </details>
+
+    <details>
+      <summary>After the file lands — what happens automatically</summary>
+      <p>Once a cookies file is saved to <code>/root/.agent-reach/</code>, the next agent run will:</p>
+      <ol>
+        <li>Detect the new file via the watcher</li>
+        <li>Run <code>agent-reach configure &lt;service&gt;-cookies &lt;path&gt;</code></li>
+        <li>Run <code>agent-reach doctor --verify-cookies</code> to confirm the cookies work</li>
+        <li>Send you a Telegram message: "✅ &lt;service&gt; cookies loaded. You can now &lt;what it unlocks&gt;."</li>
+        <li>On failure: "❌ cookies loaded but &lt;service&gt; rejected them. Re-export from a fresh browser session."</li>
+      </ol>
+    </details>
+
+    <h2>3. How to export cookies.txt from your browser</h2>
+    <details>
+      <summary>Chrome (laptop)</summary>
+      <ol>
+        <li>Install the free extension "Get cookies.txt LOCALLY" (by Rahul Baruri) from the Chrome Web Store</li>
+        <li>Open the target site (e.g. youtube.com) — make sure you're logged in</li>
+        <li>Click the extension icon → "Export cookies for this tab" (or "Export" → save as .txt)</li>
+        <li>The downloaded file will be named after the site (e.g. <code>youtube.com_cookies.txt</code>) — that's what you upload</li>
+      </ol>
+    </details>
+    <details>
+      <summary>Firefox (laptop)</summary>
+      <ol>
+        <li>Install "cookies.txt" by danylchuk (or similar)</li>
+        <li>Same as Chrome: open the site, click the extension, export</li>
+      </ol>
+    </details>
+    <details>
+      <summary>Safari (Mac)</summary>
+      <ol>
+        <li>Use the built-in Develop menu: Develop → Show Web Inspector → Storage → Cookies → right-click → Export</li>
+        <li>Or install the "Cookie-Editor" extension</li>
+      </ol>
+    </details>
+    <details>
+      <summary>Edge</summary>
+      <ol>
+        <li>Use the same Chrome extension — Edge supports Chrome Web Store extensions natively</li>
+      </ol>
+    </details>
+
+    <h2>What to do if the file won't upload</h2>
+    <ul>
+      <li><strong>File too large (&gt; 1MB):</strong> cookies.txt files are usually &lt; 50KB. If yours is huge, you exported the wrong thing — try again from a fresh browser session.</li>
+      <li><strong>"Rejected" error:</strong> cookies contain only browser-internal cookies (no session cookies). Log out, log in again, re-export.</li>
+      <li><strong>Page won't load on phone:</strong> try the form on a laptop browser instead. Or use Method B (scp).</li>
+      <li><strong>Network issue on Vercel:</strong> use Method B (scp) as a fallback — it bypasses Vercel entirely.</li>
+    </ul>
+
+    <footer>
+      Uploaded files are kept on the VPS only — never sent to a third party.
+      <br>Need help? Reply to the Telegram message that sent you this link.
+    </footer>
+  </div>
+
+  <script>
+    const dropzone = document.getElementById('dropzone');
+    const fileInput = document.getElementById('file');
+    const filenameEl = document.getElementById('filename');
+    const statusEl = document.getElementById('status');
+    const submitBtn = document.getElementById('submit-btn');
+    const serviceSelect = document.getElementById('service');
+
+    function showStatus(msg, type) {
+      statusEl.textContent = msg;
+      statusEl.className = 'status show ' + (type || 'pending');
+    }
+
+    function getService() { return serviceSelect.value; }
+
+    fileInput.addEventListener('change', (e) => {
+      const f = e.target.files[0];
+      if (f) {
+        filenameEl.textContent = '✓ ' + f.name + ' (' + Math.round(f.size/1024) + ' KB)';
+        submitBtn.disabled = false;
+        // Auto-detect service from filename
+        const n = f.name.toLowerCase();
+        if (n.includes('youtube')) serviceSelect.value = 'youtube';
+        else if (n.includes('twitter') || n.includes('x.com')) serviceSelect.value = 'twitter';
+        else if (n.includes('reddit')) serviceSelect.value = 'reddit';
+        else if (n.includes('xiaohongshu') || n.includes('xhs')) serviceSelect.value = 'xiaohongshu';
+      }
+    });
+
+    // Drag & drop
+    ['dragenter', 'dragover'].forEach(ev => {
+      dropzone.addEventListener(ev, (e) => { e.preventDefault(); dropzone.classList.add('over'); });
+    });
+    ['dragleave', 'drop'].forEach(ev => {
+      dropzone.addEventListener(ev, (e) => { e.preventDefault(); dropzone.classList.remove('over'); });
+    });
+    dropzone.addEventListener('drop', (e) => {
+      const f = e.dataTransfer.files[0];
+      if (f) {
+        fileInput.files = e.dataTransfer.files;
+        filenameEl.textContent = '✓ ' + f.name + ' (' + Math.round(f.size/1024) + ' KB)';
+        submitBtn.disabled = false;
+      }
+    });
+
+    document.getElementById('upload-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const file = fileInput.files[0];
+      if (!file) return;
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Uploading…';
+      showStatus('Reading file…');
+
+      try {
+        const text = await file.text();
+        showStatus('Sending to VPS… (file: ' + file.size + ' bytes)');
+
+        const res = await fetch('/api/upload-cookies', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            service: getService(),
+            filename: file.name,
+            content: text,
+          }),
+        });
+
+        const data = await res.json();
+        if (res.ok && data.success) {
+          showStatus('✅ Saved to VPS: ' + data.path + '. Configuring agent-reach now…');
+          submitBtn.textContent = '✓ Done';
+        } else {
+          throw new Error(data.message || data.error || 'Upload failed');
+        }
+      } catch (err) {
+        showStatus('❌ ' + (err.message || err), 'error');
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Try again';
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,1348 @@
+# Apify MCP - Full Walkthrough (David, 22min)
+# Video ID: V80QfRa7t_c
+# Total segments: 1344
+
+[00:00:00] Hermes Agent [clears throat] is the most
+[00:00:01] Hermes Agent [clears throat] is the most popular AI agent in the world with
+[00:00:03] popular AI agent in the world with
+[00:00:03] popular AI agent in the world with nearly 200,000 stars on GitHub. And
+[00:00:06] nearly 200,000 stars on GitHub. And
+[00:00:06] nearly 200,000 stars on GitHub. And that's because it can do nearly
+[00:00:08] that's because it can do nearly
+[00:00:08] that's because it can do nearly anything. But just like other agents,
+[00:00:10] anything. But just like other agents,
+[00:00:10] anything. But just like other agents, Hermes often gets blocked when trying to
+[00:00:12] Hermes often gets blocked when trying to
+[00:00:12] Hermes often gets blocked when trying to access the most valuable sites on the
+[00:00:15] access the most valuable sites on the
+[00:00:15] access the most valuable sites on the internet. Luckily, there's a solution
+[00:00:17] internet. Luckily, there's a solution
+[00:00:17] internet. Luckily, there's a solution that allows us to get qualified leads
+[00:00:19] that allows us to get qualified leads
+[00:00:19] that allows us to get qualified leads for your business, find the best hires
+[00:00:21] for your business, find the best hires
+[00:00:21] for your business, find the best hires for your company, track competitors'
+[00:00:23] for your company, track competitors'
+[00:00:23] for your company, track competitors' prices and market changes, find better
+[00:00:25] prices and market changes, find better
+[00:00:25] prices and market changes, find better job and career opportunities, and access
+[00:00:27] job and career opportunities, and access
+[00:00:27] job and career opportunities, and access websites your agents generally get
+[00:00:29] websites your agents generally get
+[00:00:29] websites your agents generally get blocked from. And it is surprisingly
+[00:00:31] blocked from. And it is surprisingly
+[00:00:31] blocked from. And it is surprisingly simple to set up. In this video, I'm
+[00:00:33] simple to set up. In this video, I'm
+[00:00:33] simple to set up. In this video, I'm going to show you how to set up Hermes
+[00:00:34] going to show you how to set up Hermes
+[00:00:34] going to show you how to set up Hermes Agent, how to connect it to Apify so
+[00:00:37] Agent, how to connect it to Apify so
+[00:00:37] Agent, how to connect it to Apify so that it can scrape anything, and my own
+[00:00:38] that it can scrape anything, and my own
+[00:00:38] that it can scrape anything, and my own personal use case that allows me to get
+[00:00:40] personal use case that allows me to get
+[00:00:40] personal use case that allows me to get an unfair advantage over any other
+[00:00:42] an unfair advantage over any other
+[00:00:42] an unfair advantage over any other business in Europe. So first, pull up
+[00:00:44] business in Europe. So first, pull up
+[00:00:44] business in Europe. So first, pull up the Hermes Agent GitHub repo. I'm going
+[00:00:46] the Hermes Agent GitHub repo. I'm going
+[00:00:46] the Hermes Agent GitHub repo. I'm going to link that below the video. And then
+[00:00:48] to link that below the video. And then
+[00:00:48] to link that below the video. And then scroll down to the quick install
+[00:00:50] scroll down to the quick install
+[00:00:50] scroll down to the quick install section. There it is. Quick install.
+[00:00:52] section. There it is. Quick install.
+[00:00:53] section. There it is. Quick install. This allows us to copy a single command
+[00:00:55] This allows us to copy a single command
+[00:00:55] This allows us to copy a single command and install Hermes Agent on your
+[00:00:56] and install Hermes Agent on your
+[00:00:56] and install Hermes Agent on your computer. So if you don't have any
+[00:00:58] computer. So if you don't have any
+[00:00:58] computer. So if you don't have any powerful agent running locally on your
+[00:00:59] powerful agent running locally on your
+[00:00:59] powerful agent running locally on your MacBook, there really is no excuse
+[00:01:01] MacBook, there really is no excuse
+[00:01:01] MacBook, there really is no excuse because it's literally a single command.
+[00:01:03] because it's literally a single command.
+[00:01:03] because it's literally a single command. So copy that and then open terminal,
+[00:01:05] So copy that and then open terminal,
+[00:01:05] So copy that and then open terminal, paste that in, and just hit enter. And
+[00:01:07] paste that in, and just hit enter. And
+[00:01:07] paste that in, and just hit enter. And this will install everything that Hermes
+[00:01:09] this will install everything that Hermes
+[00:01:09] this will install everything that Hermes Agent needs to run on your computer.
+[00:01:11] Agent needs to run on your computer.
+[00:01:11] Agent needs to run on your computer. Now, while that is running, we can
+[00:01:13] Now, while that is running, we can
+[00:01:13] Now, while that is running, we can actually set up the Apify side of
+[00:01:14] actually set up the Apify side of
+[00:01:14] actually set up the Apify side of things. It has over 40,000 different
+[00:01:16] things. It has over 40,000 different
+[00:01:16] things. It has over 40,000 different tools, whether it's for TikTok, Google
+[00:01:18] tools, whether it's for TikTok, Google
+[00:01:18] tools, whether it's for TikTok, Google Maps, Instagram, website content
+[00:01:20] Maps, Instagram, website content
+[00:01:20] Maps, Instagram, website content crawler, e-commerce scraping tool,
+[00:01:22] crawler, e-commerce scraping tool,
+[00:01:22] crawler, e-commerce scraping tool, Facebook posts, LinkedIn, Reddit, all of
+[00:01:24] Facebook posts, LinkedIn, Reddit, all of
+[00:01:24] Facebook posts, LinkedIn, Reddit, all of the most difficult sites that normally,
+[00:01:26] the most difficult sites that normally,
+[00:01:26] the most difficult sites that normally, with simple web browsing, these agents
+[00:01:28] with simple web browsing, these agents
+[00:01:29] with simple web browsing, these agents have no hopes of accessing. With Apify,
+[00:01:31] have no hopes of accessing. With Apify,
+[00:01:31] have no hopes of accessing. With Apify, they can do that super easily, which
+[00:01:33] they can do that super easily, which
+[00:01:33] they can do that super easily, which then we can use Hermes Agent on to do
+[00:01:35] then we can use Hermes Agent on to do
+[00:01:35] then we can use Hermes Agent on to do anything we want with that data. So
+[00:01:37] anything we want with that data. So
+[00:01:37] anything we want with that data. So basically, Apify is one of the first
+[00:01:40] basically, Apify is one of the first
+[00:01:40] basically, Apify is one of the first tools you want to connect to any AI
+[00:01:41] tools you want to connect to any AI
+[00:01:41] tools you want to connect to any AI agent you build so that you make it
+[00:01:43] agent you build so that you make it
+[00:01:43] agent you build so that you make it instantly 10,000 more powerful. And
+[00:01:45] instantly 10,000 more powerful. And
+[00:01:45] instantly 10,000 more powerful. And that's exactly why I asked Apify to
+[00:01:47] that's exactly why I asked Apify to
+[00:01:47] that's exactly why I asked Apify to sponsor this video, and they agreed. So
+[00:01:49] sponsor this video, and they agreed. So
+[00:01:49] sponsor this video, and they agreed. So a huge shout out to them. Now, let's
+[00:01:50] a huge shout out to them. Now, let's
+[00:01:50] a huge shout out to them. Now, let's check on our Hermes Agent. All right, so
+[00:01:52] check on our Hermes Agent. All right, so
+[00:01:52] check on our Hermes Agent. All right, so the install has finished. So we can
+[00:01:54] the install has finished. So we can
+[00:01:54] the install has finished. So we can select a the
+[00:01:55] select a the
+[00:01:55] select a the As you can see, there is many different
+[00:01:57] As you can see, there is many different
+[00:01:57] As you can see, there is many different providers. If you have a ChatGPT
+[00:01:58] providers. If you have a ChatGPT
+[00:01:58] providers. If you have a ChatGPT subscription, you can use that. If you
+[00:02:00] subscription, you can use that. If you
+[00:02:00] subscription, you can use that. If you want a great deal, MiniMax subscription
+[00:02:02] want a great deal, MiniMax subscription
+[00:02:02] want a great deal, MiniMax subscription is amazing. Tokens per dollars, if you
+[00:02:05] is amazing. Tokens per dollars, if you
+[00:02:05] is amazing. Tokens per dollars, if you have a lot of money, maybe you go with
+[00:02:07] have a lot of money, maybe you go with
+[00:02:07] have a lot of money, maybe you go with Anthropic. Or if you want access any
+[00:02:09] Anthropic. Or if you want access any
+[00:02:09] Anthropic. Or if you want access any model, you just go with OpenRouter. We
+[00:02:10] model, you just go with OpenRouter. We
+[00:02:10] model, you just go with OpenRouter. We need to put an API key here. So, if you
+[00:02:12] need to put an API key here. So, if you
+[00:02:12] need to put an API key here. So, if you don't have an API key here, just go to
+[00:02:14] don't have an API key here, just go to
+[00:02:14] don't have an API key here, just go to OpenRouter and create one. As you can
+[00:02:16] OpenRouter and create one. As you can
+[00:02:16] OpenRouter and create one. As you can see, I already have, so I'm going to do
+[00:02:17] see, I already have, so I'm going to do
+[00:02:17] see, I already have, so I'm going to do K to keep it. And now we need to select
+[00:02:19] K to keep it. And now we need to select
+[00:02:19] K to keep it. And now we need to select a model. Unfortunately, Fable got
+[00:02:20] a model. Unfortunately, Fable got
+[00:02:21] a model. Unfortunately, Fable got banned, which is a tragic day in the
+[00:02:23] banned, which is a tragic day in the
+[00:02:23] banned, which is a tragic day in the history of humanity. So, we're going to
+[00:02:25] history of humanity. So, we're going to
+[00:02:25] history of humanity. So, we're going to have to stick with 4.8 fast. Keep the
+[00:02:27] have to stick with 4.8 fast. Keep the
+[00:02:27] have to stick with 4.8 fast. Keep the current environment. We don't need to do
+[00:02:29] current environment. We don't need to do
+[00:02:29] current environment. We don't need to do any messaging platforms right now, so we
+[00:02:31] any messaging platforms right now, so we
+[00:02:31] any messaging platforms right now, so we can skip that. And we're done.
+[00:02:34] can skip that. And we're done.
+[00:02:34] can skip that. And we're done. So, now if I do clear and Hermes, we
+[00:02:36] So, now if I do clear and Hermes, we
+[00:02:36] So, now if I do clear and Hermes, we should be able to chat [clears throat]
+[00:02:37] should be able to chat [clears throat]
+[00:02:37] should be able to chat [clears throat] with Hermes agent installed locally on
+[00:02:39] with Hermes agent installed locally on
+[00:02:40] with Hermes agent installed locally on my MacBook with Opus 4.8 fast. Let's do
+[00:02:43] my MacBook with Opus 4.8 fast. Let's do
+[00:02:43] my MacBook with Opus 4.8 fast. Let's do uh
+[00:02:43] uh
+[00:02:43] uh Who are you? Classic. And there we go.
+[00:02:46] Who are you? Classic. And there we go.
+[00:02:46] Who are you? Classic. And there we go. So, Hermes agent is responding, as you
+[00:02:47] So, Hermes agent is responding, as you
+[00:02:47] So, Hermes agent is responding, as you can see, installing it was very easy.
+[00:02:50] can see, installing it was very easy.
+[00:02:50] can see, installing it was very easy. Now, let's make it 10 times more
+[00:02:51] Now, let's make it 10 times more
+[00:02:51] Now, let's make it 10 times more powerful by giving it the ability to
+[00:02:53] powerful by giving it the ability to
+[00:02:53] powerful by giving it the ability to access any data on the web and scrape
+[00:02:56] access any data on the web and scrape
+[00:02:56] access any data on the web and scrape literally any website, no matter how
+[00:02:58] literally any website, no matter how
+[00:02:58] literally any website, no matter how restrictive or how messy the data is
+[00:03:00] restrictive or how messy the data is
+[00:03:00] restrictive or how messy the data is from that website. And for that, we're
+[00:03:02] from that website. And for that, we're
+[00:03:02] from that website. And for that, we're going to use the Apify MCP connectors.
+[00:03:04] going to use the Apify MCP connectors.
+[00:03:04] going to use the Apify MCP connectors. And this is a new product from Apify
+[00:03:06] And this is a new product from Apify
+[00:03:06] And this is a new product from Apify that allows us to use any of the 40,000
+[00:03:08] that allows us to use any of the 40,000
+[00:03:08] that allows us to use any of the 40,000 plus actors and connect them with things
+[00:03:11] plus actors and connect them with things
+[00:03:11] plus actors and connect them with things like Superbase, GitHub, Notion, wherever
+[00:03:13] like Superbase, GitHub, Notion, wherever
+[00:03:13] like Superbase, GitHub, Notion, wherever your data lives, right? So, the actor
+[00:03:15] your data lives, right? So, the actor
+[00:03:15] your data lives, right? So, the actor can instantly scrape the data and save
+[00:03:17] can instantly scrape the data and save
+[00:03:17] can instantly scrape the data and save it to your database. And then, we can do
+[00:03:19] it to your database. And then, we can do
+[00:03:19] it to your database. And then, we can do whatever we want with that with Hermes
+[00:03:20] whatever we want with that with Hermes
+[00:03:20] whatever we want with that with Hermes agent. And by the way, you can get
+[00:03:22] agent. And by the way, you can get
+[00:03:22] agent. And by the way, you can get started completely for free with Apify.
+[00:03:24] started completely for free with Apify.
+[00:03:24] started completely for free with Apify. So, click the first link below the video
+[00:03:25] So, click the first link below the video
+[00:03:25] So, click the first link below the video and create an account. Then, go to top
+[00:03:27] and create an account. Then, go to top
+[00:03:27] and create an account. Then, go to top right and click on go to console. This
+[00:03:29] right and click on go to console. This
+[00:03:29] right and click on go to console. This will redirect you to the Apify console,
+[00:03:31] will redirect you to the Apify console,
+[00:03:32] will redirect you to the Apify console, where you manage all your actors. You
+[00:03:33] where you manage all your actors. You
+[00:03:33] where you manage all your actors. You can see the runs. You can create
+[00:03:34] can see the runs. You can create
+[00:03:35] can see the runs. You can create automations, schedules, a lot of
+[00:03:37] automations, schedules, a lot of
+[00:03:37] automations, schedules, a lot of different things. Now, the first we need
+[00:03:38] different things. Now, the first we need
+[00:03:38] different things. Now, the first we need to do is go to left and we need to
+[00:03:39] to do is go to left and we need to
+[00:03:39] to do is go to left and we need to choose which actor, aka scraper, we're
+[00:03:42] choose which actor, aka scraper, we're
+[00:03:42] choose which actor, aka scraper, we're going to use to access the data we want.
+[00:03:45] going to use to access the data we want.
+[00:03:45] going to use to access the data we want. So, the thing I'm going to be building
+[00:03:47] So, the thing I'm going to be building
+[00:03:47] So, the thing I'm going to be building is a tool that allows us to find the
+[00:03:49] is a tool that allows us to find the
+[00:03:49] is a tool that allows us to find the best hires for any role. So, usually
+[00:03:51] best hires for any role. So, usually
+[00:03:51] best hires for any role. So, usually those people are on LinkedIn, so we're
+[00:03:53] those people are on LinkedIn, so we're
+[00:03:53] those people are on LinkedIn, so we're going to use a LinkedIn actor, but this
+[00:03:54] going to use a LinkedIn actor, but this
+[00:03:54] going to use a LinkedIn actor, but this could be used for many different ways.
+[00:03:56] could be used for many different ways.
+[00:03:56] could be used for many different ways. Now, for LinkedIn, I found this specific
+[00:03:58] Now, for LinkedIn, I found this specific
+[00:03:58] Now, for LinkedIn, I found this specific Apify actor, and this one's great
+[00:04:00] Apify actor, and this one's great
+[00:04:00] Apify actor, and this one's great because it doesn't require any LinkedIn
+[00:04:02] because it doesn't require any LinkedIn
+[00:04:02] because it doesn't require any LinkedIn login, no account cookies. It has lower
+[00:04:05] login, no account cookies. It has lower
+[00:04:05] login, no account cookies. It has lower on-camera band risk because LinkedIn has
+[00:04:06] on-camera band risk because LinkedIn has
+[00:04:06] on-camera band risk because LinkedIn has pretty restrictive uh terms of service.
+[00:04:08] pretty restrictive uh terms of service.
+[00:04:08] pretty restrictive uh terms of service. So, do your own research before running
+[00:04:10] So, do your own research before running
+[00:04:10] So, do your own research before running mass scraping operations. It searches by
+[00:04:12] mass scraping operations. It searches by
+[00:04:13] mass scraping operations. It searches by job title, location, industry, and
+[00:04:14] job title, location, industry, and
+[00:04:14] job title, location, industry, and returns richer profile data for Hermes
+[00:04:16] returns richer profile data for Hermes
+[00:04:16] returns richer profile data for Hermes to analyze. So, I'm going to be using
+[00:04:18] to analyze. So, I'm going to be using
+[00:04:18] to analyze. So, I'm going to be using this specific Apify actor. And by the
+[00:04:20] this specific Apify actor. And by the
+[00:04:20] this specific Apify actor. And by the way, everything from this video is going
+[00:04:22] way, everything from this video is going
+[00:04:22] way, everything from this video is going to be linked in the second link below
+[00:04:24] to be linked in the second link below
+[00:04:24] to be linked in the second link below the video, completely for free in a
+[00:04:25] the video, completely for free in a
+[00:04:25] the video, completely for free in a bundle. All of the setup, the MCP
+[00:04:27] bundle. All of the setup, the MCP
+[00:04:27] bundle. All of the setup, the MCP config, the prompts, the list of Apify
+[00:04:30] config, the prompts, the list of Apify
+[00:04:30] config, the prompts, the list of Apify actors, everything you need to follow
+[00:04:31] actors, everything you need to follow
+[00:04:31] actors, everything you need to follow this video is included in the second
+[00:04:33] this video is included in the second
+[00:04:33] this video is included in the second link below the video. So, just click on
+[00:04:35] link below the video. So, just click on
+[00:04:35] link below the video. So, just click on that and grab that. It's going to be
+[00:04:37] that and grab that. It's going to be
+[00:04:37] that and grab that. It's going to be completely free. But, let's say you want
+[00:04:38] completely free. But, let's say you want
+[00:04:38] completely free. But, let's say you want to use a completely different Apify
+[00:04:40] to use a completely different Apify
+[00:04:40] to use a completely different Apify actor. Well, inside of the Apify
+[00:04:42] actor. Well, inside of the Apify
+[00:04:42] actor. Well, inside of the Apify console, go to left, click on actors,
+[00:04:44] console, go to left, click on actors,
+[00:04:44] console, go to left, click on actors, and then top right you can see go to
+[00:04:46] and then top right you can see go to
+[00:04:46] and then top right you can see go to store, and here you can see all of the
+[00:04:47] store, and here you can see all of the
+[00:04:47] store, and here you can see all of the available 40,000 plus different actors.
+[00:04:50] available 40,000 plus different actors.
+[00:04:50] available 40,000 plus different actors. And they're split into different
+[00:04:51] And they're split into different
+[00:04:51] And they're split into different categories for lead generation, rising
+[00:04:54] categories for lead generation, rising
+[00:04:54] categories for lead generation, rising stars, popular actors from the
+[00:04:55] stars, popular actors from the
+[00:04:55] stars, popular actors from the community, and many, many more. So,
+[00:04:57] community, and many, many more. So,
+[00:04:57] community, and many, many more. So, whether it's YouTube, Reddit, LinkedIn,
+[00:04:59] whether it's YouTube, Reddit, LinkedIn,
+[00:04:59] whether it's YouTube, Reddit, LinkedIn, Twitter, or anything else, you can
+[00:05:02] Twitter, or anything else, you can
+[00:05:02] Twitter, or anything else, you can probably find an Apify actor for that
+[00:05:04] probably find an Apify actor for that
+[00:05:04] probably find an Apify actor for that thing. Okay, so next we need to set up
+[00:05:05] thing. Okay, so next we need to set up
+[00:05:06] thing. Okay, so next we need to set up this Apify actor and to do a test run to
+[00:05:08] this Apify actor and to do a test run to
+[00:05:08] this Apify actor and to do a test run to see whether it works or not. So, inside
+[00:05:11] see whether it works or not. So, inside
+[00:05:11] see whether it works or not. So, inside of the profile scraper mode, I'm going
+[00:05:12] of the profile scraper mode, I'm going
+[00:05:12] of the profile scraper mode, I'm going to click on full. You can also do full
+[00:05:14] to click on full. You can also do full
+[00:05:14] to click on full. You can also do full plus email search, up to you. Search
+[00:05:16] plus email search, up to you. Search
+[00:05:16] plus email search, up to you. Search query. So, this is what you want to
+[00:05:17] query. So, this is what you want to
+[00:05:17] query. So, this is what you want to search. So, I'm going to do AI developer
+[00:05:20] search. So, I'm going to do AI developer
+[00:05:20] search. So, I'm going to do AI developer or software engineer or programmer,
+[00:05:24] or software engineer or programmer,
+[00:05:24] or software engineer or programmer, something like that. We can keep this
+[00:05:25] something like that. We can keep this
+[00:05:25] something like that. We can keep this maximum number of profiles to 20.
+[00:05:28] maximum number of profiles to 20.
+[00:05:28] maximum number of profiles to 20. Location filters, I'm going to add some
+[00:05:30] Location filters, I'm going to add some
+[00:05:30] Location filters, I'm going to add some local things because we're building an
+[00:05:32] local things because we're building an
+[00:05:32] local things because we're building an office in Katowice. If you want to join
+[00:05:33] office in Katowice. If you want to join
+[00:05:34] office in Katowice. If you want to join us, by the way, there's going to be a
+[00:05:34] us, by the way, there's going to be a
+[00:05:35] us, by the way, there's going to be a link below the video. Then, go back to
+[00:05:36] link below the video. Then, go back to
+[00:05:36] link below the video. Then, go back to the top, and in the top right you can
+[00:05:38] the top, and in the top right you can
+[00:05:38] the top, and in the top right you can see save as a new task. Click on that,
+[00:05:40] see save as a new task. Click on that,
+[00:05:40] see save as a new task. Click on that, name it something like Katowice AI
+[00:05:43] name it something like Katowice AI
+[00:05:43] name it something like Katowice AI developer, whatever, just a descriptive
+[00:05:45] developer, whatever, just a descriptive
+[00:05:45] developer, whatever, just a descriptive name. And then click on continue. And on
+[00:05:47] name. And then click on continue. And on
+[00:05:47] name. And then click on continue. And on the left, by the way you can see we got
+[00:05:48] the left, by the way you can see we got
+[00:05:48] the left, by the way you can see we got redirected into saved tasks, where you
+[00:05:51] redirected into saved tasks, where you
+[00:05:51] redirected into saved tasks, where you can see these like kind of presets for
+[00:05:53] can see these like kind of presets for
+[00:05:53] can see these like kind of presets for these actors, so you don't have to
+[00:05:54] these actors, so you don't have to
+[00:05:54] these actors, so you don't have to configure them every single time. You
+[00:05:56] configure them every single time. You
+[00:05:56] configure them every single time. You can just make sure you have the query
+[00:05:58] can just make sure you have the query
+[00:05:58] can just make sure you have the query here, software developer.
+[00:06:00] here, software developer.
+[00:06:00] here, software developer. This is most important, otherwise you'll
+[00:06:02] This is most important, otherwise you'll
+[00:06:02] This is most important, otherwise you'll get an empty run. So, I filled it in
+[00:06:05] get an empty run. So, I filled it in
+[00:06:05] get an empty run. So, I filled it in again, and we should be good. So, click
+[00:06:07] again, and we should be good. So, click
+[00:06:07] again, and we should be good. So, click save and start, top right.
+[00:06:09] save and start, top right.
+[00:06:09] save and start, top right. And it should start a run
+[00:06:11] And it should start a run
+[00:06:11] And it should start a run with this actor, and it's looking for
+[00:06:14] with this actor, and it's looking for
+[00:06:14] with this actor, and it's looking for software developers in this area, and
+[00:06:16] software developers in this area, and
+[00:06:16] software developers in this area, and it's already finding results. Look at
+[00:06:17] it's already finding results. Look at
+[00:06:17] it's already finding results. Look at this. It's amazing how fast this is. So,
+[00:06:19] this. It's amazing how fast this is. So,
+[00:06:19] this. It's amazing how fast this is. So, at the top you can see the spend, and we
+[00:06:21] at the top you can see the spend, and we
+[00:06:21] at the top you can see the spend, and we can also go to the top left runs to see
+[00:06:23] can also go to the top left runs to see
+[00:06:23] can also go to the top left runs to see all your previous runs, and the status
+[00:06:25] all your previous runs, and the status
+[00:06:25] all your previous runs, and the status of this run, whether it's finished or
+[00:06:26] of this run, whether it's finished or
+[00:06:26] of this run, whether it's finished or it's still running. If you want to see
+[00:06:28] it's still running. If you want to see
+[00:06:28] it's still running. If you want to see how many credits you have, go to the
+[00:06:29] how many credits you have, go to the
+[00:06:29] how many credits you have, go to the bottom and click on usage, and you can
+[00:06:31] bottom and click on usage, and you can
+[00:06:31] bottom and click on usage, and you can see the dollar you spent, and the amount
+[00:06:33] see the dollar you spent, and the amount
+[00:06:33] see the dollar you spent, and the amount of dollars you have left. If you want to
+[00:06:35] of dollars you have left. If you want to
+[00:06:35] of dollars you have left. If you want to upgrade, just click on upgrade and
+[00:06:36] upgrade, just click on upgrade and
+[00:06:36] upgrade, just click on upgrade and select the plan that makes the sense for
+[00:06:38] select the plan that makes the sense for
+[00:06:38] select the plan that makes the sense for you, depending on how much how many
+[00:06:40] you, depending on how much how many
+[00:06:40] you, depending on how much how many leads you want, how much scraping you
+[00:06:42] leads you want, how much scraping you
+[00:06:42] leads you want, how much scraping you want, how many Apify actors you want to
+[00:06:44] want, how many Apify actors you want to
+[00:06:44] want, how many Apify actors you want to run. Okay, there we are. So, we're
+[00:06:45] run. Okay, there we are. So, we're
+[00:06:45] run. Okay, there we are. So, we're finished running, duration less than 2
+[00:06:47] finished running, duration less than 2
+[00:06:47] finished running, duration less than 2 minutes. And when you click on the
+[00:06:48] minutes. And when you click on the
+[00:06:48] minutes. And when you click on the specific run, you can see actor
+[00:06:50] specific run, you can see actor
+[00:06:50] specific run, you can see actor succeeded with 20 results in the data
+[00:06:51] succeeded with 20 results in the data
+[00:06:51] succeeded with 20 results in the data set. Now, to view your data set, go to
+[00:06:53] set. Now, to view your data set, go to
+[00:06:53] set. Now, to view your data set, go to storage, and here you can either export
+[00:06:55] storage, and here you can either export
+[00:06:55] storage, and here you can either export it, or you can also view it in a new
+[00:06:57] it, or you can also view it in a new
+[00:06:58] it, or you can also view it in a new tab. So, you see the raw JSON, and you
+[00:07:00] tab. So, you see the raw JSON, and you
+[00:07:00] tab. So, you see the raw JSON, and you can see this is clear structured data.
+[00:07:02] can see this is clear structured data.
+[00:07:02] can see this is clear structured data. This is like the stuff that AI agents
+[00:07:04] This is like the stuff that AI agents
+[00:07:04] This is like the stuff that AI agents dream of, structured JSON that's easy to
+[00:07:07] dream of, structured JSON that's easy to
+[00:07:07] dream of, structured JSON that's easy to understand, that's easy to work with.
+[00:07:09] understand, that's easy to work with.
+[00:07:09] understand, that's easy to work with. So, yeah, this is perfect for our AI
+[00:07:11] So, yeah, this is perfect for our AI
+[00:07:11] So, yeah, this is perfect for our AI agents. So, next, what we need to do is
+[00:07:14] agents. So, next, what we need to do is
+[00:07:14] agents. So, next, what we need to do is we need to wire this up to Superbase
+[00:07:16] we need to wire this up to Superbase
+[00:07:16] we need to wire this up to Superbase through the new MCP connectors, so that
+[00:07:19] through the new MCP connectors, so that
+[00:07:19] through the new MCP connectors, so that anytime we run this Apify actor, and
+[00:07:20] anytime we run this Apify actor, and
+[00:07:20] anytime we run this Apify actor, and again, we can do that on a schedule,
+[00:07:22] again, we can do that on a schedule,
+[00:07:22] again, we can do that on a schedule, because Apify makes it very easy inside
+[00:07:24] because Apify makes it very easy inside
+[00:07:24] because Apify makes it very easy inside of their console to set all of this up.
+[00:07:26] of their console to set all of this up.
+[00:07:26] of their console to set all of this up. It goes to Superbase database, and then
+[00:07:27] It goes to Superbase database, and then
+[00:07:27] It goes to Superbase database, and then we can access that through our Hermes
+[00:07:29] we can access that through our Hermes
+[00:07:29] we can access that through our Hermes agent to analyze these leads, to contact
+[00:07:32] agent to analyze these leads, to contact
+[00:07:32] agent to analyze these leads, to contact them, and just do all the other
+[00:07:33] them, and just do all the other
+[00:07:33] them, and just do all the other operations you would want to a data set
+[00:07:36] operations you would want to a data set
+[00:07:36] operations you would want to a data set of contacts, whether it's leads, whether
+[00:07:38] of contacts, whether it's leads, whether
+[00:07:38] of contacts, whether it's leads, whether it's potential clients, whether it's
+[00:07:40] it's potential clients, whether it's
+[00:07:40] it's potential clients, whether it's guests for a podcast. Again, get
+[00:07:42] guests for a podcast. Again, get
+[00:07:42] guests for a podcast. Again, get creative. You can absolutely grow your
+[00:07:43] creative. You can absolutely grow your
+[00:07:44] creative. You can absolutely grow your business or improve your life if you
+[00:07:45] business or improve your life if you
+[00:07:45] business or improve your life if you implement scraping in the right way. For
+[00:07:47] implement scraping in the right way. For
+[00:07:47] implement scraping in the right way. For example, every business wants more
+[00:07:49] example, every business wants more
+[00:07:49] example, every business wants more leads. Every business wants more
+[00:07:50] leads. Every business wants more
+[00:07:50] leads. Every business wants more customers. If you set up your Apify
+[00:07:52] customers. If you set up your Apify
+[00:07:52] customers. If you set up your Apify actor in the right way, you can
+[00:07:53] actor in the right way, you can
+[00:07:54] actor in the right way, you can absolutely find these people and you can
+[00:07:55] absolutely find these people and you can
+[00:07:55] absolutely find these people and you can set up a Hermes workflow to
+[00:07:57] set up a Hermes workflow to
+[00:07:57] set up a Hermes workflow to automatically reach out to them. So,
+[00:07:58] automatically reach out to them. So,
+[00:07:58] automatically reach out to them. So, before we can implement Hermes agent so
+[00:08:00] before we can implement Hermes agent so
+[00:08:00] before we can implement Hermes agent so that it takes the data set created with
+[00:08:03] that it takes the data set created with
+[00:08:03] that it takes the data set created with our run and it can analyze the leads,
+[00:08:05] our run and it can analyze the leads,
+[00:08:05] our run and it can analyze the leads, qualify them, reach out to them,
+[00:08:07] qualify them, reach out to them,
+[00:08:07] qualify them, reach out to them, whatever you want to do, we need to set
+[00:08:09] whatever you want to do, we need to set
+[00:08:09] whatever you want to do, we need to set up the Supabase integration so that
+[00:08:11] up the Supabase integration so that
+[00:08:11] up the Supabase integration so that everything that happens with our actor,
+[00:08:13] everything that happens with our actor,
+[00:08:13] everything that happens with our actor, all of the leads that it generates, all
+[00:08:15] all of the leads that it generates, all
+[00:08:15] all of the leads that it generates, all of the contacts that it scrapes, it
+[00:08:17] of the contacts that it scrapes, it
+[00:08:17] of the contacts that it scrapes, it saves into Supabase. So, just go into
+[00:08:18] saves into Supabase. So, just go into
+[00:08:18] saves into Supabase. So, just go into Google and type in Supabase. The free
+[00:08:21] Google and type in Supabase. The free
+[00:08:21] Google and type in Supabase. The free account is more than enough. Just click
+[00:08:22] account is more than enough. Just click
+[00:08:23] account is more than enough. Just click on start your project. So, since I
+[00:08:24] on start your project. So, since I
+[00:08:24] on start your project. So, since I already used up my free quota, I need to
+[00:08:26] already used up my free quota, I need to
+[00:08:26] already used up my free quota, I need to pay $10 a month, but if you're starting
+[00:08:28] pay $10 a month, but if you're starting
+[00:08:28] pay $10 a month, but if you're starting on Supabase, you can have two projects
+[00:08:30] on Supabase, you can have two projects
+[00:08:30] on Supabase, you can have two projects completely for free. So, just go with
+[00:08:31] completely for free. So, just go with
+[00:08:31] completely for free. So, just go with the free Supabase account. You really do
+[00:08:33] the free Supabase account. You really do
+[00:08:33] the free Supabase account. You really do not need to pay for this one. Okay, so 2
+[00:08:36] not need to pay for this one. Okay, so 2
+[00:08:36] not need to pay for this one. Okay, so 2 minutes later, we're up. Go to the left
+[00:08:38] minutes later, we're up. Go to the left
+[00:08:38] minutes later, we're up. Go to the left SQL editor, click on plus new snippet,
+[00:08:40] SQL editor, click on plus new snippet,
+[00:08:40] SQL editor, click on plus new snippet, and I have a simple table generation for
+[00:08:43] and I have a simple table generation for
+[00:08:43] and I have a simple table generation for leads. And again, all of this is in the
+[00:08:45] leads. And again, all of this is in the
+[00:08:45] leads. And again, all of this is in the free bundle, second link below the
+[00:08:46] free bundle, second link below the
+[00:08:46] free bundle, second link below the video. All the prompts, all the SQL
+[00:08:48] video. All the prompts, all the SQL
+[00:08:48] video. All the prompts, all the SQL presets, Apify actors, everything. It's
+[00:08:51] presets, Apify actors, everything. It's
+[00:08:51] presets, Apify actors, everything. It's going to be in that bundle. So, you can
+[00:08:52] going to be in that bundle. So, you can
+[00:08:52] going to be in that bundle. So, you can see this was successful, no rows
+[00:08:54] see this was successful, no rows
+[00:08:54] see this was successful, no rows returned. So, now if we go to table
+[00:08:55] returned. So, now if we go to table
+[00:08:55] returned. So, now if we go to table editor, we can see that we have this uh
+[00:08:58] editor, we can see that we have this uh
+[00:08:58] editor, we can see that we have this uh table leads.
+[00:09:00] table leads.
+[00:09:00] table leads. We might need to set up uh endless
+[00:09:01] We might need to set up uh endless
+[00:09:01] We might need to set up uh endless policies for that in a sec, but uh I
+[00:09:05] policies for that in a sec, but uh I
+[00:09:05] policies for that in a sec, but uh I think this could be enough for now. So,
+[00:09:06] think this could be enough for now. So,
+[00:09:06] think this could be enough for now. So, inside of Apify, you might be on runs or
+[00:09:08] inside of Apify, you might be on runs or
+[00:09:08] inside of Apify, you might be on runs or saved tasks. You need to go to settings
+[00:09:10] saved tasks. You need to go to settings
+[00:09:10] saved tasks. You need to go to settings at the bottom. Settings, go to API and
+[00:09:13] at the bottom. Settings, go to API and
+[00:09:13] at the bottom. Settings, go to API and integrations here. Boom. Scroll all the
+[00:09:15] integrations here. Boom. Scroll all the
+[00:09:15] integrations here. Boom. Scroll all the way down and MCP connectors, okay? This
+[00:09:18] way down and MCP connectors, okay? This
+[00:09:18] way down and MCP connectors, okay? This is the section we're looking for. Click
+[00:09:19] is the section we're looking for. Click
+[00:09:19] is the section we're looking for. Click on add a connector. So, in the name, put
+[00:09:21] on add a connector. So, in the name, put
+[00:09:21] on add a connector. So, in the name, put something like Supabase Apify hiring
+[00:09:22] something like Supabase Apify hiring
+[00:09:22] something like Supabase Apify hiring demo. And here, we're going to actually
+[00:09:24] demo. And here, we're going to actually
+[00:09:24] demo. And here, we're going to actually extend the URL by adding our project
+[00:09:26] extend the URL by adding our project
+[00:09:26] extend the URL by adding our project reference there. Go back to Supabase
+[00:09:28] reference there. Go back to Supabase
+[00:09:28] reference there. Go back to Supabase project overview. And this is your
+[00:09:29] project overview. And this is your
+[00:09:29] project overview. And this is your Supabase URL right here. So, just copy
+[00:09:31] Supabase URL right here. So, just copy
+[00:09:31] Supabase URL right here. So, just copy that and put that after equals. Next, we
+[00:09:33] that and put that after equals. Next, we
+[00:09:33] that and put that after equals. Next, we need an API key, and for that, it's It's
+[00:09:35] need an API key, and for that, it's It's
+[00:09:35] need an API key, and for that, it's It's a project one. It should be a personal
+[00:09:36] a project one. It should be a personal
+[00:09:37] a project one. It should be a personal access token. So, in Superbase, go to
+[00:09:38] access token. So, in Superbase, go to
+[00:09:39] access token. So, in Superbase, go to {slash} dashboard {slash} account
+[00:09:40] {slash} dashboard {slash} account
+[00:09:40] {slash} dashboard {slash} account {slash} tokens. Access tokens, generate
+[00:09:43] {slash} tokens. Access tokens, generate
+[00:09:43] {slash} tokens. Access tokens, generate a new token. I can put it at expiry like
+[00:09:45] a new token. I can put it at expiry like
+[00:09:45] a new token. I can put it at expiry like 1 day or even 1 hour. I'm going to name
+[00:09:47] 1 day or even 1 hour. I'm going to name
+[00:09:47] 1 day or even 1 hour. I'm going to name the token Apify MCP demo.
+[00:09:50] the token Apify MCP demo.
+[00:09:50] the token Apify MCP demo. Expiry, just do whatever you want, or
+[00:09:52] Expiry, just do whatever you want, or
+[00:09:52] Expiry, just do whatever you want, or you can do never, that's risky.
+[00:09:54] you can do never, that's risky.
+[00:09:54] you can do never, that's risky. And
+[00:09:56] And
+[00:09:56] And click on generate token. Now again, do
+[00:09:57] click on generate token. Now again, do
+[00:09:57] click on generate token. Now again, do not share this with anybody, this can
+[00:09:59] not share this with anybody, this can
+[00:09:59] not share this with anybody, this can access your entire account, so treat
+[00:10:02] access your entire account, so treat
+[00:10:02] access your entire account, so treat this with respect. Obviously, I'm going
+[00:10:03] this with respect. Obviously, I'm going
+[00:10:03] this with respect. Obviously, I'm going to delete this token before uploading
+[00:10:05] to delete this token before uploading
+[00:10:05] to delete this token before uploading this video. So here, copy the token
+[00:10:07] this video. So here, copy the token
+[00:10:07] this video. So here, copy the token because as it says, you will not be able
+[00:10:08] because as it says, you will not be able
+[00:10:08] because as it says, you will not be able to see it again. Go back into Apify and
+[00:10:11] to see it again. Go back into Apify and
+[00:10:11] to see it again. Go back into Apify and paste it in here. Click save, and MCP
+[00:10:13] paste it in here. Click save, and MCP
+[00:10:13] paste it in here. Click save, and MCP connector should appear right here at
+[00:10:14] connector should appear right here at
+[00:10:14] connector should appear right here at the bottom in the list of MCP
+[00:10:16] the bottom in the list of MCP
+[00:10:16] the bottom in the list of MCP connectors. All right, so we're going to
+[00:10:17] connectors. All right, so we're going to
+[00:10:17] connectors. All right, so we're going to use this Apify actor, universal MCP
+[00:10:21] use this Apify actor, universal MCP
+[00:10:21] use this Apify actor, universal MCP connector. So, click try for free. This
+[00:10:23] connector. So, click try for free. This
+[00:10:23] connector. So, click try for free. This is going to take you into the Apify
+[00:10:24] is going to take you into the Apify
+[00:10:24] is going to take you into the Apify console. As you can see, this actor
+[00:10:26] console. As you can see, this actor
+[00:10:26] console. As you can see, this actor requires the dataset ID. So, let's go
+[00:10:27] requires the dataset ID. So, let's go
+[00:10:27] requires the dataset ID. So, let's go back to the runs, let's click on the
+[00:10:29] back to the runs, let's click on the
+[00:10:29] back to the runs, let's click on the last run, the storage again, and here
+[00:10:31] last run, the storage again, and here
+[00:10:31] last run, the storage again, and here we'll see the dataset ID. Copy that and
+[00:10:34] we'll see the dataset ID. Copy that and
+[00:10:34] we'll see the dataset ID. Copy that and give it to him.
+[00:10:36] give it to him.
+[00:10:36] give it to him. Wait, it's loading. Boom, click that.
+[00:10:38] Wait, it's loading. Boom, click that.
+[00:10:39] Wait, it's loading. Boom, click that. Nice. The user query here, we need to
+[00:10:40] Nice. The user query here, we need to
+[00:10:40] Nice. The user query here, we need to replace that with something like this.
+[00:10:42] replace that with something like this.
+[00:10:43] replace that with something like this. Don't overthink it. The language model,
+[00:10:44] Don't overthink it. The language model,
+[00:10:44] Don't overthink it. The language model, keep it to Deep Scrape before flash,
+[00:10:46] keep it to Deep Scrape before flash,
+[00:10:46] keep it to Deep Scrape before flash, that's perfect. Max agent steps, put it
+[00:10:48] that's perfect. Max agent steps, put it
+[00:10:48] that's perfect. Max agent steps, put it to like 40, 100 is unnecessary. And for
+[00:10:51] to like 40, 100 is unnecessary. And for
+[00:10:51] to like 40, 100 is unnecessary. And for the MCP connector, select this one,
+[00:10:52] the MCP connector, select this one,
+[00:10:52] the MCP connector, select this one, Superbase Apify hiring demo. And
+[00:10:54] Superbase Apify hiring demo. And
+[00:10:54] Superbase Apify hiring demo. And actually, let's add one more thing to
+[00:10:56] actually, let's add one more thing to
+[00:10:56] actually, let's add one more thing to the query. If a row already exists with
+[00:10:57] the query. If a row already exists with
+[00:10:57] the query. If a row already exists with the same profile URL, skip it. So then,
+[00:10:59] the same profile URL, skip it. So then,
+[00:10:59] the same profile URL, skip it. So then, scroll back to the top and click on save
+[00:11:01] scroll back to the top and click on save
+[00:11:01] scroll back to the top and click on save and start.
+[00:11:02] and start.
+[00:11:02] and start. This will start a new run,
+[00:11:04] This will start a new run,
+[00:11:04] This will start a new run, and hopefully, it'll get uploaded into
+[00:11:06] and hopefully, it'll get uploaded into
+[00:11:06] and hopefully, it'll get uploaded into our Superbase. So, let's go here, let's
+[00:11:08] our Superbase. So, let's go here, let's
+[00:11:08] our Superbase. So, let's go here, let's go table editor, leads, and we should
+[00:11:10] go table editor, leads, and we should
+[00:11:10] go table editor, leads, and we should start this getting populated in a second
+[00:11:12] start this getting populated in a second
+[00:11:12] start this getting populated in a second by Apify itself, so it should be all
+[00:11:14] by Apify itself, so it should be all
+[00:11:14] by Apify itself, so it should be all good. So here, we can refresh this to
+[00:11:16] good. So here, we can refresh this to
+[00:11:16] good. So here, we can refresh this to see if it's populated yet.
+[00:11:19] see if it's populated yet.
+[00:11:19] see if it's populated yet. All right, not yet. Here, I'm going to
+[00:11:21] All right, not yet. Here, I'm going to
+[00:11:21] All right, not yet. Here, I'm going to switch the query to use the dataset, and
+[00:11:23] switch the query to use the dataset, and
+[00:11:23] switch the query to use the dataset, and this is the name of our dataset from
+[00:11:25] this is the name of our dataset from
+[00:11:25] this is the name of our dataset from before, so you can go to runs and click
+[00:11:28] before, so you can go to runs and click
+[00:11:28] before, so you can go to runs and click on that run,
+[00:11:29] on that run,
+[00:11:29] on that run, and again, storage,
+[00:11:31] and again, storage,
+[00:11:31] and again, storage, and here you can see the data set ID.
+[00:11:33] and here you can see the data set ID.
+[00:11:33] and here you can see the data set ID. So, that's that name.
+[00:11:35] So, that's that name.
+[00:11:36] So, that's that name. We're going to test the first five items
+[00:11:37] We're going to test the first five items
+[00:11:37] We're going to test the first five items only. Here is the structure
+[00:11:39] only. Here is the structure
+[00:11:39] only. Here is the structure of how to map it into Superbase.
+[00:11:42] of how to map it into Superbase.
+[00:11:42] of how to map it into Superbase. And for the model,
+[00:11:44] And for the model,
+[00:11:44] And for the model, let's use something a bit more
+[00:11:45] let's use something a bit more
+[00:11:45] let's use something a bit more competent. I'm just going to go with
+[00:11:47] competent. I'm just going to go with
+[00:11:47] competent. I'm just going to go with Sonnet 4.6. It's like a mid-level model.
+[00:11:49] Sonnet 4.6. It's like a mid-level model.
+[00:11:50] Sonnet 4.6. It's like a mid-level model. Not too expensive, but not a super small
+[00:11:53] Not too expensive, but not a super small
+[00:11:53] Not too expensive, but not a super small model either. So, here I'm saying use
+[00:11:55] model either. So, here I'm saying use
+[00:11:55] model either. So, here I'm saying use data set and that's the data set name.
+[00:11:57] data set and that's the data set name.
+[00:11:57] data set and that's the data set name. You can access that by going to that
+[00:11:58] You can access that by going to that
+[00:11:58] You can access that by going to that run.
+[00:11:59] run.
+[00:11:59] run. Uh runs. You know, you click on the run
+[00:12:01] Uh runs. You know, you click on the run
+[00:12:01] Uh runs. You know, you click on the run we did before, storage, copy that, boom.
+[00:12:03] we did before, storage, copy that, boom.
+[00:12:03] we did before, storage, copy that, boom. So, I extended the prompt slightly,
+[00:12:05] So, I extended the prompt slightly,
+[00:12:05] So, I extended the prompt slightly, included the Superbase name, specific
+[00:12:08] included the Superbase name, specific
+[00:12:08] included the Superbase name, specific name of the table. I'm going to save
+[00:12:10] name of the table. I'm going to save
+[00:12:10] name of the table. I'm going to save that.
+[00:12:11] that.
+[00:12:11] that. Model we're using Sonnet, agent steps
+[00:12:12] Model we're using Sonnet, agent steps
+[00:12:12] Model we're using Sonnet, agent steps 40, select the MCP connector here. And
+[00:12:15] 40, select the MCP connector here. And
+[00:12:15] 40, select the MCP connector here. And we can start the run. Let's see if this
+[00:12:17] we can start the run. Let's see if this
+[00:12:17] we can start the run. Let's see if this actor works. Okay, so the actor is
+[00:12:18] actor works. Okay, so the actor is
+[00:12:18] actor works. Okay, so the actor is working. We can click on logs to see
+[00:12:20] working. We can click on logs to see
+[00:12:20] working. We can click on logs to see what is happening.
+[00:12:22] what is happening.
+[00:12:22] what is happening. It is connecting to the endpoint.
+[00:12:25] It is connecting to the endpoint.
+[00:12:25] It is connecting to the endpoint. Doing some LangChain tools.
+[00:12:29] Doing some LangChain tools.
+[00:12:29] Doing some LangChain tools. When it's converting the MCP tool to
+[00:12:30] When it's converting the MCP tool to
+[00:12:30] When it's converting the MCP tool to LangChain tool, okay.
+[00:12:33] LangChain tool, okay.
+[00:12:33] LangChain tool, okay. It spent 1 cent, so it should be doing
+[00:12:34] It spent 1 cent, so it should be doing
+[00:12:34] It spent 1 cent, so it should be doing something.
+[00:12:36] something.
+[00:12:36] something. But we got an error. So, let's go to the
+[00:12:38] But we got an error. So, let's go to the
+[00:12:38] But we got an error. So, let's go to the logs. Okay, so it seems like uh
+[00:12:41] logs. Okay, so it seems like uh
+[00:12:41] logs. Okay, so it seems like uh the run succeeded. My API key expired
+[00:12:43] the run succeeded. My API key expired
+[00:12:43] the run succeeded. My API key expired because not the API key, the personal
+[00:12:45] because not the API key, the personal
+[00:12:45] because not the API key, the personal access token expired because I put 1
+[00:12:47] access token expired because I put 1
+[00:12:47] access token expired because I put 1 hour on it. But after I fixed that, we
+[00:12:50] hour on it. But after I fixed that, we
+[00:12:50] hour on it. But after I fixed that, we have a successful run here. So, if we go
+[00:12:52] have a successful run here. So, if we go
+[00:12:52] have a successful run here. So, if we go to Superbase, into leads table, there we
+[00:12:54] to Superbase, into leads table, there we
+[00:12:54] to Superbase, into leads table, there we go. We have the leads here.
+[00:12:56] go. We have the leads here.
+[00:12:56] go. We have the leads here. Amazing. So, the first five leads have
+[00:12:58] Amazing. So, the first five leads have
+[00:12:58] Amazing. So, the first five leads have been scraped and saved into Superbase.
+[00:13:00] been scraped and saved into Superbase.
+[00:13:00] been scraped and saved into Superbase. This is massive progress. Now, we can
+[00:13:03] This is massive progress. Now, we can
+[00:13:03] This is massive progress. Now, we can try accessing this with Hermes agent
+[00:13:06] try accessing this with Hermes agent
+[00:13:06] try accessing this with Hermes agent so that he can qualify these leads,
+[00:13:08] so that he can qualify these leads,
+[00:13:08] so that he can qualify these leads, analyze them, and then based on that we
+[00:13:10] analyze them, and then based on that we
+[00:13:10] analyze them, and then based on that we could set up like follow-up workflows,
+[00:13:12] could set up like follow-up workflows,
+[00:13:12] could set up like follow-up workflows, cold outreach, email, voice, even like
+[00:13:15] cold outreach, email, voice, even like
+[00:13:15] cold outreach, email, voice, even like with Vapi, you know, 11 Labs. If you
+[00:13:17] with Vapi, you know, 11 Labs. If you
+[00:13:17] with Vapi, you know, 11 Labs. If you wanted to call these people. Yeah, this
+[00:13:19] wanted to call these people. Yeah, this
+[00:13:19] wanted to call these people. Yeah, this is a huge step. Now, the scraping is
+[00:13:20] is a huge step. Now, the scraping is
+[00:13:21] is a huge step. Now, the scraping is being saved to Superbase. So, this
+[00:13:22] being saved to Superbase. So, this
+[00:13:22] being saved to Superbase. So, this unlocks a whole new world of
+[00:13:23] unlocks a whole new world of
+[00:13:23] unlocks a whole new world of possibilities. So, the next thing I'm
+[00:13:24] possibilities. So, the next thing I'm
+[00:13:25] possibilities. So, the next thing I'm I'm to do is I'm going to screenshot
+[00:13:26] I'm to do is I'm going to screenshot
+[00:13:26] I'm to do is I'm going to screenshot this, actually.
+[00:13:27] this, actually.
+[00:13:27] this, actually. Copy, and I'm going to go to Hermes. I'm
+[00:13:30] Copy, and I'm going to go to Hermes. I'm
+[00:13:30] Copy, and I'm going to go to Hermes. I'm going to say, "Just hey." And I'm going
+[00:13:32] going to say, "Just hey." And I'm going
+[00:13:32] going to say, "Just hey." And I'm going to tell Hermes to help me set this up.
+[00:13:34] to tell Hermes to help me set this up.
+[00:13:34] to tell Hermes to help me set this up. Right? So, I'm going to give it a
+[00:13:35] Right? So, I'm going to give it a
+[00:13:35] Right? So, I'm going to give it a screenshot. Boom, control V. Okay, so
+[00:13:38] screenshot. Boom, control V. Okay, so
+[00:13:38] screenshot. Boom, control V. Okay, so your task is to help me set up access to
+[00:13:40] your task is to help me set up access to
+[00:13:40] your task is to help me set up access to my Superbase. This is for
+[00:13:43] my Superbase. This is for
+[00:13:43] my Superbase. This is for Apify scraping. It finds the leads and
+[00:13:45] Apify scraping. It finds the leads and
+[00:13:45] Apify scraping. It finds the leads and saves them into the Superbase table.
+[00:13:47] saves them into the Superbase table.
+[00:13:47] saves them into the Superbase table. Tell me what you need from me to set
+[00:13:48] Tell me what you need from me to set
+[00:13:48] Tell me what you need from me to set this up. Be very concise. So, you can
+[00:13:50] this up. Be very concise. So, you can
+[00:13:50] this up. Be very concise. So, you can literally tell Hermes agent to help you
+[00:13:52] literally tell Hermes agent to help you
+[00:13:52] literally tell Hermes agent to help you set this up, to tell you, to guide you
+[00:13:55] set this up, to tell you, to guide you
+[00:13:55] set this up, to tell you, to guide you what it needs from you.
+[00:13:56] what it needs from you.
+[00:13:56] what it needs from you. Tell us, "Okay, it needs a service role
+[00:13:57] Tell us, "Okay, it needs a service role
+[00:13:57] Tell us, "Okay, it needs a service role key and a project URL."
+[00:13:59] key and a project URL."
+[00:13:59] key and a project URL." So, say, "First, find the
+[00:14:02] So, say, "First, find the
+[00:14:03] So, say, "First, find the proper place in Hermes agent
+[00:14:07] proper place in Hermes agent
+[00:14:07] proper place in Hermes agent where to store ENV keys, ENV vars, and
+[00:14:11] where to store ENV keys, ENV vars, and
+[00:14:11] where to store ENV keys, ENV vars, and secrets." Okay, there's a skill for
+[00:14:13] secrets." Okay, there's a skill for
+[00:14:13] secrets." Okay, there's a skill for this, actually, Hermes secrets ENV.
+[00:14:17] Found it. Okay. So, it needs these
+[00:14:19] Found it. Okay. So, it needs these things, the Superbase URL.
+[00:14:21] things, the Superbase URL.
+[00:14:21] things, the Superbase URL. So, again, we can go to project overview
+[00:14:23] So, again, we can go to project overview
+[00:14:23] So, again, we can go to project overview and just give it that. Boom.
+[00:14:25] and just give it that. Boom.
+[00:14:25] and just give it that. Boom. Here is the project URL.
+[00:14:28] Here is the project URL.
+[00:14:28] Here is the project URL. Or the Superbase URL. Boom.
+[00:14:30] Or the Superbase URL. Boom.
+[00:14:30] Or the Superbase URL. Boom. What do you need next?
+[00:14:33] What do you need next?
+[00:14:33] What do you need next? Probably going to ask for the service
+[00:14:34] Probably going to ask for the service
+[00:14:34] Probably going to ask for the service role key. But, we saved the URL into the
+[00:14:38] role key. But, we saved the URL into the
+[00:14:38] role key. But, we saved the URL into the ENV.
+[00:14:40] ENV.
+[00:14:40] ENV. And yeah, it needs a service role key.
+[00:14:42] And yeah, it needs a service role key.
+[00:14:42] And yeah, it needs a service role key. So, we go to the left, inside of
+[00:14:43] So, we go to the left, inside of
+[00:14:43] So, we go to the left, inside of Superbase project settings, API keys,
+[00:14:46] Superbase project settings, API keys,
+[00:14:46] Superbase project settings, API keys, and it's the secret key right here.
+[00:14:47] and it's the secret key right here.
+[00:14:47] and it's the secret key right here. Again, do not share this with anybody.
+[00:14:49] Again, do not share this with anybody.
+[00:14:49] Again, do not share this with anybody. I'm going to rotate this key before
+[00:14:51] I'm going to rotate this key before
+[00:14:51] I'm going to rotate this key before uploading the video. Copy.
+[00:14:54] uploading the video. Copy.
+[00:14:54] uploading the video. Copy. Boom.
+[00:14:55] Boom.
+[00:14:55] Boom. It's Okay, we need to allow that. Here
+[00:14:57] It's Okay, we need to allow that. Here
+[00:14:57] It's Okay, we need to allow that. Here is the service role key. Save it.
+[00:15:00] is the service role key. Save it.
+[00:15:00] is the service role key. Save it. Boom. Paste that in. Allow Hermes to
+[00:15:02] Boom. Paste that in. Allow Hermes to
+[00:15:02] Boom. Paste that in. Allow Hermes to save it to the ENV. And I think that
+[00:15:04] save it to the ENV. And I think that
+[00:15:04] save it to the ENV. And I think that should be
+[00:15:06] should be
+[00:15:06] should be all. It should That should be everything
+[00:15:08] all. It should That should be everything
+[00:15:08] all. It should That should be everything it requires to hit the database.
+[00:15:10] it requires to hit the database.
+[00:15:10] it requires to hit the database. Okay, I have the full schema.
+[00:15:13] Okay, I have the full schema.
+[00:15:13] Okay, I have the full schema. Leads table. Okay, Apify ready. Just
+[00:15:16] Leads table. Okay, Apify ready. Just
+[00:15:16] Leads table. Okay, Apify ready. Just check the contents of the leads table
+[00:15:20] check the contents of the leads table
+[00:15:20] check the contents of the leads table and let me know if you see the people in
+[00:15:22] and let me know if you see the people in
+[00:15:22] and let me know if you see the people in there.
+[00:15:23] there.
+[00:15:23] there. I don't think it needs the actor ID.
+[00:15:25] I don't think it needs the actor ID.
+[00:15:25] I don't think it needs the actor ID. Yes, it can see them. Amazing. So now,
+[00:15:28] Yes, it can see them. Amazing. So now,
+[00:15:28] Yes, it can see them. Amazing. So now, here's what happened. We ran Apify with
+[00:15:31] here's what happened. We ran Apify with
+[00:15:31] here's what happened. We ran Apify with this LinkedIn Scraper actor
+[00:15:33] this LinkedIn Scraper actor
+[00:15:33] this LinkedIn Scraper actor to generate these leads. Then, we used
+[00:15:36] to generate these leads. Then, we used
+[00:15:36] to generate these leads. Then, we used this another Apify actor. I I told you
+[00:15:38] this another Apify actor. I I told you
+[00:15:38] this another Apify actor. I I told you guys they have actors for basically
+[00:15:39] guys they have actors for basically
+[00:15:39] guys they have actors for basically everything. This one is called Universal
+[00:15:41] everything. This one is called Universal
+[00:15:41] everything. This one is called Universal MCP Collector, and it connected to
+[00:15:43] MCP Collector, and it connected to
+[00:15:43] MCP Collector, and it connected to Superbase through the MCP.
+[00:15:46] Superbase through the MCP.
+[00:15:46] Superbase through the MCP. And then, now we gave the essential We
+[00:15:49] And then, now we gave the essential We
+[00:15:49] And then, now we gave the essential We we gave two things, the Superbase
+[00:15:51] we gave two things, the Superbase
+[00:15:51] we gave two things, the Superbase project URL and the service role key to
+[00:15:53] project URL and the service role key to
+[00:15:53] project URL and the service role key to our Hermes agent. It can now work with
+[00:15:55] our Hermes agent. It can now work with
+[00:15:55] our Hermes agent. It can now work with our Superbase. So now, basically, what
+[00:15:57] our Superbase. So now, basically, what
+[00:15:57] our Superbase. So now, basically, what remains is automating both steps, both
+[00:15:59] remains is automating both steps, both
+[00:15:59] remains is automating both steps, both the Hermes agent analysis and putting
+[00:16:02] the Hermes agent analysis and putting
+[00:16:02] the Hermes agent analysis and putting the actor on a schedule. So first, I'm
+[00:16:03] the actor on a schedule. So first, I'm
+[00:16:03] the actor on a schedule. So first, I'm going to do a test analysis to see how
+[00:16:06] going to do a test analysis to see how
+[00:16:06] going to do a test analysis to see how Hermes agent does this by sending it the
+[00:16:09] Hermes agent does this by sending it the
+[00:16:09] Hermes agent does this by sending it the prompt. So here's the full prompt.
+[00:16:10] prompt. So here's the full prompt.
+[00:16:10] prompt. So here's the full prompt. Connect to my Superbase project and read
+[00:16:11] Connect to my Superbase project and read
+[00:16:11] Connect to my Superbase project and read the public leads table. Score each
+[00:16:14] the public leads table. Score each
+[00:16:14] the public leads table. Score each candidate from zero to 100 for fit for
+[00:16:16] candidate from zero to 100 for fit for
+[00:16:16] candidate from zero to 100 for fit for my Katowice office. Some basic uh
+[00:16:19] my Katowice office. Some basic uh
+[00:16:19] my Katowice office. Some basic uh fix to prioritize and how to update the
+[00:16:21] fix to prioritize and how to update the
+[00:16:21] fix to prioritize and how to update the table. So that's the full prompt I just
+[00:16:23] table. So that's the full prompt I just
+[00:16:23] table. So that's the full prompt I just sent to Hermes agent. Let's check how
+[00:16:25] sent to Hermes agent. Let's check how
+[00:16:25] sent to Hermes agent. Let's check how it's doing.
+[00:16:26] it's doing.
+[00:16:26] it's doing. I've all records, all five scored and
+[00:16:29] I've all records, all five scored and
+[00:16:29] I've all records, all five scored and written back to public leads. Lead score
+[00:16:31] written back to public leads. Lead score
+[00:16:31] written back to public leads. Lead score rating, reasoning, fit tags, and rated
+[00:16:33] rating, reasoning, fit tags, and rated
+[00:16:33] rating, reasoning, fit tags, and rated all.
+[00:16:34] all.
+[00:16:34] all. And we can check actually
+[00:16:36] And we can check actually
+[00:16:36] And we can check actually inside of Superbase, back to table
+[00:16:38] inside of Superbase, back to table
+[00:16:38] inside of Superbase, back to table editor, leads to see if the scoring is
+[00:16:40] editor, leads to see if the scoring is
+[00:16:40] editor, leads to see if the scoring is here. There is lead score. So one guy is
+[00:16:43] here. There is lead score. So one guy is
+[00:16:43] here. There is lead score. So one guy is Okay, these two are promising fits. This
+[00:16:45] Okay, these two are promising fits. This
+[00:16:45] Okay, these two are promising fits. This is very useful already. So instead of me
+[00:16:47] is very useful already. So instead of me
+[00:16:47] is very useful already. So instead of me wasting time interviewing all these
+[00:16:48] wasting time interviewing all these
+[00:16:48] wasting time interviewing all these people or reaching out to them, Hermes
+[00:16:50] people or reaching out to them, Hermes
+[00:16:50] people or reaching out to them, Hermes agent figured out these two people are
+[00:16:53] agent figured out these two people are
+[00:16:53] agent figured out these two people are worth of interviewing, and these three
+[00:16:55] worth of interviewing, and these three
+[00:16:55] worth of interviewing, and these three are not. Like guys, do you see how
+[00:16:57] are not. Like guys, do you see how
+[00:16:57] are not. Like guys, do you see how insane this is?
+[00:16:58] insane this is?
+[00:16:58] insane this is? Apify plus Hermes agent is really
+[00:17:00] Apify plus Hermes agent is really
+[00:17:00] Apify plus Hermes agent is really incredible combo. And again, this is not
+[00:17:02] incredible combo. And again, this is not
+[00:17:02] incredible combo. And again, this is not just for hiring. This is not only for
+[00:17:04] just for hiring. This is not only for
+[00:17:04] just for hiring. This is not only for finding employees. This could be for
+[00:17:05] finding employees. This could be for
+[00:17:05] finding employees. This could be for finding leads, B2B, enterprise
+[00:17:08] finding leads, B2B, enterprise
+[00:17:08] finding leads, B2B, enterprise customers, sales. This could be for
+[00:17:11] customers, sales. This could be for
+[00:17:11] customers, sales. This could be for finding dates, this could be for finding
+[00:17:14] finding dates, this could be for finding
+[00:17:14] finding dates, this could be for finding friends in a new city, this could be for
+[00:17:16] friends in a new city, this could be for
+[00:17:16] friends in a new city, this could be for finding
+[00:17:17] finding
+[00:17:17] finding great restaurants, gyms, for checking
+[00:17:19] great restaurants, gyms, for checking
+[00:17:19] great restaurants, gyms, for checking actual like if you want to, you know,
+[00:17:21] actual like if you want to, you know,
+[00:17:21] actual like if you want to, you know, co-working place or cafe, you don't just
+[00:17:23] co-working place or cafe, you don't just
+[00:17:23] co-working place or cafe, you don't just want to look at the reviews, you want to
+[00:17:24] want to look at the reviews, you want to
+[00:17:24] want to look at the reviews, you want to scrape all of the comments, all the
+[00:17:26] scrape all of the comments, all the
+[00:17:26] scrape all of the comments, all the reviews to see is there fast internet,
+[00:17:28] reviews to see is there fast internet,
+[00:17:28] reviews to see is there fast internet, is there good seating, all this stuff.
+[00:17:30] is there good seating, all this stuff.
+[00:17:30] is there good seating, all this stuff. There's so many things this can enhance
+[00:17:32] There's so many things this can enhance
+[00:17:32] There's so many things this can enhance your life, grow your business faster,
+[00:17:34] your life, grow your business faster,
+[00:17:34] your life, grow your business faster, you just need to get creative. Now you
+[00:17:35] you just need to get creative. Now you
+[00:17:35] you just need to get creative. Now you have all of the steps, so sit down and
+[00:17:37] have all of the steps, so sit down and
+[00:17:37] have all of the steps, so sit down and think where can I implement scraping
+[00:17:39] think where can I implement scraping
+[00:17:39] think where can I implement scraping with Apify and Hermes
+[00:17:41] with Apify and Hermes
+[00:17:41] with Apify and Hermes so that
+[00:17:42] so that
+[00:17:42] so that my life is advancing faster. What
+[00:17:44] my life is advancing faster. What
+[00:17:44] my life is advancing faster. What problems can I solve with just a simple
+[00:17:46] problems can I solve with just a simple
+[00:17:46] problems can I solve with just a simple Apify actor and connecting that through
+[00:17:49] Apify actor and connecting that through
+[00:17:49] Apify actor and connecting that through Superbase or GitHub or Notion into
+[00:17:51] Superbase or GitHub or Notion into
+[00:17:51] Superbase or GitHub or Notion into Hermes where the Hermes does the
+[00:17:52] Hermes where the Hermes does the
+[00:17:52] Hermes where the Hermes does the analysis, does the reach out, does the
+[00:17:55] analysis, does the reach out, does the
+[00:17:55] analysis, does the reach out, does the qualification?
+[00:17:57] qualification?
+[00:17:57] qualification? Really sit down, spend a few minutes
+[00:17:58] Really sit down, spend a few minutes
+[00:17:58] Really sit down, spend a few minutes thinking about this because I guarantee
+[00:18:00] thinking about this because I guarantee
+[00:18:00] thinking about this because I guarantee you you can find multiple different use
+[00:18:02] you you can find multiple different use
+[00:18:02] you you can find multiple different use cases in your life or your business how
+[00:18:04] cases in your life or your business how
+[00:18:04] cases in your life or your business how you can make this immediately useful.
+[00:18:06] you can make this immediately useful.
+[00:18:06] you can make this immediately useful. Now as I promised, let me show you how
+[00:18:07] Now as I promised, let me show you how
+[00:18:07] Now as I promised, let me show you how to fully automate this both on the Apify
+[00:18:10] to fully automate this both on the Apify
+[00:18:10] to fully automate this both on the Apify side and on the Hermes side, starting
+[00:18:12] side and on the Hermes side, starting
+[00:18:12] side and on the Hermes side, starting with Hermes.
+[00:18:14] with Hermes.
+[00:18:14] with Hermes. I'm going to send this prompt. Every day
+[00:18:15] I'm going to send this prompt. Every day
+[00:18:15] I'm going to send this prompt. Every day read the public.leads table in Superbase
+[00:18:18] read the public.leads table in Superbase
+[00:18:18] read the public.leads table in Superbase and find all rows where lead score is
+[00:18:20] and find all rows where lead score is
+[00:18:20] and find all rows where lead score is null.
+[00:18:21] null.
+[00:18:21] null. Score each new lead from 0 to 100 for
+[00:18:23] Score each new lead from 0 to 100 for
+[00:18:23] Score each new lead from 0 to 100 for fit for David's Katowice office,
+[00:18:25] fit for David's Katowice office,
+[00:18:25] fit for David's Katowice office, prioritizing software engineering
+[00:18:27] prioritizing software engineering
+[00:18:27] prioritizing software engineering ability, AI automation experience,
+[00:18:29] ability, AI automation experience,
+[00:18:29] ability, AI automation experience, seniority, local relevance, blah blah
+[00:18:31] seniority, local relevance, blah blah
+[00:18:31] seniority, local relevance, blah blah blah.
+[00:18:32] blah.
+[00:18:32] blah. And evidence of shipping real projects.
+[00:18:34] And evidence of shipping real projects.
+[00:18:34] And evidence of shipping real projects. Write back lead score, rating reasoning,
+[00:18:36] Write back lead score, rating reasoning,
+[00:18:36] Write back lead score, rating reasoning, fit tags, and rated at for each new row,
+[00:18:39] fit tags, and rated at for each new row,
+[00:18:39] fit tags, and rated at for each new row, then send David a short top five digest
+[00:18:42] then send David a short top five digest
+[00:18:42] then send David a short top five digest with whom to contact first and why. This
+[00:18:44] with whom to contact first and why. This
+[00:18:44] with whom to contact first and why. This already will save my team
+[00:18:47] already will save my team
+[00:18:47] already will save my team dozens of hours per week, okay?
+[00:18:49] dozens of hours per week, okay?
+[00:18:49] dozens of hours per week, okay? Otherwise humans have to do it. Like
+[00:18:51] Otherwise humans have to do it. Like
+[00:18:51] Otherwise humans have to do it. Like when you're getting hundreds of
+[00:18:52] when you're getting hundreds of
+[00:18:52] when you're getting hundreds of applicants like we are getting,
+[00:18:55] applicants like we are getting,
+[00:18:55] applicants like we are getting, you need to go through them, right? And
+[00:18:56] you need to go through them, right? And
+[00:18:56] you need to go through them, right? And if you don't use an agent for that, a
+[00:18:58] if you don't use an agent for that, a
+[00:18:58] if you don't use an agent for that, a human has to do that. So Hermes will
+[00:19:00] human has to do that. So Hermes will
+[00:19:00] human has to do that. So Hermes will probably create a cron job for this.
+[00:19:01] probably create a cron job for this.
+[00:19:01] probably create a cron job for this. Let's scroll down, let's see what it
+[00:19:02] Let's scroll down, let's see what it
+[00:19:02] Let's scroll down, let's see what it did.
+[00:19:04] did.
+[00:19:04] did. It's asking for command.
+[00:19:06] It's asking for command.
+[00:19:06] It's asking for command. Security pipe, we're going to allow
+[00:19:07] Security pipe, we're going to allow
+[00:19:07] Security pipe, we're going to allow that. Script works.
+[00:19:11] So now it's preparing the cron job to
+[00:19:12] So now it's preparing the cron job to automate this daily. Cron create
+[00:19:14] automate this daily. Cron create
+[00:19:14] automate this daily. Cron create Katowice lead scorer and done.
+[00:19:17] Katowice lead scorer and done.
+[00:19:17] Katowice lead scorer and done. This is the name of the cron job. Here's
+[00:19:18] This is the name of the cron job. Here's
+[00:19:18] This is the name of the cron job. Here's the ID, schedule 8:00 a.m. every day,
+[00:19:21] the ID, schedule 8:00 a.m. every day,
+[00:19:21] the ID, schedule 8:00 a.m. every day, and it will deliver here. Obviously, if
+[00:19:23] and it will deliver here. Obviously, if
+[00:19:23] and it will deliver here. Obviously, if you want to connect Discord, Telegram,
+[00:19:24] you want to connect Discord, Telegram,
+[00:19:25] you want to connect Discord, Telegram, or Slack, you can easily do that. In
+[00:19:26] or Slack, you can easily do that. In
+[00:19:26] or Slack, you can easily do that. In Hermes agent, I showed that in many
+[00:19:28] Hermes agent, I showed that in many
+[00:19:28] Hermes agent, I showed that in many other videos. So, feel free to watch
+[00:19:29] other videos. So, feel free to watch
+[00:19:29] other videos. So, feel free to watch these after this one. But now, let's go
+[00:19:32] these after this one. But now, let's go
+[00:19:32] these after this one. But now, let's go into Apify. On the left, click on
+[00:19:33] into Apify. On the left, click on
+[00:19:33] into Apify. On the left, click on schedules. And now we will automate the
+[00:19:35] schedules. And now we will automate the
+[00:19:35] schedules. And now we will automate the scraping. So, actually first, make sure
+[00:19:37] scraping. So, actually first, make sure
+[00:19:37] scraping. So, actually first, make sure you did the saved task, right? As I
+[00:19:39] you did the saved task, right? As I
+[00:19:39] you did the saved task, right? As I showed you before, uh this is how you
+[00:19:41] showed you before, uh this is how you
+[00:19:41] showed you before, uh this is how you can create this kind of preset with the
+[00:19:43] can create this kind of preset with the
+[00:19:43] can create this kind of preset with the query. So, I just did software
+[00:19:44] query. So, I just did software
+[00:19:44] query. So, I just did software developer.
+[00:19:46] developer.
+[00:19:46] developer. And you can customize this way more.
+[00:19:49] And you can customize this way more.
+[00:19:49] And you can customize this way more. Apify is highly, highly customizable.
+[00:19:51] Apify is highly, highly customizable.
+[00:19:51] Apify is highly, highly customizable. So, this is going to be the saved task
+[00:19:52] So, this is going to be the saved task
+[00:19:52] So, this is going to be the saved task that runs on a schedule. So, when you go
+[00:19:54] that runs on a schedule. So, when you go
+[00:19:54] that runs on a schedule. So, when you go to schedule, click on create new. We can
+[00:19:56] to schedule, click on create new. We can
+[00:19:56] to schedule, click on create new. We can put this actually hourly.
+[00:19:58] put this actually hourly.
+[00:19:58] put this actually hourly. Instead of every hour, let's do custom.
+[00:20:00] Instead of every hour, let's do custom.
+[00:20:00] Instead of every hour, let's do custom. Let's do something like every 6 hours.
+[00:20:02] Let's do something like every 6 hours.
+[00:20:02] Let's do something like every 6 hours. That should be good enough. So, that's
+[00:20:03] That should be good enough. So, that's
+[00:20:03] That should be good enough. So, that's four times a day. Actually, I'm going to
+[00:20:04] four times a day. Actually, I'm going to
+[00:20:04] four times a day. Actually, I'm going to rename it to SWE search 6 hours.
+[00:20:08] rename it to SWE search 6 hours.
+[00:20:08] rename it to SWE search 6 hours. Automation that runs every 6 hours to
+[00:20:10] Automation that runs every 6 hours to
+[00:20:10] Automation that runs every 6 hours to scrape for more software engineers.
+[00:20:12] scrape for more software engineers.
+[00:20:12] scrape for more software engineers. Boom, save that. Then at the bottom,
+[00:20:14] Boom, save that. Then at the bottom,
+[00:20:14] Boom, save that. Then at the bottom, click on save and enable. And then
+[00:20:15] click on save and enable. And then
+[00:20:15] click on save and enable. And then scroll down below and select the actors,
+[00:20:17] scroll down below and select the actors,
+[00:20:17] scroll down below and select the actors, right? So, we don't have any actors or
+[00:20:19] right? So, we don't have any actors or
+[00:20:19] right? So, we don't have any actors or tasks. We're going to select the
+[00:20:20] tasks. We're going to select the
+[00:20:20] tasks. We're going to select the scheduled task.
+[00:20:22] scheduled task.
+[00:20:22] scheduled task. Boom.
+[00:20:23] Boom.
+[00:20:23] Boom. Here we have it.
+[00:20:25] Here we have it.
+[00:20:25] Here we have it. Education developer.
+[00:20:28] Here we have the one we created. So,
+[00:20:30] Here we have the one we created. So, select that and click save.
+[00:20:33] select that and click save.
+[00:20:33] select that and click save. Save and enable.
+[00:20:34] Save and enable.
+[00:20:35] Save and enable. Enable the schedule.
+[00:20:36] Enable the schedule.
+[00:20:36] Enable the schedule. And it's saved. So, now if we go to
+[00:20:38] And it's saved. So, now if we go to
+[00:20:38] And it's saved. So, now if we go to here, we can see that the SWE search 6
+[00:20:40] here, we can see that the SWE search 6
+[00:20:40] here, we can see that the SWE search 6 hours is enabled. Notifications are
+[00:20:42] hours is enabled. Notifications are
+[00:20:42] hours is enabled. Notifications are enabled. There's the frequency
+[00:20:43] enabled. There's the frequency
+[00:20:43] enabled. There's the frequency described. And we're going to see when
+[00:20:45] described. And we're going to see when
+[00:20:45] described. And we're going to see when the next run is happening.
+[00:20:47] the next run is happening.
+[00:20:47] the next run is happening. And just like that, we just automated
+[00:20:49] And just like that, we just automated
+[00:20:49] And just like that, we just automated the scraping. We automated the
+[00:20:50] the scraping. We automated the
+[00:20:50] the scraping. We automated the qualifying and the analysis.
+[00:20:53] qualifying and the analysis.
+[00:20:53] qualifying and the analysis. And this alone, if you put this as a
+[00:20:55] And this alone, if you put this as a
+[00:20:55] And this alone, if you put this as a business, would put you ahead of 19
+[00:20:58] business, would put you ahead of 19
+[00:20:58] business, would put you ahead of 19 I mean, like 99% of companies, easily.
+[00:21:01] I mean, like 99% of companies, easily.
+[00:21:01] I mean, like 99% of companies, easily. Like how many companies you know that
+[00:21:02] Like how many companies you know that
+[00:21:02] Like how many companies you know that have automated their recruiting
+[00:21:05] have automated their recruiting
+[00:21:05] have automated their recruiting process, their head hunting, their their
+[00:21:08] process, their head hunting, their their
+[00:21:08] process, their head hunting, their their hiring process
+[00:21:09] hiring process
+[00:21:09] hiring process and their analysis, you know, big part
+[00:21:12] and their analysis, you know, big part
+[00:21:12] and their analysis, you know, big part of their HR. This is just automated.
+[00:21:14] of their HR. This is just automated.
+[00:21:14] of their HR. This is just automated. Some of this is programmatic, some of
+[00:21:15] Some of this is programmatic, some of
+[00:21:15] Some of this is programmatic, some of this is agentic, but this is going to be
+[00:21:18] this is agentic, but this is going to be
+[00:21:18] this is agentic, but this is going to be costing a few dollars per week
+[00:21:21] costing a few dollars per week
+[00:21:21] costing a few dollars per week and it's going to save thousands of
+[00:21:23] and it's going to save thousands of
+[00:21:23] and it's going to save thousands of dollars per week in terms of salaries.
+[00:21:25] dollars per week in terms of salaries.
+[00:21:25] dollars per week in terms of salaries. If I had to hire another HR person or a
+[00:21:27] If I had to hire another HR person or a
+[00:21:27] If I had to hire another HR person or a recruiter or a headhunter,
+[00:21:30] recruiter or a headhunter,
+[00:21:30] recruiter or a headhunter, like it's insane what you can do with
+[00:21:32] like it's insane what you can do with
+[00:21:32] like it's insane what you can do with some code and AI agents. So, yeah. This
+[00:21:35] some code and AI agents. So, yeah. This
+[00:21:35] some code and AI agents. So, yeah. This is the power of Apify plus Hermes. Many
+[00:21:38] is the power of Apify plus Hermes. Many
+[00:21:38] is the power of Apify plus Hermes. Many people are underestimating
+[00:21:39] people are underestimating
+[00:21:39] people are underestimating underestimating what's possible with
+[00:21:40] underestimating what's possible with
+[00:21:40] underestimating what's possible with scraping and uh with Apify, you can
+[00:21:42] scraping and uh with Apify, you can
+[00:21:42] scraping and uh with Apify, you can scrape basically any website you can
+[00:21:44] scrape basically any website you can
+[00:21:44] scrape basically any website you can imagine, even the most difficult and
+[00:21:46] imagine, even the most difficult and
+[00:21:46] imagine, even the most difficult and restricted websites. Obviously,
+[00:21:48] restricted websites. Obviously,
+[00:21:48] restricted websites. Obviously, research the terms and conditions if you
+[00:21:50] research the terms and conditions if you
+[00:21:50] research the terms and conditions if you want to do like massive scraping
+[00:21:51] want to do like massive scraping
+[00:21:51] want to do like massive scraping operations, but
+[00:21:53] operations, but
+[00:21:53] operations, but it just works. Like it's easy to set up.
+[00:21:55] it just works. Like it's easy to set up.
+[00:21:55] it just works. Like it's easy to set up. I showed you all the steps in this
+[00:21:56] I showed you all the steps in this
+[00:21:57] I showed you all the steps in this video. So, if you only watched it, go
+[00:21:59] video. So, if you only watched it, go
+[00:21:59] video. So, if you only watched it, go ahead and go through it again and
+[00:22:01] ahead and go through it again and
+[00:22:01] ahead and go through it again and actually follow all the steps and
+[00:22:02] actually follow all the steps and
+[00:22:02] actually follow all the steps and implement it into your business right
+[00:22:04] implement it into your business right
+[00:22:04] implement it into your business right now.
+[00:22:05] now.
+[00:22:05] now. Whether it's for hiring or for getting
+[00:22:06] Whether it's for hiring or for getting
+[00:22:06] Whether it's for hiring or for getting more leads or for anything else, doesn't
+[00:22:08] more leads or for anything else, doesn't
+[00:22:08] more leads or for anything else, doesn't matter. And again, to get started with
+[00:22:10] matter. And again, to get started with
+[00:22:10] matter. And again, to get started with Apify, click the first link below the
+[00:22:11] Apify, click the first link below the
+[00:22:11] Apify, click the first link below the video and create an account. And to get
+[00:22:14] video and create an account. And to get
+[00:22:14] video and create an account. And to get all of the resources, prompts, configs,
+[00:22:16] all of the resources, prompts, configs,
+[00:22:16] all of the resources, prompts, configs, SQLs, everything I showed you in this
+[00:22:18] SQLs, everything I showed you in this
+[00:22:18] SQLs, everything I showed you in this video, click the second link below the
+[00:22:19] video, click the second link below the
+[00:22:19] video, click the second link below the video and grab this free bundle. It's
+[00:22:21] video and grab this free bundle. It's
+[00:22:21] video and grab this free bundle. It's completely free. So, with that being
+[00:22:22] completely free. So, with that being
+[00:22:22] completely free. So, with that being said, I wish you guys a wonderful
+[00:22:24] said, I wish you guys a wonderful
+[00:22:24] said, I wish you guys a wonderful productive week. See you.

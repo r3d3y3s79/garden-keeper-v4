@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Garden Keeper — Free Plant Care Cheat Sheet</title>
+  <meta name="description" content="A free one-page plant care cheat sheet — light, water, humidity, and the 4 yellow-leaf patterns every plant parent should know." />
+  <!-- Plausible analytics -->
+  <script defer data-domain="garden-keeper-v4.vercel.app" src="https://plausible.io/js/script.js"></script>
+  <script>
+    // Plausible custom-event helper (no-op if Plausible blocked)
+    window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments); };
+    // Track pageview with referrer source
+    try {
+      var ref = document.referrer || 'direct';
+      var utm_source = new URLSearchParams(location.search).get('utm_source') || '';
+      var src = utm_source || (ref.includes('reddit.com') ? 'reddit' : (ref.includes('google.com') ? 'google' : (ref === '' ? 'direct' : 'referral')));
+      window.plausible('pageview', { u: location.href, props: { source: src } });
+    } catch (e) {}
+  </script>
+  <style>
+    :root {
+      --bg: #0f2416;
+      --card: #1a3a24;
+      --accent: #7cb342;
+      --accent-2: #aed581;
+      --text: #e8f5e9;
+      --muted: #a8c5ad;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      background: linear-gradient(180deg, #0f2416 0%, #163522 100%);
+      color: var(--text);
+      min-height: 100vh;
+      line-height: 1.55;
+    }
+    .wrap {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 3rem 1.25rem 4rem;
+    }
+    .logo {
+      text-align: center;
+      font-size: 1rem;
+      letter-spacing: 0.3em;
+      color: var(--accent-2);
+      margin-bottom: 0.25rem;
+      text-transform: uppercase;
+    }
+    .tagline {
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-bottom: 2.5rem;
+    }
+    h1 {
+      font-size: clamp(2rem, 5vw, 2.8rem);
+      line-height: 1.2;
+      margin: 0 0 0.5rem;
+      text-align: center;
+    }
+    h1 .leaf { color: var(--accent); }
+    .subtitle {
+      text-align: center;
+      color: var(--muted);
+      font-size: 1.05rem;
+      margin: 0 0 2.5rem;
+    }
+    .value-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+    .value {
+      background: var(--card);
+      border: 1px solid #2e5c36;
+      border-radius: 12px;
+      padding: 1.25rem 1rem;
+    }
+    .value h3 {
+      margin: 0 0 0.4rem;
+      color: var(--accent-2);
+      font-size: 1rem;
+    }
+    .value p {
+      margin: 0;
+      font-size: 0.92rem;
+      color: var(--muted);
+    }
+    .form-card {
+      background: var(--card);
+      border: 1px solid #2e5c36;
+      border-radius: 16px;
+      padding: 2rem 1.5rem;
+      margin: 2.5rem 0;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+    }
+    .form-card h2 {
+      margin: 0 0 0.4rem;
+      font-size: 1.4rem;
+    }
+    .form-card .lede {
+      margin: 0 0 1.25rem;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+    .form-row {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+    .form-row input[type=email] {
+      flex: 1 1 220px;
+      padding: 0.85rem 1rem;
+      border-radius: 8px;
+      border: 1px solid #3a6b45;
+      background: #0e1f13;
+      color: var(--text);
+      font-size: 1rem;
+    }
+    .form-row input[type=email]:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(124, 179, 66, 0.2);
+    }
+    .form-row button {
+      padding: 0.85rem 1.4rem;
+      border-radius: 8px;
+      border: none;
+      background: var(--accent);
+      color: #0f2416;
+      font-weight: 700;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: transform 0.1s ease, background 0.2s ease;
+    }
+    .form-row button:hover { background: #8bc34a; }
+    .form-row button:active { transform: scale(0.98); }
+    .form-row button:disabled { opacity: 0.6; cursor: wait; }
+    .microcopy {
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin-top: 0.75rem;
+    }
+    .status {
+      margin-top: 0.75rem;
+      padding: 0.6rem 0.8rem;
+      border-radius: 6px;
+      font-size: 0.92rem;
+      display: none;
+    }
+    .status.show { display: block; }
+    .status.success { background: #1e4d2a; color: #c8e6c9; }
+    .status.error { background: #5b1f1f; color: #ffcdd2; }
+    .sample {
+      background: var(--card);
+      border: 1px solid #2e5c36;
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin: 2.5rem 0;
+    }
+    .sample h3 {
+      margin: 0 0 1rem;
+      color: var(--accent-2);
+    }
+    .sample .preview-row {
+      display: flex;
+      gap: 0.5rem;
+      align-items: flex-start;
+      margin: 0.5rem 0;
+      font-size: 0.92rem;
+    }
+    .sample .preview-row .icon { color: var(--accent); font-weight: 700; }
+    .social-proof {
+      text-align: center;
+      margin: 2.5rem 0 1rem;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+    .footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.82rem;
+      margin-top: 3rem;
+    }
+    .footer a { color: var(--accent-2); text-decoration: none; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="logo">The Garden Keeper</div>
+    <div class="tagline">Grow with confidence.</div>
+
+    <h1>The one-page <span class="leaf">plant care cheat sheet</span> that saves plants.</h1>
+    <p class="subtitle">Free PDF. No spam. Unsubscribe anytime.</p>
+
+    <div class="value-grid">
+      <div class="value">
+        <h3>The chopstick test</h3>
+        <p>Stop guessing when to water. One tool, three seconds, zero overwatering.</p>
+      </div>
+      <div class="value">
+        <h3>4 yellow-leaf patterns</h3>
+        <p>Yellow leaf, brown tip, droop, leggy — what it actually means and what to do.</p>
+      </div>
+      <div class="value">
+        <h3>12-month fertilizer schedule</h3>
+        <p>Stop fertilizing on guesswork. A real schedule that follows the seasons.</p>
+      </div>
+      <div class="value">
+        <h3>6 common houseplants decoded</h3>
+        <p>Pothos, monstera, snake plant, fiddle leaf, ZZ, philodendron — actual needs.</p>
+      </div>
+    </div>
+
+    <div class="form-card">
+      <h2>Get the free cheat sheet</h2>
+      <p class="lede">Enter your email — PDF arrives in your inbox in under 30 seconds.</p>
+      <form id="subscribe-form">
+        <div class="form-row">
+          <input type="email" name="email" id="email" required placeholder="you@example.com" autocomplete="email" />
+          <button type="submit" id="submit-btn">Send me the PDF</button>
+        </div>
+        <p class="microcopy">By submitting you agree to receive plant-care emails from The Garden Keeper. We never share your address.</p>
+        <div id="status" class="status"></div>
+      </form>
+    </div>
+
+    <div class="sample">
+      <h3>What's on the cheat sheet</h3>
+      <div class="preview-row"><span class="icon">→</span> The 6 most common houseplants: light, water, humidity, soil at a glance</div>
+      <div class="preview-row"><span class="icon">→</span> A watering decision tree (chopstick + finger + pot weight)</div>
+      <div class="preview-row"><span class="icon">→</span> 4 yellow-leaf patterns and what each one means</div>
+      <div class="preview-row"><span class="icon">→</span> A 12-month fertilizer schedule you can actually follow</div>
+      <div class="preview-row"><span class="icon">→</span> A simple log section to track your own plants</div>
+    </div>
+
+    <div class="social-proof">
+      Built for the 18+ million r/houseplants community — and the people who keep killing their succulents.
+    </div>
+
+    <div class="footer">
+      <a href="https://garden-keeper-v4.vercel.app/">Back to the store</a> ·
+      <a href="mailto:hello@garden-keeper.live">Contact</a>
+    </div>
+  </div>
+
+  <script>
+    (function() {
+      const form = document.getElementById('subscribe-form');
+      const status = document.getElementById('status');
+      const submit = document.getElementById('submit-btn');
+      const emailInput = document.getElementById('email');
+
+      form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        const email = emailInput.value.trim();
+        if (!email || !email.includes('@')) {
+          status.className = 'status show error';
+          status.textContent = 'Please enter a valid email address.';
+          return;
+        }
+        submit.disabled = true;
+        submit.textContent = 'Sending…';
+        status.className = 'status show';
+        status.style.background = '#1e3a4d';
+        status.style.color = '#bbdefb';
+        status.textContent = 'Adding you to the list and sending the PDF…';
+
+        try {
+          const res = await fetch('/api/subscribe', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              email: email,
+              source: 'lead-magnet-html',
+              interest: 'plant-care-cheat-sheet'
+            })
+          });
+          const data = await res.json();
+          if (res.ok && data.success) {
+            try { window.plausible('Signup', { props: { source: 'lead-magnet-html', product: 'plant-care-cheat-sheet' } }); } catch(e) {}
+            status.className = 'status show success';
+            status.innerHTML = '✅ Done! Check your inbox for the cheat sheet. ' +
+              '<a href="/plant-care-cheat-sheet.pdf" style="color:#aed581;margin-left:0.5rem">Or download it directly →</a>';
+            emailInput.value = '';
+          } else if (res.status === 409) {
+            try { window.plausible('Signup', { props: { source: 'lead-magnet-html', result: 'already_subscribed' } }); } catch(e) {}
+            status.className = 'status show success';
+            status.innerHTML = '📬 You\'re already on the list! ' +
+              '<a href="/plant-care-cheat-sheet.pdf" style="color:#aed581;margin-left:0.5rem">Grab the PDF →</a>';
+          } else {
+            throw new Error(data.message || 'Subscription failed');
+          }
+        } catch (err) {
+          status.className = 'status show error';
+          status.textContent = '❌ Something went wrong. Please try again or email hello@garden-keeper.live.';
+        } finally {
+          submit.disabled = false;
+          submit.textContent = 'Send me the PDF';
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

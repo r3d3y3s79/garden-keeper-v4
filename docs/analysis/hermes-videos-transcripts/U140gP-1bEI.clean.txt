@@ -1,0 +1,1437 @@
+# Tools & MCP for Hermes (Tonbi, 26min)
+# Video ID: U140gP-1bEI
+# Total segments: 1433
+
+[00:00:00] Welcome to module six of my Hermes agent
+[00:00:04] Welcome to module six of my Hermes agent masterclass. This one is going to be on
+[00:00:06] masterclass. This one is going to be on
+[00:00:06] masterclass. This one is going to be on tools and MCP servers.
+[00:00:08] tools and MCP servers.
+[00:00:08] tools and MCP servers. We're getting into the back half of this
+[00:00:10] We're getting into the back half of this
+[00:00:10] We're getting into the back half of this 10-part series.
+[00:00:12] 10-part series.
+[00:00:12] 10-part series. So the last module was about the brain,
+[00:00:14] So the last module was about the brain,
+[00:00:15] So the last module was about the brain, models, providers, fallback, local
+[00:00:17] models, providers, fallback, local
+[00:00:17] models, providers, fallback, local inference, and proxy.
+[00:00:19] inference, and proxy.
+[00:00:19] inference, and proxy. This module is more about the hands. So
+[00:00:21] This module is more about the hands. So
+[00:00:21] This module is more about the hands. So a model without tools is just a text,
+[00:00:23] a model without tools is just a text,
+[00:00:23] a model without tools is just a text, it's just a chatbot. Tools are really
+[00:00:25] it's just a chatbot. Tools are really
+[00:00:25] it's just a chatbot. Tools are really what let Hermes or any agent read files,
+[00:00:27] what let Hermes or any agent read files,
+[00:00:27] what let Hermes or any agent read files, patch clo- code, search the web, drive a
+[00:00:30] patch clo- code, search the web, drive a
+[00:00:30] patch clo- code, search the web, drive a browser, analyze an image, talk to a
+[00:00:32] browser, analyze an image, talk to a
+[00:00:32] browser, analyze an image, talk to a platform, or call into any external
+[00:00:35] platform, or call into any external
+[00:00:35] platform, or call into any external system.
+[00:00:36] system.
+[00:00:36] system. So by the end of this video, you'll know
+[00:00:38] So by the end of this video, you'll know
+[00:00:38] So by the end of this video, you'll know what a tool is, first of all.
+[00:00:41] what a tool is, first of all.
+[00:00:41] what a tool is, first of all. You'll know about the built-in tool
+[00:00:42] You'll know about the built-in tool
+[00:00:42] You'll know about the built-in tool catalog, how to shrink it to a safe
+[00:00:44] catalog, how to shrink it to a safe
+[00:00:44] catalog, how to shrink it to a safe surface,
+[00:00:45] surface,
+[00:00:45] surface, to consume MCP servers, how to expose
+[00:00:48] to consume MCP servers, how to expose
+[00:00:48] to consume MCP servers, how to expose Hermes itself as an MCP server, and how
+[00:00:51] Hermes itself as an MCP server, and how
+[00:00:51] Hermes itself as an MCP server, and how to author your own tool when an adapter
+[00:00:54] to author your own tool when an adapter
+[00:00:54] to author your own tool when an adapter is just not enough.
+[00:00:55] is just not enough.
+[00:00:56] is just not enough. Let's get into it.
+[00:00:57] Let's get into it.
+[00:00:57] Let's get into it. And if you like this video, please
+[00:00:58] And if you like this video, please
+[00:00:58] And if you like this video, please consider supporting the channel by
+[00:01:00] consider supporting the channel by
+[00:01:00] consider supporting the channel by joining Team Garage,
+[00:01:02] joining Team Garage,
+[00:01:02] joining Team Garage, which will give you early access to
+[00:01:04] which will give you early access to
+[00:01:04] which will give you early access to videos,
+[00:01:05] videos,
+[00:01:05] videos, or Team Garage Max, where you will get
+[00:01:07] or Team Garage Max, where you will get
+[00:01:07] or Team Garage Max, where you will get exclusive videos each week, as well as
+[00:01:09] exclusive videos each week, as well as
+[00:01:09] exclusive videos each week, as well as many other perks.
+[00:01:10] many other perks.
+[00:01:10] many other perks. I'd like to continue providing as much
+[00:01:12] I'd like to continue providing as much
+[00:01:12] I'd like to continue providing as much free valuable content as possible, as
+[00:01:14] free valuable content as possible, as
+[00:01:14] free valuable content as possible, as well as better experiments on different
+[00:01:15] well as better experiments on different
+[00:01:15] well as better experiments on different hardware. So these memberships will
+[00:01:17] hardware. So these memberships will
+[00:01:17] hardware. So these memberships will really make it possible.
+[00:01:19] really make it possible.
+[00:01:19] really make it possible. So through all the previous five
+[00:01:21] So through all the previous five
+[00:01:21] So through all the previous five modules, we've been using tools a lot,
+[00:01:23] modules, we've been using tools a lot,
+[00:01:23] modules, we've been using tools a lot, actually.
+[00:01:24] actually.
+[00:01:24] actually. But mostly as a black box, right? We
+[00:01:26] But mostly as a black box, right? We
+[00:01:26] But mostly as a black box, right? We just see them a tool call, but we don't
+[00:01:28] just see them a tool call, but we don't
+[00:01:28] just see them a tool call, but we don't actually see what's happening under the
+[00:01:29] actually see what's happening under the
+[00:01:29] actually see what's happening under the hood.
+[00:01:30] hood.
+[00:01:30] hood. But today we open that up.
+[00:01:32] But today we open that up.
+[00:01:32] But today we open that up. Module four gave you skills,
+[00:01:34] Module four gave you skills,
+[00:01:34] Module four gave you skills, instructions the agent can load. Tools
+[00:01:36] instructions the agent can load. Tools
+[00:01:36] instructions the agent can load. Tools are a bit different. Tools are actual
+[00:01:38] are a bit different. Tools are actual
+[00:01:38] are a bit different. Tools are actual callable functions. The agent emits a
+[00:01:41] callable functions. The agent emits a
+[00:01:41] callable functions. The agent emits a tool call, Hermes runs some type of
+[00:01:43] tool call, Hermes runs some type of
+[00:01:43] tool call, Hermes runs some type of code, and the results come back into
+[00:01:45] code, and the results come back into
+[00:01:45] code, and the results come back into context.
+[00:01:46] context.
+[00:01:46] context. And there are two ways to grow that
+[00:01:48] And there are two ways to grow that
+[00:01:48] And there are two ways to grow that surface, MCP servers for external
+[00:01:51] surface, MCP servers for external
+[00:01:51] surface, MCP servers for external capabilities and native tools for
+[00:01:53] capabilities and native tools for
+[00:01:53] capabilities and native tools for source-level capabilities.
+[00:01:55] source-level capabilities.
+[00:01:55] source-level capabilities. So this is the roadmap for this video.
+[00:01:57] So this is the roadmap for this video.
+[00:01:57] So this is the roadmap for this video. Five beats.
+[00:01:59] Five beats.
+[00:01:59] Five beats. Catalog what a tool is, how the registry
+[00:02:01] Catalog what a tool is, how the registry
+[00:02:01] Catalog what a tool is, how the registry and tool sets work, control how to scope
+[00:02:03] and tool sets work, control how to scope
+[00:02:03] and tool sets work, control how to scope and sandbox the surface to keep
+[00:02:06] and sandbox the surface to keep
+[00:02:06] and sandbox the surface to keep everything more secure and safe.
+[00:02:08] everything more secure and safe.
+[00:02:08] everything more secure and safe. Consume
+[00:02:10] Consume
+[00:02:10] Consume Hermes as an MCP client, then expose
+[00:02:13] Hermes as an MCP client, then expose
+[00:02:13] Hermes as an MCP client, then expose Hermes as MCP server.
+[00:02:15] Hermes as MCP server.
+[00:02:15] Hermes as MCP server. And build. We're going to actually wire
+[00:02:17] And build. We're going to actually wire
+[00:02:17] And build. We're going to actually wire an MCP pipeline,
+[00:02:18] an MCP pipeline,
+[00:02:18] an MCP pipeline, uh drive Hermes from VS Code,
+[00:02:21] uh drive Hermes from VS Code,
+[00:02:21] uh drive Hermes from VS Code, and author our own native tool.
+[00:02:24] and author our own native tool.
+[00:02:24] and author our own native tool. So, the whole point of this is not just
+[00:02:25] So, the whole point of this is not just
+[00:02:25] So, the whole point of this is not just connect everything.
+[00:02:27] connect everything.
+[00:02:27] connect everything. The point is connect the right things
+[00:02:29] The point is connect the right things
+[00:02:29] The point is connect the right things and make the visit visible surface small
+[00:02:31] and make the visit visible surface small
+[00:02:31] and make the visit visible surface small enough to trust.
+[00:02:33] enough to trust.
+[00:02:33] enough to trust. So, first we're going to talk about the
+[00:02:34] So, first we're going to talk about the
+[00:02:34] So, first we're going to talk about the tool layer.
+[00:02:35] tool layer.
+[00:02:35] tool layer. There are three ways to kind of extend
+[00:02:37] There are three ways to kind of extend
+[00:02:37] There are three ways to kind of extend the capabilities of Hermes agent.
+[00:02:39] the capabilities of Hermes agent.
+[00:02:39] the capabilities of Hermes agent. And we've already talked about skills.
+[00:02:42] And we've already talked about skills.
+[00:02:42] And we've already talked about skills. And today we're going to be talking
+[00:02:43] And today we're going to be talking
+[00:02:43] And today we're going to be talking about tools
+[00:02:45] about tools
+[00:02:45] about tools and MCP servers. So, that every time you
+[00:02:47] and MCP servers. So, that every time you
+[00:02:47] and MCP servers. So, that every time you want Hermes to do something new, you
+[00:02:48] want Hermes to do something new, you
+[00:02:48] want Hermes to do something new, you have to ask a question. Do you want
+[00:02:50] have to ask a question. Do you want
+[00:02:50] have to ask a question. Do you want instructions, which are skills?
+[00:02:52] instructions, which are skills?
+[00:02:52] instructions, which are skills? Do you need code and functions, which is
+[00:02:53] Do you need code and functions, which is
+[00:02:53] Do you need code and functions, which is a tool?
+[00:02:55] a tool?
+[00:02:55] a tool? Or do we need some type of adapter?
+[00:02:57] Or do we need some type of adapter?
+[00:02:57] Or do we need some type of adapter? Not core code, just an adapt app just an
+[00:03:00] Not core code, just an adapt app just an
+[00:03:00] Not core code, just an adapt app just an adapter just an adapter to the outside
+[00:03:02] adapter just an adapter to the outside
+[00:03:03] adapter just an adapter to the outside world.
+[00:03:04] world.
+[00:03:04] world. So, what is a tool?
+[00:03:07] A tool is just a function the model can
+[00:03:09] A tool is just a function the model can ask Hermes to run.
+[00:03:11] ask Hermes to run.
+[00:03:11] ask Hermes to run. And that's it. There's no kind of magic
+[00:03:12] And that's it. There's no kind of magic
+[00:03:12] And that's it. There's no kind of magic beyond that.
+[00:03:14] beyond that.
+[00:03:14] beyond that. So, piece by piece here, you can see the
+[00:03:15] So, piece by piece here, you can see the
+[00:03:15] So, piece by piece here, you can see the function block. It's in plain Python. It
+[00:03:18] function block. It's in plain Python. It
+[00:03:18] function block. It's in plain Python. It does the real work here.
+[00:03:21] does the real work here.
+[00:03:21] does the real work here. You can use it to read a file, call an
+[00:03:22] You can use it to read a file, call an
+[00:03:22] You can use it to read a file, call an API, start a browser action, whatever it
+[00:03:24] API, start a browser action, whatever it
+[00:03:24] API, start a browser action, whatever it is.
+[00:03:25] is.
+[00:03:25] is. And piece two is the description, the
+[00:03:27] And piece two is the description, the
+[00:03:27] And piece two is the description, the schema.
+[00:03:28] schema.
+[00:03:28] schema. So, this is what the model actually
+[00:03:30] So, this is what the model actually
+[00:03:30] So, this is what the model actually sees.
+[00:03:31] sees.
+[00:03:31] sees. The name, description, parameters. The
+[00:03:33] The name, description, parameters. The
+[00:03:33] The name, description, parameters. The descriptions matter a lot here because
+[00:03:35] descriptions matter a lot here because
+[00:03:35] descriptions matter a lot here because the model uses it just to decide when to
+[00:03:37] the model uses it just to decide when to
+[00:03:37] the model uses it just to decide when to call a tool. It doesn't read the
+[00:03:39] call a tool. It doesn't read the
+[00:03:39] call a tool. It doesn't read the function itself. It'll just read the
+[00:03:40] function itself. It'll just read the
+[00:03:40] function itself. It'll just read the description.
+[00:03:41] description.
+[00:03:41] description. And part three is the registry. You need
+[00:03:44] And part three is the registry. You need
+[00:03:44] And part three is the registry. You need um to hand the schema and the handler to
+[00:03:47] um to hand the schema and the handler to
+[00:03:47] um to hand the schema and the handler to the registry
+[00:03:48] the registry
+[00:03:48] the registry in order for the tool to actually exist.
+[00:03:50] in order for the tool to actually exist.
+[00:03:50] in order for the tool to actually exist. So, this is important distinction. The
+[00:03:52] So, this is important distinction. The
+[00:03:52] So, this is important distinction. The model never directly runs the function.
+[00:03:54] model never directly runs the function.
+[00:03:54] model never directly runs the function. It emits a structured request, a tool
+[00:03:56] It emits a structured request, a tool
+[00:03:56] It emits a structured request, a tool name plus JSON arguments.
+[00:03:58] name plus JSON arguments.
+[00:03:58] name plus JSON arguments. So, Hermes owns the execution.
+[00:04:01] So, Hermes owns the execution.
+[00:04:01] So, Hermes owns the execution. Hermes is the one that calls the handler
+[00:04:03] Hermes is the one that calls the handler
+[00:04:03] Hermes is the one that calls the handler and returns the request to the model.
+[00:04:05] and returns the request to the model.
+[00:04:05] and returns the request to the model. So, that's why tool boundaries really
+[00:04:07] So, that's why tool boundaries really
+[00:04:07] So, that's why tool boundaries really matter.
+[00:04:08] matter.
+[00:04:08] matter. The model requests, the runtime
+[00:04:10] The model requests, the runtime
+[00:04:10] The model requests, the runtime executes.
+[00:04:12] executes.
+[00:04:12] executes. So, here's the tool calling loop.
+[00:04:14] So, here's the tool calling loop.
+[00:04:14] So, here's the tool calling loop. The model emits a tool call. Like I
+[00:04:16] The model emits a tool call. Like I
+[00:04:16] The model emits a tool call. Like I said, name and the JSON arguments. The
+[00:04:19] said, name and the JSON arguments. The
+[00:04:19] said, name and the JSON arguments. The registry dispatches this to the handler.
+[00:04:22] registry dispatches this to the handler.
+[00:04:22] registry dispatches this to the handler. The handler runs and returns a JSON
+[00:04:24] The handler runs and returns a JSON
+[00:04:25] The handler runs and returns a JSON string. That's the result.
+[00:04:28] string. That's the result.
+[00:04:28] string. That's the result. That goes back into the context. And
+[00:04:30] That goes back into the context. And
+[00:04:30] That goes back into the context. And then the model reads the result and then
+[00:04:32] then the model reads the result and then
+[00:04:32] then the model reads the result and then decides the next move.
+[00:04:34] decides the next move.
+[00:04:34] decides the next move. And the JSON string may include errors.
+[00:04:37] And the JSON string may include errors.
+[00:04:37] And the JSON string may include errors. And you could see it'll be formatted
+[00:04:38] And you could see it'll be formatted
+[00:04:38] And you could see it'll be formatted like this.
+[00:04:39] like this.
+[00:04:39] like this. So, a failing tool should not crash the
+[00:04:41] So, a failing tool should not crash the
+[00:04:41] So, a failing tool should not crash the turn entirely. It should give the model
+[00:04:43] turn entirely. It should give the model
+[00:04:43] turn entirely. It should give the model enough information to recover or choose
+[00:04:45] enough information to recover or choose
+[00:04:45] enough information to recover or choose a different tool
+[00:04:47] a different tool
+[00:04:47] a different tool or ask for missing information or stop
+[00:04:49] or ask for missing information or stop
+[00:04:49] or ask for missing information or stop cleanly.
+[00:04:50] cleanly.
+[00:04:50] cleanly. So, that's why a good tool is not just
+[00:04:51] So, that's why a good tool is not just
+[00:04:51] So, that's why a good tool is not just the happy path. It's also the failure
+[00:04:53] the happy path. It's also the failure
+[00:04:53] the happy path. It's also the failure shape. Cuz you don't want one tool call
+[00:04:55] shape. Cuz you don't want one tool call
+[00:04:55] shape. Cuz you don't want one tool call fail to crash everything.
+[00:04:58] fail to crash everything.
+[00:04:58] fail to crash everything. You want the agent to be able to recover
+[00:04:59] You want the agent to be able to recover
+[00:04:59] You want the agent to be able to recover from it.
+[00:05:01] from it.
+[00:05:01] from it. So, Hermes ships with a real built-in
+[00:05:03] So, Hermes ships with a real built-in
+[00:05:03] So, Hermes ships with a real built-in registry. There's roughly 70 tools
+[00:05:05] registry. There's roughly 70 tools
+[00:05:05] registry. There's roughly 70 tools across 30 tool sets in the full surface.
+[00:05:08] across 30 tool sets in the full surface.
+[00:05:08] across 30 tool sets in the full surface. Your active profile usually sees a
+[00:05:09] Your active profile usually sees a
+[00:05:09] Your active profile usually sees a subset of them.
+[00:05:11] subset of them.
+[00:05:11] subset of them. So, you've probably seen these in the
+[00:05:12] So, you've probably seen these in the
+[00:05:12] So, you've probably seen these in the tool calls often, but they're
+[00:05:15] tool calls often, but they're
+[00:05:15] tool calls often, but they're there's
+[00:05:17] there's
+[00:05:17] there's tools for files and the terminal,
+[00:05:20] tools for files and the terminal,
+[00:05:20] tools for files and the terminal, web and browser, media, orchestration,
+[00:05:23] web and browser, media, orchestration,
+[00:05:23] web and browser, media, orchestration, and memory, and a lot more.
+[00:05:26] and memory, and a lot more.
+[00:05:26] and memory, and a lot more. And you may have noticed that Hermes has
+[00:05:27] And you may have noticed that Hermes has
+[00:05:27] And you may have noticed that Hermes has a structured tool for things agents
+[00:05:29] a structured tool for things agents
+[00:05:29] a structured tool for things agents often do badly with shell, like read
+[00:05:31] often do badly with shell, like read
+[00:05:32] often do badly with shell, like read file, search files, patch, and that's
+[00:05:34] file, search files, patch, and that's
+[00:05:34] file, search files, patch, and that's deliberate. If the agent can use a
+[00:05:35] deliberate. If the agent can use a
+[00:05:36] deliberate. If the agent can use a structured paginated, purpose-built
+[00:05:38] structured paginated, purpose-built
+[00:05:38] structured paginated, purpose-built tool, it should not shell out to cat,
+[00:05:41] tool, it should not shell out to cat,
+[00:05:41] tool, it should not shell out to cat, grep, sed commands like that.
+[00:05:44] grep, sed commands like that.
+[00:05:44] grep, sed commands like that. The structured path and tool is safer,
+[00:05:47] The structured path and tool is safer,
+[00:05:47] The structured path and tool is safer, easier to inspect, and easier for the
+[00:05:49] easier to inspect, and easier for the
+[00:05:49] easier to inspect, and easier for the model to recover from.
+[00:05:52] model to recover from.
+[00:05:52] model to recover from. So, the registry is not just a flat pile
+[00:05:54] So, the registry is not just a flat pile
+[00:05:54] So, the registry is not just a flat pile of tools. Every tool belongs to a tool
+[00:05:56] of tools. Every tool belongs to a tool
+[00:05:56] of tools. Every tool belongs to a tool set, and the tool sets are how you
+[00:05:58] set, and the tool sets are how you
+[00:05:58] set, and the tool sets are how you control the surface.
+[00:06:01] So, the core tools
+[00:06:03] So, the core tools the core tool sets are logical group
+[00:06:05] the core tool sets are logical group
+[00:06:05] the core tool sets are logical group here.
+[00:06:06] here.
+[00:06:06] here. File, terminal, web, vision.
+[00:06:09] File, terminal, web, vision.
+[00:06:09] File, terminal, web, vision. Um then you have composite tool sets,
+[00:06:11] Um then you have composite tool sets,
+[00:06:11] Um then you have composite tool sets, which are for bundle scenarios.
+[00:06:13] which are for bundle scenarios.
+[00:06:13] which are for bundle scenarios. Something like debugging, which needs
+[00:06:14] Something like debugging, which needs
+[00:06:14] Something like debugging, which needs files, and needs terminal, and needs web
+[00:06:16] files, and needs terminal, and needs web
+[00:06:16] files, and needs terminal, and needs web if necessary.
+[00:06:18] if necessary.
+[00:06:18] if necessary. Safe gives read-only research and media
+[00:06:21] Safe gives read-only research and media
+[00:06:21] Safe gives read-only research and media with no rights and no shell.
+[00:06:24] with no rights and no shell.
+[00:06:24] with no rights and no shell. Platform tool sets are deployment
+[00:06:25] Platform tool sets are deployment
+[00:06:25] Platform tool sets are deployment shaped, so CLI gets full surface. IDE or
+[00:06:29] shaped, so CLI gets full surface. IDE or
+[00:06:29] shaped, so CLI gets full surface. IDE or ACP surfaces drop messaging and other
+[00:06:32] ACP surfaces drop messaging and other
+[00:06:32] ACP surfaces drop messaging and other relevant capabilities.
+[00:06:34] relevant capabilities.
+[00:06:34] relevant capabilities. Dynamic tool sets are created at run
+[00:06:36] Dynamic tool sets are created at run
+[00:06:36] Dynamic tool sets are created at run time, so every
+[00:06:38] time, so every
+[00:06:38] time, so every MCP server adds MCP
+[00:06:41] MCP server adds MCP
+[00:06:42] MCP server adds MCP and then the server.
+[00:06:43] and then the server.
+[00:06:43] and then the server. Uh plugins add their own, and you can
+[00:06:45] Uh plugins add their own, and you can
+[00:06:45] Uh plugins add their own, and you can define custom bundles.
+[00:06:47] define custom bundles.
+[00:06:47] define custom bundles. So, tool sets are the answer to the
+[00:06:49] So, tool sets are the answer to the
+[00:06:49] So, tool sets are the answer to the question, what can the agent reach? So,
+[00:06:52] question, what can the agent reach? So,
+[00:06:52] question, what can the agent reach? So, not in theory,
+[00:06:53] not in theory,
+[00:06:53] not in theory, actually on the session, in this
+[00:06:55] actually on the session, in this
+[00:06:55] actually on the session, in this platform, for this task.
+[00:06:57] platform, for this task.
+[00:06:58] platform, for this task. So, how do we control the surface,
+[00:06:59] So, how do we control the surface,
+[00:06:59] So, how do we control the surface, right? You can scope what the agent can
+[00:07:01] right? You can scope what the agent can
+[00:07:01] right? You can scope what the agent can reach, and this is an important security
+[00:07:03] reach, and this is an important security
+[00:07:03] reach, and this is an important security and safety issue. You can also use
+[00:07:05] and safety issue. You can also use
+[00:07:05] and safety issue. You can also use sandbox to
+[00:07:07] sandbox to
+[00:07:07] sandbox to determine where it's going to run, and
+[00:07:08] determine where it's going to run, and
+[00:07:09] determine where it's going to run, and these are two important layers of
+[00:07:10] these are two important layers of
+[00:07:10] these are two important layers of defense.
+[00:07:11] defense.
+[00:07:11] defense. So, there are three places you can
+[00:07:12] So, there are three places you can
+[00:07:12] So, there are three places you can control tools, session start, persistent
+[00:07:15] control tools, session start, persistent
+[00:07:15] control tools, session start, persistent config, and then mid-session.
+[00:07:18] config, and then mid-session.
+[00:07:18] config, and then mid-session. Um in the the terminal itself, you could
+[00:07:21] Um in the the terminal itself, you could
+[00:07:21] Um in the the terminal itself, you could do Hermes chat tool sets, and then
+[00:07:23] do Hermes chat tool sets, and then
+[00:07:23] do Hermes chat tool sets, and then whichever tool sets you want to use.
+[00:07:25] whichever tool sets you want to use.
+[00:07:25] whichever tool sets you want to use. This is per session, and you could pick
+[00:07:26] This is per session, and you could pick
+[00:07:26] This is per session, and you could pick exactly what you need.
+[00:07:28] exactly what you need.
+[00:07:28] exactly what you need. Let's do Hermes chat tool sets web.
+[00:07:31] Let's do Hermes chat tool sets web.
+[00:07:31] Let's do Hermes chat tool sets web. Uh you could see I started Hermes chat
+[00:07:32] Uh you could see I started Hermes chat
+[00:07:33] Uh you could see I started Hermes chat here with the tool sets with web,
+[00:07:35] here with the tool sets with web,
+[00:07:35] here with the tool sets with web, and this loaded Hermes.
+[00:07:37] and this loaded Hermes.
+[00:07:37] and this loaded Hermes. Um and then I checked my available tool
+[00:07:39] Um and then I checked my available tool
+[00:07:39] Um and then I checked my available tool sets. We browsed down.
+[00:07:41] sets. We browsed down.
+[00:07:41] sets. We browsed down. So, only the ones with an asterisk are
+[00:07:43] So, only the ones with an asterisk are
+[00:07:43] So, only the ones with an asterisk are actually going to have currently
+[00:07:44] actually going to have currently
+[00:07:45] actually going to have currently enabled. You see with the asterisk, you
+[00:07:46] enabled. You see with the asterisk, you
+[00:07:46] enabled. You see with the asterisk, you can see only web of these are enabled.
+[00:07:49] can see only web of these are enabled.
+[00:07:49] can see only web of these are enabled. So, that's one way you can kind of
+[00:07:51] So, that's one way you can kind of
+[00:07:51] So, that's one way you can kind of restrain uh when tool sets are used or
+[00:07:54] restrain uh when tool sets are used or
+[00:07:54] restrain uh when tool sets are used or enabled, rather.
+[00:07:55] enabled, rather.
+[00:07:55] enabled, rather. Now, if I'm in mid-section, I can use
+[00:07:57] Now, if I'm in mid-section, I can use
+[00:07:57] Now, if I'm in mid-section, I can use this {slash} tools
+[00:07:59] this {slash} tools
+[00:07:59] this {slash} tools to do I can list the tools.
+[00:08:02] to do I can list the tools.
+[00:08:03] to do I can list the tools. See, these are all the tools that are
+[00:08:04] See, these are all the tools that are
+[00:08:04] See, these are all the tools that are enabled or disabled.
+[00:08:07] enabled or disabled.
+[00:08:07] enabled or disabled. I can enable some of them. Tools and
+[00:08:10] I can enable some of them. Tools and
+[00:08:10] I can enable some of them. Tools and then
+[00:08:12] then
+[00:08:12] then enable.
+[00:08:16] So, you have to do um the name of the
+[00:08:17] So, you have to do um the name of the tool.
+[00:08:18] tool.
+[00:08:18] tool. So, say I want to enable
+[00:08:21] So, say I want to enable
+[00:08:21] So, say I want to enable um
+[00:08:22] um
+[00:08:22] um video.
+[00:08:25] You do tools
+[00:08:28] You do tools enable video.
+[00:08:31] enable video.
+[00:08:31] enable video. There we go.
+[00:08:32] There we go.
+[00:08:32] There we go. So, it does start a new session, but you
+[00:08:34] So, it does start a new session, but you
+[00:08:34] So, it does start a new session, but you are able to enable
+[00:08:36] are able to enable
+[00:08:36] are able to enable the video like this right in the TUI.
+[00:08:39] the video like this right in the TUI.
+[00:08:39] the video like this right in the TUI. Or whichever tool you want to use. So,
+[00:08:41] Or whichever tool you want to use. So,
+[00:08:41] Or whichever tool you want to use. So, you can also check in your config file,
+[00:08:44] you can also check in your config file,
+[00:08:44] you can also check in your config file, which will have custom tool sets and
+[00:08:46] which will have custom tool sets and
+[00:08:46] which will have custom tool sets and project-specific bundles.
+[00:08:48] project-specific bundles.
+[00:08:48] project-specific bundles. You can also check in the web dashboard.
+[00:08:52] You can also check in the web dashboard.
+[00:08:52] You can also check in the web dashboard. And this is probably the easiest way to
+[00:08:53] And this is probably the easiest way to
+[00:08:53] And this is probably the easiest way to see everything because you can go down
+[00:08:55] see everything because you can go down
+[00:08:55] see everything because you can go down to skills
+[00:08:56] to skills
+[00:08:56] to skills and then the tool sets and you see all
+[00:08:58] and then the tool sets and you see all
+[00:08:58] and then the tool sets and you see all of the different categories. You see
+[00:09:00] of the different categories. You see
+[00:09:00] of the different categories. You see what's active.
+[00:09:03] Uh you see what's inactive.
+[00:09:06] And you can configure all of these.
+[00:09:10] And you can configure all of these. So, say I want to authorize this.
+[00:09:12] So, say I want to authorize this.
+[00:09:12] So, say I want to authorize this. I can uh authorize this directly here.
+[00:09:15] I can uh authorize this directly here.
+[00:09:16] I can uh authorize this directly here. So, I would could run the setup or set
+[00:09:17] So, I would could run the setup or set
+[00:09:17] So, I would could run the setup or set up an API key to have that um working.
+[00:09:21] up an API key to have that um working.
+[00:09:22] up an API key to have that um working. Let's enable it. You can enable it right
+[00:09:23] Let's enable it. You can enable it right
+[00:09:23] Let's enable it. You can enable it right here, so it's active.
+[00:09:25] here, so it's active.
+[00:09:25] here, so it's active. And then just set it up.
+[00:09:27] And then just set it up.
+[00:09:27] And then just set it up. So, very easy uh just in the dashboard
+[00:09:30] So, very easy uh just in the dashboard
+[00:09:30] So, very easy uh just in the dashboard to uh adjust which tool sets you
+[00:09:33] to uh adjust which tool sets you
+[00:09:33] to uh adjust which tool sets you actually want to use.
+[00:09:34] actually want to use.
+[00:09:34] actually want to use. So, tool sets answer one question, which
+[00:09:37] So, tool sets answer one question, which
+[00:09:37] So, tool sets answer one question, which is what can the agent reach? So,
+[00:09:39] is what can the agent reach? So,
+[00:09:39] is what can the agent reach? So, sandboxing answers a different question,
+[00:09:41] sandboxing answers a different question,
+[00:09:41] sandboxing answers a different question, where does execution happen? So, you see
+[00:09:44] where does execution happen? So, you see
+[00:09:44] where does execution happen? So, you see this safe tool set,
+[00:09:46] this safe tool set,
+[00:09:46] this safe tool set, this is read-only. So, it has web
+[00:09:48] this is read-only. So, it has web
+[00:09:48] this is read-only. So, it has web search, web extract, vision analysis,
+[00:09:50] search, web extract, vision analysis,
+[00:09:50] search, web extract, vision analysis, image generation.
+[00:09:52] image generation.
+[00:09:52] image generation. There's no write files, no terminal, no
+[00:09:54] There's no write files, no terminal, no
+[00:09:54] There's no write files, no terminal, no code execution.
+[00:09:56] code execution.
+[00:09:56] code execution. You want to use it when the context is
+[00:09:58] You want to use it when the context is
+[00:09:58] You want to use it when the context is untrusted, when the surface is
+[00:09:59] untrusted, when the surface is
+[00:09:59] untrusted, when the surface is public-facing, or when the job is really
+[00:10:02] public-facing, or when the job is really
+[00:10:02] public-facing, or when the job is really research-only.
+[00:10:03] research-only.
+[00:10:03] research-only. So, you can see I did it again. I mean,
+[00:10:04] So, you can see I did it again. I mean,
+[00:10:05] So, you can see I did it again. I mean, is chat tool set safe?
+[00:10:07] is chat tool set safe?
+[00:10:07] is chat tool set safe? And if I run {slash} tool sets, come
+[00:10:09] And if I run {slash} tool sets, come
+[00:10:09] And if I run {slash} tool sets, come down here,
+[00:10:11] down here,
+[00:10:11] down here, um you can see safe here. So, this only
+[00:10:12] um you can see safe here. So, this only
+[00:10:12] um you can see safe here. So, this only allows the four tools, safe tool kit
+[00:10:15] allows the four tools, safe tool kit
+[00:10:15] allows the four tools, safe tool kit without terminal access.
+[00:10:17] without terminal access.
+[00:10:17] without terminal access. So, you can set this as a default
+[00:10:21] for your profile or the specific agent,
+[00:10:23] for your profile or the specific agent, so that it doesn't have terminal access.
+[00:10:26] so that it doesn't have terminal access.
+[00:10:26] so that it doesn't have terminal access. And if you see I asked it, "Can you
+[00:10:28] And if you see I asked it, "Can you
+[00:10:28] And if you see I asked it, "Can you write a progress MD file?" I can draft
+[00:10:29] write a progress MD file?" I can draft
+[00:10:30] write a progress MD file?" I can draft it, but I don't currently have writing
+[00:10:31] it, but I don't currently have writing
+[00:10:31] it, but I don't currently have writing file writing terminal tool availability.
+[00:10:34] file writing terminal tool availability.
+[00:10:34] file writing terminal tool availability. Um so, that kind of shows you
+[00:10:37] Um so, that kind of shows you
+[00:10:37] Um so, that kind of shows you the limitations when you set it as a
+[00:10:39] the limitations when you set it as a
+[00:10:39] the limitations when you set it as a safe tool set.
+[00:10:41] safe tool set.
+[00:10:41] safe tool set. So, in terms of terminal back ends, this
+[00:10:43] So, in terms of terminal back ends, this
+[00:10:43] So, in terms of terminal back ends, this is where it runs, and it could be local,
+[00:10:45] is where it runs, and it could be local,
+[00:10:45] is where it runs, and it could be local, which I am mostly use it on local, but
+[00:10:47] which I am mostly use it on local, but
+[00:10:47] which I am mostly use it on local, but Docker, which I set up,
+[00:10:49] Docker, which I set up,
+[00:10:49] Docker, which I set up, and showed you how that work in module
+[00:10:51] and showed you how that work in module
+[00:10:51] and showed you how that work in module two, if you're interested, you can look
+[00:10:53] two, if you're interested, you can look
+[00:10:53] two, if you're interested, you can look at that. SSH, I've used SSH for like VPS
+[00:10:57] at that. SSH, I've used SSH for like VPS
+[00:10:57] at that. SSH, I've used SSH for like VPS and using Tailscale.
+[00:10:59] and using Tailscale.
+[00:10:59] and using Tailscale. So, I've used that with my VPS agent.
+[00:11:02] So, I've used that with my VPS agent.
+[00:11:03] So, I've used that with my VPS agent. And any tools executed there are only
+[00:11:05] And any tools executed there are only
+[00:11:05] And any tools executed there are only going to be executed on the VPS, not
+[00:11:07] going to be executed on the VPS, not
+[00:11:07] going to be executed on the VPS, not obviously my local machine here, even if
+[00:11:09] obviously my local machine here, even if
+[00:11:10] obviously my local machine here, even if I SSH into it here.
+[00:11:12] I SSH into it here.
+[00:11:12] I SSH into it here. And then there's approval. The approval
+[00:11:14] And then there's approval. The approval
+[00:11:14] And then there's approval. The approval auxiliary models from module five help
+[00:11:16] auxiliary models from module five help
+[00:11:16] auxiliary models from module five help classify risky actions. MCP tool calls
+[00:11:20] classify risky actions. MCP tool calls
+[00:11:20] classify risky actions. MCP tool calls flow through the same approval gates.
+[00:11:22] flow through the same approval gates.
+[00:11:22] flow through the same approval gates. This matters because MCP servers are
+[00:11:24] This matters because MCP servers are
+[00:11:24] This matters because MCP servers are just more tools, so they don't get a
+[00:11:26] just more tools, so they don't get a
+[00:11:26] just more tools, so they don't get a free pass just because they came from a
+[00:11:28] free pass just because they came from a
+[00:11:28] free pass just because they came from a protocol.
+[00:11:31] So, you can see if I give it a task,
+[00:11:33] So, you can see if I give it a task, review the files in this directory. This
+[00:11:34] review the files in this directory. This
+[00:11:34] review the files in this directory. This is with all skills or all tools
+[00:11:37] is with all skills or all tools
+[00:11:37] is with all skills or all tools available. We've all seen this, so I'm
+[00:11:39] available. We've all seen this, so I'm
+[00:11:39] available. We've all seen this, so I'm not going to go through to too much with
+[00:11:41] not going to go through to too much with
+[00:11:41] not going to go through to too much with the tool calling.
+[00:11:42] the tool calling.
+[00:11:42] the tool calling. Um but you can see these are different
+[00:11:43] Um but you can see these are different
+[00:11:43] Um but you can see these are different tools that it's using.
+[00:11:46] tools that it's using.
+[00:11:46] tools that it's using. Find execution.
+[00:11:49] And
+[00:11:51] And the nice thing about Hermes agent
+[00:11:52] the nice thing about Hermes agent
+[00:11:52] the nice thing about Hermes agent compared to other agents is that you get
+[00:11:54] compared to other agents is that you get
+[00:11:54] compared to other agents is that you get to see a lot of the tool calls um as
+[00:11:57] to see a lot of the tool calls um as
+[00:11:57] to see a lot of the tool calls um as you're working, so you know exactly what
+[00:11:58] you're working, so you know exactly what
+[00:11:58] you're working, so you know exactly what it's doing.
+[00:12:04] So, you can see it's doing read files
+[00:12:05] So, you can see it's doing read files here.
+[00:12:07] here.
+[00:12:07] here. These are all tools.
+[00:12:11] So, part three, we're going to get into
+[00:12:12] So, part three, we're going to get into MCP servers a little bit.
+[00:12:14] MCP servers a little bit.
+[00:12:15] MCP servers a little bit. And MCP servers are just an adaptive
+[00:12:17] And MCP servers are just an adaptive
+[00:12:17] And MCP servers are just an adaptive layer.
+[00:12:18] layer.
+[00:12:18] layer. There are um a lot of criticisms of MCP,
+[00:12:23] There are um a lot of criticisms of MCP,
+[00:12:23] There are um a lot of criticisms of MCP, but it's still widely used, so I wanted
+[00:12:25] but it's still widely used, so I wanted
+[00:12:25] but it's still widely used, so I wanted to cover it here. MCP stands for model
+[00:12:27] to cover it here. MCP stands for model
+[00:12:27] to cover it here. MCP stands for model context protocol.
+[00:12:28] context protocol.
+[00:12:28] context protocol. So, you connect Hermes to an external
+[00:12:30] So, you connect Hermes to an external
+[00:12:30] So, you connect Hermes to an external capability with zero core code and then
+[00:12:33] capability with zero core code and then
+[00:12:33] capability with zero core code and then filter the server down to the smallest
+[00:12:35] filter the server down to the smallest
+[00:12:35] filter the server down to the smallest trusted service.
+[00:12:37] trusted service.
+[00:12:37] trusted service. So, here's the cleanest mental model.
+[00:12:39] So, here's the cleanest mental model.
+[00:12:39] So, here's the cleanest mental model. Hermes stays the agent, the MCP server
+[00:12:42] Hermes stays the agent, the MCP server
+[00:12:42] Hermes stays the agent, the MCP server contributes tools.
+[00:12:45] contributes tools.
+[00:12:45] contributes tools. So, a server is discovered at startup or
+[00:12:47] So, a server is discovered at startup or
+[00:12:47] So, a server is discovered at startup or reload. Its tools register into the same
+[00:12:49] reload. Its tools register into the same
+[00:12:49] reload. Its tools register into the same registry as native tools, and then the
+[00:12:51] registry as native tools, and then the
+[00:12:51] registry as native tools, and then the model sees them like normal tools.
+[00:12:53] model sees them like normal tools.
+[00:12:53] model sees them like normal tools. And you can control how much of each
+[00:12:55] And you can control how much of each
+[00:12:55] And you can control how much of each server is visible.
+[00:12:56] server is visible.
+[00:12:56] server is visible. So, good MCP usage is not just like
+[00:12:59] So, good MCP usage is not just like
+[00:12:59] So, good MCP usage is not just like connect everything.
+[00:13:00] connect everything.
+[00:13:00] connect everything. That's how you bury the model in 100
+[00:13:01] That's how you bury the model in 100
+[00:13:01] That's how you bury the model in 100 vague tools and degrade selection.
+[00:13:04] vague tools and degrade selection.
+[00:13:05] vague tools and degrade selection. Good MCP usage is connect to the right
+[00:13:07] Good MCP usage is connect to the right
+[00:13:07] Good MCP usage is connect to the right server, expose the smallest useful
+[00:13:09] server, expose the smallest useful
+[00:13:09] server, expose the smallest useful surface, and keep the rest invisible.
+[00:13:12] surface, and keep the rest invisible.
+[00:13:12] surface, and keep the rest invisible. So, how do you add a server? There are
+[00:13:14] So, how do you add a server? There are
+[00:13:14] So, how do you add a server? There are two transport shapes for MCP servers.
+[00:13:17] two transport shapes for MCP servers.
+[00:13:17] two transport shapes for MCP servers. One is this STDIO.
+[00:13:22] This means it's a local subprocess,
+[00:13:24] This means it's a local subprocess, command plus arguments.
+[00:13:27] command plus arguments.
+[00:13:27] command plus arguments. So, we're going to be setting up the
+[00:13:28] So, we're going to be setting up the
+[00:13:28] So, we're going to be setting up the Blender MCP server, but this uses the
+[00:13:30] Blender MCP server, but this uses the
+[00:13:30] Blender MCP server, but this uses the command
+[00:13:31] command
+[00:13:31] command UVX
+[00:13:33] UVX
+[00:13:33] UVX Blender MCP.
+[00:13:36] Blender MCP.
+[00:13:36] Blender MCP. The other shape is using HTTP as a
+[00:13:38] The other shape is using HTTP as a
+[00:13:38] The other shape is using HTTP as a remote endpoint. So, Stripe is a good
+[00:13:40] remote endpoint. So, Stripe is a good
+[00:13:40] remote endpoint. So, Stripe is a good example of this.
+[00:13:41] example of this.
+[00:13:41] example of this. Um it uses a bearer token for
+[00:13:43] Um it uses a bearer token for
+[00:13:43] Um it uses a bearer token for authorization, but then just hits this
+[00:13:45] authorization, but then just hits this
+[00:13:45] authorization, but then just hits this endpoint.
+[00:13:47] endpoint.
+[00:13:47] endpoint. And when a server connects, each tool
+[00:13:48] And when a server connects, each tool
+[00:13:49] And when a server connects, each tool registers as MP MCP server, whatever the
+[00:13:51] registers as MP MCP server, whatever the
+[00:13:51] registers as MP MCP server, whatever the server's name is, and whatever the
+[00:13:52] server's name is, and whatever the
+[00:13:52] server's name is, and whatever the tool's name is.
+[00:13:54] tool's name is.
+[00:13:54] tool's name is. And the server gets its own dynamic tool
+[00:13:56] And the server gets its own dynamic tool
+[00:13:56] And the server gets its own dynamic tool set.
+[00:13:58] So, discovery is dynamic. So, if a
+[00:14:00] So, discovery is dynamic. So, if a server changes its tool list, Hermes can
+[00:14:02] server changes its tool list, Hermes can
+[00:14:02] server changes its tool list, Hermes can refresh without a full agent restart.
+[00:14:06] refresh without a full agent restart.
+[00:14:06] refresh without a full agent restart. And just a note,
+[00:14:07] And just a note,
+[00:14:07] And just a note, keep try to keep secrets out of the
+[00:14:08] keep try to keep secrets out of the
+[00:14:08] keep try to keep secrets out of the config file when you can.
+[00:14:10] config file when you can.
+[00:14:10] config file when you can. Use environmental variables for bearer
+[00:14:12] Use environmental variables for bearer
+[00:14:12] Use environmental variables for bearer tokens for OAuth capable servers. Use
+[00:14:15] tokens for OAuth capable servers. Use
+[00:14:15] tokens for OAuth capable servers. Use the OAuth flow rather than long-lived
+[00:14:17] the OAuth flow rather than long-lived
+[00:14:17] the OAuth flow rather than long-lived copied tokens uh cuz it's a little less
+[00:14:20] copied tokens uh cuz it's a little less
+[00:14:20] copied tokens uh cuz it's a little less safe.
+[00:14:21] safe.
+[00:14:22] safe. So, let me show you it how to actually
+[00:14:23] So, let me show you it how to actually
+[00:14:23] So, let me show you it how to actually add an MCP server. I don't have any on
+[00:14:25] add an MCP server. I don't have any on
+[00:14:25] add an MCP server. I don't have any on this version of Hermes.
+[00:14:27] this version of Hermes.
+[00:14:27] this version of Hermes. Um you can see that if you just do
+[00:14:28] Um you can see that if you just do
+[00:14:28] Um you can see that if you just do Hermes MCP, it shows you what's
+[00:14:30] Hermes MCP, it shows you what's
+[00:14:30] Hermes MCP, it shows you what's available. You've Linear and
+[00:14:33] available. You've Linear and
+[00:14:33] available. You've Linear and Noon available.
+[00:14:34] Noon available.
+[00:14:34] Noon available. And you can see all the commands related
+[00:14:35] And you can see all the commands related
+[00:14:35] And you can see all the commands related to MCP, MCP catalog,
+[00:14:38] to MCP, MCP catalog,
+[00:14:38] to MCP, MCP catalog, which has the new approved MCPs. You can
+[00:14:41] which has the new approved MCPs. You can
+[00:14:41] which has the new approved MCPs. You can just do MCP install,
+[00:14:43] just do MCP install,
+[00:14:43] just do MCP install, um remove, list,
+[00:14:46] um remove, list,
+[00:14:46] um remove, list, configure.
+[00:14:48] configure.
+[00:14:48] configure. So, I asked Hermes how to set up the MCP
+[00:14:50] So, I asked Hermes how to set up the MCP
+[00:14:50] So, I asked Hermes how to set up the MCP server for Blender. Gave me the
+[00:14:52] server for Blender. Gave me the
+[00:14:52] server for Blender. Gave me the instructions. You can do this manually
+[00:14:54] instructions. You can do this manually
+[00:14:54] instructions. You can do this manually if you want, or you can just ask it.
+[00:14:56] if you want, or you can just ask it.
+[00:14:56] if you want, or you can just ask it. Can you add
+[00:14:58] Can you add
+[00:14:58] Can you add the MCP
+[00:15:00] the MCP
+[00:15:00] the MCP server for Blender?
+[00:15:02] server for Blender?
+[00:15:02] server for Blender? I'll have to do stuff on the Blender
+[00:15:04] I'll have to do stuff on the Blender
+[00:15:04] I'll have to do stuff on the Blender side to get it connected
+[00:15:06] side to get it connected
+[00:15:06] side to get it connected as well.
+[00:15:08] as well.
+[00:15:08] as well. And while that's working, let me show
+[00:15:09] And while that's working, let me show
+[00:15:09] And while that's working, let me show you also in the dashboard, if you go
+[00:15:11] you also in the dashboard, if you go
+[00:15:11] you also in the dashboard, if you go down to MCP, it'll show you everything
+[00:15:13] down to MCP, it'll show you everything
+[00:15:13] down to MCP, it'll show you everything that you saw in the catalog there. So,
+[00:15:15] that you saw in the catalog there. So,
+[00:15:15] that you saw in the catalog there. So, like Linear and Noon here.
+[00:15:17] like Linear and Noon here.
+[00:15:17] like Linear and Noon here. You can install them one click.
+[00:15:19] You can install them one click.
+[00:15:20] You can install them one click. Um I don't have any MCP servers
+[00:15:21] Um I don't have any MCP servers
+[00:15:21] Um I don't have any MCP servers configured yet on this one, but you do
+[00:15:24] configured yet on this one, but you do
+[00:15:24] configured yet on this one, but you do add server and you just put in the name.
+[00:15:26] add server and you just put in the name.
+[00:15:27] add server and you just put in the name. You can choose the transport, like I
+[00:15:28] You can choose the transport, like I
+[00:15:28] You can choose the transport, like I just told you the two different types.
+[00:15:30] just told you the two different types.
+[00:15:30] just told you the two different types. You do this one
+[00:15:31] You do this one
+[00:15:31] You do this one as the command, the arguments,
+[00:15:33] as the command, the arguments,
+[00:15:33] as the command, the arguments, and then if there's an API key involved
+[00:15:35] and then if there's an API key involved
+[00:15:36] and then if there's an API key involved or HTTP like with the Stripe example.
+[00:15:38] or HTTP like with the Stripe example.
+[00:15:38] or HTTP like with the Stripe example. So, you just put the endpoint and once
+[00:15:40] So, you just put the endpoint and once
+[00:15:40] So, you just put the endpoint and once again, the um
+[00:15:42] again, the um
+[00:15:42] again, the um API key.
+[00:15:44] API key.
+[00:15:44] API key. And while I was showing you that, it
+[00:15:45] And while I was showing you that, it
+[00:15:45] And while I was showing you that, it added it. So, you can do this manually
+[00:15:48] added it. So, you can do this manually
+[00:15:48] added it. So, you can do this manually or just ask it to to add the MCP server.
+[00:15:51] or just ask it to to add the MCP server.
+[00:15:51] or just ask it to to add the MCP server. Um, and then just do reload
+[00:15:54] Um, and then just do reload
+[00:15:54] Um, and then just do reload MCP.
+[00:15:59] And you can see it was added to my MCP
+[00:16:02] And you can see it was added to my MCP servers in my dashboard here.
+[00:16:04] servers in my dashboard here.
+[00:16:04] servers in my dashboard here. So, then this is Blender, but obviously
+[00:16:06] So, then this is Blender, but obviously
+[00:16:06] So, then this is Blender, but obviously depends on what you're connecting.
+[00:16:08] depends on what you're connecting.
+[00:16:08] depends on what you're connecting. Go to edit, preferences,
+[00:16:11] Go to edit, preferences,
+[00:16:11] Go to edit, preferences, add-ons here, and then see Blender MCP
+[00:16:13] add-ons here, and then see Blender MCP
+[00:16:13] add-ons here, and then see Blender MCP here.
+[00:16:14] here.
+[00:16:14] here. You can enable it like that.
+[00:16:17] You can enable it like that.
+[00:16:17] You can enable it like that. Very simple.
+[00:16:19] Very simple.
+[00:16:19] Very simple. Um, you need do need to download this
+[00:16:21] Um, you need do need to download this
+[00:16:21] Um, you need do need to download this Blender MCP add-on script so that
+[00:16:25] Blender MCP add-on script so that
+[00:16:25] Blender MCP add-on script so that is something uh to keep in mind. So,
+[00:16:28] is something uh to keep in mind. So,
+[00:16:28] is something uh to keep in mind. So, that will allow me to connect to it.
+[00:16:31] Then you need to open this and that's
+[00:16:33] Then you need to open this and that's just with N.
+[00:16:34] just with N.
+[00:16:34] just with N. Blender MCP.
+[00:16:37] Blender MCP.
+[00:16:37] Blender MCP. And then connect to MCP server. It's
+[00:16:39] And then connect to MCP server. It's
+[00:16:39] And then connect to MCP server. It's running on the local port.
+[00:16:42] Now I can just prompt it.
+[00:16:44] Now I can just prompt it. Uh, can you make a
+[00:16:48] tower
+[00:16:49] tower Blender?
+[00:16:52] Blender?
+[00:16:52] Blender? So, right now it's on the default, just
+[00:16:53] So, right now it's on the default, just
+[00:16:53] So, right now it's on the default, just this cube thing, but
+[00:16:55] this cube thing, but
+[00:16:55] this cube thing, but by prompting Premise
+[00:16:57] by prompting Premise
+[00:16:57] by prompting Premise through the MCP server connecting it
+[00:16:59] through the MCP server connecting it
+[00:16:59] through the MCP server connecting it locally,
+[00:17:00] locally,
+[00:17:00] locally, uh I should be able to make a tower.
+[00:17:03] uh I should be able to make a tower.
+[00:17:03] uh I should be able to make a tower. And there we go.
+[00:17:04] And there we go.
+[00:17:04] And there we go. You see it's still
+[00:17:06] You see it's still
+[00:17:06] You see it's still uh finishing it up,
+[00:17:07] uh finishing it up,
+[00:17:07] uh finishing it up, but we can already see in Blender um we
+[00:17:09] but we can already see in Blender um we
+[00:17:10] but we can already see in Blender um we got our our tower here.
+[00:17:12] got our our tower here.
+[00:17:12] got our our tower here. There's a better look, you can see it on
+[00:17:13] There's a better look, you can see it on
+[00:17:13] There's a better look, you can see it on the top, pretty detailed. I didn't give
+[00:17:15] the top, pretty detailed. I didn't give
+[00:17:15] the top, pretty detailed. I didn't give it any other
+[00:17:17] it any other
+[00:17:17] it any other other information.
+[00:17:18] other information.
+[00:17:18] other information. It's funny, I wrote it down, you can see
+[00:17:20] It's funny, I wrote it down, you can see
+[00:17:20] It's funny, I wrote it down, you can see it says Hermes Tower.
+[00:17:22] it says Hermes Tower.
+[00:17:22] it says Hermes Tower. I didn't tell it to to write that. So,
+[00:17:24] I didn't tell it to to write that. So,
+[00:17:24] I didn't tell it to to write that. So, that's a good shot.
+[00:17:26] that's a good shot.
+[00:17:26] that's a good shot. So, I'll be doing a dedicated video on
+[00:17:28] So, I'll be doing a dedicated video on
+[00:17:28] So, I'll be doing a dedicated video on on Blender cuz I've been playing around
+[00:17:30] on Blender cuz I've been playing around
+[00:17:30] on Blender cuz I've been playing around with this a lot. It's pretty fun to use
+[00:17:32] with this a lot. It's pretty fun to use
+[00:17:32] with this a lot. It's pretty fun to use uh with your agent.
+[00:17:33] uh with your agent.
+[00:17:33] uh with your agent. But, this is just an example of the MCP
+[00:17:35] But, this is just an example of the MCP
+[00:17:35] But, this is just an example of the MCP server, which you can see is still
+[00:17:37] server, which you can see is still
+[00:17:37] server, which you can see is still running.
+[00:17:38] running.
+[00:17:38] running. You can see here Blender MCP exposes 22
+[00:17:40] You can see here Blender MCP exposes 22
+[00:17:40] You can see here Blender MCP exposes 22 tools
+[00:17:41] tools
+[00:17:42] tools and they're all registered with this MCP
+[00:17:44] and they're all registered with this MCP
+[00:17:44] and they're all registered with this MCP Blender prefix. So, all these are going
+[00:17:47] Blender prefix. So, all these are going
+[00:17:47] Blender prefix. So, all these are going to be named after this. So, like get
+[00:17:49] to be named after this. So, like get
+[00:17:49] to be named after this. So, like get scene info is a tool, execute Blender
+[00:17:51] scene info is a tool, execute Blender
+[00:17:51] scene info is a tool, execute Blender code is a tool,
+[00:17:53] code is a tool,
+[00:17:53] code is a tool, um download Poly Haven asset is a tool.
+[00:17:58] So, in the config.yaml file, you can
+[00:18:00] So, in the config.yaml file, you can kind of set an allow list of specific
+[00:18:03] kind of set an allow list of specific
+[00:18:03] kind of set an allow list of specific tools by using include or exclude.
+[00:18:07] tools by using include or exclude.
+[00:18:07] tools by using include or exclude. Like say I didn't want this to um use
+[00:18:10] Like say I didn't want this to um use
+[00:18:10] Like say I didn't want this to um use like this download. What if I'm a little
+[00:18:12] like this download. What if I'm a little
+[00:18:12] like this download. What if I'm a little bit concerned about this these assets?
+[00:18:14] bit concerned about this these assets?
+[00:18:14] bit concerned about this these assets? I can put this in an exclude
+[00:18:18] I can put this in an exclude
+[00:18:18] I can put this in an exclude um list so that this MCP server cannot
+[00:18:21] um list so that this MCP server cannot
+[00:18:21] um list so that this MCP server cannot use the download
+[00:18:23] use the download
+[00:18:23] use the download uh Poly Haven
+[00:18:25] uh Poly Haven
+[00:18:25] uh Poly Haven asset tool.
+[00:18:27] asset tool.
+[00:18:27] asset tool. So, that's the way you can kind of scope
+[00:18:29] So, that's the way you can kind of scope
+[00:18:29] So, that's the way you can kind of scope the the tool permissions and filter it
+[00:18:31] the the tool permissions and filter it
+[00:18:31] the the tool permissions and filter it down to only what you really trust and
+[00:18:33] down to only what you really trust and
+[00:18:33] down to only what you really trust and what you really need.
+[00:18:35] what you really need.
+[00:18:35] what you really need. So, two other little safety uh pieces to
+[00:18:37] So, two other little safety uh pieces to
+[00:18:37] So, two other little safety uh pieces to mention, OAuth and then package
+[00:18:40] mention, OAuth and then package
+[00:18:40] mention, OAuth and then package scanning.
+[00:18:41] scanning.
+[00:18:41] scanning. So, setting OAuth to OAuth on an HTTP
+[00:18:45] So, setting OAuth to OAuth on an HTTP
+[00:18:45] So, setting OAuth to OAuth on an HTTP HTTP server gives you a browser-based
+[00:18:49] HTTP server gives you a browser-based
+[00:18:49] HTTP server gives you a browser-based OAuth 2.1 PKCE flow. So, the tokens land
+[00:18:53] OAuth 2.1 PKCE flow. So, the tokens land
+[00:18:53] OAuth 2.1 PKCE flow. So, the tokens land in this JSON
+[00:18:55] in this JSON
+[00:18:55] in this JSON and auto refresh. That means there's no
+[00:18:57] and auto refresh. That means there's no
+[00:18:57] and auto refresh. That means there's no long-lived secrets in the config and
+[00:19:00] long-lived secrets in the config and
+[00:19:00] long-lived secrets in the config and Notion is the case for this.
+[00:19:02] Notion is the case for this.
+[00:19:02] Notion is the case for this. And this kind of malware scan before any
+[00:19:05] And this kind of malware scan before any
+[00:19:05] And this kind of malware scan before any NPX or UVX launches, Hermes queries
+[00:19:08] NPX or UVX launches, Hermes queries
+[00:19:08] NPX or UVX launches, Hermes queries uh api.osv.dev
+[00:19:10] uh api.osv.dev
+[00:19:10] uh api.osv.dev for any kind of malware advisories. Very
+[00:19:14] for any kind of malware advisories. Very
+[00:19:14] for any kind of malware advisories. Very important as I think there's going to be
+[00:19:16] important as I think there's going to be
+[00:19:16] important as I think there's going to be a lot more attacks with these kind of
+[00:19:17] a lot more attacks with these kind of
+[00:19:17] a lot more attacks with these kind of packages.
+[00:19:18] packages.
+[00:19:18] packages. And this will block confirmed malicious
+[00:19:20] And this will block confirmed malicious
+[00:19:20] And this will block confirmed malicious packages.
+[00:19:23] packages.
+[00:19:23] packages. Important to note that this is a screen.
+[00:19:24] Important to note that this is a screen.
+[00:19:24] Important to note that this is a screen. It's not a sandbox. It catches known bad
+[00:19:27] It's not a sandbox. It catches known bad
+[00:19:27] It's not a sandbox. It catches known bad packages. It doesn't make any arbitrary
+[00:19:29] packages. It doesn't make any arbitrary
+[00:19:29] packages. It doesn't make any arbitrary remote packages trustworthy.
+[00:19:32] remote packages trustworthy.
+[00:19:32] remote packages trustworthy. So part four, we just saw Hermes as a
+[00:19:34] So part four, we just saw Hermes as a
+[00:19:35] So part four, we just saw Hermes as a client for an MCP server. Now I'm going
+[00:19:36] client for an MCP server. Now I'm going
+[00:19:36] client for an MCP server. Now I'm going to expose Hermes as a server.
+[00:19:40] to expose Hermes as a server.
+[00:19:40] to expose Hermes as a server. So if you do Hermes MCP serve here, it
+[00:19:43] So if you do Hermes MCP serve here, it
+[00:19:44] So if you do Hermes MCP serve here, it starts in STDIO MCP server using fast
+[00:19:47] starts in STDIO MCP server using fast
+[00:19:47] starts in STDIO MCP server using fast MCP and exposes 10 tools. You can see
+[00:19:50] MCP and exposes 10 tools. You can see
+[00:19:50] MCP and exposes 10 tools. You can see here conversations list, conversation
+[00:19:53] here conversations list, conversation
+[00:19:53] here conversations list, conversation get, message read,
+[00:19:54] get, message read,
+[00:19:54] get, message read, and the rest of them.
+[00:19:57] and the rest of them.
+[00:19:57] and the rest of them. So read operations work without the
+[00:19:59] So read operations work without the
+[00:19:59] So read operations work without the gateway. Send operations need the
+[00:20:01] gateway. Send operations need the
+[00:20:01] gateway. Send operations need the gateway running because something has to
+[00:20:03] gateway running because something has to
+[00:20:03] gateway running because something has to deliver the message into the live Hermes
+[00:20:05] deliver the message into the live Hermes
+[00:20:05] deliver the message into the live Hermes runtime. So if a client can list
+[00:20:07] runtime. So if a client can list
+[00:20:07] runtime. So if a client can list conversations but cannot send, you want
+[00:20:10] conversations but cannot send, you want
+[00:20:10] conversations but cannot send, you want to check the gateway before you debug
+[00:20:11] to check the gateway before you debug
+[00:20:11] to check the gateway before you debug the
+[00:20:12] the
+[00:20:12] the MCP config. So this is kind of the
+[00:20:14] MCP config. So this is kind of the
+[00:20:14] MCP config. So this is kind of the mirror image of what we just did.
+[00:20:17] mirror image of what we just did.
+[00:20:17] mirror image of what we just did. Hermes consumed other systems tools,
+[00:20:19] Hermes consumed other systems tools,
+[00:20:19] Hermes consumed other systems tools, Blender's in that case. Here the other
+[00:20:21] Blender's in that case. Here the other
+[00:20:21] Blender's in that case. Here the other MCP native clients consume Hermes
+[00:20:23] MCP native clients consume Hermes
+[00:20:23] MCP native clients consume Hermes conversation service.
+[00:20:25] conversation service.
+[00:20:25] conversation service. Okay, you can see I did Hermes MCP serve
+[00:20:27] Okay, you can see I did Hermes MCP serve
+[00:20:27] Okay, you can see I did Hermes MCP serve here.
+[00:20:28] here.
+[00:20:28] here. And I'm just in the VS code co-pilot
+[00:20:31] And I'm just in the VS code co-pilot
+[00:20:31] And I'm just in the VS code co-pilot here.
+[00:20:32] here.
+[00:20:32] here. And I'm asking it to change the
+[00:20:34] And I'm asking it to change the
+[00:20:34] And I'm asking it to change the settings.
+[00:20:37] settings.
+[00:20:37] settings. You see this is the block that we added
+[00:20:39] You see this is the block that we added
+[00:20:39] You see this is the block that we added to the VS code
+[00:20:41] to the VS code
+[00:20:41] to the VS code JSON file here in the settings
+[00:20:46] so that it could see the MCP server.
+[00:20:49] so that it could see the MCP server. So you can check now in agents, right?
+[00:20:51] So you can check now in agents, right?
+[00:20:51] So you can check now in agents, right? And talk with the agent. This is in VS
+[00:20:54] And talk with the agent. This is in VS
+[00:20:54] And talk with the agent. This is in VS code.
+[00:20:55] code.
+[00:20:55] code. You see there's an agents thing on the
+[00:20:57] You see there's an agents thing on the
+[00:20:57] You see there's an agents thing on the top.
+[00:20:58] top.
+[00:20:58] top. But
+[00:20:59] But
+[00:20:59] But you can see I asked it what the MCP
+[00:21:01] you can see I asked it what the MCP
+[00:21:01] you can see I asked it what the MCP server's tools were
+[00:21:03] server's tools were
+[00:21:03] server's tools were and here they are.
+[00:21:05] and here they are.
+[00:21:05] and here they are. Hermes channels list, Hermes
+[00:21:07] Hermes channels list, Hermes
+[00:21:07] Hermes channels list, Hermes conversation list. So, these are all the
+[00:21:09] conversation list. So, these are all the
+[00:21:09] conversation list. So, these are all the different tools. Um, a lot of these are
+[00:21:11] different tools. Um, a lot of these are
+[00:21:11] different tools. Um, a lot of these are from messages
+[00:21:13] from messages
+[00:21:13] from messages and platforms. Like, I don't have
+[00:21:14] and platforms. Like, I don't have
+[00:21:14] and platforms. Like, I don't have messaging set up on this Hermes, so they
+[00:21:16] messaging set up on this Hermes, so they
+[00:21:16] messaging set up on this Hermes, so they won't work.
+[00:21:17] won't work.
+[00:21:17] won't work. But, you can see all the the tools here.
+[00:21:19] But, you can see all the the tools here.
+[00:21:19] But, you can see all the the tools here. So, that's how you expose
+[00:21:21] So, that's how you expose
+[00:21:21] So, that's how you expose Hermes agent as an MCP server to connect
+[00:21:23] Hermes agent as an MCP server to connect
+[00:21:23] Hermes agent as an MCP server to connect to VS code or there's other platforms as
+[00:21:26] to VS code or there's other platforms as
+[00:21:26] to VS code or there's other platforms as well.
+[00:21:28] well.
+[00:21:28] well. Okay. So, the last kind of major task
+[00:21:30] Okay. So, the last kind of major task
+[00:21:30] Okay. So, the last kind of major task we're going to do here is actually
+[00:21:31] we're going to do here is actually
+[00:21:31] we're going to do here is actually create our own tool.
+[00:21:33] create our own tool.
+[00:21:33] create our own tool. And this is going to be a stock price
+[00:21:35] And this is going to be a stock price
+[00:21:35] And this is going to be a stock price tool.
+[00:21:38] tool.
+[00:21:38] tool. And it'll be used just to call uh, to
+[00:21:40] And it'll be used just to call uh, to
+[00:21:41] And it'll be used just to call uh, to find stock prices.
+[00:21:43] find stock prices.
+[00:21:43] find stock prices. So, this is the Python script, um, that
+[00:21:45] So, this is the Python script, um, that
+[00:21:45] So, this is the Python script, um, that I created. And this is going to be
+[00:21:46] I created. And this is going to be
+[00:21:46] I created. And this is going to be really the tool.
+[00:21:49] really the tool.
+[00:21:49] really the tool. You can see from tools registry import
+[00:21:51] You can see from tools registry import
+[00:21:51] You can see from tools registry import registry.
+[00:21:52] registry.
+[00:21:52] registry. So, we're going to be using something
+[00:21:53] So, we're going to be using something
+[00:21:53] So, we're going to be using something called Finnhub, finnhub.io, to actually
+[00:21:55] called Finnhub, finnhub.io, to actually
+[00:21:55] called Finnhub, finnhub.io, to actually get the stock prices.
+[00:21:57] get the stock prices.
+[00:21:57] get the stock prices. So, these are the the functions that
+[00:21:59] So, these are the the functions that
+[00:21:59] So, these are the the functions that we're going to need.
+[00:22:01] we're going to need.
+[00:22:02] we're going to need. And this is the main thing.
+[00:22:04] And this is the main thing.
+[00:22:04] And this is the main thing. Um, it's going to need an API key, so if
+[00:22:05] Um, it's going to need an API key, so if
+[00:22:05] Um, it's going to need an API key, so if there's no API key, it'll throw an
+[00:22:07] there's no API key, it'll throw an
+[00:22:07] there's no API key, it'll throw an error.
+[00:22:09] error.
+[00:22:09] error. Um, if we get it, the response will be
+[00:22:11] Um, if we get it, the response will be
+[00:22:11] Um, if we get it, the response will be the the ticker,
+[00:22:14] the the ticker,
+[00:22:14] the the ticker, the symbol,
+[00:22:15] the symbol,
+[00:22:15] the symbol, and then the data, which will should be
+[00:22:17] and then the data, which will should be
+[00:22:17] and then the data, which will should be the price.
+[00:22:18] the price.
+[00:22:18] the price. So, this is stock price schema. Like I
+[00:22:20] So, this is stock price schema. Like I
+[00:22:20] So, this is stock price schema. Like I told you before, this is the schema that
+[00:22:21] told you before, this is the schema that
+[00:22:21] told you before, this is the schema that you're going to need for the tool to
+[00:22:23] you're going to need for the tool to
+[00:22:23] you're going to need for the tool to work.
+[00:22:24] work.
+[00:22:24] work. Name, it's just going to be called stock
+[00:22:25] Name, it's just going to be called stock
+[00:22:25] Name, it's just going to be called stock price. Description, get the latest stock
+[00:22:27] price. Description, get the latest stock
+[00:22:27] price. Description, get the latest stock quote for a public company ticker using
+[00:22:29] quote for a public company ticker using
+[00:22:29] quote for a public company ticker using Finnhub.
+[00:22:31] Finnhub.
+[00:22:31] Finnhub. Uh, use this for questions like what is
+[00:22:33] Uh, use this for questions like what is
+[00:22:33] Uh, use this for questions like what is Apple trading at or get current Nvidia
+[00:22:35] Apple trading at or get current Nvidia
+[00:22:35] Apple trading at or get current Nvidia price.
+[00:22:37] price.
+[00:22:37] price. And then this is the schema
+[00:22:39] And then this is the schema
+[00:22:39] And then this is the schema for the properties
+[00:22:41] for the properties
+[00:22:41] for the properties and parameters.
+[00:22:42] and parameters.
+[00:22:42] and parameters. It's going to be a string.
+[00:22:46] And this is down here's the registry
+[00:22:48] And this is down here's the registry block.
+[00:22:49] block.
+[00:22:49] block. So, this is how you register it so that
+[00:22:51] So, this is how you register it so that
+[00:22:51] So, this is how you register it so that the so that Hermes can actually use the
+[00:22:53] the so that Hermes can actually use the
+[00:22:53] the so that Hermes can actually use the tool.
+[00:22:54] tool.
+[00:22:54] tool. So, this is just a Python script. It's
+[00:22:55] So, this is just a Python script. It's
+[00:22:55] So, this is just a Python script. It's not too complicated.
+[00:22:57] not too complicated.
+[00:22:57] not too complicated. So, I am here in Finnhub and I I my API
+[00:23:00] So, I am here in Finnhub and I I my API
+[00:23:00] So, I am here in Finnhub and I I my API key and I'm going to just add it to the
+[00:23:01] key and I'm going to just add it to the
+[00:23:01] key and I'm going to just add it to the environmental variables list.
+[00:23:04] environmental variables list.
+[00:23:04] environmental variables list. So, this is the tool sets.py
+[00:23:07] So, this is the tool sets.py
+[00:23:07] So, this is the tool sets.py Python script in Hermes Agent, and you
+[00:23:10] Python script in Hermes Agent, and you
+[00:23:10] Python script in Hermes Agent, and you can see this in whatever your local
+[00:23:12] can see this in whatever your local
+[00:23:12] can see this in whatever your local Hermes Agent uh config file is. It's
+[00:23:15] Hermes Agent uh config file is. It's
+[00:23:15] Hermes Agent uh config file is. It's just tool sets.py, and it shows you
+[00:23:17] just tool sets.py, and it shows you
+[00:23:17] just tool sets.py, and it shows you everything
+[00:23:18] everything
+[00:23:18] everything like these are Hermes core tools,
+[00:23:20] like these are Hermes core tools,
+[00:23:20] like these are Hermes core tools, everything we were talking about before,
+[00:23:22] everything we were talking about before,
+[00:23:22] everything we were talking about before, right? Web search, terminal, file
+[00:23:24] right? Web search, terminal, file
+[00:23:24] right? Web search, terminal, file manipulation, vision.
+[00:23:25] manipulation, vision.
+[00:23:26] manipulation, vision. And that's all you need just to set
+[00:23:30] And that's all you need just to set
+[00:23:30] And that's all you need just to set You can see here the safe tools
+[00:23:32] You can see here the safe tools
+[00:23:32] You can see here the safe tools um that were allowed,
+[00:23:33] um that were allowed,
+[00:23:33] um that were allowed, the basic tool sets.
+[00:23:37] And we need to add our stock price tool
+[00:23:41] And we need to add our stock price tool to this list.
+[00:23:43] to this list.
+[00:23:43] to this list. And
+[00:23:44] And
+[00:23:44] And I guess we just add it like that, right?
+[00:23:49] Add stock price here.
+[00:23:50] Add stock price here. See if this works.
+[00:23:54] Okay. And you can see I asked it,
+[00:23:56] Okay. And you can see I asked it, "Can you check the price of Nvidia using
+[00:23:58] "Can you check the price of Nvidia using
+[00:23:58] "Can you check the price of Nvidia using stock price tool?" It used the stock
+[00:23:59] stock price tool?" It used the stock
+[00:23:59] stock price tool?" It used the stock price tool.
+[00:24:01] price tool.
+[00:24:01] price tool. And there you go. Nvidia's trading at
+[00:24:02] And there you go. Nvidia's trading at
+[00:24:02] And there you go. Nvidia's trading at this number.
+[00:24:04] this number.
+[00:24:04] this number. There you go.
+[00:24:06] There you go.
+[00:24:06] There you go. Same thing. What is the price of Tesla?
+[00:24:08] Same thing. What is the price of Tesla?
+[00:24:08] Same thing. What is the price of Tesla? Even if I don't specifically ask it to
+[00:24:09] Even if I don't specifically ask it to
+[00:24:09] Even if I don't specifically ask it to use that tool, it'll use it. So, that's
+[00:24:11] use that tool, it'll use it. So, that's
+[00:24:11] use that tool, it'll use it. So, that's how you register a a tool.
+[00:24:14] how you register a a tool.
+[00:24:14] how you register a a tool. So, if it's something if you have a
+[00:24:15] So, if it's something if you have a
+[00:24:15] So, if it's something if you have a certain workflow that requires
+[00:24:18] certain workflow that requires
+[00:24:18] certain workflow that requires the same task
+[00:24:20] the same task
+[00:24:20] the same task like this to be done over and over
+[00:24:22] like this to be done over and over
+[00:24:22] like this to be done over and over again, registering it as a tool uh is a
+[00:24:25] again, registering it as a tool uh is a
+[00:24:25] again, registering it as a tool uh is a pretty good option as well. But, you
+[00:24:26] pretty good option as well. But, you
+[00:24:26] pretty good option as well. But, you have to be careful
+[00:24:27] have to be careful
+[00:24:27] have to be careful uh with it.
+[00:24:30] uh with it.
+[00:24:30] uh with it. So, quick recap of what we did today. We
+[00:24:31] So, quick recap of what we did today. We
+[00:24:32] So, quick recap of what we did today. We learned about skill versus tools, MCPs,
+[00:24:35] learned about skill versus tools, MCPs,
+[00:24:35] learned about skill versus tools, MCPs, the decision rules for extending Hermes.
+[00:24:37] the decision rules for extending Hermes.
+[00:24:37] the decision rules for extending Hermes. Uh we saw the map of 70-ish tools
+[00:24:43] organized through core, composite,
+[00:24:44] organized through core, composite, platform, and dynamic tool sets.
+[00:24:47] platform, and dynamic tool sets.
+[00:24:47] platform, and dynamic tool sets. You saw the surface control with Hermes
+[00:24:49] You saw the surface control with Hermes
+[00:24:49] You saw the surface control with Hermes tools/tools safe, sandbox backends, and
+[00:24:52] tools/tools safe, sandbox backends, and
+[00:24:53] tools/tools safe, sandbox backends, and approval gating.
+[00:24:54] approval gating.
+[00:24:54] approval gating. We learned a a bit about MCP servers,
+[00:24:56] We learned a a bit about MCP servers,
+[00:24:56] We learned a a bit about MCP servers, and we actually saw a live demonstration
+[00:24:59] and we actually saw a live demonstration
+[00:24:59] and we actually saw a live demonstration of setting up
+[00:25:00] of setting up
+[00:25:00] of setting up one with Blender. And we made a pretty
+[00:25:02] one with Blender. And we made a pretty
+[00:25:02] one with Blender. And we made a pretty cool tower over here.
+[00:25:04] cool tower over here.
+[00:25:04] cool tower over here. There it is, Hermes Tower.
+[00:25:07] There it is, Hermes Tower.
+[00:25:07] There it is, Hermes Tower. I also exposed Hermes as a server. We
+[00:25:09] I also exposed Hermes as a server. We
+[00:25:09] I also exposed Hermes as a server. We saw in VS Code the different tools that
+[00:25:11] saw in VS Code the different tools that
+[00:25:11] saw in VS Code the different tools that we got from Hermes. And then you just
+[00:25:13] we got from Hermes. And then you just
+[00:25:13] we got from Hermes. And then you just saw me build a stock price tool.
+[00:25:16] saw me build a stock price tool.
+[00:25:16] saw me build a stock price tool. So, this is going to be the end of
+[00:25:17] So, this is going to be the end of
+[00:25:17] So, this is going to be the end of module six, which is all about tools and
+[00:25:19] module six, which is all about tools and
+[00:25:19] module six, which is all about tools and MCP servers. Hope you learned a lot.
+[00:25:21] MCP servers. Hope you learned a lot.
+[00:25:21] MCP servers. Hope you learned a lot. They're important elements to really
+[00:25:24] They're important elements to really
+[00:25:24] They're important elements to really giving your Hermes agent
+[00:25:25] giving your Hermes agent
+[00:25:25] giving your Hermes agent a lot of power
+[00:25:27] a lot of power
+[00:25:27] a lot of power and uh capabilities.
+[00:25:29] and uh capabilities.
+[00:25:29] and uh capabilities. In the next one, module seven, we're
+[00:25:30] In the next one, module seven, we're
+[00:25:30] In the next one, module seven, we're going to be talking about cron, as well
+[00:25:33] going to be talking about cron, as well
+[00:25:33] going to be talking about cron, as well as automation in general
+[00:25:35] as automation in general
+[00:25:35] as automation in general in Hermes agent. So,
+[00:25:37] in Hermes agent. So,
+[00:25:37] in Hermes agent. So, everything we just built previously, the
+[00:25:38] everything we just built previously, the
+[00:25:39] everything we just built previously, the skills, and now tools, MCP servers,
+[00:25:42] skills, and now tools, MCP servers,
+[00:25:42] skills, and now tools, MCP servers, uh the scoped surface, the model stack
+[00:25:44] uh the scoped surface, the model stack
+[00:25:44] uh the scoped surface, the model stack that we saw in the previous module,
+[00:25:46] that we saw in the previous module,
+[00:25:46] that we saw in the previous module, we're going to use all of this. You're
+[00:25:48] we're going to use all of this. You're
+[00:25:48] we're going to use all of this. You're going to see how Hermes can run on a
+[00:25:49] going to see how Hermes can run on a
+[00:25:49] going to see how Hermes can run on a schedule in fresh sessions without you
+[00:25:52] schedule in fresh sessions without you
+[00:25:52] schedule in fresh sessions without you in the loop. And to see what kind of
+[00:25:54] in the loop. And to see what kind of
+[00:25:54] in the loop. And to see what kind of automation workflows that you can create
+[00:25:56] automation workflows that you can create
+[00:25:56] automation workflows that you can create with it.
+[00:25:57] with it.
+[00:25:57] with it. So, we're going to move on from
+[00:25:59] So, we're going to move on from
+[00:25:59] So, we're going to move on from prompting agents to just having an agent
+[00:26:01] prompting agents to just having an agent
+[00:26:01] prompting agents to just having an agent that wakes up and does the work.
+[00:26:03] that wakes up and does the work.
+[00:26:03] that wakes up and does the work. But, thank you for watching this video.
+[00:26:06] But, thank you for watching this video.
+[00:26:06] But, thank you for watching this video. Please leave a comment. What kind of
+[00:26:07] Please leave a comment. What kind of
+[00:26:07] Please leave a comment. What kind of tools or MCP servers have you used?
+[00:26:10] tools or MCP servers have you used?
+[00:26:10] tools or MCP servers have you used? If you like the video, please leave a
+[00:26:11] If you like the video, please leave a
+[00:26:11] If you like the video, please leave a like. Please subscribe. And I will see
+[00:26:13] like. Please subscribe. And I will see
+[00:26:13] like. Please subscribe. And I will see you in the next one.
+[00:26:14] you in the next one.
+[00:26:14] you in the next one. Thank you for watching.
