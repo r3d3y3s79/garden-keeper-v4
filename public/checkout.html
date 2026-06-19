@@ -26,6 +26,20 @@
   .price { font-size: 1.8rem; font-weight: 700; color: var(--accent); }
   .btn { margin-top: 1rem; display:inline-block; background: var(--accent); color: #0f2416; border:none; padding:.75rem 1.25rem; border-radius:8px; font-weight:700; cursor:pointer; }
   .vip .btn { background: #ffd700; }
+
+  /* Modal overlay */
+  .modal-backdrop { position: fixed; inset: 0; background: rgba(0,0,0,0.7); display: none; align-items: center; justify-content: center; z-index: 9999; padding: 1rem; }
+  .modal-backdrop.show { display: flex; }
+  .modal { background: var(--card); border: 1px solid #2e5c36; border-radius: 12px; padding: 2rem; max-width: 420px; width: 100%; }
+  .modal h2 { margin: 0 0 0.5rem; font-size: 1.3rem; }
+  .modal p { margin: 0 0 1rem; opacity: 0.8; font-size: 0.95rem; }
+  .modal input[type="email"] { width: 100%; padding: 0.75rem; border-radius: 8px; border: 1px solid #2e5c36; background: #0f2416; color: var(--text); font-size: 1rem; box-sizing: border-box; }
+  .modal .row { display: flex; gap: 0.5rem; margin-top: 1rem; }
+  .modal button { flex: 1; padding: 0.75rem 1rem; border: none; border-radius: 8px; font-weight: 700; cursor: pointer; font-size: 1rem; }
+  .modal .primary { background: var(--accent); color: #0f2416; }
+  .modal .secondary { background: transparent; color: var(--text); border: 1px solid #2e5c36; }
+  .modal .err { color: #ff8a80; font-size: 0.85rem; margin-top: 0.5rem; min-height: 1.2em; }
+  .modal .product-line { color: var(--accent); font-weight: 700; }
 </style>
 </head>
 <body>
@@ -37,29 +51,46 @@
       <h3>Single Journal</h3>
       <div class="price">$6.99</div>
       <p>One beautifully designed journal for your plant-tracking needs.</p>
-      <button class="btn" onclick="checkout('gk_single_journal')">Buy Now</button>
+      <button class="btn" data-product="gk_single_journal">Buy Now</button>
     </div>
     <div class="tier">
       <h3>Bundle (3 Journals)</h3>
       <div class="price">$11.99</div>
       <p>Triple pack — perfect for gifting or multi-season tracking.</p>
-      <button class="btn" onclick="checkout('gk_bundle_3')">Buy Now</button>
+      <button class="btn" data-product="gk_bundle_3">Buy Now</button>
     </div>
     <div class="tier">
       <h3>Complete Set (5)</h3>
       <div class="price">$17.99</div>
       <p>The full collection — five themed journals at our best value.</p>
-      <button class="btn" onclick="checkout('gk_complete_set_5')">Buy Now</button>
+      <button class="btn" data-product="gk_complete_set_5">Buy Now</button>
     </div>
     <div class="tier vip">
       <h3>VIP Subscription</h3>
       <div class="price">$4.99<span style="font-size:.9rem">/mo</span></div>
       <p>Exclusive guides, community perks & early releases.</p>
-      <button class="btn" onclick="checkout('gk_vip_monthly')">Subscribe</button>
+      <button class="btn" data-product="gk_vip_monthly">Subscribe</button>
     </div>
   </div>
   <p style="text-align:center;margin-top:2rem;opacity:.6;font-size:.85rem">Secure checkout powered by Stripe</p>
 </div>
+
+<!-- Pre-checkout email capture modal -->
+<div class="modal-backdrop" id="emailModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal">
+    <h2 id="modalTitle">Where should we send your journal?</h2>
+    <p>You're getting <span class="product-line" id="modalProduct">your product</span>. We'll email order updates and a one-time nurturing sequence.</p>
+    <form id="emailForm" autocomplete="email">
+      <input type="email" id="emailInput" name="email" required placeholder="you@example.com" aria-label="Email address">
+      <div class="err" id="emailErr" role="alert" aria-live="polite"></div>
+      <div class="row">
+        <button type="button" class="secondary" id="modalCancel">Cancel</button>
+        <button type="submit" class="primary" id="modalSubmit">Continue to Checkout</button>
+      </div>
+    </form>
+  </div>
+</div>
+
 <script>
 const PAYMENT_LINKS = {
   gk_single_journal:   'https://buy.stripe.com/7sYfZa8J10rBcBK8Z02go00',
@@ -67,15 +98,90 @@ const PAYMENT_LINKS = {
   gk_complete_set_5:     'https://buy.stripe.com/8x2dR2e3leir8lufno2go02',
   gk_vip_monthly:        'https://buy.stripe.com/5kQ14g3oH2zJbxG7UW2go03'
 };
-function checkout(lookupKey) {
-  const url = PAYMENT_LINKS[lookupKey];
-  if (url) {
-    try { window.plausible('CheckoutStart', { props: { product: lookupKey } }); } catch(e) {}
-    window.location.href = url;
-  } else {
-    alert('Product not available: ' + lookupKey);
-  }
+const PRODUCT_LABEL = {
+  gk_single_journal:   'Single Journal ($6.99)',
+  gk_bundle_3:           'Bundle of 3 Journals ($11.99)',
+  gk_complete_set_5:     'Complete Set of 5 Journals ($17.99)',
+  gk_vip_monthly:        'VIP Subscription ($4.99/mo)'
+};
+
+const modal = document.getElementById('emailModal');
+const form = document.getElementById('emailForm');
+const emailInput = document.getElementById('emailInput');
+const emailErr = document.getElementById('emailErr');
+const productLabel = document.getElementById('modalProduct');
+const submitBtn = document.getElementById('modalSubmit');
+const cancelBtn = document.getElementById('modalCancel');
+let pendingProduct = null;
+let pendingUrl = null;
+
+function openModal(product) {
+  pendingProduct = product;
+  pendingUrl = PAYMENT_LINKS[product];
+  if (!pendingUrl) { alert('Product not available: ' + product); return; }
+  productLabel.textContent = PRODUCT_LABEL[product] || product;
+  emailInput.value = '';
+  emailErr.textContent = '';
+  submitBtn.disabled = false;
+  submitBtn.textContent = 'Continue to Checkout';
+  modal.classList.add('show');
+  setTimeout(() => emailInput.focus(), 50);
+  try { window.plausible('CheckoutEmailPrompt', { props: { product } }); } catch(e) {}
 }
+
+function closeModal() {
+  modal.classList.remove('show');
+  pendingProduct = null;
+  pendingUrl = null;
+}
+
+document.querySelectorAll('button.btn[data-product]').forEach(b => {
+  b.addEventListener('click', () => openModal(b.dataset.product));
+});
+cancelBtn.addEventListener('click', closeModal);
+modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && modal.classList.contains('show')) closeModal(); });
+
+function validEmail(s) {
+  return typeof s === 'string' && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(s.trim());
+}
+
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  emailErr.textContent = '';
+  const email = emailInput.value.trim().toLowerCase();
+  if (!validEmail(email)) {
+    emailErr.textContent = 'Please enter a valid email address.';
+    return;
+  }
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Reserving your spot…';
+  try {
+    try { window.plausible('CheckoutStart', { props: { product: pendingProduct } }); } catch(e) {}
+    // Fire-and-forget subscribe. We don't block checkout on it — the user's
+    // primary intent is to pay. If subscribe fails, we still redirect.
+    const ctrl = new AbortController();
+    const t = setTimeout(() => ctrl.abort(), 8000);
+    fetch('/api/subscribe', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email, source: 'pre-checkout', interest: pendingProduct }),
+      signal: ctrl.signal,
+    }).catch(() => { /* swallow — we'll still redirect to Stripe */ })
+      .finally(() => clearTimeout(t));
+    // Redirect to Stripe with locked prefilled email. locked_prefilled_email
+    // means the customer can't change it on the Stripe-hosted page — this
+    // guarantees the email we captured is the email Stripe sees, so even
+    // on abandonment our recover-abandoned.js can match sessions to emails
+    // via the Stripe API customer_email field.
+    const sep = pendingUrl.includes('?') ? '&' : '?';
+    window.location.href = `${pendingUrl}${sep}locked_prefilled_email=${encodeURIComponent(email)}`;
+  } catch (err) {
+    emailErr.textContent = 'Something went wrong. Please try again.';
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'Continue to Checkout';
+  }
+});
 </script>
 </body>
 </html>
