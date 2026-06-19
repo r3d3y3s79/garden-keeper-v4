@@ -35,7 +35,7 @@
 | 🍅 Tomato | Fruit Vegetable | Mar, Apr | May, Jun | — | Jul, Aug, Sep, Oct |
 | 🌽 Corn | Grain | — | — | May, Jun | Aug, Sep |
 | 🌿 Basil | Herb | Mar, Apr | May, Jun | May, Jun | Jun, Jul, Aug, Sep |
-| 🌿 Cilantro | Herb | — | — | Mar, Apr, May, Aug, Sep | May, Jun, Jun, Jul, Oct, Nov |
+| 🌿 Cilantro | Herb | — | — | Mar, Apr, May, Aug, Sep | May, Jun, Jul, Oct, Nov |
 | 🌿 Dill | Herb | — | — | Apr, May, Jun, Jul | Jun, Jul, Aug, Sep |
 | 🌿 Mint | Herb | — | Apr, May, Sep | — | May, Jun, Jul, Aug, Sep, Oct |
 | 🌿 Parsley | Herb | Feb, Mar | Apr, May | Apr, May | Jun, Jul, Aug, Sep, Oct |
