@@ -41,6 +41,7 @@ class EmailHandler(BaseHTTPRequestHandler):
         if self.path == '/api/stripe-webhook':
             self._handle_stripe_webhook()
         elif self.path == '/api/subscribe':
+            import sqlite3 as _sq
             content_length = int(self.headers.get('Content-Length', 0))
             post_data = self.rfile.read(content_length).decode('utf-8')
             try:
@@ -60,13 +61,17 @@ class EmailHandler(BaseHTTPRequestHandler):
                         ar = send_auto_reply(email)
                         if ar['ok']:
                             # Mark day-1 as sent
+                            _c = None
                             try:
-                                import sqlite3 as _sq
-                                _c = _sq.connect('/root/the-garden-keeper/data/subscribers.db')
+                                _c = _sq.connect('/root/the-garden-keeper/data/subscribers.db', timeout=30)
+                                _c.execute("PRAGMA journal_mode=WAL")
+                                _c.execute("PRAGMA busy_timeout=30000")
                                 _c.execute("UPDATE subscribers SET last_sent_at=CURRENT_TIMESTAMP, sequence_day=1 WHERE email=?", (email,))
-                                _c.commit(); _c.close()
-                            except Exception:
-                                pass
+                                _c.commit()
+                            finally:
+                                if _c is not None:
+                                    try: _c.close()
+                                    except Exception: pass
                         result['auto_reply'] = ar
                     except Exception as ar_err:
                         result['auto_reply'] = {'ok': False, 'error': str(ar_err)}
@@ -320,8 +325,11 @@ class EmailHandler(BaseHTTPRequestHandler):
             # Merge buyer email into subscribers DB
             merged = False
             if buyer_email and '@' in buyer_email:
+                _c = None
                 try:
-                    _c = _sq.connect('/root/the-garden-keeper/data/subscribers.db')
+                    _c = _sq.connect('/root/the-garden-keeper/data/subscribers.db', timeout=30)
+                    _c.execute("PRAGMA journal_mode=WAL")
+                    _c.execute("PRAGMA busy_timeout=30000")
                     _c.execute('''
                         INSERT OR IGNORE INTO subscribers (email, source, interest, status)
                         VALUES (?, 'stripe_paid', 'paying_customer', 'active')
@@ -335,7 +343,6 @@ class EmailHandler(BaseHTTPRequestHandler):
                     _c.commit()
                     # Confirm merge
                     row = _c.execute('SELECT id, interest, source FROM subscribers WHERE email = ?', (buyer_email,)).fetchone()
-                    _c.close()
                     if row:
                         merged = True
                         order_entry['subscriber_id'] = row[0]
@@ -345,6 +352,10 @@ class EmailHandler(BaseHTTPRequestHandler):
                             json.dump(orders_data, _f, indent=2)
                 except Exception as db_err:
                     order_entry['subscriber_merge_error'] = str(db_err)
+                finally:
+                    if _c is not None:
+                        try: _c.close()
+                        except Exception: pass
 
             self._send_json(200, {
                 "received": True,
@@ -379,8 +390,12 @@ class EmailHandler(BaseHTTPRequestHandler):
             revenue_cents = orders_data.get('total_revenue_cents', 0) or 0
 
             # Subscriber stats
-            db = _sq.connect('/root/the-garden-keeper/data/subscribers.db')
+            _db = None
             try:
+                _db = _sq.connect('/root/the-garden-keeper/data/subscribers.db', timeout=30)
+                _db.execute("PRAGMA journal_mode=WAL")
+                _db.execute("PRAGMA busy_timeout=30000")
+                db = _db
                 sub_count = db.execute('SELECT COUNT(*) FROM subscribers WHERE status = "active"').fetchone()[0]
                 # Last 7d signups
                 week_ago = (_dt.now() - _td(days=7)).strftime('%Y-%m-%d %H:%M:%S')
@@ -392,7 +407,9 @@ class EmailHandler(BaseHTTPRequestHandler):
                     'SELECT source, COUNT(*) c FROM subscribers GROUP BY source ORDER BY c DESC LIMIT 5'
                 ).fetchall()
             finally:
-                db.close()
+                if _db is not None:
+                    try: _db.close()
+                    except Exception: pass
 
             paid_count = sum(1 for o in orders if o.get('payment_status') in ('paid', 'succeeded', 'complete'))
             conversion_rate = (paid_count / sub_count * 100.0) if sub_count > 0 else 0.0

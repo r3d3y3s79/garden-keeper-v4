@@ -1,0 +1,165 @@
+{
+  "_note": "Verified by Pathfinder on 2026-06-20. r/houseplants is banned for r3d3y3s79 and r/plantclinic is text-post-disabled. This override map posts each day to a reachable subreddit with the correct flair_id.",
+  "flair_ids": {
+    "plants": {
+      "Plant ID": "5a4235bc-5b7b-11e9-bdc9-0ed0faad570c",
+      "Help": "d8055cda-5bf9-11e9-9c2a-0e2abe1982b0",
+      "Success": "e53f2958-5bf9-11e9-a74d-0eaadd77df9c",
+      "Discussion": "edee8aee-5bf9-11e9-bb89-0ea1a05bf0ac"
+    },
+    "Aerogarden": {
+      "Help": "be23f2bc-540d-11ed-9846-3adae26bffd5",
+      "Progress": "dfe43ab0-540d-11ed-a1d5-0a05a78edc1e",
+      "Success": "edf7abd2-540d-11ed-bb51-f6993a39e324",
+      "Info": "06ac8cc4-540e-11ed-9e9e-a6fb4ee9479c",
+      "Discussion": "cc0a0eb6-5444-11ed-a1d5-7a02a4d8057a"
+    },
+    "IndoorGarden": {
+      "Full Room Shot": "3ad75a48-848b-11ee-be4c-3a01edffc420",
+      "Houseplant Close Up": "549aee04-848b-11ee-b1c3-7e8b0c6bd226",
+      "Plant Identification": "5e2909e2-848b-11ee-a15e-1adae14c50b7",
+      "Plant Discussion": "7544058c-848b-11ee-b1c3-feef96340e3e",
+      "Product Discussion": "8228b11c-848b-11ee-a797-4abde4e674b5",
+      "Meme": "2264eb9a-cdee-11ee-b124-be10e68d1035"
+    },
+    "succulents": {
+      "Photo": "2ff7f40a-b796-11e9-a95e-0ec74b753fd4",
+      "Plant Progress/Props": "f473a29e-b796-11e9-91dd-0ef279d621f8",
+      "Help": "628cd29a-5d61-11e8-ab56-0ec63242f67e",
+      "Article": "93a26646-b856-11e9-a9a8-0e452ebbdc22",
+      "Solved": "27e74940-914f-11e9-9647-0e716fd52750",
+      "Misc": "670488be-b796-11e9-b9ae-0ecd1aefb860"
+    },
+    "gardening": null,
+    "Microgrowery": {
+      "Help My Sick Plant": "f0a5d200-78a4-11e8-b5e3-0e0fa4c8c9c5",
+      "Pictures": "be0c7e9a-78a4-11e8-9683-0e8df1c8e1d2",
+      "Question": "39b48f44-78a4-11e8-aa47-0eb1c4e4cfb1",
+      "First Time Grower": "76a35a02-78a4-11e8-85e2-0e7df0e6f3c1",
+      "DIY": "2cb13a78-78a4-11e8-b10a-0e9c8c0d3a1c",
+      "Guide": "9bd97c64-78a4-11e8-b6f3-0e3c3a3e0f8e"
+    }
+  },
+  "subreddit_overrides": {
+    "1": {
+      "subreddit": "Aerogarden",
+      "flair": "Help"
+    },
+    "2": {
+      "subreddit": "plants",
+      "flair": "Help"
+    },
+    "3": {
+      "subreddit": "IndoorGarden",
+      "flair": "Plant Discussion"
+    },
+    "4": {
+      "subreddit": "plants",
+      "flair": "Discussion"
+    },
+    "5": {
+      "subreddit": "plants",
+      "flair": "Help"
+    },
+    "6": {
+      "subreddit": "gardening",
+      "flair": null
+    },
+    "7": {
+      "subreddit": "Aerogarden",
+      "flair": "Help"
+    },
+    "8": {
+      "subreddit": "IndoorGarden",
+      "flair": "Plant Discussion"
+    },
+    "9": {
+      "subreddit": "plants",
+      "flair": "Help"
+    },
+    "10": {
+      "subreddit": "plants",
+      "flair": "Success"
+    },
+    "11": {
+      "subreddit": "gardening",
+      "flair": null
+    },
+    "12": {
+      "subreddit": "IndoorGarden",
+      "flair": "Plant Discussion"
+    },
+    "13": {
+      "subreddit": "plants",
+      "flair": "Discussion"
+    },
+    "14": {
+      "subreddit": "plants",
+      "flair": "Discussion"
+    },
+    "15": {
+      "subreddit": "IndoorGarden",
+      "flair": "Plant Discussion"
+    },
+    "16": {
+      "subreddit": "plants",
+      "flair": "Help"
+    },
+    "17": {
+      "subreddit": "plants",
+      "flair": "Discussion"
+    },
+    "18": {
+      "subreddit": "gardening",
+      "flair": null
+    },
+    "19": {
+      "subreddit": "IndoorGarden",
+      "flair": "Plant Discussion"
+    },
+    "20": {
+      "subreddit": "plants",
+      "flair": "Help"
+    },
+    "21": {
+      "subreddit": "plants",
+      "flair": "Help"
+    },
+    "22": {
+      "subreddit": "IndoorGarden",
+      "flair": "Product Discussion"
+    },
+    "23": {
+      "subreddit": "plants",
+      "flair": "Help"
+    },
+    "24": {
+      "subreddit": "plants",
+      "flair": "Story"
+    },
+    "25": {
+      "subreddit": "gardening",
+      "flair": null
+    },
+    "26": {
+      "subreddit": "IndoorGarden",
+      "flair": "Plant Discussion"
+    },
+    "27": {
+      "subreddit": "plants",
+      "flair": "Success"
+    },
+    "28": {
+      "subreddit": "plants",
+      "flair": "Help"
+    },
+    "29": {
+      "subreddit": "IndoorGarden",
+      "flair": "Plant Discussion"
+    },
+    "30": {
+      "subreddit": "gardening",
+      "flair": null
+    }
+  }
+}

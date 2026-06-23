@@ -12,10 +12,23 @@ from urllib.parse import parse_qs
 
 DB_PATH = "/root/the-garden-keeper/data/subscribers.db"
 
+# Connection helper used everywhere — WAL mode + 30s busy_timeout
+# prevents "database is locked" errors when concurrent writers hit the
+# DB at the same time. WAL also lets readers proceed during writes.
+def _connect(timeout=30):
+    conn = sqlite3.connect(DB_PATH, timeout=timeout)
+    try:
+        conn.execute("PRAGMA journal_mode=WAL")
+        conn.execute("PRAGMA synchronous=NORMAL")
+        conn.execute("PRAGMA busy_timeout=30000")
+    except Exception:
+        pass
+    return conn
+
 def init_db():
     """Create SQLite database with subscriber table."""
     os.makedirs(os.path.dirname(DB_PATH), exist_ok=True)
-    conn = sqlite3.connect(DB_PATH)
+    conn = _connect()
     c = conn.cursor()
     c.execute('''
         CREATE TABLE IF NOT EXISTS subscribers (
@@ -47,33 +60,37 @@ def init_db():
 
 def add_subscriber(email, source='store', interest='general'):
     """Add a new subscriber to the database."""
+    conn = None
     try:
-        conn = sqlite3.connect(DB_PATH)
+        conn = _connect()
         c = conn.cursor()
         c.execute('''
             INSERT INTO subscribers (email, source, interest)
             VALUES (?, ?, ?)
         ''', (email, source, interest))
         conn.commit()
-        conn.close()
         return {"success": True, "message": "Subscribed!"}
     except sqlite3.IntegrityError:
         return {"success": False, "message": "Already subscribed."}
+    finally:
+        if conn is not None:
+            try: conn.close()
+            except Exception: pass
 
 def get_stats():
     """Get subscriber statistics."""
-    conn = sqlite3.connect(DB_PATH)
+    conn = _connect()
     c = conn.cursor()
-    
+
     c.execute("SELECT COUNT(*) FROM subscribers WHERE status = 'active'")
     total = c.fetchone()[0]
-    
+
     c.execute("SELECT COUNT(*) FROM subscribers WHERE DATE(subscribed_at) = DATE('now')")
     today = c.fetchone()[0]
-    
+
     c.execute("SELECT COUNT(*) FROM subscribers WHERE sequence_day > 0")
     nurtured = c.fetchone()[0]
-    
+
     conn.close()
     return {
         "total_active": total,
@@ -84,7 +101,7 @@ def get_stats():
 
 def get_subscribers_for_day(day_number):
     """Get subscribers who should receive day N of sequence."""
-    conn = sqlite3.connect(DB_PATH)
+    conn = _connect()
     c = conn.cursor()
     c.execute('''
         SELECT id, email, sequence_day FROM subscribers
@@ -96,15 +113,20 @@ def get_subscribers_for_day(day_number):
 
 def increment_sequence_day(subscriber_id):
     """Move subscriber to next day in sequence."""
-    conn = sqlite3.connect(DB_PATH)
-    c = conn.cursor()
-    c.execute('''
-        UPDATE subscribers
-        SET sequence_day = sequence_day + 1, last_sent_at = CURRENT_TIMESTAMP
-        WHERE id = ?
-    ''', (subscriber_id,))
-    conn.commit()
-    conn.close()
+    conn = None
+    try:
+        conn = _connect()
+        c = conn.cursor()
+        c.execute('''
+            UPDATE subscribers
+            SET sequence_day = sequence_day + 1, last_sent_at = CURRENT_TIMESTAMP
+            WHERE id = ?
+        ''', (subscriber_id,))
+        conn.commit()
+    finally:
+        if conn is not None:
+            try: conn.close()
+            except Exception: pass
 
 if __name__ == "__main__":
     init_db()

@@ -1,0 +1,42 @@
+{
+  "generated_at": "2026-06-20T18:20:00Z",
+  "filter_patterns": [
+    "test",
+    "verify",
+    "joe",
+    "smoke",
+    "probe",
+    "ceo",
+    "lead-",
+    "e2e",
+    "deploy",
+    "preview",
+    "browser",
+    "ceotest",
+    "real-audience",
+    "checkout",
+    "@gardenkeeper",
+    "+ceo"
+  ],
+  "external_count": 3,
+  "external": [
+    {
+      "email": "post-restart-1781652473@example.com",
+      "source": "qa-verify",
+      "status": "active",
+      "subscribed_at": "2026-06-16 23:27:53"
+    },
+    {
+      "email": "josephmarr77@yahoo.com",
+      "source": "lead-magnet-v4-live",
+      "status": "active",
+      "subscribed_at": "2026-06-17 01:02:26"
+    },
+    {
+      "email": "t@t.com",
+      "source": "store",
+      "status": "active",
+      "subscribed_at": "2026-06-20 19:17:39"
+    }
+  ]
+}
